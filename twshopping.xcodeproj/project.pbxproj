@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20A566571C8F28E700B09B7E /* SPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A566561C8F28E700B09B7E /* SPService.swift */; };
 		20C2602F1C8DC63E00938F54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C2602E1C8DC63E00938F54 /* AppDelegate.swift */; };
 		20C260311C8DC63E00938F54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C260301C8DC63E00938F54 /* ViewController.swift */; };
 		20C260341C8DC63E00938F54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20C260321C8DC63E00938F54 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		20A566561C8F28E700B09B7E /* SPService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPService.swift; sourceTree = "<group>"; };
 		20C2602B1C8DC63E00938F54 /* twshopping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = twshopping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20C2602E1C8DC63E00938F54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20C260301C8DC63E00938F54 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				20C2605F1C8DC95000938F54 /* Frameworks */,
 				20C2602E1C8DC63E00938F54 /* AppDelegate.swift */,
 				20C260301C8DC63E00938F54 /* ViewController.swift */,
+				20A566561C8F28E700B09B7E /* SPService.swift */,
 				20C260321C8DC63E00938F54 /* Main.storyboard */,
 				20C260381C8DC63E00938F54 /* Assets.xcassets */,
 				20C2603A1C8DC63E00938F54 /* LaunchScreen.storyboard */,
@@ -311,6 +314,7 @@
 			files = (
 				20C260311C8DC63E00938F54 /* ViewController.swift in Sources */,
 				20C2602F1C8DC63E00938F54 /* AppDelegate.swift in Sources */,
+				20A566571C8F28E700B09B7E /* SPService.swift in Sources */,
 				20C260371C8DC63E00938F54 /* twshopping.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,48 +15,30 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        //存
-//        let testObject = AVObject(className: "TestObject")
-//        testObject.setObject("kevin", forKey: "name")
-//        testObject.save()
-        
+                
         
 
-//        //查詢
-//        AVQuery.doCloudQueryInBackgroundWithCQL("select * from TestObject where name='kevin1'") { (result: AVCloudQueryResult!, error: NSError!) -> Void in
-//            if result != nil {
-//                print(result.className)
-//                print(result.results)
-//            }
-//        }
 
+        SPService.queryOrderById("") { (result, error) -> Void in
+            if result != nil {
+                print(result.className)
+                print(result.results)
+            }
+        }
         
-        //sign in
-//        let user = AVUser()
-//        user.username = "KevinLiou2";
-//        user.email = "kevin.liou@infotimes.com.tw"
-//        user.password = "1234"
-//        
-//        user.signUpInBackgroundWithBlock { (succeeded: Bool, error: NSError!) -> Void in
-//            if succeeded {
-//                print("成功,請至信箱收取驗證信。")
-//            }else{
-//                print(error)
-//            }
-//        }
         
         
         // log in
-        AVUser.logInWithUsernameInBackground("kevin.liou@infotimes.com.tw", password: "1234") { (user: AVUser!,error: NSError!) -> Void in
-            
-            if user != nil {
-                print(user.username);
-                print(user.email);
-            }else{
-                print(error)
-            }
-            
-        }
+//        AVUser.logInWithUsernameInBackground("kevin.liou@infotimes.com.tw", password: "1234") { (user: AVUser!,error: NSError!) -> Void in
+//            
+//            if user != nil {
+//                print(user.username);
+//                print(user.email);
+//            }else{
+//                print(error)
+//            }
+//            
+//        }
         
         
 //        //        当前用户

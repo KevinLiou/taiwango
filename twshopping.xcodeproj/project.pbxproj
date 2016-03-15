@@ -7,7 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A8F68621C97C86C00F1EFF3 /* SPNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8F68611C97C86C00F1EFF3 /* SPNavigationController.swift */; };
+		0A8F68651C97C89400F1EFF3 /* SPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8F68641C97C89400F1EFF3 /* SPViewController.swift */; };
+		0A8F68691C97E4B500F1EFF3 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8F68681C97E4B500F1EFF3 /* LoadingViewController.swift */; };
+		0A8F686D1C97E97D00F1EFF3 /* SPTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8F686C1C97E97D00F1EFF3 /* SPTools.swift */; };
+		0A8F686F1C97FBB600F1EFF3 /* Tools.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A8F686E1C97FBB600F1EFF3 /* Tools.storyboard */; };
+		0A8F68711C98065E00F1EFF3 /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8F68701C98065E00F1EFF3 /* LeftMenuViewController.swift */; };
+		0A8F68741C980F8F00F1EFF3 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8F68731C980F8F00F1EFF3 /* LaunchViewController.swift */; };
 		20A566571C8F28E700B09B7E /* SPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A566561C8F28E700B09B7E /* SPService.swift */; };
+		20B988281C9718D100D46ACB /* json.json in Resources */ = {isa = PBXBuildFile; fileRef = 20B988271C9718D100D46ACB /* json.json */; };
 		20C2602F1C8DC63E00938F54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C2602E1C8DC63E00938F54 /* AppDelegate.swift */; };
 		20C260311C8DC63E00938F54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C260301C8DC63E00938F54 /* ViewController.swift */; };
 		20C260341C8DC63E00938F54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20C260321C8DC63E00938F54 /* Main.storyboard */; };
@@ -23,6 +31,7 @@
 		20C2606F1C8DCA2500938F54 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20C2606E1C8DCA2500938F54 /* CoreTelephony.framework */; };
 		20C260711C8DCA2B00938F54 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20C260701C8DCA2B00938F54 /* CoreLocation.framework */; };
 		20C260731C8DCB2100938F54 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 20C260721C8DCB2100938F54 /* libsqlite3.tbd */; };
+		B0D1217492232F80663CE217 /* Pods_twshopping.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E0F2B3D5933D479EF39383D /* Pods_twshopping.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +52,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A8F68611C97C86C00F1EFF3 /* SPNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPNavigationController.swift; sourceTree = "<group>"; };
+		0A8F68641C97C89400F1EFF3 /* SPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPViewController.swift; sourceTree = "<group>"; };
+		0A8F68681C97E4B500F1EFF3 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		0A8F686C1C97E97D00F1EFF3 /* SPTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTools.swift; sourceTree = "<group>"; };
+		0A8F686E1C97FBB600F1EFF3 /* Tools.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tools.storyboard; sourceTree = "<group>"; };
+		0A8F68701C98065E00F1EFF3 /* LeftMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuViewController.swift; sourceTree = "<group>"; };
+		0A8F68731C980F8F00F1EFF3 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		20A566561C8F28E700B09B7E /* SPService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPService.swift; sourceTree = "<group>"; };
+		20B988271C9718D100D46ACB /* json.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = json.json; sourceTree = "<group>"; };
 		20C2602B1C8DC63E00938F54 /* twshopping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = twshopping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20C2602E1C8DC63E00938F54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20C260301C8DC63E00938F54 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +82,9 @@
 		20C2606E1C8DCA2500938F54 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		20C260701C8DCA2B00938F54 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		20C260721C8DCB2100938F54 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		5251A53FFCE96C520714C319 /* Pods-twshopping.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twshopping.release.xcconfig"; path = "Pods/Target Support Files/Pods-twshopping/Pods-twshopping.release.xcconfig"; sourceTree = "<group>"; };
+		9E0F2B3D5933D479EF39383D /* Pods_twshopping.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_twshopping.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F237CBDC66EFFAF057DA22F3 /* Pods-twshopping.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twshopping.debug.xcconfig"; path = "Pods/Target Support Files/Pods-twshopping/Pods-twshopping.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +99,7 @@
 				20C2606B1C8DCA1800938F54 /* SystemConfiguration.framework in Frameworks */,
 				20C260671C8DC99100938F54 /* AVOSCloudCrashReporting.framework in Frameworks */,
 				20C260641C8DC98000938F54 /* AVOSCloud.framework in Frameworks */,
+				B0D1217492232F80663CE217 /* Pods_twshopping.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +120,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A8F68631C97C87D00F1EFF3 /* MyClasses */ = {
+			isa = PBXGroup;
+			children = (
+				0A8F686B1C97E95A00F1EFF3 /* CustomTools */,
+				0A8F68611C97C86C00F1EFF3 /* SPNavigationController.swift */,
+				0A8F68641C97C89400F1EFF3 /* SPViewController.swift */,
+			);
+			name = MyClasses;
+			sourceTree = "<group>";
+		};
+		0A8F686A1C97E4E500F1EFF3 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				20C260321C8DC63E00938F54 /* Main.storyboard */,
+				20C2603A1C8DC63E00938F54 /* LaunchScreen.storyboard */,
+				0A8F686E1C97FBB600F1EFF3 /* Tools.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		0A8F686B1C97E95A00F1EFF3 /* CustomTools */ = {
+			isa = PBXGroup;
+			children = (
+				0A8F68681C97E4B500F1EFF3 /* LoadingViewController.swift */,
+				20A566561C8F28E700B09B7E /* SPService.swift */,
+				0A8F686C1C97E97D00F1EFF3 /* SPTools.swift */,
+			);
+			name = CustomTools;
+			sourceTree = "<group>";
+		};
+		0A8F68721C980F6E00F1EFF3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0A8F68701C98065E00F1EFF3 /* LeftMenuViewController.swift */,
+				0A8F68731C980F8F00F1EFF3 /* LaunchViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		20B988261C97149D00D46ACB /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				20B988271C9718D100D46ACB /* json.json */,
+			);
+			name = resource;
+			sourceTree = "<group>";
+		};
 		20C260221C8DC63E00938F54 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +174,8 @@
 				20C260451C8DC63E00938F54 /* twshoppingTests */,
 				20C260501C8DC63F00938F54 /* twshoppingUITests */,
 				20C2602C1C8DC63E00938F54 /* Products */,
+				3D849CE02873D5E22D19326B /* Pods */,
+				FE00F7A43F77BC319A03F5FF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,13 +192,14 @@
 		20C2602D1C8DC63E00938F54 /* twshopping */ = {
 			isa = PBXGroup;
 			children = (
+				0A8F68721C980F6E00F1EFF3 /* ViewControllers */,
+				0A8F68631C97C87D00F1EFF3 /* MyClasses */,
+				0A8F686A1C97E4E500F1EFF3 /* Storyboard */,
+				20B988261C97149D00D46ACB /* resource */,
 				20C2605F1C8DC95000938F54 /* Frameworks */,
 				20C2602E1C8DC63E00938F54 /* AppDelegate.swift */,
 				20C260301C8DC63E00938F54 /* ViewController.swift */,
-				20A566561C8F28E700B09B7E /* SPService.swift */,
-				20C260321C8DC63E00938F54 /* Main.storyboard */,
 				20C260381C8DC63E00938F54 /* Assets.xcassets */,
-				20C2603A1C8DC63E00938F54 /* LaunchScreen.storyboard */,
 				20C2603D1C8DC63E00938F54 /* Info.plist */,
 				20C260351C8DC63E00938F54 /* twshopping.xcdatamodeld */,
 			);
@@ -175,6 +246,23 @@
 			name = AVOSCloud;
 			sourceTree = "<group>";
 		};
+		3D849CE02873D5E22D19326B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F237CBDC66EFFAF057DA22F3 /* Pods-twshopping.debug.xcconfig */,
+				5251A53FFCE96C520714C319 /* Pods-twshopping.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FE00F7A43F77BC319A03F5FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9E0F2B3D5933D479EF39383D /* Pods_twshopping.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -182,9 +270,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 20C260561C8DC63F00938F54 /* Build configuration list for PBXNativeTarget "twshopping" */;
 			buildPhases = (
+				C5AFB94B6FAF4962D196E1B2 /* Check Pods Manifest.lock */,
 				20C260271C8DC63E00938F54 /* Sources */,
 				20C260281C8DC63E00938F54 /* Frameworks */,
 				20C260291C8DC63E00938F54 /* Resources */,
+				EFB2AC5151FA4FA8B5906475 /* Embed Pods Frameworks */,
+				AA40BF188DCAEEFCD6496562 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -288,6 +379,8 @@
 				20C2603C1C8DC63E00938F54 /* LaunchScreen.storyboard in Resources */,
 				20C260391C8DC63E00938F54 /* Assets.xcassets in Resources */,
 				20C260341C8DC63E00938F54 /* Main.storyboard in Resources */,
+				0A8F686F1C97FBB600F1EFF3 /* Tools.storyboard in Resources */,
+				20B988281C9718D100D46ACB /* json.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,15 +400,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		AA40BF188DCAEEFCD6496562 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-twshopping/Pods-twshopping-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5AFB94B6FAF4962D196E1B2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EFB2AC5151FA4FA8B5906475 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-twshopping/Pods-twshopping-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		20C260271C8DC63E00938F54 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A8F68691C97E4B500F1EFF3 /* LoadingViewController.swift in Sources */,
+				0A8F68741C980F8F00F1EFF3 /* LaunchViewController.swift in Sources */,
 				20C260311C8DC63E00938F54 /* ViewController.swift in Sources */,
 				20C2602F1C8DC63E00938F54 /* AppDelegate.swift in Sources */,
 				20A566571C8F28E700B09B7E /* SPService.swift in Sources */,
+				0A8F686D1C97E97D00F1EFF3 /* SPTools.swift in Sources */,
+				0A8F68711C98065E00F1EFF3 /* LeftMenuViewController.swift in Sources */,
+				0A8F68621C97C86C00F1EFF3 /* SPNavigationController.swift in Sources */,
 				20C260371C8DC63E00938F54 /* twshopping.xcdatamodeld in Sources */,
+				0A8F68651C97C89400F1EFF3 /* SPViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +603,7 @@
 		};
 		20C260571C8DC63F00938F54 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F237CBDC66EFFAF057DA22F3 /* Pods-twshopping.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -481,6 +629,7 @@
 		};
 		20C260581C8DC63F00938F54 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5251A53FFCE96C520714C319 /* Pods-twshopping.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

@@ -9,8 +9,9 @@
 import UIKit
 import AVOSCloud
 
-class ViewController: UIViewController {
+class ViewController: SPViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -19,12 +20,12 @@ class ViewController: UIViewController {
         
 
 
-        SPService.queryOrderById("") { (result, error) -> Void in
-            if result != nil {
-                print(result.className)
-                print(result.results)
-            }
-        }
+//        SPService.queryOrderById("") { (result, error) -> Void in
+//            if result != nil {
+//                print(result.className)
+//                print(result.results)
+//            }
+//        }
         
         
         
@@ -65,6 +66,24 @@ class ViewController: UIViewController {
 //        AVUser *currentUser = [AVUser currentUser]; // 现在的currentUser是nil了
     }
 
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+//        SPTools.showLoadingOnViewController(self)
+        
+        
+        
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+    }
+    
+    @IBAction func menuItemClick(sender: UIBarButtonItem) {
+        self.sideMenuViewController.presentLeftMenuViewController()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

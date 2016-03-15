@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import AVOSCloud
+import RESideMenu
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -25,10 +26,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let pushNotificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: nil)
         application.registerUserNotificationSettings(pushNotificationSettings)
         application.registerForRemoteNotifications()
-        UIApplication.sharedApplication().applicationIconBadgeNumber = 0
         
         
         
+        
+        
+//        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//        let navigationController = storyBoard.instantiateViewControllerWithIdentifier("SPNavigationController")
+//        
+//        let leftMenuViewController = storyBoard.instantiateViewControllerWithIdentifier("LeftMenuViewController")
+//        let sideMenuViewController = RESideMenu(contentViewController: navigationController, leftMenuViewController: leftMenuViewController, rightMenuViewController: nil)
+//        sideMenuViewController.backgroundImage = UIImage(named: "Launch")
+//        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+//        self.window?.rootViewController = sideMenuViewController
+//        self.window?.makeKeyAndVisible()
         
         return true
     }
@@ -57,6 +68,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillEnterForeground(application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+        UIApplication.sharedApplication().applicationIconBadgeNumber = 0
     }
 
     func applicationDidBecomeActive(application: UIApplication) {

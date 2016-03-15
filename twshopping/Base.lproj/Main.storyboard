@@ -1,25 +1,149 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jdb-Be-9yH">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="twshopping" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="eKn-Kq-10R">
+                        <barButtonItem key="leftBarButtonItem" image="icon_menu" id="hok-eR-c4R">
+                            <connections>
+                                <action selector="menuItemClick:" destination="BYZ-38-t0r" id="Q7E-X0-4Gz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="631" y="18"/>
+        </scene>
+        <!--Launch View Controller-->
+        <scene sceneID="ZJY-Qb-fgW">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x0C-xD-dCS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="LaunchViewController" id="jdb-Be-9yH" customClass="LaunchViewController" customModule="twshopping" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1x1-V3-BNJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="E1B-LJ-c6z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hTA-eK-q1R">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launch" translatesAutoresizingMaskIntoConstraints="NO" id="Fg0-Oh-8t1">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Fg0-Oh-8t1" firstAttribute="top" secondItem="hTA-eK-q1R" secondAttribute="top" id="KeC-8i-AOz"/>
+                            <constraint firstItem="Fg0-Oh-8t1" firstAttribute="leading" secondItem="hTA-eK-q1R" secondAttribute="leading" id="WKW-Di-MsQ"/>
+                            <constraint firstItem="Fg0-Oh-8t1" firstAttribute="bottom" secondItem="E1B-LJ-c6z" secondAttribute="top" id="h7E-rg-mc3"/>
+                            <constraint firstAttribute="trailing" secondItem="Fg0-Oh-8t1" secondAttribute="trailing" id="v3A-do-exm"/>
+                        </constraints>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-62" y="-680"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ibj-Lh-Q8T">
+            <objects>
+                <navigationController storyboardIdentifier="SPNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="DIF-84-tZr" customClass="SPNavigationController" customModule="twshopping" customModuleProvider="target" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="cER-6m-QnU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Yib-ny-Aqg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n0i-Iw-Pnk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-39" y="18"/>
+        </scene>
+        <!--Left Menu View Controller-->
+        <scene sceneID="x3z-jp-n9z">
+            <objects>
+                <viewController storyboardIdentifier="LeftMenuViewController" id="bbl-wy-76b" customClass="LeftMenuViewController" customModule="twshopping" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hZn-fN-K2j"/>
+                        <viewControllerLayoutGuide type="bottom" id="wbv-51-OIY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yk3-Gw-n5G">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PZB-a9-ahA" userLabel="TopView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="lGH-X9-oum"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="boC-5g-JX8">
+                                <rect key="frame" x="0.0" y="70" width="600" height="460"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LeftMenuCell" id="NRm-Dw-Obu">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NRm-Dw-Obu" id="0t4-Iw-Ydl">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a5w-jM-5Lm" userLabel="BottomView">
+                                <rect key="frame" x="0.0" y="530" width="600" height="70"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="WLl-Yt-9QG"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="a5w-jM-5Lm" firstAttribute="top" secondItem="boC-5g-JX8" secondAttribute="bottom" id="2eH-nc-ysa"/>
+                            <constraint firstItem="PZB-a9-ahA" firstAttribute="leading" secondItem="yk3-Gw-n5G" secondAttribute="leading" id="3nT-I2-TgV"/>
+                            <constraint firstAttribute="trailing" secondItem="boC-5g-JX8" secondAttribute="trailing" id="PUp-n0-QFo"/>
+                            <constraint firstItem="a5w-jM-5Lm" firstAttribute="bottom" secondItem="wbv-51-OIY" secondAttribute="top" id="YvB-am-iR7"/>
+                            <constraint firstItem="boC-5g-JX8" firstAttribute="leading" secondItem="yk3-Gw-n5G" secondAttribute="leading" id="YyI-x3-eTv"/>
+                            <constraint firstItem="a5w-jM-5Lm" firstAttribute="leading" secondItem="PZB-a9-ahA" secondAttribute="leading" id="adf-Li-bwb"/>
+                            <constraint firstItem="a5w-jM-5Lm" firstAttribute="trailing" secondItem="PZB-a9-ahA" secondAttribute="trailing" id="f5Y-0m-ESb"/>
+                            <constraint firstItem="boC-5g-JX8" firstAttribute="top" secondItem="PZB-a9-ahA" secondAttribute="bottom" id="fL0-yS-Co3"/>
+                            <constraint firstItem="PZB-a9-ahA" firstAttribute="top" secondItem="yk3-Gw-n5G" secondAttribute="top" id="t6T-I6-Oqk"/>
+                            <constraint firstAttribute="trailing" secondItem="PZB-a9-ahA" secondAttribute="trailing" id="xHI-zd-E8Z"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="boC-5g-JX8" id="APG-13-qzG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gIS-DK-iix" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="705"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Launch" width="320" height="568"/>
+        <image name="icon_menu" width="22" height="18"/>
+    </resources>
 </document>

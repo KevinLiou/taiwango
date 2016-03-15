@@ -25,6 +25,16 @@ class LaunchViewController: UIViewController {
         let delay = dispatch_time(DISPATCH_TIME_NOW, Int64(time * Double(NSEC_PER_SEC)))
         dispatch_after(delay, dispatch_get_main_queue()) { () -> Void in
             SPTools.hideLoadingOnViewController(self)
+            
+            //登入過
+            //...
+            
+            
+            
+            //未登入
+            //...
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            appDelegate.entryLoginViewController()
         }
         
     }

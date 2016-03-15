@@ -33,7 +33,6 @@
         <!--Launch View Controller-->
         <scene sceneID="ZJY-Qb-fgW">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x0C-xD-dCS" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="LaunchViewController" id="jdb-Be-9yH" customClass="LaunchViewController" customModule="twshopping" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1x1-V3-BNJ"/>
@@ -56,6 +55,7 @@
                         </constraints>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x0C-xD-dCS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-62" y="-680"/>
         </scene>

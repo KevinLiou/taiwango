@@ -14,6 +14,13 @@
 		0A8F686F1C97FBB600F1EFF3 /* Tools.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A8F686E1C97FBB600F1EFF3 /* Tools.storyboard */; };
 		0A8F68711C98065E00F1EFF3 /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8F68701C98065E00F1EFF3 /* LeftMenuViewController.swift */; };
 		0A8F68741C980F8F00F1EFF3 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8F68731C980F8F00F1EFF3 /* LaunchViewController.swift */; };
+		203BEF141C9834B40090F463 /* LoginPages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 203BEF131C9834B40090F463 /* LoginPages.storyboard */; };
+		203BEF161C9837150090F463 /* SPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203BEF151C9837150090F463 /* SPTextField.swift */; };
+		203BEF181C983A150090F463 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203BEF171C983A150090F463 /* LoginViewController.swift */; };
+		203BEF1A1C9840440090F463 /* SPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203BEF191C9840440090F463 /* SPButton.swift */; };
+		203BEF1C1C98489C0090F463 /* SPWhiteCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203BEF1B1C98489C0090F463 /* SPWhiteCornerView.swift */; };
+		203BEF1E1C9848DF0090F463 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203BEF1D1C9848DF0090F463 /* RegisterViewController.swift */; };
+		203BEF221C9864CF0090F463 /* ForgotPwdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203BEF211C9864CF0090F463 /* ForgotPwdViewController.swift */; };
 		20A566571C8F28E700B09B7E /* SPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A566561C8F28E700B09B7E /* SPService.swift */; };
 		20B988281C9718D100D46ACB /* json.json in Resources */ = {isa = PBXBuildFile; fileRef = 20B988271C9718D100D46ACB /* json.json */; };
 		20C2602F1C8DC63E00938F54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C2602E1C8DC63E00938F54 /* AppDelegate.swift */; };
@@ -59,6 +66,13 @@
 		0A8F686E1C97FBB600F1EFF3 /* Tools.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tools.storyboard; sourceTree = "<group>"; };
 		0A8F68701C98065E00F1EFF3 /* LeftMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuViewController.swift; sourceTree = "<group>"; };
 		0A8F68731C980F8F00F1EFF3 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		203BEF131C9834B40090F463 /* LoginPages.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginPages.storyboard; sourceTree = "<group>"; };
+		203BEF151C9837150090F463 /* SPTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTextField.swift; sourceTree = "<group>"; };
+		203BEF171C983A150090F463 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		203BEF191C9840440090F463 /* SPButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPButton.swift; sourceTree = "<group>"; };
+		203BEF1B1C98489C0090F463 /* SPWhiteCornerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPWhiteCornerView.swift; sourceTree = "<group>"; };
+		203BEF1D1C9848DF0090F463 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		203BEF211C9864CF0090F463 /* ForgotPwdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPwdViewController.swift; sourceTree = "<group>"; };
 		20A566561C8F28E700B09B7E /* SPService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPService.swift; sourceTree = "<group>"; };
 		20B988271C9718D100D46ACB /* json.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = json.json; sourceTree = "<group>"; };
 		20C2602B1C8DC63E00938F54 /* twshopping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = twshopping.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +140,9 @@
 				0A8F686B1C97E95A00F1EFF3 /* CustomTools */,
 				0A8F68611C97C86C00F1EFF3 /* SPNavigationController.swift */,
 				0A8F68641C97C89400F1EFF3 /* SPViewController.swift */,
+				203BEF151C9837150090F463 /* SPTextField.swift */,
+				203BEF191C9840440090F463 /* SPButton.swift */,
+				203BEF1B1C98489C0090F463 /* SPWhiteCornerView.swift */,
 			);
 			name = MyClasses;
 			sourceTree = "<group>";
@@ -136,6 +153,7 @@
 				20C260321C8DC63E00938F54 /* Main.storyboard */,
 				20C2603A1C8DC63E00938F54 /* LaunchScreen.storyboard */,
 				0A8F686E1C97FBB600F1EFF3 /* Tools.storyboard */,
+				203BEF131C9834B40090F463 /* LoginPages.storyboard */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -153,10 +171,21 @@
 		0A8F68721C980F6E00F1EFF3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				0A8F68701C98065E00F1EFF3 /* LeftMenuViewController.swift */,
 				0A8F68731C980F8F00F1EFF3 /* LaunchViewController.swift */,
+				203BEF231C9865AE0090F463 /* LoginPages */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		203BEF231C9865AE0090F463 /* LoginPages */ = {
+			isa = PBXGroup;
+			children = (
+				0A8F68701C98065E00F1EFF3 /* LeftMenuViewController.swift */,
+				203BEF171C983A150090F463 /* LoginViewController.swift */,
+				203BEF1D1C9848DF0090F463 /* RegisterViewController.swift */,
+				203BEF211C9864CF0090F463 /* ForgotPwdViewController.swift */,
+			);
+			name = LoginPages;
 			sourceTree = "<group>";
 		};
 		20B988261C97149D00D46ACB /* resource */ = {
@@ -381,6 +410,7 @@
 				20C260341C8DC63E00938F54 /* Main.storyboard in Resources */,
 				0A8F686F1C97FBB600F1EFF3 /* Tools.storyboard in Resources */,
 				20B988281C9718D100D46ACB /* json.json in Resources */,
+				203BEF141C9834B40090F463 /* LoginPages.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,15 +483,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				203BEF181C983A150090F463 /* LoginViewController.swift in Sources */,
 				0A8F68691C97E4B500F1EFF3 /* LoadingViewController.swift in Sources */,
 				0A8F68741C980F8F00F1EFF3 /* LaunchViewController.swift in Sources */,
+				203BEF221C9864CF0090F463 /* ForgotPwdViewController.swift in Sources */,
+				203BEF161C9837150090F463 /* SPTextField.swift in Sources */,
 				20C260311C8DC63E00938F54 /* ViewController.swift in Sources */,
+				203BEF1A1C9840440090F463 /* SPButton.swift in Sources */,
+				203BEF1E1C9848DF0090F463 /* RegisterViewController.swift in Sources */,
 				20C2602F1C8DC63E00938F54 /* AppDelegate.swift in Sources */,
 				20A566571C8F28E700B09B7E /* SPService.swift in Sources */,
 				0A8F686D1C97E97D00F1EFF3 /* SPTools.swift in Sources */,
 				0A8F68711C98065E00F1EFF3 /* LeftMenuViewController.swift in Sources */,
 				0A8F68621C97C86C00F1EFF3 /* SPNavigationController.swift in Sources */,
 				20C260371C8DC63E00938F54 /* twshopping.xcdatamodeld in Sources */,
+				203BEF1C1C98489C0090F463 /* SPWhiteCornerView.swift in Sources */,
 				0A8F68651C97C89400F1EFF3 /* SPViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

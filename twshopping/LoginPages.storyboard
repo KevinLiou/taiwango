@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="ccQ-7k-3LL">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="ZEV-eq-Kmb" customClass="LoginViewController" customModule="twshopping" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LI2-G3-qTW"/>
+                        <viewControllerLayoutGuide type="bottom" id="UGF-DC-PBO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dAH-Oa-FMw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入帳號" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="9wJ-im-ev0" customClass="SPTextField" customModule="twshopping" customModuleProvider="target">
+                                <rect key="frame" x="190" y="268" width="220" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="DZl-mR-eUV"/>
+                                    <constraint firstAttribute="width" constant="220" id="IRO-BH-lhe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="icon_email"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入密碼" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CT3-Xz-5vw" customClass="SPTextField" customModule="twshopping" customModuleProvider="target">
+                                <rect key="frame" x="190" y="320" width="220" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="EUF-Ub-11o"/>
+                                    <constraint firstAttribute="height" constant="44" id="uTe-zT-lVv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="icon_pwd"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_top_logo" translatesAutoresizingMaskIntoConstraints="NO" id="OX3-tM-9C5">
+                                <rect key="frame" x="198" y="81" width="205" height="135"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="135" id="aqU-uS-yeM"/>
+                                    <constraint firstAttribute="width" constant="205" id="gRE-qU-uF9"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="忘記密碼" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jq7-1q-VTZ">
+                                <rect key="frame" x="250" y="372" width="100" height="17"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="whu-sX-EKh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="TOE-zE-AfY" appends="YES" id="2x9-1L-6Qh"/>
+                                </connections>
+                            </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tcf-ol-ue6" customClass="SPButton" customModule="twshopping" customModuleProvider="target">
+                                <rect key="frame" x="190" y="419" width="220" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="1ok-bD-wRs"/>
+                                    <constraint firstAttribute="width" constant="220" id="MRb-rm-ndU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="登入"/>
+                            </button>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="快速註冊" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYO-SJ-lWN">
+                                <rect key="frame" x="190" y="553" width="100" height="17"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="zBC-s4-M5z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="69N-ru-u89" appends="YES" id="Mtj-cP-1ZF"/>
+                                </connections>
+                            </label>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="略過" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9w-cy-PLh">
+                                <rect key="frame" x="310" y="553" width="100" height="17"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="cc4-SG-wtd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="uqW-bI-ZAI" appends="YES" id="NkY-Zg-jNO"/>
+                                </connections>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.56862745098039214" green="0.6588235294117647" blue="0.81568627450980391" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="OX3-tM-9C5" firstAttribute="centerX" secondItem="dAH-Oa-FMw" secondAttribute="centerX" id="2Xu-fF-aM5"/>
+                            <constraint firstItem="Jq7-1q-VTZ" firstAttribute="centerX" secondItem="dAH-Oa-FMw" secondAttribute="centerX" id="3fu-Ul-0aO"/>
+                            <constraint firstItem="Jq7-1q-VTZ" firstAttribute="top" secondItem="CT3-Xz-5vw" secondAttribute="bottom" constant="8" id="59W-MC-HK7"/>
+                            <constraint firstItem="9wJ-im-ev0" firstAttribute="centerY" secondItem="dAH-Oa-FMw" secondAttribute="centerY" constant="-10" id="Fb6-88-mQf"/>
+                            <constraint firstItem="M9w-cy-PLh" firstAttribute="trailing" secondItem="CT3-Xz-5vw" secondAttribute="trailing" id="Jc9-SA-U4D"/>
+                            <constraint firstItem="IYO-SJ-lWN" firstAttribute="leading" secondItem="CT3-Xz-5vw" secondAttribute="leading" id="SQy-xI-pYL"/>
+                            <constraint firstItem="9wJ-im-ev0" firstAttribute="top" secondItem="OX3-tM-9C5" secondAttribute="bottom" constant="52" id="U66-h8-7vB"/>
+                            <constraint firstItem="Tcf-ol-ue6" firstAttribute="top" secondItem="Jq7-1q-VTZ" secondAttribute="bottom" constant="30" id="VxK-WV-MfG"/>
+                            <constraint firstItem="UGF-DC-PBO" firstAttribute="top" secondItem="IYO-SJ-lWN" secondAttribute="bottom" constant="30" id="cdg-0P-lBb"/>
+                            <constraint firstItem="9wJ-im-ev0" firstAttribute="centerX" secondItem="dAH-Oa-FMw" secondAttribute="centerX" id="hA9-cs-Ejo"/>
+                            <constraint firstItem="CT3-Xz-5vw" firstAttribute="centerX" secondItem="dAH-Oa-FMw" secondAttribute="centerX" id="hNo-kv-UpJ"/>
+                            <constraint firstItem="CT3-Xz-5vw" firstAttribute="top" secondItem="9wJ-im-ev0" secondAttribute="bottom" constant="8" id="olW-6m-RyR"/>
+                            <constraint firstItem="Tcf-ol-ue6" firstAttribute="centerX" secondItem="dAH-Oa-FMw" secondAttribute="centerX" id="uf4-DL-2ah"/>
+                            <constraint firstItem="UGF-DC-PBO" firstAttribute="top" secondItem="M9w-cy-PLh" secondAttribute="bottom" constant="30" id="xpl-7g-eGH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="tnr-tu-aqy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rv6-Uf-gsP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="69N-ru-u89">
+                    <connections>
+                        <action selector="tapGoToRegister:" destination="ZEV-eq-Kmb" id="gNO-Cg-CXO"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="uqW-bI-ZAI">
+                    <connections>
+                        <action selector="tapPassLogin:" destination="ZEV-eq-Kmb" id="9QI-fZ-vxX"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="TOE-zE-AfY">
+                    <connections>
+                        <action selector="tapForgotPassword:" destination="ZEV-eq-Kmb" id="rTD-8k-uDE"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1484" y="362"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="LsX-8x-ix4">
+            <objects>
+                <viewController storyboardIdentifier="RegisterViewController" id="iec-Tg-bgo" customClass="RegisterViewController" customModule="twshopping" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dbp-ul-APN"/>
+                        <viewControllerLayoutGuide type="bottom" id="QJn-bk-PaD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0jU-Yc-JRD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kHJ-2K-8Z2" customClass="SPWhiteCornerView" customModule="twshopping" customModuleProvider="target">
+                                <rect key="frame" x="10" y="30" width="580" height="397"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="姓名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MPa-mK-vql">
+                                        <rect key="frame" x="180" y="21" width="220" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="220" id="Gc2-gS-uyf"/>
+                                            <constraint firstAttribute="height" constant="21" id="pah-ea-euV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="信箱(登入帳號)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVJ-lm-jJ7">
+                                        <rect key="frame" x="180" y="115" width="220" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="lMs-bB-5Mt"/>
+                                            <constraint firstAttribute="width" constant="220" id="tjd-kp-HMf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入姓名" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="01W-iM-KSH" customClass="SPTextField" customModule="twshopping" customModuleProvider="target">
+                                        <rect key="frame" x="180" y="50" width="220" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="220" id="qAV-Lp-C5k"/>
+                                            <constraint firstAttribute="height" constant="44" id="x63-2s-LTn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="icon_name"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入信箱" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="HaQ-0d-xdt" customClass="SPTextField" customModule="twshopping" customModuleProvider="target">
+                                        <rect key="frame" x="180" y="144" width="220" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="bue-8Q-CTR"/>
+                                            <constraint firstAttribute="width" constant="220" id="jDW-Se-h0Z"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="icon_email"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入密碼" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Lej-Ri-RNj" customClass="SPTextField" customModule="twshopping" customModuleProvider="target">
+                                        <rect key="frame" x="180" y="251" width="220" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="220" id="MRt-xh-5p1"/>
+                                            <constraint firstAttribute="height" constant="44" id="apa-l2-Xb2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="icon_pwd"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密碼確認" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="b3a-hZ-8t0" customClass="SPTextField" customModule="twshopping" customModuleProvider="target">
+                                        <rect key="frame" x="180" y="303" width="220" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="220" id="80V-FP-EjG"/>
+                                            <constraint firstAttribute="height" constant="44" id="TQP-G0-X1u"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="icon_pwd"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="密碼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NvA-7c-K62">
+                                        <rect key="frame" x="180" y="222" width="220" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="220" id="LNP-yB-9YG"/>
+                                            <constraint firstAttribute="height" constant="21" id="Y34-Fb-ygX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="IVJ-lm-jJ7" firstAttribute="leading" secondItem="HaQ-0d-xdt" secondAttribute="leading" id="1YA-Dy-AIn"/>
+                                    <constraint firstItem="HaQ-0d-xdt" firstAttribute="top" secondItem="IVJ-lm-jJ7" secondAttribute="bottom" constant="8" id="4Vb-58-EDK"/>
+                                    <constraint firstItem="MPa-mK-vql" firstAttribute="leading" secondItem="01W-iM-KSH" secondAttribute="leading" id="7kD-bF-bsW"/>
+                                    <constraint firstItem="01W-iM-KSH" firstAttribute="top" secondItem="kHJ-2K-8Z2" secondAttribute="top" constant="50" id="Hre-gM-HHB"/>
+                                    <constraint firstAttribute="height" constant="500" id="Kxe-iH-ymL"/>
+                                    <constraint firstItem="HaQ-0d-xdt" firstAttribute="top" secondItem="01W-iM-KSH" secondAttribute="bottom" constant="50" id="NsW-Np-G9W"/>
+                                    <constraint firstItem="Lej-Ri-RNj" firstAttribute="leading" secondItem="HaQ-0d-xdt" secondAttribute="leading" id="gbc-9L-0w9"/>
+                                    <constraint firstItem="01W-iM-KSH" firstAttribute="top" secondItem="MPa-mK-vql" secondAttribute="bottom" constant="8" id="jz7-1d-7Lt"/>
+                                    <constraint firstItem="01W-iM-KSH" firstAttribute="centerX" secondItem="kHJ-2K-8Z2" secondAttribute="centerX" id="kDO-y9-g8Y"/>
+                                    <constraint firstItem="HaQ-0d-xdt" firstAttribute="leading" secondItem="01W-iM-KSH" secondAttribute="leading" id="kmZ-BV-wYA"/>
+                                    <constraint firstItem="Lej-Ri-RNj" firstAttribute="top" secondItem="HaQ-0d-xdt" secondAttribute="bottom" constant="63" id="kz4-nn-kCD"/>
+                                    <constraint firstItem="NvA-7c-K62" firstAttribute="leading" secondItem="Lej-Ri-RNj" secondAttribute="leading" id="qzs-dv-zAD"/>
+                                    <constraint firstItem="b3a-hZ-8t0" firstAttribute="top" secondItem="Lej-Ri-RNj" secondAttribute="bottom" constant="8" id="s3p-1p-JUP"/>
+                                    <constraint firstItem="b3a-hZ-8t0" firstAttribute="leading" secondItem="Lej-Ri-RNj" secondAttribute="leading" id="skt-Vq-Jy6"/>
+                                    <constraint firstAttribute="bottom" secondItem="b3a-hZ-8t0" secondAttribute="bottom" constant="50" id="uIj-dF-9rQ"/>
+                                    <constraint firstItem="Lej-Ri-RNj" firstAttribute="top" secondItem="NvA-7c-K62" secondAttribute="bottom" constant="8" id="ut5-Rf-jrE"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Kxe-iH-ymL"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.56862745098039214" green="0.6588235294117647" blue="0.81568627450980391" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="kHJ-2K-8Z2" firstAttribute="leading" secondItem="0jU-Yc-JRD" secondAttribute="leading" constant="10" id="Dj6-Sy-Fg8"/>
+                            <constraint firstItem="kHJ-2K-8Z2" firstAttribute="top" secondItem="dbp-ul-APN" secondAttribute="bottom" constant="10" id="PZK-ty-vF0"/>
+                            <constraint firstAttribute="trailing" secondItem="kHJ-2K-8Z2" secondAttribute="trailing" constant="10" id="Scm-SS-rW4"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UGH-rL-0Pa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2163" y="362"/>
+        </scene>
+        <!--Forgot Pwd View Controller-->
+        <scene sceneID="DUb-SP-pwa">
+            <objects>
+                <viewController storyboardIdentifier="ForgotPwdViewController" id="eff-xk-cbf" customClass="ForgotPwdViewController" customModule="twshopping" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kFb-Vc-Fns"/>
+                        <viewControllerLayoutGuide type="bottom" id="rWv-rF-i8G"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fWn-xG-gtl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mlp-Jk-rGa" customClass="SPWhiteCornerView" customModule="twshopping" customModuleProvider="target">
+                                <rect key="frame" x="10" y="30" width="580" height="250"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="信箱(登入帳號)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rc8-zr-Hm4">
+                                        <rect key="frame" x="180" y="21" width="220" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="220" id="446-mx-6nk"/>
+                                            <constraint firstAttribute="height" constant="21" id="WEH-If-MG9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入信箱" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1i0-cb-pXW" customClass="SPTextField" customModule="twshopping" customModuleProvider="target">
+                                        <rect key="frame" x="180" y="50" width="220" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="LBC-cJ-tst"/>
+                                            <constraint firstAttribute="width" constant="220" id="vif-xK-fdb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="icon_email"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* 新的密碼將會寄到您的信箱" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6mt-e1-Iok">
+                                        <rect key="frame" x="180" y="214" width="220" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="220" id="PAW-XC-5ER"/>
+                                            <constraint firstAttribute="height" constant="21" id="fco-dR-x9j"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="1i0-cb-pXW" firstAttribute="top" secondItem="mlp-Jk-rGa" secondAttribute="top" constant="50" id="28Z-Xv-NHX"/>
+                                    <constraint firstItem="1i0-cb-pXW" firstAttribute="top" secondItem="rc8-zr-Hm4" secondAttribute="bottom" constant="8" id="681-o0-BsA"/>
+                                    <constraint firstItem="6mt-e1-Iok" firstAttribute="trailing" secondItem="1i0-cb-pXW" secondAttribute="trailing" id="Opp-3g-CU1"/>
+                                    <constraint firstAttribute="height" constant="250" id="myV-EM-mwB"/>
+                                    <constraint firstItem="1i0-cb-pXW" firstAttribute="centerX" secondItem="mlp-Jk-rGa" secondAttribute="centerX" id="qaP-EI-sAI"/>
+                                    <constraint firstAttribute="bottom" secondItem="6mt-e1-Iok" secondAttribute="bottom" constant="15" id="reR-dP-x87"/>
+                                    <constraint firstItem="rc8-zr-Hm4" firstAttribute="leading" secondItem="1i0-cb-pXW" secondAttribute="leading" id="zJ3-5x-uEv"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.56862745100000001" green="0.6588235294" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="mlp-Jk-rGa" secondAttribute="trailing" constant="10" id="IsX-kZ-yXQ"/>
+                            <constraint firstItem="mlp-Jk-rGa" firstAttribute="top" secondItem="kFb-Vc-Fns" secondAttribute="bottom" constant="10" id="VGX-gh-AQD"/>
+                            <constraint firstItem="mlp-Jk-rGa" firstAttribute="leading" secondItem="fWn-xG-gtl" secondAttribute="leading" constant="10" id="eiu-7S-uGI"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i1x-uL-LZz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2813" y="362"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VFo-HO-Oth">
+            <objects>
+                <navigationController storyboardIdentifier="NavLoginViewController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="qZk-FJ-Wab" customClass="SPNavigationController" customModule="twshopping" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nu0-w0-Hjs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZEV-eq-Kmb" kind="relationship" relationship="rootViewController" id="UUq-w0-eDM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xZd-Mv-qC3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="672" y="362"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon_email" width="26" height="20"/>
+        <image name="icon_name" width="20" height="28"/>
+        <image name="icon_pwd" width="21" height="28"/>
+        <image name="login_top_logo" width="205" height="135"/>
+    </resources>
+</document>

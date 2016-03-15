@@ -18,7 +18,7 @@ class SPTools {
     
     static func hideLoadingOnViewController(viewController: UIViewController){
         if (viewController.presentedViewController?.isKindOfClass(LoadingViewController) == true) {
-            viewController.dismissViewControllerAnimated(true, completion: nil)
+            viewController.dismissViewControllerAnimated(false, completion: nil)
         }
         
     }

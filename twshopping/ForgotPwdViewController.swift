@@ -1,30 +1,19 @@
 //
-//  SPViewController.swift
+//  ForgotPwdViewController.swift
 //  twshopping
 //
-//  Created by KevinLiou on 2016/3/15.
+//  Created by Kevin on 2016/3/15.
 //  Copyright © 2016年 KevinLiou. All rights reserved.
 //
 
 import UIKit
 
-class SPViewController: UIViewController {
+class ForgotPwdViewController: SPViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-//        let bgImageView = UIImageView(frame: self.view.bounds)
-//        bgImageView.image = UIImage(named: "bg")
-//        self.view.addSubview(bgImageView)
-        
-        if self.navigationController?.viewControllers.count > 1 {
-            
-            let image = UIImage(named: "icon_back")?.imageWithRenderingMode(.AlwaysOriginal)
-            let backButtonItem = UIBarButtonItem(image: image, style: .Plain, target: self.navigationController, action: Selector("popViewControllerAnimated:"))
-            self.navigationItem.leftBarButtonItem = backButtonItem;
-        }
-        
     }
 
     override func didReceiveMemoryWarning() {

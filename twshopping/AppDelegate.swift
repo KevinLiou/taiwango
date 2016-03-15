@@ -27,20 +27,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.registerUserNotificationSettings(pushNotificationSettings)
         application.registerForRemoteNotifications()
         
-        
-        
-        
-        
-//        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-//        let navigationController = storyBoard.instantiateViewControllerWithIdentifier("SPNavigationController")
-//        
-//        let leftMenuViewController = storyBoard.instantiateViewControllerWithIdentifier("LeftMenuViewController")
-//        let sideMenuViewController = RESideMenu(contentViewController: navigationController, leftMenuViewController: leftMenuViewController, rightMenuViewController: nil)
-//        sideMenuViewController.backgroundImage = UIImage(named: "Launch")
-//        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-//        self.window?.rootViewController = sideMenuViewController
-//        self.window?.makeKeyAndVisible()
-        
         return true
     }
     
@@ -81,6 +67,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.saveContext()
     }
 
+    
+    // MARK: - other 
+    internal func entryMainViewController(){
+        
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let navigationController = storyBoard.instantiateViewControllerWithIdentifier("SPNavigationController")
+        
+        let leftMenuViewController = storyBoard.instantiateViewControllerWithIdentifier("LeftMenuViewController")
+        let sideMenuViewController = RESideMenu(contentViewController: navigationController, leftMenuViewController: leftMenuViewController, rightMenuViewController: nil)
+        sideMenuViewController.backgroundImage = UIImage(named: "Launch")
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window?.rootViewController = sideMenuViewController
+        self.window?.makeKeyAndVisible()
+        
+    }
+    
+    
+    func entryLoginViewController(){
+        let loginPages = UIStoryboard(name: "LoginPages", bundle: nil)
+        let loginViewController = loginPages.instantiateViewControllerWithIdentifier("NavLoginViewController")
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window?.rootViewController = loginViewController
+        self.window?.makeKeyAndVisible()
+    }
+    
     // MARK: - Core Data stack
 
     lazy var applicationDocumentsDirectory: NSURL = {

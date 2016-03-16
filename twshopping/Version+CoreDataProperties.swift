@@ -2,7 +2,7 @@
 //  Version+CoreDataProperties.swift
 //  twshopping
 //
-//  Created by KevinLiou on 2016/3/16.
+//  Created by Kevin on 2016/3/16.
 //  Copyright © 2016年 KevinLiou. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -18,5 +18,6 @@ extension Version {
     @NSManaged var team: String?
     @NSManaged var type: NSNumber?
     @NSManaged var version: String?
+    @NSManaged var policy: String?
 
 }

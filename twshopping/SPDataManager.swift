@@ -36,7 +36,7 @@ class SPDataManager {
             version.type = NSNumber(integer: Int(type))
             version.info = app_info_dic["info"] as? String
             version.team = app_info_dic["team"] as? String
-            
+            version.policy = app_info_dic["policy"] as? String
             
             //store
             let stores = value["store"] as! [[String:AnyObject]]
@@ -61,6 +61,7 @@ class SPDataManager {
             let cates = value["cate"] as! [[String:AnyObject]]
             for dic_cate in cates {
                 
+                //cate
                 let cate = NSEntityDescription.insertNewObjectForEntityForName("Cate", inManagedObjectContext: context) as! Cate
                 cate.language = language
                 cate.name = dic_cate["name"] as? String
@@ -68,8 +69,13 @@ class SPDataManager {
                 
                 
                 //products
-                let products = dic_cate["products"] as! [[String:AnyObject]]
-                for dic_product in products {
+                let products = dic_cate["products"] as? [[String:AnyObject]]
+                
+                guard let p = products else{
+                    continue
+                }
+                
+                for dic_product in p {
                     
                     let product = NSEntityDescription.insertNewObjectForEntityForName("Product", inManagedObjectContext: context) as! Product
                     product.product_id = dic_product["product_id"] as? Int
@@ -82,29 +88,21 @@ class SPDataManager {
                     product.language = language
                     product.cate = cate
                     
-                    let priduct_store_id = dic_product["store_id"] as? Int
-                    if priduct_store_id != nil {
-                        let store_predicate = NSPredicate(format: "store_id = %@", priduct_store_id!)
+                    let product_store_id = dic_product["store_id"] as? Int
+                    if (product_store_id != nil) {
+                        let store_predicate = NSPredicate(format: "store_id = \(product_store_id!)")
                         let stores = fetchStoreWithPredicate(predicate: store_predicate)
                         product.store = stores.first
                     }
                 }
                 
-                /*Int 不要是0 */
+                
                 
             }
             
-            
-            
-            
-            
-            
-//            let product = value["product"]
-            
         }
         
-        
-//        self.appDelegate.saveContext()
+        self.appDelegate.saveContext()
     }
     
     func fetchStoreWithPredicate(predicate predicate:NSPredicate?) -> [Store] {

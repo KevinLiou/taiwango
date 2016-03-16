@@ -44,6 +44,7 @@
     </entity>
     <entity name="Version" representedClassName=".Version" syncable="YES">
         <attribute name="info" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="policy" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="team" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="version" optional="YES" attributeType="String" syncable="YES"/>
@@ -54,6 +55,6 @@
         <element name="Product" positionX="592" positionY="266" width="128" height="193"/>
         <element name="Profile" positionX="-0" positionY="-9" width="128" height="105"/>
         <element name="Store" positionX="70" positionY="347" width="128" height="193"/>
-        <element name="Version" positionX="0" positionY="126" width="128" height="103"/>
+        <element name="Version" positionX="0" positionY="126" width="128" height="120"/>
     </elements>
 </model>

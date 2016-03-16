@@ -21,8 +21,6 @@
 		0A8F68741C980F8F00F1EFF3 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8F68731C980F8F00F1EFF3 /* LaunchViewController.swift */; };
 		0AD3DB4B1C99693F0055213B /* Language+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD3DB3F1C99693F0055213B /* Language+CoreDataProperties.swift */; };
 		0AD3DB4C1C99693F0055213B /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD3DB401C99693F0055213B /* Language.swift */; };
-		0AD3DB4D1C99693F0055213B /* Version+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD3DB411C99693F0055213B /* Version+CoreDataProperties.swift */; };
-		0AD3DB4E1C99693F0055213B /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD3DB421C99693F0055213B /* Version.swift */; };
 		0AD3DB4F1C99693F0055213B /* Cate+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD3DB431C99693F0055213B /* Cate+CoreDataProperties.swift */; };
 		0AD3DB501C99693F0055213B /* Cate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD3DB441C99693F0055213B /* Cate.swift */; };
 		0AD3DB511C99693F0055213B /* Profile+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD3DB451C99693F0055213B /* Profile+CoreDataProperties.swift */; };
@@ -31,6 +29,8 @@
 		0AD3DB541C99693F0055213B /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD3DB481C99693F0055213B /* Product.swift */; };
 		0AD3DB551C99693F0055213B /* Store+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD3DB491C99693F0055213B /* Store+CoreDataProperties.swift */; };
 		0AD3DB561C99693F0055213B /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD3DB4A1C99693F0055213B /* Store.swift */; };
+		2006FCFF1C999183004759FE /* Version+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2006FCFD1C999183004759FE /* Version+CoreDataProperties.swift */; };
+		2006FD001C999183004759FE /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2006FCFE1C999183004759FE /* Version.swift */; };
 		203BEF161C9837150090F463 /* SPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203BEF151C9837150090F463 /* SPTextField.swift */; };
 		203BEF181C983A150090F463 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203BEF171C983A150090F463 /* LoginViewController.swift */; };
 		203BEF1A1C9840440090F463 /* SPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203BEF191C9840440090F463 /* SPButton.swift */; };
@@ -89,8 +89,6 @@
 		0A8F68731C980F8F00F1EFF3 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		0AD3DB3F1C99693F0055213B /* Language+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Language+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0AD3DB401C99693F0055213B /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
-		0AD3DB411C99693F0055213B /* Version+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Version+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		0AD3DB421C99693F0055213B /* Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
 		0AD3DB431C99693F0055213B /* Cate+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Cate+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0AD3DB441C99693F0055213B /* Cate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cate.swift; sourceTree = "<group>"; };
 		0AD3DB451C99693F0055213B /* Profile+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -99,6 +97,8 @@
 		0AD3DB481C99693F0055213B /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		0AD3DB491C99693F0055213B /* Store+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Store+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0AD3DB4A1C99693F0055213B /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		2006FCFD1C999183004759FE /* Version+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Version+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2006FCFE1C999183004759FE /* Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
 		203BEF151C9837150090F463 /* SPTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTextField.swift; sourceTree = "<group>"; };
 		203BEF171C983A150090F463 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		203BEF191C9840440090F463 /* SPButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPButton.swift; sourceTree = "<group>"; };
@@ -230,8 +230,6 @@
 			children = (
 				0AD3DB3F1C99693F0055213B /* Language+CoreDataProperties.swift */,
 				0AD3DB401C99693F0055213B /* Language.swift */,
-				0AD3DB411C99693F0055213B /* Version+CoreDataProperties.swift */,
-				0AD3DB421C99693F0055213B /* Version.swift */,
 				0AD3DB431C99693F0055213B /* Cate+CoreDataProperties.swift */,
 				0AD3DB441C99693F0055213B /* Cate.swift */,
 				0AD3DB451C99693F0055213B /* Profile+CoreDataProperties.swift */,
@@ -240,6 +238,8 @@
 				0AD3DB481C99693F0055213B /* Product.swift */,
 				0AD3DB491C99693F0055213B /* Store+CoreDataProperties.swift */,
 				0AD3DB4A1C99693F0055213B /* Store.swift */,
+				2006FCFD1C999183004759FE /* Version+CoreDataProperties.swift */,
+				2006FCFE1C999183004759FE /* Version.swift */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -546,23 +546,23 @@
 				0AD3DB501C99693F0055213B /* Cate.swift in Sources */,
 				203BEF1E1C9848DF0090F463 /* RegisterViewController.swift in Sources */,
 				20C2602F1C8DC63E00938F54 /* AppDelegate.swift in Sources */,
+				2006FD001C999183004759FE /* Version.swift in Sources */,
 				20A566571C8F28E700B09B7E /* SPService.swift in Sources */,
 				0A7DEB241C99074D00D82329 /* LeftMenuCell.swift in Sources */,
 				0A8F686D1C97E97D00F1EFF3 /* SPTools.swift in Sources */,
 				0AD3DB541C99693F0055213B /* Product.swift in Sources */,
 				0AD3DB521C99693F0055213B /* Profile.swift in Sources */,
 				0AD3DB561C99693F0055213B /* Store.swift in Sources */,
+				2006FCFF1C999183004759FE /* Version+CoreDataProperties.swift in Sources */,
 				0A8F68711C98065E00F1EFF3 /* LeftMenuViewController.swift in Sources */,
 				0A8F68621C97C86C00F1EFF3 /* SPNavigationController.swift in Sources */,
 				0AD3DB4F1C99693F0055213B /* Cate+CoreDataProperties.swift in Sources */,
 				0AD3DB551C99693F0055213B /* Store+CoreDataProperties.swift in Sources */,
 				0AD3DB531C99693F0055213B /* Product+CoreDataProperties.swift in Sources */,
 				20C260371C8DC63E00938F54 /* twshopping.xcdatamodeld in Sources */,
-				0AD3DB4D1C99693F0055213B /* Version+CoreDataProperties.swift in Sources */,
 				203BEF1C1C98489C0090F463 /* SPWhiteCornerView.swift in Sources */,
 				0A38EC3B1C9913CC0001117A /* SPBlackView.swift in Sources */,
 				0A8F68651C97C89400F1EFF3 /* SPViewController.swift in Sources */,
-				0AD3DB4E1C99693F0055213B /* Version.swift in Sources */,
 				0AD3DB4C1C99693F0055213B /* Language.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

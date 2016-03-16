@@ -2,7 +2,7 @@
 //  Version.swift
 //  twshopping
 //
-//  Created by KevinLiou on 2016/3/16.
+//  Created by Kevin on 2016/3/16.
 //  Copyright © 2016年 KevinLiou. All rights reserved.
 //
 

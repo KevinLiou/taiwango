@@ -16,7 +16,7 @@ extension Cate {
 
     @NSManaged var cate_id: NSNumber?
     @NSManaged var name: String?
-    @NSManaged var product: NSSet?
     @NSManaged var language: Language?
+    @NSManaged var product: NSSet?
 
 }

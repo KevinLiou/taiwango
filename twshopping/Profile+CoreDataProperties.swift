@@ -14,9 +14,9 @@ import CoreData
 
 extension Profile {
 
-    @NSManaged var email: String?
-    @NSManaged var name: String?
     @NSManaged var address: String?
+    @NSManaged var email: String?
     @NSManaged var mobile: String?
+    @NSManaged var name: String?
 
 }

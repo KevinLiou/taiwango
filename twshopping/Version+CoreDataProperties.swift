@@ -14,9 +14,9 @@ import CoreData
 
 extension Version {
 
-    @NSManaged var version: String?
-    @NSManaged var type: NSNumber?
     @NSManaged var info: String?
     @NSManaged var team: String?
+    @NSManaged var type: NSNumber?
+    @NSManaged var version: String?
 
 }

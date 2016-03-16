@@ -27,18 +27,21 @@ class LaunchViewController: UIViewController {
             
             //load data
             let bundle = NSBundle.mainBundle()
-            let path = bundle.pathForResource("json", ofType: "json")
-            
-            do{
-                let jsonData = NSData(contentsOfFile: path!) //try String(contentsOfFile: path!, encoding: NSUTF8StringEncoding)
-                
-                if let data = try NSJSONSerialization.JSONObjectWithData(jsonData!, options: .MutableLeaves) as? [String:String] {
-                    
+            if let path = bundle.pathForResource("json", ofType: "json") {
+                if let jsonData = NSData(contentsOfFile: path) {
+                    do{
+                        
+                        if let data = try NSJSONSerialization.JSONObjectWithData(jsonData, options: .MutableLeaves) as? [String:[String:[AnyObject]]] {
+                            SPDataManager.sharedInstance.insertAllData(data: data)
+                        }
+                        
+                    } catch {
+                        //error
+                    }
                 }
-                
-            } catch {
-                exit(0)
             }
+            
+            
             
             //登入過
             //...

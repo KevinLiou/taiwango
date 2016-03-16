@@ -14,15 +14,15 @@ import CoreData
 
 extension Product {
 
-    @NSManaged var product_id: NSNumber?
     @NSManaged var cate_id: NSNumber?
-    @NSManaged var name: String?
-    @NSManaged var image_urls: String?
-    @NSManaged var store_id: NSNumber?
-    @NSManaged var product_key: String?
     @NSManaged var desc: String?
-    @NSManaged var cate: NSManagedObject?
+    @NSManaged var image_urls: String?
+    @NSManaged var name: String?
+    @NSManaged var product_id: NSNumber?
+    @NSManaged var product_key: String?
+    @NSManaged var store_id: NSNumber?
+    @NSManaged var cate: Cate?
     @NSManaged var store: Store?
-    @NSManaged var language: NSManagedObject?
+    @NSManaged var language: Language?
 
 }

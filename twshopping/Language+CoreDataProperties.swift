@@ -15,5 +15,8 @@ import CoreData
 extension Language {
 
     @NSManaged var lan: String?
+    @NSManaged var cate: NSSet?
+    @NSManaged var product: NSSet?
+    @NSManaged var store: NSSet?
 
 }

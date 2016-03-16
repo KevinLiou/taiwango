@@ -14,15 +14,15 @@ import CoreData
 
 extension Store {
 
-    @NSManaged var store_id: NSNumber?
-    @NSManaged var name: String?
-    @NSManaged var desc: String?
-    @NSManaged var mail: String?
     @NSManaged var contact: String?
-    @NSManaged var mobile: String?
-    @NSManaged var phone: String?
+    @NSManaged var desc: String?
     @NSManaged var info: String?
+    @NSManaged var mail: String?
+    @NSManaged var mobile: String?
+    @NSManaged var name: String?
+    @NSManaged var phone: String?
+    @NSManaged var store_id: NSNumber?
     @NSManaged var product: NSSet?
-    @NSManaged var language: NSManagedObject?
+    @NSManaged var language: Language?
 
 }

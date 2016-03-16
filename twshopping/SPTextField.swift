@@ -11,23 +11,18 @@ import UIKit
 @IBDesignable
 class SPTextField: UITextField {
 
-//    required init?(coder aDecoder: NSCoder) {
-//        super.init(coder: aDecoder)
-//        let emailImageView = UIImageView(image: UIImage(named: "icon_email"))
-//        emailImageView.frame = CGRectMake(0, 0, emailImageView.image!.size.width + 10.0, emailImageView.image!.size.height)
-//        emailImageView.contentMode = .Center
-//        self.leftView = emailImageView
-//        self.leftViewMode = .Always
-//    }
-//    
-//    override init(frame: CGRect) {
-//        super.init(frame: frame)
-//        let emailImageView = UIImageView(image: UIImage(named: "icon_email"))
-//        emailImageView.frame = CGRectMake(0, 0, emailImageView.image!.size.width + 10.0, emailImageView.image!.size.height)
-//        emailImageView.contentMode = .Center
-//        self.leftView = emailImageView
-//        self.leftViewMode = .Always
-//    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.attributedPlaceholder = NSAttributedString(string: self.placeholder!, attributes: [NSForegroundColorAttributeName: UIColor(white: 1.0, alpha: 0.9)])
+        self.backgroundColor = UIColor.clearColor()
+        self.textColor = UIColor.whiteColor()
+        self.font = UIFont.preferredFontForTextStyle(UIFontTextStyleFootnote)
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
 
     @IBInspectable var image : UIImage?
     
@@ -35,13 +30,9 @@ class SPTextField: UITextField {
     // An empty implementation adversely affects performance during animation.
     override func drawRect(rect: CGRect) {
         // Drawing code
-        self.attributedPlaceholder = NSAttributedString(string: self.placeholder!, attributes: [NSForegroundColorAttributeName: UIColor(white: 1.0, alpha: 0.9)])
         self.layer.borderWidth = 1.0
         self.layer.borderColor = UIColor.whiteColor().CGColor
         self.layer.cornerRadius = self.frame.size.height/2.0
-        self.backgroundColor = UIColor.clearColor()
-        self.textColor = UIColor.whiteColor()
-        self.font = UIFont.boldSystemFontOfSize(14.0) 
         
         if image != nil {
             let emailImageView = UIImageView(image: image)

@@ -1,0 +1,48 @@
+
+/* Class = "UITextField"; placeholder = "請輸入姓名"; ObjectID = "01W-iM-KSH"; */
+"01W-iM-KSH.placeholder" = "請輸入姓名";
+
+/* Class = "UITextField"; placeholder = "請輸入信箱"; ObjectID = "1i0-cb-pXW"; */
+"1i0-cb-pXW.placeholder" = "請輸入信箱";
+
+/* Class = "UILabel"; text = "* 新的密碼將會寄到您的信箱"; ObjectID = "6mt-e1-Iok"; */
+"6mt-e1-Iok.text" = "* 新的密碼將會寄到您的信箱";
+
+/* Class = "UITextField"; placeholder = "請輸入帳號"; ObjectID = "9wJ-im-ev0"; */
+"9wJ-im-ev0.placeholder" = "請輸入帳號";
+
+/* Class = "UITextField"; placeholder = "請輸入密碼"; ObjectID = "CT3-Xz-5vw"; */
+"CT3-Xz-5vw.placeholder" = "請輸入密碼";
+
+/* Class = "UITextField"; placeholder = "請輸入信箱"; ObjectID = "HaQ-0d-xdt"; */
+"HaQ-0d-xdt.placeholder" = "請輸入信箱";
+
+/* Class = "UILabel"; text = "信箱(登入帳號)"; ObjectID = "IVJ-lm-jJ7"; */
+"IVJ-lm-jJ7.text" = "信箱(登入帳號)";
+
+/* Class = "UILabel"; text = "快速註冊"; ObjectID = "IYO-SJ-lWN"; */
+"IYO-SJ-lWN.text" = "快速註冊";
+
+/* Class = "UILabel"; text = "忘記密碼"; ObjectID = "Jq7-1q-VTZ"; */
+"Jq7-1q-VTZ.text" = "忘記密碼";
+
+/* Class = "UITextField"; placeholder = "請輸入密碼"; ObjectID = "Lej-Ri-RNj"; */
+"Lej-Ri-RNj.placeholder" = "請輸入密碼";
+
+/* Class = "UILabel"; text = "略過"; ObjectID = "M9w-cy-PLh"; */
+"M9w-cy-PLh.text" = "略過";
+
+/* Class = "UILabel"; text = "姓名"; ObjectID = "MPa-mK-vql"; */
+"MPa-mK-vql.text" = "姓名";
+
+/* Class = "UILabel"; text = "密碼"; ObjectID = "NvA-7c-K62"; */
+"NvA-7c-K62.text" = "密碼";
+
+/* Class = "UIButton"; normalTitle = "登入"; ObjectID = "Tcf-ol-ue6"; */
+"Tcf-ol-ue6.normalTitle" = "登入";
+
+/* Class = "UITextField"; placeholder = "密碼確認"; ObjectID = "b3a-hZ-8t0"; */
+"b3a-hZ-8t0.placeholder" = "密碼確認";
+
+/* Class = "UILabel"; text = "信箱(登入帳號)"; ObjectID = "rc8-zr-Hm4"; */
+"rc8-zr-Hm4.text" = "信箱(登入帳號)";

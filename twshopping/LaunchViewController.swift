@@ -24,17 +24,32 @@ class LaunchViewController: UIViewController {
         let time: NSTimeInterval = 3.0
         let delay = dispatch_time(DISPATCH_TIME_NOW, Int64(time * Double(NSEC_PER_SEC)))
         dispatch_after(delay, dispatch_get_main_queue()) { () -> Void in
-            SPTools.hideLoadingOnViewController(self)
+            
+            //load data
+            let bundle = NSBundle.mainBundle()
+            let path = bundle.pathForResource("json", ofType: "json")
+            
+            do{
+                let jsonData = NSData(contentsOfFile: path!) //try String(contentsOfFile: path!, encoding: NSUTF8StringEncoding)
+                
+                if let data = try NSJSONSerialization.JSONObjectWithData(jsonData!, options: .MutableLeaves) as? [String:String] {
+                    
+                }
+                
+            } catch {
+                exit(0)
+            }
             
             //登入過
             //...
-            
             
             
             //未登入
             //...
             let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
             appDelegate.entryLoginViewController()
+            
+            SPTools.hideLoadingOnViewController(self)
         }
         
     }

@@ -16,10 +16,21 @@ class SPWhiteTextLabel: UILabel {
         super.init(coder: aDecoder)
         self.textColor = UIColor.whiteColor()
         self.font = UIFont.preferredFontForTextStyle(UIFontTextStyleFootnote)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "fontSizeChanged:", name: UIContentSizeCategoryDidChangeNotification, object: nil)
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+    }
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
+    // MARK : observer
+    func fontSizeChanged(notification:NSNotification) {
+        self.font = UIFont.preferredFontForTextStyle(UIFontTextStyleFootnote)
     }
     
     /*

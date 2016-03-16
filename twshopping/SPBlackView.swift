@@ -14,7 +14,7 @@ class SPBlackView: SPWhiteCornerView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        self.backgroundColor = UIColor(colorLiteralRed: 0, green: 0, blue: 0, alpha: 0.3)
+        self.backgroundColor = UIColor(colorLiteralRed: 0, green: 0, blue: 0, alpha: 0.6)
         self.clipsToBounds = true
         self.opaque = false
         

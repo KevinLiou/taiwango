@@ -18,6 +18,8 @@ class SPTextField: UITextField {
         self.backgroundColor = UIColor.clearColor()
         self.textColor = UIColor.whiteColor()
         self.font = UIFont.preferredFontForTextStyle(UIFontTextStyleFootnote)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "fontSizeChanged:", name: UIContentSizeCategoryDidChangeNotification, object: nil)
     }
     
     override init(frame: CGRect) {
@@ -43,5 +45,13 @@ class SPTextField: UITextField {
         }
     }
 
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
+    // MARK : observer
+    func fontSizeChanged(notification:NSNotification) {
+        self.font = UIFont.preferredFontForTextStyle(UIFontTextStyleFootnote)
+    }
 
 }

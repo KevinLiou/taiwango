@@ -14,13 +14,12 @@ class SPButton: UIButton {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-//        self.textColor = UIColor.whiteColor()
-//        self.font = UIFont.preferredFontForTextStyle(UIFontTextStyleFootnote)
         self.titleLabel?.textColor = UIColor.whiteColor()
         self.titleLabel?.font = UIFont.preferredFontForTextStyle(UIFontTextStyleFootnote)
         self.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.3)
         self.clipsToBounds = true
 
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "fontSizeChanged:", name: UIContentSizeCategoryDidChangeNotification, object: nil)
     }
 
     override init(frame: CGRect) {
@@ -37,5 +36,13 @@ class SPButton: UIButton {
         self.layer.cornerRadius = self.frame.size.height/2.0
     }
     
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
+    // MARK : Observer
+    func fontSizeChanged(notification:NSNotification) {
+        self.titleLabel?.font = UIFont.preferredFontForTextStyle(UIFontTextStyleFootnote)
+    }
 
 }

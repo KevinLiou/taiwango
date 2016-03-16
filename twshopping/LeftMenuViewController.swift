@@ -11,6 +11,17 @@ import UIKit
 class LeftMenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
+    let sections:[String] = ["所有商品" ,"系統公告" ,"個人/訂單資訊" ,"應用程式聲明、政策" ,"開發團隊資訊"]
+    var cates:[Cate]? = {
+
+//        let predicate = NSPredicate(format: "language.lan like \(SPTools.getPreferredLanguages())")
+                let predicate = NSPredicate(format: "language.lan = '\(SPTools.getPreferredLanguages())'")
+        let result = SPDataManager.sharedInstance.fetchCateWithPredicate(predicate: predicate)
+        
+        return result
+    }()
+    var showCate = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +33,7 @@ class LeftMenuViewController: UIViewController, UITableViewDelegate, UITableView
         
         tableView.estimatedRowHeight = 49.0
         tableView.rowHeight = UITableViewAutomaticDimension
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,11 +44,15 @@ class LeftMenuViewController: UIViewController, UITableViewDelegate, UITableView
     // MARK: - Table view data source
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        return sections.count
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 30
+        if section == 0 {
+            return showCate ? ((cates?.count)! + 1) : 1
+        }else{
+            return 1
+        }
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -45,13 +61,27 @@ class LeftMenuViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        if indexPath.row%5 == 0{
-            let cell = tableView.dequeueReusableCellWithIdentifier("LeftMenuCell", forIndexPath: indexPath)
+        if indexPath.section == 0 {
             
-            return cell
+            if indexPath.row == 0 {
+                let cell = tableView.dequeueReusableCellWithIdentifier("LeftMenuCell", forIndexPath: indexPath)
+                let titleLabel = cell.contentView.viewWithTag(1000) as! UILabel
+                titleLabel.text = sections[indexPath.section]
+                return cell
+            }else{
+                let cell = tableView.dequeueReusableCellWithIdentifier("LeftMenuDetailCell", forIndexPath: indexPath)
+                let titleLabel = cell.contentView.viewWithTag(1000) as! UILabel
+                
+                let cate = cates![(indexPath.row-1)]
+                titleLabel.text = cate.name
+                return cell
+            }
+            
+            
         }else{
-            let cell = tableView.dequeueReusableCellWithIdentifier("LeftMenuDetailCell", forIndexPath: indexPath)
-            
+            let cell = tableView.dequeueReusableCellWithIdentifier("LeftMenuCell", forIndexPath: indexPath)
+            let titleLabel = cell.contentView.viewWithTag(1000) as! UILabel
+            titleLabel.text = sections[indexPath.section]
             return cell
         }
 
@@ -59,7 +89,25 @@ class LeftMenuViewController: UIViewController, UITableViewDelegate, UITableView
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        
+        if indexPath.section == 0 && indexPath.row == 0 {
+            showCate = !showCate
+            
+            var indexPaths:[NSIndexPath] = []
+            for (index, _) in cates!.enumerate() {
+                indexPaths.append(NSIndexPath(forRow: index+1, inSection: 0))
+            }
+            
+            if showCate {
+                tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Bottom)
+            }else{
+                tableView.deleteRowsAtIndexPaths(indexPaths, withRowAnimation: .Top)
+            }
+            
+        }else{
+            
+            //        self.sideMenuViewController.setContentViewController(<#T##contentViewController: UIViewController!##UIViewController!#>, animated: true)
+            self.sideMenuViewController.hideMenuViewController()
+        }
         
     }
     

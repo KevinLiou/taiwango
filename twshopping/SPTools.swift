@@ -22,4 +22,15 @@ class SPTools {
         }
         
     }
+    
+    static func getPreferredLanguages() -> String {
+        let language = NSLocale.preferredLanguages()[0]
+        if language.hasPrefix("zh-Hans") {
+            //簡體
+            return "ch"
+        }else{
+            //繁體
+            return "tw"
+        }
+    }
 }

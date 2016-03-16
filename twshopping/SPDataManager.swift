@@ -19,7 +19,8 @@ class SPDataManager {
     }
     
     func insertAllData(data data:[String:[String:[AnyObject]]]){
-//        print(data)
+        
+        deleteLanguageWithPredicate(predicate: nil)
         
         for (lan, value) in data {
             //languages
@@ -92,7 +93,7 @@ class SPDataManager {
                     if (product_store_id != nil) {
                         let store_predicate = NSPredicate(format: "store_id = \(product_store_id!)")
                         let stores = fetchStoreWithPredicate(predicate: store_predicate)
-                        product.store = stores.first
+                        product.store = stores?.first
                     }
                 }
                 
@@ -105,7 +106,8 @@ class SPDataManager {
         self.appDelegate.saveContext()
     }
     
-    func fetchStoreWithPredicate(predicate predicate:NSPredicate?) -> [Store] {
+    
+    func fetchStoreWithPredicate(predicate predicate:NSPredicate?) -> [Store]? {
         
         let request = NSFetchRequest(entityName: "Store")
         if predicate != nil {
@@ -116,9 +118,51 @@ class SPDataManager {
             let result = try context.executeFetchRequest(request) as! [Store]
             return result
         }catch{
-            return []
+            return nil
         }
     }
+    
+    func fetchCateWithPredicate(predicate predicate:NSPredicate?) -> [Cate]? {
+        let request = NSFetchRequest(entityName: "Cate")
+        if predicate != nil {
+            request.predicate = predicate
+        }
+        
+        let sortDesc = NSSortDescriptor(key: "cate_id", ascending: true)
+        request.sortDescriptors = [sortDesc]
+        
+        do{
+            let result = try context.executeFetchRequest(request) as! [Cate]
+            return result
+        }catch{
+            return nil
+        }
+    }
+    
+    func fetchLanguageWithPredicate(predicate predicate:NSPredicate?) -> [Language]? {
+        let request = NSFetchRequest(entityName: "Language")
+        if predicate != nil {
+            request.predicate = predicate
+        }
+        
+        do{
+            let result = try context.executeFetchRequest(request) as! [Language]
+            return result
+        }catch{
+            return nil
+        }
+    }
+    
+    func deleteLanguageWithPredicate(predicate predicate:NSPredicate?){
+        
+        let languages = fetchLanguageWithPredicate(predicate: nil)
+        for language in languages! {
+            context.deleteObject(language)
+        }
+        self.appDelegate.saveContext()
+    }
+    
+    
     
     
 }

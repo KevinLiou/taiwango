@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 import AVOSCloud
-
+import RESideMenu
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -71,19 +71,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     
     // MARK: - other 
-//    internal func entryMainViewController(){
-//        
-//        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-//        let navigationController = storyBoard.instantiateViewControllerWithIdentifier("NavProductListViewController")
-//        
-//        let leftMenuViewController = storyBoard.instantiateViewControllerWithIdentifier("LeftMenuViewController")
-//        let sideMenuViewController = RESideMenu(contentViewController: navigationController, leftMenuViewController: leftMenuViewController, rightMenuViewController: nil)
-//        sideMenuViewController.backgroundImage = UIImage(named: "Launch")
-//        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-//        self.window?.rootViewController = sideMenuViewController
-//        self.window?.makeKeyAndVisible()
-//        
-//    }
+    func entryMainViewController(){
+
+        //取回default 分類中的products
+        let predicate = NSPredicate(format: "language.lan = '\(SPTools.getPreferredLanguages())'")
+        let result = SPDataManager.sharedInstance.fetchCateWithPredicate(predicate: predicate)
+        
+        guard let catesCount = result?.count where catesCount > 0 else{
+            return
+        }
+        
+        let cate = result?.first
+        let products = cate!.product?.allObjects as! [Product]
+        
+        //取得需要的view controller
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let navProductListViewController = mainStoryboard.instantiateViewControllerWithIdentifier("NavProductListViewController") as! SPNavigationController
+        let leftMenuViewController = mainStoryboard.instantiateViewControllerWithIdentifier("LeftMenuViewController")
+        let productListViewController = navProductListViewController.viewControllers.first as! ProductListViewController
+        
+        //側邊選單init
+        let sideMenuViewController = RESideMenu(contentViewController: navProductListViewController, leftMenuViewController: leftMenuViewController, rightMenuViewController: nil)
+        sideMenuViewController.backgroundImage = UIImage(named: "Launch")
+        
+        //set第一個畫面的值
+        productListViewController.dataSource = products
+        productListViewController.title = cate!.name
+        
+        //更換app畫面
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window?.rootViewController = sideMenuViewController
+        self.window?.makeKeyAndVisible()
+        
+    }
     
     
     func entryLoginViewController(){

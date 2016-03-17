@@ -299,8 +299,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="Tfw-CK-dFC" id="rvy-X9-zDx"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LeftMenuDetailCell" rowHeight="40" id="97X-cw-0ew" customClass="LeftMenuCell" customModule="twshopping" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LeftMenuDetailCell" rowHeight="40" id="97X-cw-0ew" customClass="LeftMenuDetailCell" customModule="twshopping" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="83" width="600" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="97X-cw-0ew" id="6Ig-13-MLY">
@@ -344,6 +347,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="o1Z-fH-Rjn" id="8Ap-Jg-Vt7"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -384,7 +390,7 @@
         <!--Navigation Controller-->
         <scene sceneID="4dm-Y9-wCc">
             <objects>
-                <navigationController storyboardIdentifier="NavInfoViewController" automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnSwipe="YES" hidesBarsOnTap="YES" id="k3Z-fW-whn" customClass="SPNavigationController" customModule="twshopping" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavInfoViewController" automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnSwipe="YES" id="k3Z-fW-whn" customClass="SPNavigationController" customModule="twshopping" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NjA-c7-9oh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

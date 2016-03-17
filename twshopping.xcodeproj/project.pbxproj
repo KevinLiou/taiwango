@@ -45,6 +45,7 @@
 		203BEF1E1C9848DF0090F463 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203BEF1D1C9848DF0090F463 /* RegisterViewController.swift */; };
 		203BEF221C9864CF0090F463 /* ForgotPwdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203BEF211C9864CF0090F463 /* ForgotPwdViewController.swift */; };
 		20A566571C8F28E700B09B7E /* SPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A566561C8F28E700B09B7E /* SPService.swift */; };
+		20AE329E1C9AD98A00078EE6 /* LeftMenuDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AE329D1C9AD98A00078EE6 /* LeftMenuDetailCell.swift */; };
 		20B988281C9718D100D46ACB /* json.json in Resources */ = {isa = PBXBuildFile; fileRef = 20B988271C9718D100D46ACB /* json.json */; };
 		20C2602F1C8DC63E00938F54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C2602E1C8DC63E00938F54 /* AppDelegate.swift */; };
 		20C260311C8DC63E00938F54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C260301C8DC63E00938F54 /* ViewController.swift */; };
@@ -120,6 +121,7 @@
 		203BEF1D1C9848DF0090F463 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		203BEF211C9864CF0090F463 /* ForgotPwdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPwdViewController.swift; sourceTree = "<group>"; };
 		20A566561C8F28E700B09B7E /* SPService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPService.swift; sourceTree = "<group>"; };
+		20AE329D1C9AD98A00078EE6 /* LeftMenuDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuDetailCell.swift; sourceTree = "<group>"; };
 		20B988271C9718D100D46ACB /* json.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = json.json; sourceTree = "<group>"; };
 		20C2602B1C8DC63E00938F54 /* twshopping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = twshopping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20C2602E1C8DC63E00938F54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 				0A8F68731C980F8F00F1EFF3 /* LaunchViewController.swift */,
 				0A8F68701C98065E00F1EFF3 /* LeftMenuViewController.swift */,
 				0A7DEB231C99074D00D82329 /* LeftMenuCell.swift */,
+				20AE329D1C9AD98A00078EE6 /* LeftMenuDetailCell.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -607,6 +610,7 @@
 				203BEF1C1C98489C0090F463 /* SPWhiteCornerView.swift in Sources */,
 				0A17ACED1C9A905800B7C268 /* ProductListViewController.swift in Sources */,
 				0A38EC3B1C9913CC0001117A /* SPBlackView.swift in Sources */,
+				20AE329E1C9AD98A00078EE6 /* LeftMenuDetailCell.swift in Sources */,
 				0A8F68651C97C89400F1EFF3 /* SPViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

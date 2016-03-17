@@ -1,15 +1,15 @@
 //
-//  LeftMenuCell.swift
+//  LeftMenuDetailCell.swift
 //  twshopping
 //
-//  Created by KevinLiou on 2016/3/16.
+//  Created by Kevin on 2016/3/17.
 //  Copyright © 2016年 KevinLiou. All rights reserved.
 //
 
 import UIKit
 
-class LeftMenuCell: UITableViewCell {
-    
+class LeftMenuDetailCell: UITableViewCell {
+
     @IBOutlet weak var titleLabel: SPWhiteTextLabel!
     override func awakeFromNib() {
         super.awakeFromNib()

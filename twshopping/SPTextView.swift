@@ -24,7 +24,20 @@ class SPTextView: UITextView {
         
         self.textContainer.lineFragmentPadding = 0
         self.textContainerInset = UIEdgeInsetsZero
+        
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "fontSizeChanged:", name: UIContentSizeCategoryDidChangeNotification, object: nil)
     }
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
+    // MARK : observer
+    func fontSizeChanged(notification:NSNotification) {
+        self.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
+    }
+
     
     override init(frame: CGRect, textContainer: NSTextContainer?) {
         super.init(frame: frame, textContainer: textContainer)

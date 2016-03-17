@@ -60,18 +60,18 @@ class LeftMenuViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
+
         if indexPath.section == 0 {
             
             if indexPath.row == 0 {
-                let cell = tableView.dequeueReusableCellWithIdentifier("LeftMenuCell", forIndexPath: indexPath)
-                let titleLabel = cell.contentView.viewWithTag(1000) as! UILabel
-                titleLabel.text = sections[indexPath.section]
+                let cell = tableView.dequeueReusableCellWithIdentifier("LeftMenuCell", forIndexPath: indexPath) as! LeftMenuCell
+                cell.userSelected((currentSelect == indexPath))
+                cell.titleLabel.text = sections[indexPath.section]
                 return cell
             }else{
-                let cell = tableView.dequeueReusableCellWithIdentifier("LeftMenuDetailCell", forIndexPath: indexPath)
+                let cell = tableView.dequeueReusableCellWithIdentifier("LeftMenuDetailCell", forIndexPath: indexPath) as! LeftMenuDetailCell
+                cell.userSelected((currentSelect == indexPath))
                 let titleLabel = cell.contentView.viewWithTag(1000) as! UILabel
-                
                 let cate = cates![(indexPath.row-1)]
                 titleLabel.text = cate.name
                 return cell
@@ -79,9 +79,9 @@ class LeftMenuViewController: UIViewController, UITableViewDelegate, UITableView
             
             
         }else{
-            let cell = tableView.dequeueReusableCellWithIdentifier("LeftMenuCell", forIndexPath: indexPath)
-            let titleLabel = cell.contentView.viewWithTag(1000) as! UILabel
-            titleLabel.text = sections[indexPath.section]
+            let cell = tableView.dequeueReusableCellWithIdentifier("LeftMenuCell", forIndexPath: indexPath) as! LeftMenuCell
+            cell.userSelected((currentSelect == indexPath))
+            cell.titleLabel.text = sections[indexPath.section]
             return cell
         }
 
@@ -163,10 +163,8 @@ class LeftMenuViewController: UIViewController, UITableViewDelegate, UITableView
             
         }
         
-        let prevIndexPath = currentSelect //old
-        currentSelect = indexPath //new
-        tableView.reloadRowsAtIndexPaths([prevIndexPath, currentSelect], withRowAnimation: .None)
-        
+        currentSelect = indexPath
+        tableView.reloadData()
     }
     
     

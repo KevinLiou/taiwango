@@ -1,10 +1,23 @@
 PODS:
+  - FLAnimatedImage (1.0.12)
+  - PINCache (2.2.2)
+  - PINRemoteImage (2.1):
+    - PINRemoteImage/FLAnimatedImage (= 2.1)
+  - PINRemoteImage/Core (2.1):
+    - PINCache (>= 2.1)
+  - PINRemoteImage/FLAnimatedImage (2.1):
+    - FLAnimatedImage (>= 1.0)
+    - PINRemoteImage/Core
   - RESideMenu (4.0.7)
 
 DEPENDENCIES:
+  - PINRemoteImage (~> 2.1)
   - RESideMenu (~> 4.0.7)
 
 SPEC CHECKSUMS:
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  PINCache: 078426d356ab95ef875e9e62e5c35a2ea3333c28
+  PINRemoteImage: e8367ac3f5c234712f1d8c274462ec834d649940
   RESideMenu: f24c508404b49c667344c54aba7e590883533958
 
 COCOAPODS: 0.39.0

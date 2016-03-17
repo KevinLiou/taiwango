@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PINRemoteImage
 
 class ProductListViewController: SPSingleImageViewController {
 
@@ -20,8 +21,19 @@ class ProductListViewController: SPSingleImageViewController {
         // Do any additional setup after loading the view.
         tableView.estimatedRowHeight = 90.0
         tableView.rowHeight = UITableViewAutomaticDimension
+        
+        
+        let image = UIImage(named: "icon_profile")?.imageWithRenderingMode(.AlwaysOriginal)
+        let rifhtButtonItem = UIBarButtonItem(image: image, style: .Plain, target: self, action: "goToPersonalPage")
+        self.navigationItem.rightBarButtonItem = rifhtButtonItem;
     }
 
+    // MARK: - Actions
+    func goToPersonalPage(){
+        
+    }
+    
+    
     // MARK: - Table view data source
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (dataSource?.count)!
@@ -37,6 +49,10 @@ class ProductListViewController: SPSingleImageViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("ProductCell", forIndexPath: indexPath) as! ProductCell
         
         
+        if let image_url = product.image_urls {
+            cell.productImageView.pin_updateWithProgress = true
+            cell.productImageView.pin_setImageFromURL(NSURL(string: image_url))
+        }
         cell.titleLabel.text = product.name
         cell.descLabel.text = product.desc
         

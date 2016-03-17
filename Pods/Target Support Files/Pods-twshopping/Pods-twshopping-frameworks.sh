@@ -84,8 +84,14 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-twshopping/FLAnimatedImage.framework"
+  install_framework "Pods-twshopping/PINCache.framework"
+  install_framework "Pods-twshopping/PINRemoteImage.framework"
   install_framework "Pods-twshopping/RESideMenu.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-twshopping/FLAnimatedImage.framework"
+  install_framework "Pods-twshopping/PINCache.framework"
+  install_framework "Pods-twshopping/PINRemoteImage.framework"
   install_framework "Pods-twshopping/RESideMenu.framework"
 fi

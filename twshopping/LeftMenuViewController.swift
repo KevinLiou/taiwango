@@ -129,8 +129,16 @@ class LeftMenuViewController: UIViewController, UITableViewDelegate, UITableView
             
             
         }else if indexPath.section == 1{
+            //push list
+//            let predicate = NSPredicate(format: "lan = '\(SPTools.getPreferredLanguages())'")
+//            let language = SPDataManager.sharedInstance.fetchLanguageWithPredicate(predicate: predicate)
+//            let version = language?.first?.version
             
-            
+            let navPushListViewController = self.storyboard?.instantiateViewControllerWithIdentifier("NavPushListViewController") as! SPNavigationController
+            let pushListViewController = navPushListViewController.viewControllers.first as! PushListViewController
+            pushListViewController.title = sections[indexPath.section]
+            self.sideMenuViewController.setContentViewController(navPushListViewController, animated: true)
+            self.sideMenuViewController.hideMenuViewController()
             
         }else if indexPath.section == 2{
             

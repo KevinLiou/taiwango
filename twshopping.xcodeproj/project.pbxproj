@@ -38,6 +38,8 @@
 		0AD3DB541C99693F0055213B /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD3DB481C99693F0055213B /* Product.swift */; };
 		0AD3DB551C99693F0055213B /* Store+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD3DB491C99693F0055213B /* Store+CoreDataProperties.swift */; };
 		0AD3DB561C99693F0055213B /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD3DB4A1C99693F0055213B /* Store.swift */; };
+		2017C2931C9AFBB10047B51D /* PushListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2017C2921C9AFBB10047B51D /* PushListViewController.swift */; };
+		2017C2951C9AFF430047B51D /* PushCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2017C2941C9AFF430047B51D /* PushCell.swift */; };
 		203BEF161C9837150090F463 /* SPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203BEF151C9837150090F463 /* SPTextField.swift */; };
 		203BEF181C983A150090F463 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203BEF171C983A150090F463 /* LoginViewController.swift */; };
 		203BEF1A1C9840440090F463 /* SPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203BEF191C9840440090F463 /* SPButton.swift */; };
@@ -114,6 +116,8 @@
 		0AD3DB481C99693F0055213B /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		0AD3DB491C99693F0055213B /* Store+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Store+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0AD3DB4A1C99693F0055213B /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		2017C2921C9AFBB10047B51D /* PushListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushListViewController.swift; sourceTree = "<group>"; };
+		2017C2941C9AFF430047B51D /* PushCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushCell.swift; sourceTree = "<group>"; };
 		203BEF151C9837150090F463 /* SPTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTextField.swift; sourceTree = "<group>"; };
 		203BEF171C983A150090F463 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		203BEF191C9840440090F463 /* SPButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPButton.swift; sourceTree = "<group>"; };
@@ -182,13 +186,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0A17ACDE1C9A637D00B7C268 /* Others */ = {
+		0A17ACDE1C9A637D00B7C268 /* Info */ = {
 			isa = PBXGroup;
 			children = (
 				0A17ACDF1C9A639700B7C268 /* InfoViewController.swift */,
 				0A8F68681C97E4B500F1EFF3 /* LoadingViewController.swift */,
 			);
-			name = Others;
+			name = Info;
 			sourceTree = "<group>";
 		};
 		0A17ACEB1C9A903400B7C268 /* Product */ = {
@@ -253,14 +257,13 @@
 		0A8F68721C980F6E00F1EFF3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2017C2911C9AFB750047B51D /* Push */,
+				2017C2901C9AFB580047B51D /* Menu */,
 				0A17ACEB1C9A903400B7C268 /* Product */,
-				0A17ACDE1C9A637D00B7C268 /* Others */,
+				0A17ACDE1C9A637D00B7C268 /* Info */,
 				0A8F68631C97C87D00F1EFF3 /* MyClasses */,
 				203BEF231C9865AE0090F463 /* LoginPages */,
 				0A8F68731C980F8F00F1EFF3 /* LaunchViewController.swift */,
-				0A8F68701C98065E00F1EFF3 /* LeftMenuViewController.swift */,
-				0A7DEB231C99074D00D82329 /* LeftMenuCell.swift */,
-				20AE329D1C9AD98A00078EE6 /* LeftMenuDetailCell.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -282,6 +285,25 @@
 				0A17ACE61C9A85E000B7C268 /* Version.swift */,
 			);
 			name = Entity;
+			sourceTree = "<group>";
+		};
+		2017C2901C9AFB580047B51D /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				0A8F68701C98065E00F1EFF3 /* LeftMenuViewController.swift */,
+				0A7DEB231C99074D00D82329 /* LeftMenuCell.swift */,
+				20AE329D1C9AD98A00078EE6 /* LeftMenuDetailCell.swift */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		2017C2911C9AFB750047B51D /* Push */ = {
+			isa = PBXGroup;
+			children = (
+				2017C2921C9AFBB10047B51D /* PushListViewController.swift */,
+				2017C2941C9AFF430047B51D /* PushCell.swift */,
+			);
+			name = Push;
 			sourceTree = "<group>";
 		};
 		203BEF231C9865AE0090F463 /* LoginPages */ = {
@@ -593,6 +615,7 @@
 				0A7DEB241C99074D00D82329 /* LeftMenuCell.swift in Sources */,
 				0A8F686D1C97E97D00F1EFF3 /* SPTools.swift in Sources */,
 				0A17ACDD1C9A60A400B7C268 /* SPSingleImageViewController.swift in Sources */,
+				2017C2931C9AFBB10047B51D /* PushListViewController.swift in Sources */,
 				0AD3DB541C99693F0055213B /* Product.swift in Sources */,
 				0A17ACE91C9A85E000B7C268 /* Version+CoreDataProperties.swift in Sources */,
 				0AD3DB521C99693F0055213B /* Profile.swift in Sources */,
@@ -610,6 +633,7 @@
 				203BEF1C1C98489C0090F463 /* SPWhiteCornerView.swift in Sources */,
 				0A17ACED1C9A905800B7C268 /* ProductListViewController.swift in Sources */,
 				0A38EC3B1C9913CC0001117A /* SPBlackView.swift in Sources */,
+				2017C2951C9AFF430047B51D /* PushCell.swift in Sources */,
 				20AE329E1C9AD98A00078EE6 /* LeftMenuDetailCell.swift in Sources */,
 				0A8F68651C97C89400F1EFF3 /* SPViewController.swift in Sources */,
 			);
@@ -785,6 +809,7 @@
 					"-ObjC",
 					"-licucore",
 					"-lz",
+					"$(inherited)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tw.com.tnot.twshopping;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -810,6 +835,7 @@
 					"-ObjC",
 					"-licucore",
 					"-lz",
+					"$(inherited)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tw.com.tnot.twshopping;
 				PRODUCT_NAME = "$(TARGET_NAME)";

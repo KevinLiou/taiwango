@@ -1,0 +1,2 @@
+/Users/Kevin/Library/Developer/Xcode/DerivedData/twshopping-eowkmhzqxtfxiufzxvmyhydjltww/Build/Products/Debug-iphonesimulator/twshopping.app
+iPhone Developer

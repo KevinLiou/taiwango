@@ -38,6 +38,7 @@ class SPDataManager {
             version.info = app_info_dic["info"] as? String
             version.team = app_info_dic["team"] as? String
             version.policy = app_info_dic["policy"] as? String
+            version.language = language
             
             //store
             let stores = value["store"] as! [[String:AnyObject]]
@@ -153,6 +154,7 @@ class SPDataManager {
         }
     }
     
+    // also delete all storage if its relationship of Language
     func deleteLanguageWithPredicate(predicate predicate:NSPredicate?){
         
         let languages = fetchLanguageWithPredicate(predicate: nil)

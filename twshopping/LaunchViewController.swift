@@ -41,6 +41,7 @@ class LaunchViewController: UIViewController {
                 }
             }
             
+            //update type 1, 2, 3
             
             
             //登入過

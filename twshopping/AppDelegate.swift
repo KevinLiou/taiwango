@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 import AVOSCloud
-import RESideMenu
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -71,19 +71,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     
     // MARK: - other 
-    internal func entryMainViewController(){
-        
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let navigationController = storyBoard.instantiateViewControllerWithIdentifier("SPNavigationController")
-        
-        let leftMenuViewController = storyBoard.instantiateViewControllerWithIdentifier("LeftMenuViewController")
-        let sideMenuViewController = RESideMenu(contentViewController: navigationController, leftMenuViewController: leftMenuViewController, rightMenuViewController: nil)
-        sideMenuViewController.backgroundImage = UIImage(named: "Launch")
-        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        self.window?.rootViewController = sideMenuViewController
-        self.window?.makeKeyAndVisible()
-        
-    }
+//    internal func entryMainViewController(){
+//        
+//        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//        let navigationController = storyBoard.instantiateViewControllerWithIdentifier("NavProductListViewController")
+//        
+//        let leftMenuViewController = storyBoard.instantiateViewControllerWithIdentifier("LeftMenuViewController")
+//        let sideMenuViewController = RESideMenu(contentViewController: navigationController, leftMenuViewController: leftMenuViewController, rightMenuViewController: nil)
+//        sideMenuViewController.backgroundImage = UIImage(named: "Launch")
+//        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+//        self.window?.rootViewController = sideMenuViewController
+//        self.window?.makeKeyAndVisible()
+//        
+//    }
     
     
     func entryLoginViewController(){

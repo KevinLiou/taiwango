@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A17ACDB1C9A608B00B7C268 /* SPSingleColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A17ACDA1C9A608B00B7C268 /* SPSingleColorViewController.swift */; };
+		0A17ACDD1C9A60A400B7C268 /* SPSingleImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A17ACDC1C9A60A400B7C268 /* SPSingleImageViewController.swift */; };
+		0A17ACE01C9A639700B7C268 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A17ACDF1C9A639700B7C268 /* InfoViewController.swift */; };
+		0A17ACE21C9A7BFD00B7C268 /* SPTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A17ACE11C9A7BFD00B7C268 /* SPTextView.swift */; };
+		0A17ACE71C9A85E000B7C268 /* Language+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A17ACE31C9A85E000B7C268 /* Language+CoreDataProperties.swift */; };
+		0A17ACE81C9A85E000B7C268 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A17ACE41C9A85E000B7C268 /* Language.swift */; };
+		0A17ACE91C9A85E000B7C268 /* Version+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A17ACE51C9A85E000B7C268 /* Version+CoreDataProperties.swift */; };
+		0A17ACEA1C9A85E000B7C268 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A17ACE61C9A85E000B7C268 /* Version.swift */; };
+		0A17ACED1C9A905800B7C268 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A17ACEC1C9A905800B7C268 /* ProductListViewController.swift */; };
+		0A17ACEF1C9A93F800B7C268 /* SPImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A17ACEE1C9A93F800B7C268 /* SPImageView.swift */; };
+		0A17ACF11C9A985200B7C268 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A17ACF01C9A985200B7C268 /* ProductCell.swift */; };
 		0A38EC3B1C9913CC0001117A /* SPBlackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A38EC3A1C9913CC0001117A /* SPBlackView.swift */; };
 		0A38EC561C9941E50001117A /* SPDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A38EC551C9941E50001117A /* SPDataManager.swift */; };
 		0A7DEB131C98F59B00D82329 /* Tools.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A7DEB151C98F59B00D82329 /* Tools.storyboard */; };
@@ -19,8 +30,6 @@
 		0A8F686D1C97E97D00F1EFF3 /* SPTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8F686C1C97E97D00F1EFF3 /* SPTools.swift */; };
 		0A8F68711C98065E00F1EFF3 /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8F68701C98065E00F1EFF3 /* LeftMenuViewController.swift */; };
 		0A8F68741C980F8F00F1EFF3 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8F68731C980F8F00F1EFF3 /* LaunchViewController.swift */; };
-		0AD3DB4B1C99693F0055213B /* Language+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD3DB3F1C99693F0055213B /* Language+CoreDataProperties.swift */; };
-		0AD3DB4C1C99693F0055213B /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD3DB401C99693F0055213B /* Language.swift */; };
 		0AD3DB4F1C99693F0055213B /* Cate+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD3DB431C99693F0055213B /* Cate+CoreDataProperties.swift */; };
 		0AD3DB501C99693F0055213B /* Cate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD3DB441C99693F0055213B /* Cate.swift */; };
 		0AD3DB511C99693F0055213B /* Profile+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD3DB451C99693F0055213B /* Profile+CoreDataProperties.swift */; };
@@ -29,8 +38,6 @@
 		0AD3DB541C99693F0055213B /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD3DB481C99693F0055213B /* Product.swift */; };
 		0AD3DB551C99693F0055213B /* Store+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD3DB491C99693F0055213B /* Store+CoreDataProperties.swift */; };
 		0AD3DB561C99693F0055213B /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD3DB4A1C99693F0055213B /* Store.swift */; };
-		2006FCFF1C999183004759FE /* Version+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2006FCFD1C999183004759FE /* Version+CoreDataProperties.swift */; };
-		2006FD001C999183004759FE /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2006FCFE1C999183004759FE /* Version.swift */; };
 		203BEF161C9837150090F463 /* SPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203BEF151C9837150090F463 /* SPTextField.swift */; };
 		203BEF181C983A150090F463 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203BEF171C983A150090F463 /* LoginViewController.swift */; };
 		203BEF1A1C9840440090F463 /* SPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203BEF191C9840440090F463 /* SPButton.swift */; };
@@ -75,6 +82,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A17ACDA1C9A608B00B7C268 /* SPSingleColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPSingleColorViewController.swift; sourceTree = "<group>"; };
+		0A17ACDC1C9A60A400B7C268 /* SPSingleImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPSingleImageViewController.swift; sourceTree = "<group>"; };
+		0A17ACDF1C9A639700B7C268 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		0A17ACE11C9A7BFD00B7C268 /* SPTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTextView.swift; sourceTree = "<group>"; };
+		0A17ACE31C9A85E000B7C268 /* Language+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Language+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0A17ACE41C9A85E000B7C268 /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		0A17ACE51C9A85E000B7C268 /* Version+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Version+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0A17ACE61C9A85E000B7C268 /* Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
+		0A17ACEC1C9A905800B7C268 /* ProductListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
+		0A17ACEE1C9A93F800B7C268 /* SPImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPImageView.swift; sourceTree = "<group>"; };
+		0A17ACF01C9A985200B7C268 /* ProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		0A38EC3A1C9913CC0001117A /* SPBlackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPBlackView.swift; sourceTree = "<group>"; };
 		0A38EC551C9941E50001117A /* SPDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPDataManager.swift; sourceTree = "<group>"; };
 		0A7DEB141C98F59B00D82329 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Tools.storyboard; sourceTree = "<group>"; };
@@ -87,8 +105,6 @@
 		0A8F686C1C97E97D00F1EFF3 /* SPTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTools.swift; sourceTree = "<group>"; };
 		0A8F68701C98065E00F1EFF3 /* LeftMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuViewController.swift; sourceTree = "<group>"; };
 		0A8F68731C980F8F00F1EFF3 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
-		0AD3DB3F1C99693F0055213B /* Language+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Language+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		0AD3DB401C99693F0055213B /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		0AD3DB431C99693F0055213B /* Cate+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Cate+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0AD3DB441C99693F0055213B /* Cate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cate.swift; sourceTree = "<group>"; };
 		0AD3DB451C99693F0055213B /* Profile+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -97,8 +113,6 @@
 		0AD3DB481C99693F0055213B /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		0AD3DB491C99693F0055213B /* Store+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Store+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0AD3DB4A1C99693F0055213B /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
-		2006FCFD1C999183004759FE /* Version+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Version+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		2006FCFE1C999183004759FE /* Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
 		203BEF151C9837150090F463 /* SPTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTextField.swift; sourceTree = "<group>"; };
 		203BEF171C983A150090F463 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		203BEF191C9840440090F463 /* SPButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPButton.swift; sourceTree = "<group>"; };
@@ -166,6 +180,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A17ACDE1C9A637D00B7C268 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				0A17ACDF1C9A639700B7C268 /* InfoViewController.swift */,
+				0A8F68681C97E4B500F1EFF3 /* LoadingViewController.swift */,
+			);
+			name = Others;
+			sourceTree = "<group>";
+		};
+		0A17ACEB1C9A903400B7C268 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				0A17ACEC1C9A905800B7C268 /* ProductListViewController.swift */,
+				0A17ACF01C9A985200B7C268 /* ProductCell.swift */,
+			);
+			name = Product;
+			sourceTree = "<group>";
+		};
 		0A38EC3C1C9941610001117A /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +220,10 @@
 				203BEF1B1C98489C0090F463 /* SPWhiteCornerView.swift */,
 				0A7DEB251C990ABF00D82329 /* SPWhiteTextLabel.swift */,
 				0A38EC3A1C9913CC0001117A /* SPBlackView.swift */,
+				0A17ACDA1C9A608B00B7C268 /* SPSingleColorViewController.swift */,
+				0A17ACDC1C9A60A400B7C268 /* SPSingleImageViewController.swift */,
+				0A17ACE11C9A7BFD00B7C268 /* SPTextView.swift */,
+				0A17ACEE1C9A93F800B7C268 /* SPImageView.swift */,
 			);
 			name = MyClasses;
 			sourceTree = "<group>";
@@ -206,7 +242,6 @@
 		0A8F686B1C97E95A00F1EFF3 /* CustomTools */ = {
 			isa = PBXGroup;
 			children = (
-				0A8F68681C97E4B500F1EFF3 /* LoadingViewController.swift */,
 				20A566561C8F28E700B09B7E /* SPService.swift */,
 				0A8F686C1C97E97D00F1EFF3 /* SPTools.swift */,
 			);
@@ -216,6 +251,8 @@
 		0A8F68721C980F6E00F1EFF3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0A17ACEB1C9A903400B7C268 /* Product */,
+				0A17ACDE1C9A637D00B7C268 /* Others */,
 				0A8F68631C97C87D00F1EFF3 /* MyClasses */,
 				203BEF231C9865AE0090F463 /* LoginPages */,
 				0A8F68731C980F8F00F1EFF3 /* LaunchViewController.swift */,
@@ -228,8 +265,6 @@
 		0AD3DB3E1C99690E0055213B /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				0AD3DB3F1C99693F0055213B /* Language+CoreDataProperties.swift */,
-				0AD3DB401C99693F0055213B /* Language.swift */,
 				0AD3DB431C99693F0055213B /* Cate+CoreDataProperties.swift */,
 				0AD3DB441C99693F0055213B /* Cate.swift */,
 				0AD3DB451C99693F0055213B /* Profile+CoreDataProperties.swift */,
@@ -238,8 +273,10 @@
 				0AD3DB481C99693F0055213B /* Product.swift */,
 				0AD3DB491C99693F0055213B /* Store+CoreDataProperties.swift */,
 				0AD3DB4A1C99693F0055213B /* Store.swift */,
-				2006FCFD1C999183004759FE /* Version+CoreDataProperties.swift */,
-				2006FCFE1C999183004759FE /* Version.swift */,
+				0A17ACE31C9A85E000B7C268 /* Language+CoreDataProperties.swift */,
+				0A17ACE41C9A85E000B7C268 /* Language.swift */,
+				0A17ACE51C9A85E000B7C268 /* Version+CoreDataProperties.swift */,
+				0A17ACE61C9A85E000B7C268 /* Version.swift */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -538,32 +575,39 @@
 				203BEF221C9864CF0090F463 /* ForgotPwdViewController.swift in Sources */,
 				0A38EC561C9941E50001117A /* SPDataManager.swift in Sources */,
 				203BEF161C9837150090F463 /* SPTextField.swift in Sources */,
+				0A17ACE21C9A7BFD00B7C268 /* SPTextView.swift in Sources */,
 				20C260311C8DC63E00938F54 /* ViewController.swift in Sources */,
 				0AD3DB511C99693F0055213B /* Profile+CoreDataProperties.swift in Sources */,
 				0A7DEB261C990AC000D82329 /* SPWhiteTextLabel.swift in Sources */,
+				0A17ACEA1C9A85E000B7C268 /* Version.swift in Sources */,
+				0A17ACDB1C9A608B00B7C268 /* SPSingleColorViewController.swift in Sources */,
 				203BEF1A1C9840440090F463 /* SPButton.swift in Sources */,
-				0AD3DB4B1C99693F0055213B /* Language+CoreDataProperties.swift in Sources */,
 				0AD3DB501C99693F0055213B /* Cate.swift in Sources */,
 				203BEF1E1C9848DF0090F463 /* RegisterViewController.swift in Sources */,
 				20C2602F1C8DC63E00938F54 /* AppDelegate.swift in Sources */,
-				2006FD001C999183004759FE /* Version.swift in Sources */,
 				20A566571C8F28E700B09B7E /* SPService.swift in Sources */,
+				0A17ACEF1C9A93F800B7C268 /* SPImageView.swift in Sources */,
 				0A7DEB241C99074D00D82329 /* LeftMenuCell.swift in Sources */,
 				0A8F686D1C97E97D00F1EFF3 /* SPTools.swift in Sources */,
+				0A17ACDD1C9A60A400B7C268 /* SPSingleImageViewController.swift in Sources */,
 				0AD3DB541C99693F0055213B /* Product.swift in Sources */,
+				0A17ACE91C9A85E000B7C268 /* Version+CoreDataProperties.swift in Sources */,
 				0AD3DB521C99693F0055213B /* Profile.swift in Sources */,
+				0A17ACE71C9A85E000B7C268 /* Language+CoreDataProperties.swift in Sources */,
 				0AD3DB561C99693F0055213B /* Store.swift in Sources */,
-				2006FCFF1C999183004759FE /* Version+CoreDataProperties.swift in Sources */,
+				0A17ACE01C9A639700B7C268 /* InfoViewController.swift in Sources */,
 				0A8F68711C98065E00F1EFF3 /* LeftMenuViewController.swift in Sources */,
+				0A17ACE81C9A85E000B7C268 /* Language.swift in Sources */,
 				0A8F68621C97C86C00F1EFF3 /* SPNavigationController.swift in Sources */,
+				0A17ACF11C9A985200B7C268 /* ProductCell.swift in Sources */,
 				0AD3DB4F1C99693F0055213B /* Cate+CoreDataProperties.swift in Sources */,
 				0AD3DB551C99693F0055213B /* Store+CoreDataProperties.swift in Sources */,
 				0AD3DB531C99693F0055213B /* Product+CoreDataProperties.swift in Sources */,
 				20C260371C8DC63E00938F54 /* twshopping.xcdatamodeld in Sources */,
 				203BEF1C1C98489C0090F463 /* SPWhiteCornerView.swift in Sources */,
+				0A17ACED1C9A905800B7C268 /* ProductListViewController.swift in Sources */,
 				0A38EC3B1C9913CC0001117A /* SPBlackView.swift in Sources */,
 				0A8F68651C97C89400F1EFF3 /* SPViewController.swift in Sources */,
-				0AD3DB4C1C99693F0055213B /* Language.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

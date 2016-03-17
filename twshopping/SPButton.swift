@@ -15,7 +15,7 @@ class SPButton: UIButton {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.titleLabel?.textColor = UIColor.whiteColor()
-        self.titleLabel?.font = UIFont.preferredFontForTextStyle(UIFontTextStyleFootnote)
+        self.titleLabel?.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
         self.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.3)
         self.clipsToBounds = true
 

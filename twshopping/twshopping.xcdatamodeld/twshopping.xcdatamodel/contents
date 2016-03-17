@@ -11,6 +11,7 @@
         <relationship name="cate" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Cate" inverseName="language" inverseEntity="Cate" syncable="YES"/>
         <relationship name="product" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Product" inverseName="language" inverseEntity="Product" syncable="YES"/>
         <relationship name="store" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Store" inverseName="language" inverseEntity="Store" syncable="YES"/>
+        <relationship name="version" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Version" inverseName="language" inverseEntity="Version" syncable="YES"/>
     </entity>
     <entity name="Product" representedClassName=".Product" syncable="YES">
         <attribute name="cate_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
@@ -48,13 +49,14 @@
         <attribute name="team" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="version" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="language" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Language" inverseName="version" inverseEntity="Language" syncable="YES"/>
     </entity>
     <elements>
         <element name="Cate" positionX="603" positionY="30" width="128" height="103"/>
-        <element name="Language" positionX="306" positionY="-18" width="128" height="103"/>
+        <element name="Language" positionX="313" positionY="251" width="128" height="118"/>
         <element name="Product" positionX="592" positionY="266" width="128" height="193"/>
-        <element name="Profile" positionX="-0" positionY="-9" width="128" height="105"/>
+        <element name="Profile" positionX="288" positionY="54" width="128" height="105"/>
         <element name="Store" positionX="70" positionY="347" width="128" height="193"/>
-        <element name="Version" positionX="0" positionY="126" width="128" height="120"/>
+        <element name="Version" positionX="25" positionY="119" width="128" height="133"/>
     </elements>
 </model>

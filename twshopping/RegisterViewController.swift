@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class RegisterViewController: SPViewController {
+class RegisterViewController: SPSingleColorViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

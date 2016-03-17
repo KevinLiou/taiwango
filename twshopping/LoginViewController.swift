@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import RESideMenu
 
-class LoginViewController: SPViewController {
+@IBDesignable
+class LoginViewController: SPSingleColorViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +35,7 @@ class LoginViewController: SPViewController {
     }
     
     @IBAction func tapPassLogin(sender: UITapGestureRecognizer) {
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        appDelegate.entryMainViewController()
+        entryMainViewController()
     }
     @IBAction func tapForgotPassword(sender: UITapGestureRecognizer) {
         let forgotPwdViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ForgotPwdViewController")
@@ -45,6 +46,36 @@ class LoginViewController: SPViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    func entryMainViewController(){
+        //products
+        
+        //取回default 分類中的products
+        let predicate = NSPredicate(format: "language.lan = '\(SPTools.getPreferredLanguages())'")
+        let result = SPDataManager.sharedInstance.fetchCateWithPredicate(predicate: predicate)
+        let cate = result?.first
+        let products = cate!.product?.allObjects as! [Product]
+        
+        //取得需要的view controller
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let navProductListViewController = mainStoryboard.instantiateViewControllerWithIdentifier("NavProductListViewController") as! SPNavigationController
+        let leftMenuViewController = mainStoryboard.instantiateViewControllerWithIdentifier("LeftMenuViewController")
+        let productListViewController = navProductListViewController.viewControllers.first as! ProductListViewController
+        
+        //側邊選單init
+        let sideMenuViewController = RESideMenu(contentViewController: navProductListViewController, leftMenuViewController: leftMenuViewController, rightMenuViewController: nil)
+        sideMenuViewController.backgroundImage = UIImage(named: "Launch")
+        
+        //set第一個畫面的值
+        productListViewController.dataSource = products
+        productListViewController.title = cate!.name
+        
+        //更換app畫面
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        appDelegate.window?.rootViewController = sideMenuViewController
+        appDelegate.window?.makeKeyAndVisible()
+    }
 
     /*
     // MARK: - Navigation

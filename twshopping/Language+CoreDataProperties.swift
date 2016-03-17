@@ -2,7 +2,7 @@
 //  Language+CoreDataProperties.swift
 //  twshopping
 //
-//  Created by KevinLiou on 2016/3/16.
+//  Created by KevinLiou on 2016/3/17.
 //  Copyright © 2016年 KevinLiou. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -18,5 +18,6 @@ extension Language {
     @NSManaged var cate: NSSet?
     @NSManaged var product: NSSet?
     @NSManaged var store: NSSet?
+    @NSManaged var version: Version?
 
 }

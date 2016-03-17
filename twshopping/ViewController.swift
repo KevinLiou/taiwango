@@ -70,18 +70,10 @@ class ViewController: SPViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-//        SPTools.showLoadingOnViewController(self)
-        
-        
-        
     }
     
     override func viewDidDisappear(animated: Bool) {
         super.viewDidDisappear(animated)
-    }
-    
-    @IBAction func menuItemClick(sender: UIBarButtonItem) {
-        self.sideMenuViewController.presentLeftMenuViewController()
     }
     
     override func didReceiveMemoryWarning() {

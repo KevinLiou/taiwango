@@ -1,19 +1,25 @@
 //
-//  ForgotPwdViewController.swift
+//  InfoViewController.swift
 //  twshopping
 //
-//  Created by Kevin on 2016/3/15.
+//  Created by KevinLiou on 2016/3/17.
 //  Copyright © 2016年 KevinLiou. All rights reserved.
 //
 
 import UIKit
 
-class ForgotPwdViewController: SPSingleColorViewController {
+@IBDesignable
+class InfoViewController: SPSingleImageViewController {
 
+    var infoString:String?
+    
+    @IBOutlet weak var textView: SPTextView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.textView.text = infoString
     }
 
     override func didReceiveMemoryWarning() {

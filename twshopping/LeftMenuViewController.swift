@@ -14,13 +14,13 @@ class LeftMenuViewController: UIViewController, UITableViewDelegate, UITableView
     let sections:[String] = ["所有商品" ,"系統公告" ,"個人/訂單資訊" ,"應用程式聲明、政策" ,"開發團隊資訊"]
     var cates:[Cate]? = {
 
-//        let predicate = NSPredicate(format: "language.lan like \(SPTools.getPreferredLanguages())")
-                let predicate = NSPredicate(format: "language.lan = '\(SPTools.getPreferredLanguages())'")
+        let predicate = NSPredicate(format: "language.lan = '\(SPTools.getPreferredLanguages())'")
         let result = SPDataManager.sharedInstance.fetchCateWithPredicate(predicate: predicate)
         
         return result
     }()
     var showCate = false
+    var currentSelect:NSIndexPath = NSIndexPath(forRow: 1, inSection: 0) //default
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,25 +89,83 @@ class LeftMenuViewController: UIViewController, UITableViewDelegate, UITableView
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        if indexPath.section == 0 && indexPath.row == 0 {
-            showCate = !showCate
+        if indexPath.section == 0 {
             
-            var indexPaths:[NSIndexPath] = []
-            for (index, _) in cates!.enumerate() {
-                indexPaths.append(NSIndexPath(forRow: index+1, inSection: 0))
-            }
-            
-            if showCate {
-                tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Bottom)
+            if indexPath.row == 0 {
+                showCate = !showCate
+                
+                var indexPaths:[NSIndexPath] = []
+                for (index, _) in cates!.enumerate() {
+                    indexPaths.append(NSIndexPath(forRow: index+1, inSection: 0))
+                }
+                
+                if showCate {
+                    tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Bottom)
+                }else{
+                    tableView.deleteRowsAtIndexPaths(indexPaths, withRowAnimation: .Top)
+                }
+                
+                return;
             }else{
-                tableView.deleteRowsAtIndexPaths(indexPaths, withRowAnimation: .Top)
+                
+                if currentSelect == indexPath {
+                    self.sideMenuViewController.hideMenuViewController()
+                    return;
+                }
+                
+                //products
+                let cate = cates![indexPath.row-1]
+                let products = cate.product?.allObjects as! [Product]
+                let navProductListViewController = self.storyboard?.instantiateViewControllerWithIdentifier("NavProductListViewController") as! SPNavigationController
+                
+                let productListViewController = navProductListViewController.viewControllers.first as! ProductListViewController
+                
+                productListViewController.dataSource = products
+                productListViewController.title = cate.name
+                self.sideMenuViewController.setContentViewController(navProductListViewController, animated: true)
+                self.sideMenuViewController.hideMenuViewController()
+
             }
             
-        }else{
             
-            //        self.sideMenuViewController.setContentViewController(<#T##contentViewController: UIViewController!##UIViewController!#>, animated: true)
+        }else if indexPath.section == 1{
+            
+            
+            
+        }else if indexPath.section == 2{
+            
+            
+        }else if indexPath.section == 3{
+            
+            let predicate = NSPredicate(format: "lan = '\(SPTools.getPreferredLanguages())'")
+            let language = SPDataManager.sharedInstance.fetchLanguageWithPredicate(predicate: predicate)
+            let version = language?.first?.version
+            
+            let navInfoViewController = self.storyboard?.instantiateViewControllerWithIdentifier("NavInfoViewController") as! SPNavigationController
+            let infoViewController = navInfoViewController.viewControllers.first as! InfoViewController
+            infoViewController.infoString = version?.policy
+            infoViewController.title = sections[indexPath.section]
+            self.sideMenuViewController.setContentViewController(navInfoViewController, animated: true)
             self.sideMenuViewController.hideMenuViewController()
+            
+        }else if indexPath.section == 4{
+            
+            let predicate = NSPredicate(format: "lan = '\(SPTools.getPreferredLanguages())'")
+            let language = SPDataManager.sharedInstance.fetchLanguageWithPredicate(predicate: predicate)
+            let version = language?.first?.version
+            
+            let navInfoViewController = self.storyboard?.instantiateViewControllerWithIdentifier("NavInfoViewController") as! SPNavigationController
+            let infoViewController = navInfoViewController.viewControllers.first as! InfoViewController
+            infoViewController.infoString = version?.team
+            infoViewController.title = sections[indexPath.section]
+            self.sideMenuViewController.setContentViewController(navInfoViewController, animated: true)
+            self.sideMenuViewController.hideMenuViewController()
+            
         }
+        
+        let prevIndexPath = currentSelect //old
+        currentSelect = indexPath //new
+        tableView.reloadRowsAtIndexPaths([prevIndexPath, currentSelect], withRowAnimation: .None)
         
     }
     

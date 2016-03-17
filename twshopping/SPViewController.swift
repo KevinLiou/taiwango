@@ -14,17 +14,23 @@ class SPViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-//        let bgImageView = UIImageView(frame: self.view.bounds)
-//        bgImageView.image = UIImage(named: "bg")
-//        self.view.addSubview(bgImageView)
-        
         if self.navigationController?.viewControllers.count > 1 {
             
             let image = UIImage(named: "icon_back")?.imageWithRenderingMode(.AlwaysOriginal)
             let backButtonItem = UIBarButtonItem(image: image, style: .Plain, target: self.navigationController, action: Selector("popViewControllerAnimated:"))
             self.navigationItem.leftBarButtonItem = backButtonItem;
+        }else{
+            
+            let image = UIImage(named: "icon_menu")?.imageWithRenderingMode(.AlwaysOriginal)
+            let backButtonItem = UIBarButtonItem(image: image, style: .Plain, target: self, action: "showMenu")
+            self.navigationItem.leftBarButtonItem = backButtonItem;
+            
         }
-        
+    }
+    
+    
+    func showMenu(){
+        self.sideMenuViewController.presentLeftMenuViewController()
     }
 
     override func didReceiveMemoryWarning() {

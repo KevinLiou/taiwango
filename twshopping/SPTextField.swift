@@ -17,7 +17,7 @@ class SPTextField: UITextField {
         self.attributedPlaceholder = NSAttributedString(string: self.placeholder!, attributes: [NSForegroundColorAttributeName: UIColor(white: 1.0, alpha: 0.9)])
         self.backgroundColor = UIColor.clearColor()
         self.textColor = UIColor.whiteColor()
-        self.font = UIFont.preferredFontForTextStyle(UIFontTextStyleFootnote)
+        self.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "fontSizeChanged:", name: UIContentSizeCategoryDidChangeNotification, object: nil)
     }

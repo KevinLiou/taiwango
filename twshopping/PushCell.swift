@@ -14,12 +14,19 @@ class PushCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        self.titleLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
+        
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIContentSizeCategoryDidChangeNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "fontSizeChanged:", name: UIContentSizeCategoryDidChangeNotification, object: nil)
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
-
+    
+    // MARK : observer
+    func fontSizeChanged(notification:NSNotification) {
+        self.titleLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
+    }
 }

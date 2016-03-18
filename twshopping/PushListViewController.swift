@@ -11,6 +11,8 @@ import UIKit
 class PushListViewController: SPSingleImageViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    var dataSource: [Push]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,10 +23,8 @@ class PushListViewController: SPSingleImageViewController {
 
     
     // MARK: - Table view data source
-    
-    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return (dataSource?.count)!
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -34,15 +34,13 @@ class PushListViewController: SPSingleImageViewController {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("PushCell", forIndexPath: indexPath) as! PushCell
-        cell.titleLabel.text = "Hello~"
+        cell.titleLabel.text = self.dataSource![indexPath.row].title
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
     }
-    
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

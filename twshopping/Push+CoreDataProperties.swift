@@ -1,5 +1,5 @@
 //
-//  Language+CoreDataProperties.swift
+//  Push+CoreDataProperties.swift
 //  twshopping
 //
 //  Created by KevinLiou on 2016/3/18.
@@ -12,13 +12,13 @@
 import Foundation
 import CoreData
 
-extension Language {
+extension Push {
 
-    @NSManaged var lan: String?
-    @NSManaged var cate: NSSet?
-    @NSManaged var product: NSSet?
-    @NSManaged var store: NSSet?
-    @NSManaged var version: Version?
-    @NSManaged var push: NSSet?
+    @NSManaged var push_id: NSNumber?
+    @NSManaged var type: NSNumber?
+    @NSManaged var title: String?
+    @NSManaged var info: String?
+    @NSManaged var product_id: NSNumber?
+    @NSManaged var language: Language?
 
 }

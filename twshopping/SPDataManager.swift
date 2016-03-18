@@ -27,6 +27,21 @@ class SPDataManager {
             let language = NSEntityDescription.insertNewObjectForEntityForName("Language", inManagedObjectContext: context) as! Language
             language.lan = lan
             
+            //push 
+            let pushs = value["push"] as! [[String:AnyObject]]
+            for dic_push in pushs {
+                
+                let push = NSEntityDescription.insertNewObjectForEntityForName("Push", inManagedObjectContext: context) as! Push
+                push.push_id = dic_push["push_id"] as? Int
+                push.type = dic_push["type"] as? Int
+                push.title = dic_push["title"] as? String
+                push.info = dic_push["info"] as? String
+                push.product_id = dic_push["product_id"] as? Int
+                push.language = language
+            }
+            
+            
+            
             //app_info
             let app_info = value["app_info"]
 
@@ -107,6 +122,17 @@ class SPDataManager {
         self.appDelegate.saveContext()
     }
     
+    func fetchProfile() -> Profile? {
+        
+        let request = NSFetchRequest(entityName: "Profile")
+        
+        do{
+            let result = try context.executeFetchRequest(request) as! [Profile]
+            return result.first
+        }catch{
+            return nil
+        }
+    }
     
     func fetchStoreWithPredicate(predicate predicate:NSPredicate?) -> [Store]? {
         
@@ -153,6 +179,18 @@ class SPDataManager {
             return nil
         }
     }
+    
+    
+    func deleteProfile(){
+        
+        let profile = fetchProfile()
+        
+        if let del_profile = profile {
+            context.deleteObject(del_profile)
+            self.appDelegate.saveContext()
+        }
+    }
+    
     
     // also delete all storage if its relationship of Language
     func deleteLanguageWithPredicate(predicate predicate:NSPredicate?){

@@ -30,7 +30,19 @@ class ProductListViewController: SPSingleImageViewController {
 
     // MARK: - Actions
     func goToPersonalPage(){
+        let profile = SPDataManager.sharedInstance.fetchProfile()
         
+        if let user_profile = profile {
+            
+            
+            
+        }else{
+            let loginPages = UIStoryboard(name: "LoginPages", bundle: nil)
+            let loginViewController = loginPages.instantiateViewControllerWithIdentifier("LoginViewController")
+            
+            self.navigationController?.pushViewController(loginViewController, animated: true)
+            return
+        }
     }
     
     

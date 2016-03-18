@@ -35,9 +35,18 @@ class LoginViewController: SPSingleColorViewController {
     }
     
     @IBAction func tapPassLogin(sender: UITapGestureRecognizer) {
-        //更換app畫面
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        appDelegate.entryMainViewController()
+        
+        if self.navigationController?.viewControllers.count > 1 {
+            //返回上一頁
+            self.navigationController?.popViewControllerAnimated(true)
+        }else if (self.presentingViewController?.isKindOfClass(RESideMenu) == true) {
+            //dismiss
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }else{
+            //更換app root畫面
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            appDelegate.entryMainViewController()
+        }
     }
     @IBAction func tapForgotPassword(sender: UITapGestureRecognizer) {
         let forgotPwdViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ForgotPwdViewController")

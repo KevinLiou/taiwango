@@ -1,5 +1,21 @@
 {
     "ch": {
+        "push": [
+                 {
+                 "push_id": 1,
+                 "type": 1,
+                 "title": "更新: V1.0.0正式上線囉",
+                 "info": "新版APP正式上線，更多好康與優惠，趕緊來更新吧！",
+                 "product_id": 1
+                 },
+                 {
+                 "push_id": 2,
+                 "type": 2,
+                 "title": "優惠: MAWI-藍色半寶石珍珠項鍊",
+                 "info": 0,
+                 "product_id": 1
+                 }
+                 ],
         "app_info": [
                      {
                      "version": "1.0.0",
@@ -61,7 +77,8 @@
                               "store_id": 1,
                               "product_key": 0,
                               "desc": "四年前女将Heroine在一趟旅途中，巧妙地与Lie Down I Think I Love You相遇了。女将的艺术总监时常固定前往欧洲，找出可以带回台湾与众家姊妹们分享的美丽事物。伦敦之旅让女将Heroine与古董丝巾包品牌设计师Emily解下不解之缘。 100年6月24日我们将第一个Lie Down I Think I Love You 丝巾包交到珍爱此包的优雅女性手中，自此女将Heroine便持续走在Lie Down I Think I Love You的推广路途上，将这款结合古董丝巾与特殊蛙口造型、广受日韩艺人喜爱的甜美喜悦带给中港台的所有爱美女生！ "
-                              }]
+                              }
+                              ]
                  },
                  {
                  "cate_id": 2,
@@ -141,6 +158,22 @@
                  ]
     },
     "tw": {
+        "push": [
+                 {
+                 "push_id": 1,
+                 "type": 1,
+                 "title": "更新: V1.0.0正式上線囉",
+                 "info": "新版APP正式上線，更多好康與優惠，趕緊來更新吧！",
+                 "product_id": 1
+                 },
+                 {
+                 "push_id": 2,
+                 "type": 2,
+                 "title": "優惠: MAWI-藍色半寶石珍珠項鍊",
+                 "info": 0,
+                 "product_id": 1
+                 }
+                 ],
         "app_info": [
                      {
                      "version": "1.0.0",
@@ -202,7 +235,8 @@
                               "store_id": 1,
                               "product_key": 0,
                               "desc": "四年前女將Heroine在一趟旅途中，巧妙地與Lie Down I Think I Love You相遇了。女將的藝術總監時常固定前往歐洲，找出可以帶回台灣與眾家姊妹們分享的美麗事物。倫敦之旅讓女將Heroine與古董絲巾包品牌設計師Emily解下不解之緣。100年6月24日我們將第一個Lie Down I Think I Love You 絲巾包交到珍愛此包的優雅女性手中，自此女將Heroine便持續走在Lie Down I Think I Love You的推廣路途上，將這款結合古董絲巾與特殊蛙口造型、廣受日韓藝人喜愛的甜美喜悅帶給中港台的所有愛美女生！"
-                              }]
+                              }
+                              ]
                  },
                  {
                  "cate_id": 2,

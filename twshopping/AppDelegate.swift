@@ -92,7 +92,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //側邊選單init
         let sideMenuViewController = RESideMenu(contentViewController: navProductListViewController, leftMenuViewController: leftMenuViewController, rightMenuViewController: nil)
-        sideMenuViewController.backgroundImage = UIImage(named: "Launch")
+//        sideMenuViewController.backgroundImage = UIImage(named: "Launch")
         
         //set第一個畫面的值
         productListViewController.dataSource = products
@@ -104,7 +104,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.makeKeyAndVisible()
         
     }
-    
     
     func entryLoginViewController(){
         let loginPages = UIStoryboard(name: "LoginPages", bundle: nil)

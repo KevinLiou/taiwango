@@ -1,5 +1,5 @@
 //
-//  Language.swift
+//  Push.swift
 //  twshopping
 //
 //  Created by KevinLiou on 2016/3/18.
@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 
-class Language: NSManagedObject {
+class Push: NSManagedObject {
 
 // Insert code here to add functionality to your managed object subclass
 

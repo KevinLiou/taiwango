@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LeftMenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class LeftMenuViewController: SPSingleColorViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     let sections:[String] = ["所有商品" ,"系統公告" ,"個人/訂單資訊" ,"應用程式聲明、政策" ,"開發團隊資訊"]
@@ -130,17 +130,33 @@ class LeftMenuViewController: UIViewController, UITableViewDelegate, UITableView
             
         }else if indexPath.section == 1{
             //push list
-//            let predicate = NSPredicate(format: "lan = '\(SPTools.getPreferredLanguages())'")
-//            let language = SPDataManager.sharedInstance.fetchLanguageWithPredicate(predicate: predicate)
-//            let version = language?.first?.version
+            let predicate = NSPredicate(format: "lan = '\(SPTools.getPreferredLanguages())'")
+            let language = SPDataManager.sharedInstance.fetchLanguageWithPredicate(predicate: predicate)
+            let pushs = language?.first?.push?.allObjects as! [Push]
             
             let navPushListViewController = self.storyboard?.instantiateViewControllerWithIdentifier("NavPushListViewController") as! SPNavigationController
             let pushListViewController = navPushListViewController.viewControllers.first as! PushListViewController
             pushListViewController.title = sections[indexPath.section]
+            pushListViewController.dataSource = pushs
             self.sideMenuViewController.setContentViewController(navPushListViewController, animated: true)
             self.sideMenuViewController.hideMenuViewController()
             
         }else if indexPath.section == 2{
+            
+            let profile = SPDataManager.sharedInstance.fetchProfile()
+            
+            if let user_profile = profile {
+                
+                
+                
+            }else{
+                let loginPages = UIStoryboard(name: "LoginPages", bundle: nil)
+                let loginViewController = loginPages.instantiateViewControllerWithIdentifier("NavLoginViewController")
+                
+                self.presentViewController(loginViewController, animated: true, completion: nil)
+                return
+            }
+            
             
             
         }else if indexPath.section == 3{

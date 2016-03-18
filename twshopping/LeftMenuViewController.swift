@@ -42,7 +42,6 @@ class LeftMenuViewController: SPSingleColorViewController, UITableViewDelegate, 
     }
 
     // MARK: - Table view data source
-
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return sections.count
     }
@@ -145,17 +144,19 @@ class LeftMenuViewController: SPSingleColorViewController, UITableViewDelegate, 
             
             let profile = SPDataManager.sharedInstance.fetchProfile()
             
-            if let user_profile = profile {
+//            if let user_profile = profile {
+            
+                let navProfileListViewController = self.storyboard?.instantiateViewControllerWithIdentifier("NavProfileListViewController")
                 
-                
-                
-            }else{
-                let loginPages = UIStoryboard(name: "LoginPages", bundle: nil)
-                let loginViewController = loginPages.instantiateViewControllerWithIdentifier("NavLoginViewController")
-                
-                self.presentViewController(loginViewController, animated: true, completion: nil)
-                return
-            }
+                self.sideMenuViewController.setContentViewController(navProfileListViewController, animated: true)
+                self.sideMenuViewController.hideMenuViewController()
+//            }else{
+//                let loginPages = UIStoryboard(name: "LoginPages", bundle: nil)
+//                let loginViewController = loginPages.instantiateViewControllerWithIdentifier("NavLoginViewController")
+//                
+//                self.presentViewController(loginViewController, animated: true, completion: nil)
+//                return
+//            }
             
             
             

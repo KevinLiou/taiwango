@@ -41,6 +41,8 @@
 		0AE44B8F1C9BBB75009FBE89 /* Language+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE44B8D1C9BBB75009FBE89 /* Language+CoreDataProperties.swift */; };
 		0AE44B901C9BBB75009FBE89 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE44B8E1C9BBB75009FBE89 /* Language.swift */; };
 		0AE44B931C9BD1A0009FBE89 /* ProfileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE44B921C9BD1A0009FBE89 /* ProfileListViewController.swift */; };
+		0AE44B951C9C0812009FBE89 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE44B941C9C0812009FBE89 /* ProfileCell.swift */; };
+		0AE44B971C9C0827009FBE89 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE44B961C9C0827009FBE89 /* OrderCell.swift */; };
 		2017C2931C9AFBB10047B51D /* PushListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2017C2921C9AFBB10047B51D /* PushListViewController.swift */; };
 		2017C2951C9AFF430047B51D /* PushCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2017C2941C9AFF430047B51D /* PushCell.swift */; };
 		203BEF161C9837150090F463 /* SPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203BEF151C9837150090F463 /* SPTextField.swift */; };
@@ -122,6 +124,8 @@
 		0AE44B8D1C9BBB75009FBE89 /* Language+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Language+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0AE44B8E1C9BBB75009FBE89 /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		0AE44B921C9BD1A0009FBE89 /* ProfileListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileListViewController.swift; sourceTree = "<group>"; };
+		0AE44B941C9C0812009FBE89 /* ProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		0AE44B961C9C0827009FBE89 /* OrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
 		2017C2921C9AFBB10047B51D /* PushListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushListViewController.swift; sourceTree = "<group>"; };
 		2017C2941C9AFF430047B51D /* PushCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushCell.swift; sourceTree = "<group>"; };
 		203BEF151C9837150090F463 /* SPTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTextField.swift; sourceTree = "<group>"; };
@@ -300,6 +304,8 @@
 			isa = PBXGroup;
 			children = (
 				0AE44B921C9BD1A0009FBE89 /* ProfileListViewController.swift */,
+				0AE44B941C9C0812009FBE89 /* ProfileCell.swift */,
+				0AE44B961C9C0827009FBE89 /* OrderCell.swift */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -614,6 +620,7 @@
 				203BEF181C983A150090F463 /* LoginViewController.swift in Sources */,
 				0A8F68691C97E4B500F1EFF3 /* LoadingViewController.swift in Sources */,
 				0A8F68741C980F8F00F1EFF3 /* LaunchViewController.swift in Sources */,
+				0AE44B951C9C0812009FBE89 /* ProfileCell.swift in Sources */,
 				203BEF221C9864CF0090F463 /* ForgotPwdViewController.swift in Sources */,
 				0AE44B931C9BD1A0009FBE89 /* ProfileListViewController.swift in Sources */,
 				0A38EC561C9941E50001117A /* SPDataManager.swift in Sources */,
@@ -643,6 +650,7 @@
 				0AD3DB561C99693F0055213B /* Store.swift in Sources */,
 				0AE44B8B1C9BB99A009FBE89 /* Push+CoreDataProperties.swift in Sources */,
 				0A17ACE01C9A639700B7C268 /* InfoViewController.swift in Sources */,
+				0AE44B971C9C0827009FBE89 /* OrderCell.swift in Sources */,
 				0A8F68711C98065E00F1EFF3 /* LeftMenuViewController.swift in Sources */,
 				0A8F68621C97C86C00F1EFF3 /* SPNavigationController.swift in Sources */,
 				0A17ACF11C9A985200B7C268 /* ProductCell.swift in Sources */,

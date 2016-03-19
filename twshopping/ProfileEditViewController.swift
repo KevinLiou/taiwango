@@ -9,11 +9,26 @@
 import UIKit
 
 class ProfileEditViewController: SPSingleColorViewController {
+    
+    var profile:Profile?
 
+    @IBOutlet weak var nameTextField: SPTextField!
+    @IBOutlet weak var emailTextField: SPTextField!
+    @IBOutlet weak var addressTextField: SPTextField!
+    @IBOutlet weak var mobileTextField: SPTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.title = "詳細個人資料"
+        
+        let saveItem = UIBarButtonItem(title: "儲存", style: .Plain, target: self, action: "save")
+        self.navigationItem.rightBarButtonItem = saveItem
+        
+        
+    }
+    
+    func save(){
+        self.navigationController?.popViewControllerAnimated(true)
     }
 
     override func didReceiveMemoryWarning() {

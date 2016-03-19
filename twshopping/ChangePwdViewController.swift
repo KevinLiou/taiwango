@@ -10,12 +10,26 @@ import UIKit
 
 class ChangePwdViewController: SPSingleColorViewController {
 
+    @IBOutlet weak var oldPwdTextField: SPTextField!
+    
+    @IBOutlet weak var newPwdTextField: SPTextField!
+    @IBOutlet weak var newPwdTextField2: SPTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.title = "變更密碼"
+        
+        let saveItem = UIBarButtonItem(title: "確定", style: .Plain, target: self, action: "save")
+        self.navigationItem.rightBarButtonItem = saveItem
     }
 
+    func save(){
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

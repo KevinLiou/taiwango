@@ -77,7 +77,8 @@ class ProfileListViewController: SPSingleImageViewController {
                 self.navigationController?.pushViewController(profileEditViewController!, animated: true)
             })
             let changePwd = UIAlertAction(title: "變更密碼", style: .Default, handler: { (_) -> Void in
-                
+                let changePwdViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ChangePwdViewController")
+                self.navigationController?.pushViewController(changePwdViewController!, animated: true)
             })
             
             let cancel = UIAlertAction(title: "取消", style: .Cancel, handler: nil)

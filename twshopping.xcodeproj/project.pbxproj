@@ -45,6 +45,8 @@
 		0AE44B971C9C0827009FBE89 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE44B961C9C0827009FBE89 /* OrderCell.swift */; };
 		2017C2931C9AFBB10047B51D /* PushListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2017C2921C9AFBB10047B51D /* PushListViewController.swift */; };
 		2017C2951C9AFF430047B51D /* PushCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2017C2941C9AFF430047B51D /* PushCell.swift */; };
+		2028955D1C9D6931006CCFAE /* ProfileEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2028955C1C9D6931006CCFAE /* ProfileEditViewController.swift */; };
+		2028955F1C9D6943006CCFAE /* ChangePwdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2028955E1C9D6943006CCFAE /* ChangePwdViewController.swift */; };
 		203BEF161C9837150090F463 /* SPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203BEF151C9837150090F463 /* SPTextField.swift */; };
 		203BEF181C983A150090F463 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203BEF171C983A150090F463 /* LoginViewController.swift */; };
 		203BEF1A1C9840440090F463 /* SPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203BEF191C9840440090F463 /* SPButton.swift */; };
@@ -128,6 +130,8 @@
 		0AE44B961C9C0827009FBE89 /* OrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
 		2017C2921C9AFBB10047B51D /* PushListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushListViewController.swift; sourceTree = "<group>"; };
 		2017C2941C9AFF430047B51D /* PushCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushCell.swift; sourceTree = "<group>"; };
+		2028955C1C9D6931006CCFAE /* ProfileEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileEditViewController.swift; sourceTree = "<group>"; };
+		2028955E1C9D6943006CCFAE /* ChangePwdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePwdViewController.swift; sourceTree = "<group>"; };
 		203BEF151C9837150090F463 /* SPTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTextField.swift; sourceTree = "<group>"; };
 		203BEF171C983A150090F463 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		203BEF191C9840440090F463 /* SPButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPButton.swift; sourceTree = "<group>"; };
@@ -306,6 +310,8 @@
 				0AE44B921C9BD1A0009FBE89 /* ProfileListViewController.swift */,
 				0AE44B941C9C0812009FBE89 /* ProfileCell.swift */,
 				0AE44B961C9C0827009FBE89 /* OrderCell.swift */,
+				2028955C1C9D6931006CCFAE /* ProfileEditViewController.swift */,
+				2028955E1C9D6943006CCFAE /* ChangePwdViewController.swift */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -633,6 +639,8 @@
 				0A17ACEA1C9A85E000B7C268 /* Version.swift in Sources */,
 				0A17ACDB1C9A608B00B7C268 /* SPSingleColorViewController.swift in Sources */,
 				203BEF1A1C9840440090F463 /* SPButton.swift in Sources */,
+				2028955F1C9D6943006CCFAE /* ChangePwdViewController.swift in Sources */,
+				2028955D1C9D6931006CCFAE /* ProfileEditViewController.swift in Sources */,
 				0AE44B8C1C9BB99A009FBE89 /* Push.swift in Sources */,
 				0AD3DB501C99693F0055213B /* Cate.swift in Sources */,
 				203BEF1E1C9848DF0090F463 /* RegisterViewController.swift in Sources */,

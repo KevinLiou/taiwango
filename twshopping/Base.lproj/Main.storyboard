@@ -792,6 +792,152 @@
             </objects>
             <point key="canvasLocation" x="2066" y="139"/>
         </scene>
+        <!--Profile Edit View Controller-->
+        <scene sceneID="Vkh-t4-VYi">
+            <objects>
+                <viewController storyboardIdentifier="ProfileEditViewController" id="jQW-mg-ttj" customClass="ProfileEditViewController" customModule="twshopping" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eat-Rg-BMb"/>
+                        <viewControllerLayoutGuide type="bottom" id="oI3-he-ovd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zge-Yb-GCO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aH9-nE-Rya" customClass="SPWhiteCornerView" customModule="twshopping" customModuleProvider="target">
+                                <rect key="frame" x="10" y="28" width="580" height="452"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="姓名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNe-Hw-GA5" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                        <rect key="frame" x="180" y="21" width="220" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="220" id="0TB-bp-o79"/>
+                                            <constraint firstAttribute="height" constant="21" id="se3-sq-Q9b"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="聯絡信箱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Dr-G3-8Ah" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                        <rect key="frame" x="180" y="115" width="220" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="220" id="G5c-Ls-aG3"/>
+                                            <constraint firstAttribute="height" constant="21" id="haU-gL-Vfl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入姓名" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="oNq-N8-f4b" customClass="SPTextField" customModule="twshopping" customModuleProvider="target">
+                                        <rect key="frame" x="180" y="50" width="220" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="220" id="6kT-cs-w2w"/>
+                                            <constraint firstAttribute="height" constant="44" id="Aa7-8H-KCf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="icon_name"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入信箱" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fMv-05-PVT" customClass="SPTextField" customModule="twshopping" customModuleProvider="target">
+                                        <rect key="frame" x="180" y="144" width="220" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="1Si-8V-ieP"/>
+                                            <constraint firstAttribute="width" constant="220" id="7Oo-IK-Tyd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="icon_email"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入區號+地址" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="EaJ-Of-txa" customClass="SPTextField" customModule="twshopping" customModuleProvider="target">
+                                        <rect key="frame" x="180" y="251" width="220" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="uv6-dG-hfo"/>
+                                            <constraint firstAttribute="width" constant="220" id="zVR-Fs-yXB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="icon_address"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地址(請輸入區號+地址)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpP-sF-w2l" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                        <rect key="frame" x="180" y="222" width="220" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="220" id="DbR-uV-WGI"/>
+                                            <constraint firstAttribute="height" constant="21" id="i00-PH-LvJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="電話號碼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8e-5b-Kqi" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                        <rect key="frame" x="180" y="329" width="220" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="agO-cA-2FU"/>
+                                            <constraint firstAttribute="width" constant="220" id="eej-AQ-Rnm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入手機號" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="yHL-s9-pd9" customClass="SPTextField" customModule="twshopping" customModuleProvider="target">
+                                        <rect key="frame" x="180" y="358" width="220" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="IMt-dZ-uPj"/>
+                                            <constraint firstAttribute="width" constant="220" id="QqJ-fO-cHX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="icon_mobile"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="yHL-s9-pd9" firstAttribute="top" secondItem="a8e-5b-Kqi" secondAttribute="bottom" constant="8" id="0aG-di-ROp"/>
+                                    <constraint firstItem="yHL-s9-pd9" firstAttribute="leading" secondItem="EaJ-Of-txa" secondAttribute="leading" id="2L8-Lt-CX2"/>
+                                    <constraint firstItem="EaJ-Of-txa" firstAttribute="top" secondItem="mpP-sF-w2l" secondAttribute="bottom" constant="8" id="49L-aA-0nG"/>
+                                    <constraint firstItem="EaJ-Of-txa" firstAttribute="top" secondItem="fMv-05-PVT" secondAttribute="bottom" constant="63" id="6gr-jv-uEe"/>
+                                    <constraint firstItem="fMv-05-PVT" firstAttribute="top" secondItem="3Dr-G3-8Ah" secondAttribute="bottom" constant="8" id="BRJ-7E-pvW"/>
+                                    <constraint firstItem="gNe-Hw-GA5" firstAttribute="leading" secondItem="oNq-N8-f4b" secondAttribute="leading" id="I0Y-zt-zPU"/>
+                                    <constraint firstItem="3Dr-G3-8Ah" firstAttribute="leading" secondItem="fMv-05-PVT" secondAttribute="leading" id="KIw-gm-OQ5"/>
+                                    <constraint firstItem="oNq-N8-f4b" firstAttribute="centerX" secondItem="aH9-nE-Rya" secondAttribute="centerX" id="Qfe-EY-C7D"/>
+                                    <constraint firstItem="mpP-sF-w2l" firstAttribute="leading" secondItem="EaJ-Of-txa" secondAttribute="leading" id="VnK-az-aJ2"/>
+                                    <constraint firstItem="oNq-N8-f4b" firstAttribute="top" secondItem="gNe-Hw-GA5" secondAttribute="bottom" constant="8" id="cXv-ra-a2g"/>
+                                    <constraint firstItem="fMv-05-PVT" firstAttribute="leading" secondItem="oNq-N8-f4b" secondAttribute="leading" id="d6b-s5-NIJ"/>
+                                    <constraint firstItem="yHL-s9-pd9" firstAttribute="top" secondItem="EaJ-Of-txa" secondAttribute="bottom" constant="63" id="iGO-1a-Exq"/>
+                                    <constraint firstItem="a8e-5b-Kqi" firstAttribute="leading" secondItem="yHL-s9-pd9" secondAttribute="leading" id="mR0-rA-9Z2"/>
+                                    <constraint firstAttribute="bottom" secondItem="yHL-s9-pd9" secondAttribute="bottom" constant="50" id="pjw-El-z6O"/>
+                                    <constraint firstItem="yHL-s9-pd9" firstAttribute="top" secondItem="EaJ-Of-txa" secondAttribute="bottom" constant="8" id="qvL-fQ-dWd"/>
+                                    <constraint firstItem="EaJ-Of-txa" firstAttribute="leading" secondItem="fMv-05-PVT" secondAttribute="leading" id="tja-52-WlU"/>
+                                    <constraint firstItem="oNq-N8-f4b" firstAttribute="top" secondItem="aH9-nE-Rya" secondAttribute="top" constant="50" id="uJQ-rI-24x"/>
+                                    <constraint firstItem="fMv-05-PVT" firstAttribute="top" secondItem="oNq-N8-f4b" secondAttribute="bottom" constant="50" id="wPi-vu-Oqv"/>
+                                    <constraint firstAttribute="height" constant="500" id="yYV-rw-PFl"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="yYV-rw-PFl"/>
+                                        <exclude reference="qvL-fQ-dWd"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.56862745100000001" green="0.6588235294" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="aH9-nE-Rya" firstAttribute="top" secondItem="eat-Rg-BMb" secondAttribute="bottom" constant="8" id="82D-Fy-Anl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aH9-nE-Rya" secondAttribute="trailing" constant="-10" id="EHj-Tv-OTf"/>
+                            <constraint firstItem="aH9-nE-Rya" firstAttribute="leading" secondItem="Zge-Yb-GCO" secondAttribute="leadingMargin" constant="-10" id="KS0-bW-JHy"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4tI-fL-0jT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2712" y="139"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Hng-HV-2OS">
             <objects>
@@ -814,7 +960,11 @@
     </scenes>
     <resources>
         <image name="Launch" width="320" height="568"/>
+        <image name="icon_address" width="20" height="30"/>
         <image name="icon_arrow" width="8" height="13"/>
+        <image name="icon_email" width="26" height="20"/>
+        <image name="icon_mobile" width="18" height="30"/>
+        <image name="icon_name" width="20" height="28"/>
         <image name="image_hoder" width="88" height="88"/>
     </resources>
 </document>

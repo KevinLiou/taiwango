@@ -66,8 +66,28 @@ class ProfileListViewController: SPSingleImageViewController {
         }
         
     }
-
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if indexPath.row == 0 {
+            
+            let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
+            let edtiProfile = UIAlertAction(title: "編輯個人資料", style: .Default, handler: { (_) -> Void in
+                let profileEditViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ProfileEditViewController")
+                self.navigationController?.pushViewController(profileEditViewController!, animated: true)
+            })
+            let changePwd = UIAlertAction(title: "變更密碼", style: .Default, handler: { (_) -> Void in
+                
+            })
+            
+            let cancel = UIAlertAction(title: "取消", style: .Cancel, handler: nil)
+            alertController.addAction(edtiProfile)
+            alertController.addAction(changePwd)
+            alertController.addAction(cancel)
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
+    }
     
 
     override func didReceiveMemoryWarning() {

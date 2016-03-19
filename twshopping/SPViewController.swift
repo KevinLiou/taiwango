@@ -19,6 +19,7 @@ class SPViewController: UIViewController {
             let image = UIImage(named: "icon_back")?.imageWithRenderingMode(.AlwaysOriginal)
             let backButtonItem = UIBarButtonItem(image: image, style: .Plain, target: self.navigationController, action: Selector("popViewControllerAnimated:"))
             self.navigationItem.leftBarButtonItem = backButtonItem;
+            
         }else{
             
             let image = UIImage(named: "icon_menu")?.imageWithRenderingMode(.AlwaysOriginal)

@@ -21,7 +21,7 @@ class LaunchViewController: UIViewController {
         SPTools.showLoadingOnViewController(self)
         
         
-        let time: NSTimeInterval = 3.0
+        let time: NSTimeInterval = 1.0
         let delay = dispatch_time(DISPATCH_TIME_NOW, Int64(time * Double(NSEC_PER_SEC)))
         dispatch_after(delay, dispatch_get_main_queue()) { () -> Void in
             
@@ -44,14 +44,14 @@ class LaunchViewController: UIViewController {
             //update type 1, 2, 3
             
             
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
             //登入過
             //...
-            
+            appDelegate.entryMainViewController()
             
             //未登入
             //...
-            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-            appDelegate.entryLoginViewController()
+//            appDelegate.entryLoginViewController()
             
             SPTools.hideLoadingOnViewController(self)
         }

@@ -142,7 +142,7 @@
                                                                 <constraint firstAttribute="height" constant="79" id="si8-d6-QRa"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="7vj-QL-tnB" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.94999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="7vj-QL-tnB" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
                                                             <rect key="frame" x="88" y="34" width="470" height="39"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="39" id="3lh-jl-faY"/>

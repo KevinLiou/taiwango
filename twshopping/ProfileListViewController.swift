@@ -55,7 +55,7 @@ class ProfileListViewController: SPSingleImageViewController {
             }else{
                 let cell = tableView.dequeueReusableCellWithIdentifier("OrderCell", forIndexPath: indexPath) as! OrderCell
                 cell.dateLabel.text = "2016-03-18 18:05 您購買了,"
-                cell.nameLabel.text = "本次賽事，廠商提供的產品，皆可作為參賽團隊設計APP的比賽題目，參賽者"
+                cell.nameLabel.text = "維力炸醬麵～～～＝"
                 cell.snLabel.text = "訂單編號: ABC-123456789"
                 cell.costLabel.text = "交易金額: 7,200 NT"
                 

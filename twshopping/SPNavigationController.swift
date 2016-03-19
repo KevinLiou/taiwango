@@ -30,17 +30,16 @@ class SPNavigationController: UINavigationController {
         
         
         
-        
+        //alpha bg
         self.navigationBar.setBackgroundImage(UIImage(named: "nav"), forBarMetrics: .Default)
         self.navigationBar.shadowImage = UIImage()
         self.navigationBar.translucent = true
-
         
-        
-        
+        //tint color
         self.navigationBar.barTintColor = UIColor.whiteColor()
         self.navigationBar.tintColor = UIColor.whiteColor()
         self.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+                
     }
     
     override func viewDidLoad() {

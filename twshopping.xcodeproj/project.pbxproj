@@ -72,6 +72,7 @@
 		20C2606F1C8DCA2500938F54 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20C2606E1C8DCA2500938F54 /* CoreTelephony.framework */; };
 		20C260711C8DCA2B00938F54 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20C260701C8DCA2B00938F54 /* CoreLocation.framework */; };
 		20C260731C8DCB2100938F54 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 20C260721C8DCB2100938F54 /* libsqlite3.tbd */; };
+		20F731471C9EF7630047C494 /* ProductInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F731461C9EF7630047C494 /* ProductInfoCell.swift */; };
 		B0D1217492232F80663CE217 /* Pods_twshopping.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E0F2B3D5933D479EF39383D /* Pods_twshopping.framework */; };
 /* End PBXBuildFile section */
 
@@ -164,6 +165,7 @@
 		20C2606E1C8DCA2500938F54 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		20C260701C8DCA2B00938F54 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		20C260721C8DCB2100938F54 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		20F731461C9EF7630047C494 /* ProductInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductInfoCell.swift; sourceTree = "<group>"; };
 		5251A53FFCE96C520714C319 /* Pods-twshopping.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twshopping.release.xcconfig"; path = "Pods/Target Support Files/Pods-twshopping/Pods-twshopping.release.xcconfig"; sourceTree = "<group>"; };
 		9E0F2B3D5933D479EF39383D /* Pods_twshopping.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_twshopping.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F237CBDC66EFFAF057DA22F3 /* Pods-twshopping.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twshopping.debug.xcconfig"; path = "Pods/Target Support Files/Pods-twshopping/Pods-twshopping.debug.xcconfig"; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 				0A17ACEC1C9A905800B7C268 /* ProductListViewController.swift */,
 				0A17ACF01C9A985200B7C268 /* ProductCell.swift */,
 				202367631C9E781A00D6F452 /* ProductInfoViewController.swift */,
+				20F731461C9EF7630047C494 /* ProductInfoCell.swift */,
 			);
 			name = Product;
 			sourceTree = "<group>";
@@ -675,6 +678,7 @@
 				0A38EC3B1C9913CC0001117A /* SPBlackView.swift in Sources */,
 				2017C2951C9AFF430047B51D /* PushCell.swift in Sources */,
 				20AE329E1C9AD98A00078EE6 /* LeftMenuDetailCell.swift in Sources */,
+				20F731471C9EF7630047C494 /* ProductInfoCell.swift in Sources */,
 				0A8F68651C97C89400F1EFF3 /* SPViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

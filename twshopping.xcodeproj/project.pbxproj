@@ -73,6 +73,7 @@
 		20C260711C8DCA2B00938F54 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20C260701C8DCA2B00938F54 /* CoreLocation.framework */; };
 		20C260731C8DCB2100938F54 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 20C260721C8DCB2100938F54 /* libsqlite3.tbd */; };
 		20F731471C9EF7630047C494 /* ProductInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F731461C9EF7630047C494 /* ProductInfoCell.swift */; };
+		20F731491C9F0E8D0047C494 /* OrderSnCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F731481C9F0E8D0047C494 /* OrderSnCell.swift */; };
 		B0D1217492232F80663CE217 /* Pods_twshopping.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E0F2B3D5933D479EF39383D /* Pods_twshopping.framework */; };
 /* End PBXBuildFile section */
 
@@ -166,6 +167,7 @@
 		20C260701C8DCA2B00938F54 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		20C260721C8DCB2100938F54 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		20F731461C9EF7630047C494 /* ProductInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductInfoCell.swift; sourceTree = "<group>"; };
+		20F731481C9F0E8D0047C494 /* OrderSnCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderSnCell.swift; sourceTree = "<group>"; };
 		5251A53FFCE96C520714C319 /* Pods-twshopping.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twshopping.release.xcconfig"; path = "Pods/Target Support Files/Pods-twshopping/Pods-twshopping.release.xcconfig"; sourceTree = "<group>"; };
 		9E0F2B3D5933D479EF39383D /* Pods_twshopping.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_twshopping.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F237CBDC66EFFAF057DA22F3 /* Pods-twshopping.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twshopping.debug.xcconfig"; path = "Pods/Target Support Files/Pods-twshopping/Pods-twshopping.debug.xcconfig"; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				0A17ACF01C9A985200B7C268 /* ProductCell.swift */,
 				202367631C9E781A00D6F452 /* ProductInfoViewController.swift */,
 				20F731461C9EF7630047C494 /* ProductInfoCell.swift */,
+				20F731481C9F0E8D0047C494 /* OrderSnCell.swift */,
 			);
 			name = Product;
 			sourceTree = "<group>";
@@ -666,6 +669,7 @@
 				0AE44B8B1C9BB99A009FBE89 /* Push+CoreDataProperties.swift in Sources */,
 				0A17ACE01C9A639700B7C268 /* InfoViewController.swift in Sources */,
 				0AE44B971C9C0827009FBE89 /* OrderCell.swift in Sources */,
+				20F731491C9F0E8D0047C494 /* OrderSnCell.swift in Sources */,
 				0A8F68711C98065E00F1EFF3 /* LeftMenuViewController.swift in Sources */,
 				0A8F68621C97C86C00F1EFF3 /* SPNavigationController.swift in Sources */,
 				0A17ACF11C9A985200B7C268 /* ProductCell.swift in Sources */,

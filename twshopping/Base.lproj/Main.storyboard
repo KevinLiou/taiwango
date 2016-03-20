@@ -1113,8 +1113,97 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProductInfoCell" rowHeight="90" id="2aM-AH-4Iu" customClass="ProductInfoCell" customModule="twshopping" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OrderSnCell" rowHeight="90" id="CyP-LB-0So" customClass="OrderSnCell" customModule="twshopping" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="600" height="90"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CyP-LB-0So" id="4ce-cv-aMR">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wi9-0r-gfN" customClass="SPBlackView" customModule="twshopping" customModuleProvider="target">
+                                                            <rect key="frame" x="8" y="8" width="584" height="92"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading...." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.94999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="DXd-fe-8zL" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                                                    <rect key="frame" x="8" y="64" width="568" height="20"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="39" id="NOX-4w-ZsP"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <variation key="default">
+                                                                        <mask key="constraints">
+                                                                            <exclude reference="NOX-4w-ZsP"/>
+                                                                        </mask>
+                                                                    </variation>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wPP-NL-an4" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                                                    <rect key="frame" x="8" y="8" width="568" height="20"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="21" id="CGB-wm-u8v"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <variation key="default">
+                                                                        <mask key="constraints">
+                                                                            <exclude reference="CGB-wm-u8v"/>
+                                                                        </mask>
+                                                                    </variation>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N3o-rE-sRh" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                                                    <rect key="frame" x="8" y="36" width="568" height="20"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="21" id="CIK-c2-E4S"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <variation key="default">
+                                                                        <mask key="constraints">
+                                                                            <exclude reference="CIK-c2-E4S"/>
+                                                                        </mask>
+                                                                    </variation>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstItem="DXd-fe-8zL" firstAttribute="leading" secondItem="wi9-0r-gfN" secondAttribute="leading" constant="8" id="0vX-3n-2td"/>
+                                                                <constraint firstAttribute="trailing" secondItem="DXd-fe-8zL" secondAttribute="trailing" constant="8" id="3L2-rK-xVP"/>
+                                                                <constraint firstItem="N3o-rE-sRh" firstAttribute="leading" secondItem="wi9-0r-gfN" secondAttribute="leading" constant="8" id="6Zk-mW-i3h"/>
+                                                                <constraint firstAttribute="trailing" secondItem="wPP-NL-an4" secondAttribute="trailing" constant="8" id="7XB-Pv-GcW"/>
+                                                                <constraint firstItem="wPP-NL-an4" firstAttribute="leading" secondItem="wi9-0r-gfN" secondAttribute="leading" constant="8" id="AE4-nH-Ufs"/>
+                                                                <constraint firstItem="DXd-fe-8zL" firstAttribute="top" secondItem="wPP-NL-an4" secondAttribute="bottom" constant="8" id="I54-m0-MwM"/>
+                                                                <constraint firstItem="DXd-fe-8zL" firstAttribute="top" secondItem="N3o-rE-sRh" secondAttribute="bottom" constant="8" id="Ve8-6d-iy5"/>
+                                                                <constraint firstItem="wPP-NL-an4" firstAttribute="top" secondItem="wi9-0r-gfN" secondAttribute="top" constant="8" id="YCX-GA-jcl"/>
+                                                                <constraint firstItem="N3o-rE-sRh" firstAttribute="top" secondItem="wPP-NL-an4" secondAttribute="bottom" constant="8" id="geR-aA-B76"/>
+                                                                <constraint firstAttribute="trailing" secondItem="N3o-rE-sRh" secondAttribute="trailing" constant="8" id="iSX-Gg-17a"/>
+                                                                <constraint firstAttribute="bottom" secondItem="DXd-fe-8zL" secondAttribute="bottom" constant="8" id="uFd-y7-7Ji"/>
+                                                            </constraints>
+                                                            <variation key="default">
+                                                                <mask key="constraints">
+                                                                    <exclude reference="I54-m0-MwM"/>
+                                                                </mask>
+                                                            </variation>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="wi9-0r-gfN" firstAttribute="trailing" secondItem="4ce-cv-aMR" secondAttribute="trailingMargin" id="Eu7-MW-UcV"/>
+                                                        <constraint firstItem="wi9-0r-gfN" firstAttribute="leading" secondItem="4ce-cv-aMR" secondAttribute="leadingMargin" id="PM4-Lc-oBR"/>
+                                                        <constraint firstAttribute="bottom" secondItem="wi9-0r-gfN" secondAttribute="bottom" priority="750" id="bzf-lC-Eem"/>
+                                                        <constraint firstItem="wi9-0r-gfN" firstAttribute="top" secondItem="4ce-cv-aMR" secondAttribute="topMargin" id="hSO-yU-1xB"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <connections>
+                                                    <outlet property="costLabel" destination="N3o-rE-sRh" id="Evy-FG-KZM"/>
+                                                    <outlet property="dateLabel" destination="DXd-fe-8zL" id="C4A-0T-G8J"/>
+                                                    <outlet property="snLabel" destination="wPP-NL-an4" id="jb0-Dr-6iN"/>
+                                                </connections>
+                                            </tableViewCell>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProductInfoCell" rowHeight="90" id="2aM-AH-4Iu" customClass="ProductInfoCell" customModule="twshopping" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="118" width="600" height="90"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2aM-AH-4Iu" id="6bC-da-bzO">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
@@ -1186,7 +1275,7 @@
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProductImageCell" rowHeight="97" id="fhn-j0-Ihs">
-                                                <rect key="frame" x="0.0" y="118" width="600" height="97"/>
+                                                <rect key="frame" x="0.0" y="208" width="600" height="97"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fhn-j0-Ihs" id="YLI-Uw-LRq">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="97"/>
@@ -1232,7 +1321,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eKP-bc-CaA" userLabel="Bottom View">
                                         <rect key="frame" x="0.0" y="560" width="600" height="60"/>
                                         <subviews>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dd-Ci-k1O" customClass="SPButton" customModule="twshopping" customModuleProvider="target">
+                                            <button opaque="NO" clipsSubviews="YES" tag="1000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dd-Ci-k1O" customClass="SPButton" customModule="twshopping" customModuleProvider="target">
                                                 <rect key="frame" x="127" y="8" width="110" height="44"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -1241,8 +1330,11 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <state key="normal" title="店家資訊"/>
+                                                <connections>
+                                                    <action selector="goToStoreInfo:" destination="6rR-8j-KUO" eventType="touchUpInside" id="pw6-Ad-FZ1"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAT-Um-Uop" customClass="SPButton" customModule="twshopping" customModuleProvider="target">
+                                            <button opaque="NO" clipsSubviews="YES" tag="1001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAT-Um-Uop" customClass="SPButton" customModule="twshopping" customModuleProvider="target">
                                                 <rect key="frame" x="363" y="8" width="110" height="44"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -1251,6 +1343,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <state key="normal" title="購買商品"/>
+                                                <connections>
+                                                    <action selector="buyThis:" destination="6rR-8j-KUO" eventType="touchUpInside" id="wTT-bH-xnQ"/>
+                                                </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iim-JC-iSD">
                                                 <rect key="frame" x="473" y="0.0" width="127" height="60"/>
@@ -1319,6 +1414,8 @@
                     <navigationItem key="navigationItem" id="kMb-QO-3xU"/>
                     <connections>
                         <outlet property="bottomView" destination="eKP-bc-CaA" id="uTC-dz-h3N"/>
+                        <outlet property="buyThisButton" destination="uAT-Um-Uop" id="TBA-df-Zrm"/>
+                        <outlet property="goTosStoreButton" destination="4dd-Ci-k1O" id="Y2v-Zj-taa"/>
                         <outlet property="tableView" destination="6re-J3-IV5" id="fb4-cZ-OVQ"/>
                     </connections>
                 </viewController>

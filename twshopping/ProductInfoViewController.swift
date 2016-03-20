@@ -11,23 +11,32 @@ import UIKit
 class ProductInfoViewController: SPSingleImageViewController, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    
+    //bottom views
     @IBOutlet weak var bottomView: UIView!
+    @IBOutlet weak var goTosStoreButton: SPButton!
+    @IBOutlet weak var buyThisButton: SPButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.navigationController
+        //購買商品詳細資訊頁
+        //商品詳細資訊頁
+        //共用此VC
+        
+        
         tableView.estimatedRowHeight = 90.0
         tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.contentInset.bottom = 8.0
         
     }
     
     // MARK: - Table view data source
-    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -38,6 +47,14 @@ class ProductInfoViewController: SPSingleImageViewController, UITableViewDelegat
         
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCellWithIdentifier("ProductImageCell", forIndexPath: indexPath)
+            return cell
+        }else if indexPath.row == 1 {
+            let cell = tableView.dequeueReusableCellWithIdentifier("OrderSnCell", forIndexPath: indexPath) as! OrderSnCell
+            
+            cell.snLabel.text = "訂單編號: ABC-1234567890"
+            cell.costLabel.text = "交易金額: 7,200,345,678,900"
+            cell.dateLabel.text = "交易時間: 2013-03-14 14:22:50"
+            
             return cell
         }else{
             let cell = tableView.dequeueReusableCellWithIdentifier("ProductInfoCell", forIndexPath: indexPath) as! ProductInfoCell
@@ -58,7 +75,6 @@ class ProductInfoViewController: SPSingleImageViewController, UITableViewDelegat
         
     }
     
-    
     func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         if velocity.y < 0 {
             bottomViewShow()
@@ -66,6 +82,19 @@ class ProductInfoViewController: SPSingleImageViewController, UITableViewDelegat
             bottomViewHidden()
         }
     }
+    
+    
+    //MARK: - Actions
+    
+    @IBAction func goToStoreInfo(sender: UIButton) {
+        
+    }
+    
+    @IBAction func buyThis(sender: UIButton) {
+        
+        
+    }
+    
     
     func bottomViewShow(){
         UIView.animateWithDuration(0.3, animations: { () -> Void in

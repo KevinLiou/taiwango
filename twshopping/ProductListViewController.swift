@@ -74,6 +74,9 @@ class ProductListViewController: SPSingleImageViewController {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
+        let productInfoViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ProductInfoViewController")
+        self.navigationController?.pushViewController(productInfoViewController!, animated: true)
+        
     }
     
     override func didReceiveMemoryWarning() {

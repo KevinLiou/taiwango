@@ -1093,6 +1093,97 @@
             </objects>
             <point key="canvasLocation" x="3421" y="139"/>
         </scene>
+        <!--Product Info View Controller-->
+        <scene sceneID="4Ug-Mx-wRP">
+            <objects>
+                <viewController storyboardIdentifier="ProductInfoViewController" id="6rR-8j-KUO" customClass="ProductInfoViewController" customModule="twshopping" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bYo-5S-hLp"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rzl-cP-hDE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="37D-nX-aUZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XDc-rA-8Bs">
+                                <rect key="frame" x="0.0" y="-20" width="600" height="620"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="97" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6re-J3-IV5">
+                                        <rect key="frame" x="0.0" y="20" width="600" height="600"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProductImageCell" rowHeight="97" id="fhn-j0-Ihs">
+                                                <rect key="frame" x="0.0" y="28" width="600" height="97"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fhn-j0-Ihs" id="YLI-Uw-LRq">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="97"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JBQ-b9-JzW" customClass="SPBlackView" customModule="twshopping" customModuleProvider="target">
+                                                            <rect key="frame" x="8" y="9" width="584" height="90"/>
+                                                            <subviews>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_hoder" translatesAutoresizingMaskIntoConstraints="NO" id="1dI-8b-Lqk">
+                                                                    <rect key="frame" x="226" y="1" width="132" height="88"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="1dI-8b-Lqk" secondAttribute="height" multiplier="350:232" id="Cak-u9-yVf"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstItem="1dI-8b-Lqk" firstAttribute="centerX" secondItem="JBQ-b9-JzW" secondAttribute="centerX" id="YGo-b0-sZU"/>
+                                                                <constraint firstItem="1dI-8b-Lqk" firstAttribute="width" secondItem="JBQ-b9-JzW" secondAttribute="width" constant="-2" id="eZD-dN-dfd"/>
+                                                                <constraint firstItem="1dI-8b-Lqk" firstAttribute="height" secondItem="JBQ-b9-JzW" secondAttribute="height" constant="-2" id="hHP-9e-5va"/>
+                                                                <constraint firstItem="1dI-8b-Lqk" firstAttribute="centerY" secondItem="JBQ-b9-JzW" secondAttribute="centerY" id="xXe-7O-daL"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="JBQ-b9-JzW" firstAttribute="leading" secondItem="YLI-Uw-LRq" secondAttribute="leading" constant="8" id="0YV-pg-hGb"/>
+                                                        <constraint firstItem="JBQ-b9-JzW" firstAttribute="width" secondItem="YLI-Uw-LRq" secondAttribute="width" constant="-16" id="cYi-cq-ETG"/>
+                                                        <constraint firstAttribute="bottom" secondItem="JBQ-b9-JzW" secondAttribute="bottom" id="qEC-5Q-thN"/>
+                                                        <constraint firstItem="JBQ-b9-JzW" firstAttribute="top" secondItem="YLI-Uw-LRq" secondAttribute="top" constant="8" id="tO2-wl-B6n"/>
+                                                        <constraint firstAttribute="trailing" secondItem="JBQ-b9-JzW" secondAttribute="trailing" constant="8" id="uRs-Ej-ycV"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="6rR-8j-KUO" id="wIY-tk-Iir"/>
+                                            <outlet property="delegate" destination="6rR-8j-KUO" id="CRD-oh-PzG"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="6re-J3-IV5" firstAttribute="leading" secondItem="XDc-rA-8Bs" secondAttribute="leading" id="CLL-0I-uv3"/>
+                                    <constraint firstAttribute="bottom" secondItem="6re-J3-IV5" secondAttribute="bottom" id="YVZ-a4-m6S"/>
+                                    <constraint firstItem="6re-J3-IV5" firstAttribute="top" secondItem="XDc-rA-8Bs" secondAttribute="top" constant="20" id="e2h-H4-CAc"/>
+                                    <constraint firstAttribute="trailing" secondItem="6re-J3-IV5" secondAttribute="trailing" id="hyR-nt-wzB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="XDc-rA-8Bs" secondAttribute="trailing" id="1a5-ar-bYH"/>
+                            <constraint firstItem="XDc-rA-8Bs" firstAttribute="leading" secondItem="37D-nX-aUZ" secondAttribute="leading" id="8TU-20-qID"/>
+                            <constraint firstItem="XDc-rA-8Bs" firstAttribute="top" secondItem="37D-nX-aUZ" secondAttribute="top" constant="-20" id="YoE-K8-iFH"/>
+                            <constraint firstAttribute="bottom" secondItem="XDc-rA-8Bs" secondAttribute="bottom" id="aVW-81-3da"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="kMb-QO-3xU"/>
+                    <connections>
+                        <outlet property="tableView" destination="6re-J3-IV5" id="fb4-cZ-OVQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6d7-sC-eir" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2741" y="-567"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Launch" width="320" height="568"/>

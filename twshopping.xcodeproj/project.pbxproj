@@ -45,6 +45,7 @@
 		0AE44B971C9C0827009FBE89 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE44B961C9C0827009FBE89 /* OrderCell.swift */; };
 		2017C2931C9AFBB10047B51D /* PushListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2017C2921C9AFBB10047B51D /* PushListViewController.swift */; };
 		2017C2951C9AFF430047B51D /* PushCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2017C2941C9AFF430047B51D /* PushCell.swift */; };
+		202367641C9E781A00D6F452 /* ProductInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202367631C9E781A00D6F452 /* ProductInfoViewController.swift */; };
 		2028955D1C9D6931006CCFAE /* ProfileEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2028955C1C9D6931006CCFAE /* ProfileEditViewController.swift */; };
 		2028955F1C9D6943006CCFAE /* ChangePwdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2028955E1C9D6943006CCFAE /* ChangePwdViewController.swift */; };
 		203BEF161C9837150090F463 /* SPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203BEF151C9837150090F463 /* SPTextField.swift */; };
@@ -130,6 +131,7 @@
 		0AE44B961C9C0827009FBE89 /* OrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
 		2017C2921C9AFBB10047B51D /* PushListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushListViewController.swift; sourceTree = "<group>"; };
 		2017C2941C9AFF430047B51D /* PushCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushCell.swift; sourceTree = "<group>"; };
+		202367631C9E781A00D6F452 /* ProductInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductInfoViewController.swift; sourceTree = "<group>"; };
 		2028955C1C9D6931006CCFAE /* ProfileEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileEditViewController.swift; sourceTree = "<group>"; };
 		2028955E1C9D6943006CCFAE /* ChangePwdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePwdViewController.swift; sourceTree = "<group>"; };
 		203BEF151C9837150090F463 /* SPTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTextField.swift; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 			children = (
 				0A17ACEC1C9A905800B7C268 /* ProductListViewController.swift */,
 				0A17ACF01C9A985200B7C268 /* ProductCell.swift */,
+				202367631C9E781A00D6F452 /* ProductInfoViewController.swift */,
 			);
 			name = Product;
 			sourceTree = "<group>";
@@ -641,6 +644,7 @@
 				203BEF1A1C9840440090F463 /* SPButton.swift in Sources */,
 				2028955F1C9D6943006CCFAE /* ChangePwdViewController.swift in Sources */,
 				2028955D1C9D6931006CCFAE /* ProfileEditViewController.swift in Sources */,
+				202367641C9E781A00D6F452 /* ProductInfoViewController.swift in Sources */,
 				0AE44B8C1C9BB99A009FBE89 /* Push.swift in Sources */,
 				0AD3DB501C99693F0055213B /* Cate.swift in Sources */,
 				203BEF1E1C9848DF0090F463 /* RegisterViewController.swift in Sources */,

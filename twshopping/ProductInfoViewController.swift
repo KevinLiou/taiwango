@@ -8,14 +8,16 @@
 
 import UIKit
 
-class ProductInfoViewController: SPSingleImageViewController {
+class ProductInfoViewController: SPSingleImageViewController, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var bottomView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 //        self.navigationController
         tableView.estimatedRowHeight = 90.0
         tableView.rowHeight = UITableViewAutomaticDimension
+        
     }
     
     // MARK: - Table view data source
@@ -40,7 +42,7 @@ class ProductInfoViewController: SPSingleImageViewController {
         }else{
             let cell = tableView.dequeueReusableCellWithIdentifier("ProductInfoCell", forIndexPath: indexPath) as! ProductInfoCell
             cell.titleLabel.text = "標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題"
-            cell.descLabel.text = "說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明\n說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明\n說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明\n說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明\n說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明\n說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明\n說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明\n說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明\n說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明\n說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明\n說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明\n說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明\n"
+            cell.descLabel.text = "說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明\n說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明\n說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明\n說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明\n說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明\n說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明\n說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明\n說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明\n說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明\n說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明\n說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明\n說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明"
             return cell
         }
 
@@ -48,10 +50,35 @@ class ProductInfoViewController: SPSingleImageViewController {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
+        if self.bottomView.alpha == 0.0 {
+            bottomViewShow()
+        }else{
+            bottomViewHidden()
+        }
+        
     }
     
     
-
+    func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        if velocity.y < 0 {
+            bottomViewShow()
+        }else{
+            bottomViewHidden()
+        }
+    }
+    
+    func bottomViewShow(){
+        UIView.animateWithDuration(0.3, animations: { () -> Void in
+            self.bottomView.alpha = 1.0
+        })
+    }
+    
+    func bottomViewHidden(){
+        UIView.animateWithDuration(0.3, animations: { () -> Void in
+            self.bottomView.alpha = 0.0
+        })
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

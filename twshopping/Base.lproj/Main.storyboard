@@ -1121,10 +1121,10 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v6B-vb-RQi" customClass="SPBlackView" customModule="twshopping" customModuleProvider="target">
-                                                            <rect key="frame" x="8" y="8" width="584" height="82"/>
+                                                            <rect key="frame" x="8" y="8" width="584" height="88"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.94999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="5of-Up-RRl" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
-                                                                    <rect key="frame" x="8" y="38" width="568" height="36"/>
+                                                                    <rect key="frame" x="8" y="40" width="568" height="36"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="39" id="lEX-k0-PV6"/>
                                                                     </constraints>
@@ -1139,7 +1139,7 @@
                                                                     </variation>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" text="Title Loading..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6An-NM-kse" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
-                                                                    <rect key="frame" x="8" y="8" width="568" height="22"/>
+                                                                    <rect key="frame" x="8" y="12" width="568" height="20"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="21" id="j4B-l3-Ccc"/>
                                                                     </constraints>
@@ -1156,9 +1156,9 @@
                                                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstItem="6An-NM-kse" firstAttribute="leading" secondItem="v6B-vb-RQi" secondAttribute="leading" constant="8" id="5ux-VH-30E"/>
-                                                                <constraint firstItem="6An-NM-kse" firstAttribute="top" secondItem="v6B-vb-RQi" secondAttribute="top" constant="8" id="HeM-RU-epK"/>
+                                                                <constraint firstItem="6An-NM-kse" firstAttribute="top" secondItem="v6B-vb-RQi" secondAttribute="top" constant="12" id="HeM-RU-epK"/>
                                                                 <constraint firstAttribute="trailing" secondItem="5of-Up-RRl" secondAttribute="trailing" constant="8" id="UEV-I0-qR1"/>
-                                                                <constraint firstAttribute="bottom" secondItem="5of-Up-RRl" secondAttribute="bottom" constant="8" id="UzR-ff-Pna"/>
+                                                                <constraint firstAttribute="bottom" secondItem="5of-Up-RRl" secondAttribute="bottom" constant="12" id="UzR-ff-Pna"/>
                                                                 <constraint firstAttribute="trailing" secondItem="6An-NM-kse" secondAttribute="trailing" constant="8" id="YFN-Wi-P3P"/>
                                                                 <constraint firstItem="5of-Up-RRl" firstAttribute="leading" secondItem="v6B-vb-RQi" secondAttribute="leading" constant="8" id="fr4-QX-A4p"/>
                                                                 <constraint firstItem="5of-Up-RRl" firstAttribute="top" secondItem="6An-NM-kse" secondAttribute="bottom" constant="8" id="wQR-QD-6Ct"/>
@@ -1185,7 +1185,7 @@
                                                     <outlet property="titleLabel" destination="6An-NM-kse" id="VAw-Ac-0Na"/>
                                                 </connections>
                                             </tableViewCell>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProductImageCell" rowHeight="97" id="fhn-j0-Ihs">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProductImageCell" rowHeight="97" id="fhn-j0-Ihs">
                                                 <rect key="frame" x="0.0" y="118" width="600" height="97"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fhn-j0-Ihs" id="YLI-Uw-LRq">
@@ -1229,13 +1229,82 @@
                                             <outlet property="delegate" destination="6rR-8j-KUO" id="CRD-oh-PzG"/>
                                         </connections>
                                     </tableView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eKP-bc-CaA" userLabel="Bottom View">
+                                        <rect key="frame" x="0.0" y="560" width="600" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dd-Ci-k1O" customClass="SPButton" customModule="twshopping" customModuleProvider="target">
+                                                <rect key="frame" x="127" y="8" width="110" height="44"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="110" id="Rix-0J-t8v"/>
+                                                    <constraint firstAttribute="height" constant="44" id="kO1-nr-Q6g"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <state key="normal" title="店家資訊"/>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAT-Um-Uop" customClass="SPButton" customModule="twshopping" customModuleProvider="target">
+                                                <rect key="frame" x="363" y="8" width="110" height="44"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="YOW-5t-HM8"/>
+                                                    <constraint firstAttribute="width" constant="110" id="eQX-b9-gc6"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <state key="normal" title="購買商品"/>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iim-JC-iSD">
+                                                <rect key="frame" x="473" y="0.0" width="127" height="60"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lo0-FJ-sKW">
+                                                <rect key="frame" x="237" y="0.0" width="126" height="60"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W44-ud-ZA6">
+                                                <rect key="frame" x="0.0" y="0.0" width="127" height="60"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="W44-ud-ZA6" secondAttribute="bottom" id="07E-Z8-rbH"/>
+                                            <constraint firstItem="lo0-FJ-sKW" firstAttribute="width" secondItem="W44-ud-ZA6" secondAttribute="width" id="0PB-rj-z6r"/>
+                                            <constraint firstItem="iim-JC-iSD" firstAttribute="height" secondItem="eKP-bc-CaA" secondAttribute="height" id="1rm-cH-HZf"/>
+                                            <constraint firstItem="lo0-FJ-sKW" firstAttribute="height" secondItem="eKP-bc-CaA" secondAttribute="height" id="QDy-O9-TG5"/>
+                                            <constraint firstItem="4dd-Ci-k1O" firstAttribute="leading" secondItem="eKP-bc-CaA" secondAttribute="leading" constant="27" id="QSm-zR-bl3"/>
+                                            <constraint firstItem="4dd-Ci-k1O" firstAttribute="leading" secondItem="W44-ud-ZA6" secondAttribute="trailing" id="WsC-QO-3PD"/>
+                                            <constraint firstItem="lo0-FJ-sKW" firstAttribute="leading" secondItem="4dd-Ci-k1O" secondAttribute="trailing" id="Ys6-SM-88i"/>
+                                            <constraint firstItem="W44-ud-ZA6" firstAttribute="top" secondItem="eKP-bc-CaA" secondAttribute="top" id="Yyh-U4-Y8W"/>
+                                            <constraint firstAttribute="trailing" secondItem="iim-JC-iSD" secondAttribute="trailing" id="bZj-4N-4rg"/>
+                                            <constraint firstItem="iim-JC-iSD" firstAttribute="width" secondItem="lo0-FJ-sKW" secondAttribute="width" id="fGt-Sn-aEE"/>
+                                            <constraint firstItem="4dd-Ci-k1O" firstAttribute="centerY" secondItem="eKP-bc-CaA" secondAttribute="centerY" id="fiW-m4-DRO"/>
+                                            <constraint firstItem="iim-JC-iSD" firstAttribute="leading" secondItem="uAT-Um-Uop" secondAttribute="trailing" id="gCU-C9-utc"/>
+                                            <constraint firstAttribute="bottom" secondItem="lo0-FJ-sKW" secondAttribute="bottom" id="iWx-MQ-ovA"/>
+                                            <constraint firstItem="iim-JC-iSD" firstAttribute="top" secondItem="eKP-bc-CaA" secondAttribute="top" id="n4V-Yb-DaL"/>
+                                            <constraint firstItem="W44-ud-ZA6" firstAttribute="height" secondItem="eKP-bc-CaA" secondAttribute="height" id="nDR-Bf-0wr"/>
+                                            <constraint firstItem="uAT-Um-Uop" firstAttribute="centerY" secondItem="eKP-bc-CaA" secondAttribute="centerY" id="q9P-ee-erC"/>
+                                            <constraint firstItem="lo0-FJ-sKW" firstAttribute="top" secondItem="eKP-bc-CaA" secondAttribute="top" id="vr4-6A-N2J"/>
+                                            <constraint firstItem="uAT-Um-Uop" firstAttribute="leading" secondItem="lo0-FJ-sKW" secondAttribute="trailing" id="x5X-Y6-MKH"/>
+                                            <constraint firstAttribute="bottom" secondItem="iim-JC-iSD" secondAttribute="bottom" id="xrT-6Y-MpC"/>
+                                            <constraint firstItem="W44-ud-ZA6" firstAttribute="leading" secondItem="eKP-bc-CaA" secondAttribute="leading" id="yDF-au-asC"/>
+                                            <constraint firstAttribute="height" constant="60" id="zHf-Cl-FKb"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="QSm-zR-bl3"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="6re-J3-IV5" firstAttribute="leading" secondItem="XDc-rA-8Bs" secondAttribute="leading" id="CLL-0I-uv3"/>
+                                    <constraint firstAttribute="trailing" secondItem="eKP-bc-CaA" secondAttribute="trailing" id="ON1-YQ-owB"/>
+                                    <constraint firstAttribute="bottom" secondItem="eKP-bc-CaA" secondAttribute="bottom" id="R8q-Z6-7oc"/>
                                     <constraint firstAttribute="bottom" secondItem="6re-J3-IV5" secondAttribute="bottom" id="YVZ-a4-m6S"/>
                                     <constraint firstItem="6re-J3-IV5" firstAttribute="top" secondItem="XDc-rA-8Bs" secondAttribute="top" constant="20" id="e2h-H4-CAc"/>
                                     <constraint firstAttribute="trailing" secondItem="6re-J3-IV5" secondAttribute="trailing" id="hyR-nt-wzB"/>
+                                    <constraint firstItem="eKP-bc-CaA" firstAttribute="leading" secondItem="XDc-rA-8Bs" secondAttribute="leading" id="jnb-q9-vNe"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -1249,6 +1318,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="kMb-QO-3xU"/>
                     <connections>
+                        <outlet property="bottomView" destination="eKP-bc-CaA" id="uTC-dz-h3N"/>
                         <outlet property="tableView" destination="6re-J3-IV5" id="fb4-cZ-OVQ"/>
                     </connections>
                 </viewController>

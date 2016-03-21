@@ -35,6 +35,13 @@ class ProductInfoViewController: SPSingleImageViewController, UITableViewDelegat
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.contentInset.bottom = 8.0
         
+        
+        switch infoType {
+        case .OrderInfo:
+            self.buyThisButton.hidden = true
+        case .ProductInfo:
+            self.buyThisButton.hidden = false
+        }
     }
     
     // MARK: - Table view data source

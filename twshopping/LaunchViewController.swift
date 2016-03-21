@@ -45,14 +45,18 @@ class LaunchViewController: UIViewController {
             
             
             let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-            //登入過
-            //...
-            appDelegate.entryMainViewController()
+            let profile = SPDataManager.sharedInstance.fetchProfile()
             
-            //未登入
-            //...
-//            appDelegate.entryLoginViewController()
-            
+            if let _ = profile {
+                //登入過
+                //...
+                appDelegate.entryMainViewController()
+            }else{
+                //未登入
+                //...
+                appDelegate.entryLoginViewController()
+            }
+
             SPTools.hideLoadingOnViewController(self)
         }
         

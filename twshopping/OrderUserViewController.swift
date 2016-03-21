@@ -10,6 +10,8 @@ import UIKit
 
 class OrderUserViewController: SPSingleColorViewController {
 
+    var product:Product?
+    
     @IBOutlet var productTitleLabel: SPWhiteTextLabel!
     @IBOutlet var productName: SPWhiteTextLabel!
     @IBOutlet var productPrice: SPWhiteTextLabel!
@@ -24,8 +26,10 @@ class OrderUserViewController: SPSingleColorViewController {
         super.viewDidLoad()
         self.title = "購買商品"
         
-        self.productName.text = "商品名稱: 商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱商品名稱"
-        self.productPrice.text = "消費金額: 123123123123123123123123123123123"
+        if let product_name = product?.name {
+            self.productName.text = "商品名稱: \(product_name)"
+            self.productPrice.text = "消費金額: 123,123"
+        }
         
         self.productTitleLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
         self.OrderUserTitleLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
@@ -36,6 +40,7 @@ class OrderUserViewController: SPSingleColorViewController {
     
     func buyIt(){
         let productInfoViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ProductInfoViewController") as! ProductInfoViewController
+        productInfoViewController.product = product
         productInfoViewController.infoType = .OrderInfo
         productInfoViewController.title = "購買完成"
         self.navigationController?.pushViewController(productInfoViewController, animated: true)

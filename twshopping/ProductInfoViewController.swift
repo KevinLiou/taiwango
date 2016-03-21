@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PINRemoteImage
 
 enum ProductInfoType {
     case ProductInfo, OrderInfo
@@ -28,6 +29,7 @@ class ProductInfoViewController: SPSingleImageViewController, UITableViewDelegat
         //購買商品詳細資訊頁
         //商品詳細資訊頁
         //共用此VC
+        self.title = product?.name
         
         tableView.estimatedRowHeight = 90.0
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -60,6 +62,13 @@ class ProductInfoViewController: SPSingleImageViewController, UITableViewDelegat
         case .OrderInfo:
             if indexPath.row == 0 {
                 let cell = tableView.dequeueReusableCellWithIdentifier("ProductImageCell", forIndexPath: indexPath)
+                let imageView = cell.contentView.viewWithTag(1000) as! UIImageView
+                
+                if let image_url = product!.image_urls {
+                    imageView.pin_updateWithProgress = true
+                    imageView.pin_setImageFromURL(NSURL(string: image_url))
+                }
+                
                 return cell
             }else if indexPath.row == 1 {
                 let cell = tableView.dequeueReusableCellWithIdentifier("OrderSnCell", forIndexPath: indexPath) as! OrderSnCell
@@ -71,8 +80,8 @@ class ProductInfoViewController: SPSingleImageViewController, UITableViewDelegat
                 return cell
             }else if indexPath.row == 2{
                 let cell = tableView.dequeueReusableCellWithIdentifier("ProductInfoCell", forIndexPath: indexPath) as! ProductInfoCell
-                cell.titleLabel.text = "標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題"
-                cell.descLabel.text = "說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明"
+                cell.titleLabel.text = product?.name
+                cell.descLabel.text = product?.desc
                 return cell
             }else{
                 let cell = tableView.dequeueReusableCellWithIdentifier("OrderUserCell", forIndexPath: indexPath) as! OrderUserCell
@@ -86,11 +95,17 @@ class ProductInfoViewController: SPSingleImageViewController, UITableViewDelegat
         case .ProductInfo:
             if indexPath.row == 0 {
                 let cell = tableView.dequeueReusableCellWithIdentifier("ProductImageCell", forIndexPath: indexPath)
+                let imageView = cell.contentView.viewWithTag(1000) as! UIImageView
+                
+                if let image_url = product!.image_urls {
+                    imageView.pin_updateWithProgress = true
+                    imageView.pin_setImageFromURL(NSURL(string: image_url))
+                }
                 return cell
             }else{
                 let cell = tableView.dequeueReusableCellWithIdentifier("ProductInfoCell", forIndexPath: indexPath) as! ProductInfoCell
-                cell.titleLabel.text = "標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題"
-                cell.descLabel.text = "說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明"
+                cell.titleLabel.text = product?.name
+                cell.descLabel.text = product?.desc
                 return cell
             }
         }
@@ -120,7 +135,12 @@ class ProductInfoViewController: SPSingleImageViewController, UITableViewDelegat
     //MARK: - Actions
     
     @IBAction func goToStoreInfo(sender: UIButton) {
+        let store = product?.store
         
+        let infoViewController = self.storyboard?.instantiateViewControllerWithIdentifier("InfoViewController") as! InfoViewController
+        infoViewController.infoString = store?.info
+        infoViewController.title = store?.name
+        self.navigationController?.pushViewController(infoViewController, animated: true)
     }
     
     @IBAction func buyThis(sender: UIButton) {
@@ -129,9 +149,9 @@ class ProductInfoViewController: SPSingleImageViewController, UITableViewDelegat
             return
         }
         
-        let orderUserViewController = self.storyboard?.instantiateViewControllerWithIdentifier("OrderUserViewController")
-        self.navigationController?.pushViewController(orderUserViewController!, animated: true)
-        
+        let orderUserViewController = self.storyboard?.instantiateViewControllerWithIdentifier("OrderUserViewController") as! OrderUserViewController
+        orderUserViewController.product = product
+        self.navigationController?.pushViewController(orderUserViewController, animated: true)
     }
     
     

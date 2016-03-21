@@ -12,12 +12,12 @@ class ProfileListViewController: SPSingleImageViewController {
 
     @IBOutlet var tableView: UITableView!
     var profile:Profile?
-    let orders:[[String:AnyObject]] = [["1":"1"]]
+    let orders:[[String:AnyObject]] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        self.title = "個人/訂單資訊"
         
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 70.0
@@ -27,11 +27,12 @@ class ProfileListViewController: SPSingleImageViewController {
     // MARK: - Table view data source
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-//        if profile == nil {
-//            return 0
-//        }
+        if orders.isEmpty{
+            return 2
+        }else{
+            return orders.count + 1
+        }
         
-        return orders.count + 1
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -49,7 +50,7 @@ class ProfileListViewController: SPSingleImageViewController {
             return cell
         }else{
             
-            if orders.count == 0 {
+            if orders.isEmpty {
                 let cell = tableView.dequeueReusableCellWithIdentifier("NoOrderCell", forIndexPath: indexPath)
                 return cell
             }else{

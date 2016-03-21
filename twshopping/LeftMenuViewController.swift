@@ -144,19 +144,20 @@ class LeftMenuViewController: SPSingleColorViewController, UITableViewDelegate, 
             
             let profile = SPDataManager.sharedInstance.fetchProfile()
             
-//            if let user_profile = profile {
+            if let user_profile = profile {
             
-                let navProfileListViewController = self.storyboard?.instantiateViewControllerWithIdentifier("NavProfileListViewController")
-                
+                let navProfileListViewController = self.storyboard?.instantiateViewControllerWithIdentifier("NavProfileListViewController") as! SPNavigationController
+                let profileListViewController = navProfileListViewController.viewControllers.first as! ProfileListViewController
+                profileListViewController.profile = user_profile
                 self.sideMenuViewController.setContentViewController(navProfileListViewController, animated: true)
                 self.sideMenuViewController.hideMenuViewController()
-//            }else{
-//                let loginPages = UIStoryboard(name: "LoginPages", bundle: nil)
-//                let loginViewController = loginPages.instantiateViewControllerWithIdentifier("NavLoginViewController")
-//                
-//                self.presentViewController(loginViewController, animated: true, completion: nil)
-//                return
-//            }
+            }else{
+                let loginPages = UIStoryboard(name: "LoginPages", bundle: nil)
+                let loginViewController = loginPages.instantiateViewControllerWithIdentifier("NavLoginViewController")
+                
+                self.presentViewController(loginViewController, animated: true, completion: nil)
+                return
+            }
             
             
             

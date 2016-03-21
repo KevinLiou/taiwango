@@ -120,43 +120,37 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProductCell" rowHeight="90" id="kqj-tS-2JZ" customClass="ProductCell" customModule="twshopping" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="kqj-tS-2JZ" id="d8e-Jy-XLA">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kqj-tS-2JZ" id="d8e-Jy-XLA">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uQz-RP-mTJ" customClass="SPBlackView" customModule="twshopping" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="8" width="584" height="81"/>
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uQz-RP-mTJ" customClass="SPBlackView" customModule="twshopping" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="8" width="584" height="82"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="icon_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="v6P-y3-3W5">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="v6P-y3-3W5">
                                                             <rect key="frame" x="566" y="34" width="8" height="13"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="8" id="Pdh-7h-kZv"/>
-                                                                <constraint firstAttribute="height" constant="13" id="qZl-OC-DTg"/>
+                                                                <constraint firstAttribute="height" constant="13" id="jXo-n9-5ch"/>
+                                                                <constraint firstAttribute="width" constant="8" id="tpm-J8-TuG"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <imageView userInteractionEnabled="NO" tag="1002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="image_hoder" translatesAutoresizingMaskIntoConstraints="NO" id="Dyv-1Z-WlC" customClass="SPImageView" customModule="twshopping" customModuleProvider="target">
-                                                            <rect key="frame" x="1" y="1" width="79" height="79"/>
+                                                        <imageView userInteractionEnabled="NO" tag="1002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_hoder" translatesAutoresizingMaskIntoConstraints="NO" id="Dyv-1Z-WlC" customClass="SPImageView" customModule="twshopping" customModuleProvider="target">
+                                                            <rect key="frame" x="1" y="1" width="80" height="80"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" secondItem="Dyv-1Z-WlC" secondAttribute="height" multiplier="1:1" id="MgI-c6-h0Y"/>
-                                                                <constraint firstAttribute="height" constant="79" id="si8-d6-QRa"/>
+                                                                <constraint firstAttribute="width" constant="80" id="ktd-Py-ciu"/>
+                                                                <constraint firstAttribute="width" secondItem="Dyv-1Z-WlC" secondAttribute="height" multiplier="1:1" id="vxJ-4P-PLz"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.94999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="7vj-QL-tnB" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.94999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="7vj-QL-tnB" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
                                                             <rect key="frame" x="88" y="34" width="470" height="39"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="39" id="3lh-jl-faY"/>
-                                                            </constraints>
                                                             <string key="text">Loading................................................................................................................................................</string>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Title Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEg-ee-rq2" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
-                                                            <rect key="frame" x="88" y="8" width="470" height="21"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="21" id="Zc2-cl-dLy"/>
-                                                            </constraints>
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEg-ee-rq2" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                                            <rect key="frame" x="88" y="8" width="470" height="20"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -164,27 +158,33 @@
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                                                     <constraints>
-                                                        <constraint firstItem="v6P-y3-3W5" firstAttribute="leading" secondItem="NEg-ee-rq2" secondAttribute="trailing" constant="8" id="0yU-jW-TkP"/>
-                                                        <constraint firstItem="Dyv-1Z-WlC" firstAttribute="top" secondItem="uQz-RP-mTJ" secondAttribute="top" constant="1" id="3xE-5K-EmK"/>
-                                                        <constraint firstAttribute="height" constant="81" id="BZB-CU-Tay"/>
-                                                        <constraint firstItem="Dyv-1Z-WlC" firstAttribute="leading" secondItem="uQz-RP-mTJ" secondAttribute="leading" constant="1" id="Jc0-3x-my5"/>
-                                                        <constraint firstItem="7vj-QL-tnB" firstAttribute="leading" secondItem="Dyv-1Z-WlC" secondAttribute="trailing" constant="8" id="M0E-AX-Hzd"/>
-                                                        <constraint firstItem="NEg-ee-rq2" firstAttribute="top" secondItem="uQz-RP-mTJ" secondAttribute="top" constant="8" id="PNU-HH-aJj"/>
-                                                        <constraint firstAttribute="trailing" secondItem="v6P-y3-3W5" secondAttribute="trailing" constant="10" id="RXs-H2-HJf"/>
-                                                        <constraint firstAttribute="bottom" secondItem="Dyv-1Z-WlC" secondAttribute="bottom" constant="1" id="Wvz-JY-CwZ"/>
-                                                        <constraint firstAttribute="bottom" secondItem="7vj-QL-tnB" secondAttribute="bottom" constant="8" id="nXk-W3-gmo"/>
-                                                        <constraint firstItem="v6P-y3-3W5" firstAttribute="leading" secondItem="7vj-QL-tnB" secondAttribute="trailing" constant="8" id="oFr-2R-VIX"/>
-                                                        <constraint firstItem="NEg-ee-rq2" firstAttribute="leading" secondItem="Dyv-1Z-WlC" secondAttribute="trailing" constant="8" id="u1X-Ru-889"/>
-                                                        <constraint firstItem="v6P-y3-3W5" firstAttribute="centerY" secondItem="uQz-RP-mTJ" secondAttribute="centerY" id="x1G-gv-Wjv"/>
+                                                        <constraint firstItem="Dyv-1Z-WlC" firstAttribute="top" secondItem="uQz-RP-mTJ" secondAttribute="top" constant="1" id="4gm-5I-5C7"/>
+                                                        <constraint firstItem="NEg-ee-rq2" firstAttribute="leading" secondItem="Dyv-1Z-WlC" secondAttribute="trailing" constant="7" id="F99-RS-Ym5"/>
+                                                        <constraint firstItem="Dyv-1Z-WlC" firstAttribute="leading" secondItem="uQz-RP-mTJ" secondAttribute="leading" constant="1" id="JOL-f6-CQ8"/>
+                                                        <constraint firstItem="v6P-y3-3W5" firstAttribute="leading" secondItem="7vj-QL-tnB" secondAttribute="trailing" constant="8" id="JWn-gI-viH"/>
+                                                        <constraint firstItem="v6P-y3-3W5" firstAttribute="centerY" secondItem="uQz-RP-mTJ" secondAttribute="centerY" id="Pwt-99-P5Z"/>
+                                                        <constraint firstItem="7vj-QL-tnB" firstAttribute="top" secondItem="NEg-ee-rq2" secondAttribute="bottom" constant="6" id="T7u-kh-5qZ"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Dyv-1Z-WlC" secondAttribute="bottom" constant="1" id="bqr-1j-s7o"/>
+                                                        <constraint firstAttribute="bottom" secondItem="7vj-QL-tnB" secondAttribute="bottom" constant="9" id="cwH-vK-HkI"/>
+                                                        <constraint firstItem="7vj-QL-tnB" firstAttribute="top" secondItem="NEg-ee-rq2" secondAttribute="bottom" constant="5" id="f73-aR-crr"/>
+                                                        <constraint firstAttribute="trailing" secondItem="v6P-y3-3W5" secondAttribute="trailing" constant="10" id="fU1-Gm-GAA"/>
+                                                        <constraint firstItem="7vj-QL-tnB" firstAttribute="leading" secondItem="Dyv-1Z-WlC" secondAttribute="trailing" constant="7" id="ifw-Hr-Z7l"/>
+                                                        <constraint firstItem="v6P-y3-3W5" firstAttribute="leading" secondItem="NEg-ee-rq2" secondAttribute="trailing" constant="8" id="x06-6i-8m0"/>
+                                                        <constraint firstItem="NEg-ee-rq2" firstAttribute="top" secondItem="uQz-RP-mTJ" secondAttribute="top" constant="8" id="yhf-EE-MWf"/>
                                                     </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="f73-aR-crr"/>
+                                                        </mask>
+                                                    </variation>
                                                 </view>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstItem="uQz-RP-mTJ" firstAttribute="trailing" secondItem="d8e-Jy-XLA" secondAttribute="trailingMargin" id="5ha-LN-eFm"/>
-                                                <constraint firstItem="uQz-RP-mTJ" firstAttribute="top" secondItem="d8e-Jy-XLA" secondAttribute="topMargin" id="8Uo-qI-XWT"/>
-                                                <constraint firstItem="uQz-RP-mTJ" firstAttribute="leading" secondItem="d8e-Jy-XLA" secondAttribute="leadingMargin" id="GIu-DR-xgs"/>
-                                                <constraint firstAttribute="bottom" secondItem="uQz-RP-mTJ" secondAttribute="bottom" id="NQu-ad-HXo"/>
+                                                <constraint firstItem="uQz-RP-mTJ" firstAttribute="top" secondItem="d8e-Jy-XLA" secondAttribute="top" constant="8" id="9qk-n5-KjN"/>
+                                                <constraint firstAttribute="trailing" secondItem="uQz-RP-mTJ" secondAttribute="trailing" constant="8" id="AZG-wi-h51"/>
+                                                <constraint firstAttribute="bottom" secondItem="uQz-RP-mTJ" secondAttribute="bottom" id="JfZ-hJ-nam"/>
+                                                <constraint firstItem="uQz-RP-mTJ" firstAttribute="leading" secondItem="d8e-Jy-XLA" secondAttribute="leading" constant="8" id="hwV-fc-PLw"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

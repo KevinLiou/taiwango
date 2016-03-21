@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVOSCloud
 
 class ProfileListViewController: SPSingleImageViewController {
 
@@ -81,10 +82,17 @@ class ProfileListViewController: SPSingleImageViewController {
                 let changePwdViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ChangePwdViewController")
                 self.navigationController?.pushViewController(changePwdViewController!, animated: true)
             })
+            let logOut = UIAlertAction(title: "登出", style: .Default, handler: { (_) -> Void in
+                
+                SPDataManager.sharedInstance.deleteProfile()
+                AVUser.logOut()
+                self.navigationController?.popToRootViewControllerAnimated(true)
+            })
             
             let cancel = UIAlertAction(title: "取消", style: .Cancel, handler: nil)
             alertController.addAction(edtiProfile)
             alertController.addAction(changePwd)
+            alertController.addAction(logOut)
             alertController.addAction(cancel)
             
             self.presentViewController(alertController, animated: true, completion: nil)

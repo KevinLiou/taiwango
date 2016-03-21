@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import AVOSCloud
 import RESideMenu
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,10 +19,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        //IQKeyboardManager
+        IQKeyboardManager.sharedManager().enable = true
+        
+        //land cloud
         AVOSCloud.setApplicationId("9W9ytOI1uzq4SCRJLoOQcSAO-gzGzoHsz", clientKey: "B8m37WIshNBujvs92AwXLflE")
         AVAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
 
+        //apns
         let notificationTypes: UIUserNotificationType = [UIUserNotificationType.Alert, UIUserNotificationType.Badge, UIUserNotificationType.Sound]
         let pushNotificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: nil)
         application.registerUserNotificationSettings(pushNotificationSettings)

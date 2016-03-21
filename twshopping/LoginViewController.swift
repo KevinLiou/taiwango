@@ -8,10 +8,13 @@
 
 import UIKit
 import RESideMenu
+import AVOSCloud
 
 @IBDesignable
 class LoginViewController: SPSingleColorViewController {
 
+    @IBOutlet var emailTextField: SPTextField!
+    @IBOutlet var pwdTextField: SPTextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,12 +32,46 @@ class LoginViewController: SPSingleColorViewController {
     }
     
     // MARK : Actions
+    @IBAction func tapToLogin(sender: SPButton) {
+        
+        if (self.emailTextField.text?.characters.count == 0) ||
+            (self.pwdTextField.text?.characters.count == 0) {
+                
+            return
+        }
+        
+        SPTools.showLoadingOnViewController(self)
+        SPUser.logInWithUsernameInBackground(self.emailTextField.text, password: self.pwdTextField.text) { (user: AVUser!,error: NSError!) -> Void in
+            
+            if user != nil {
+                
+                let email = user.email
+                let mobilePhoneNumber = user.mobilePhoneNumber
+                let address = user["address"] as? String
+                let name = user["name"] as? String
+                
+                SPDataManager.sharedInstance.insertProfile(email, mobilePhoneNumber: mobilePhoneNumber, address: address, name: name)
+                
+                self.tapPassLogin()
+                
+            }else{
+                
+                let errInfo = error.userInfo["error"] as! String
+                
+                let alertView = UIAlertView(title: "登入失敗！", message:errInfo , delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "確定")
+                alertView.show()
+            }
+            SPTools.hideLoadingOnViewController(self)
+            self.view.endEditing(true)
+        }
+    }
+    
     @IBAction func tapGoToRegister(sender: UITapGestureRecognizer) {
         let registerViewController = self.storyboard?.instantiateViewControllerWithIdentifier("RegisterViewController")
         self.navigationController?.pushViewController(registerViewController!, animated: true)
     }
     
-    @IBAction func tapPassLogin(sender: UITapGestureRecognizer) {
+    @IBAction func tapPassLogin() {
         
         if self.navigationController?.viewControllers.count > 1 {
             //返回上一頁

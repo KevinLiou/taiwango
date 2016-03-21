@@ -70,6 +70,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="登入"/>
+                                <connections>
+                                    <action selector="tapToLogin:" destination="ZEV-eq-Kmb" eventType="touchUpInside" id="mg4-MM-oyA"/>
+                                </connections>
                             </button>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="快速註冊" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYO-SJ-lWN" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
                                 <rect key="frame" x="190" y="540" width="100" height="40"/>
@@ -119,6 +122,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tnr-tu-aqy"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="9wJ-im-ev0" id="9hh-S4-44u"/>
+                        <outlet property="pwdTextField" destination="CT3-Xz-5vw" id="h3q-Mv-2qU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rv6-Uf-gsP" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="69N-ru-u89">
@@ -128,7 +135,7 @@
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="uqW-bI-ZAI">
                     <connections>
-                        <action selector="tapPassLogin:" destination="ZEV-eq-Kmb" id="9QI-fZ-vxX"/>
+                        <action selector="tapPassLogin" destination="ZEV-eq-Kmb" id="Ynv-fQ-hxu"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="TOE-zE-AfY">
@@ -152,20 +159,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kHJ-2K-8Z2" customClass="SPWhiteCornerView" customModule="twshopping" customModuleProvider="target">
-                                <rect key="frame" x="10" y="30" width="580" height="397"/>
+                                <rect key="frame" x="10" y="30" width="580" height="283"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="姓名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MPa-mK-vql" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
-                                        <rect key="frame" x="180" y="21" width="220" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="220" id="Gc2-gS-uyf"/>
-                                            <constraint firstAttribute="height" constant="21" id="pah-ea-euV"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="信箱(登入帳號)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVJ-lm-jJ7" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
-                                        <rect key="frame" x="180" y="115" width="220" height="21"/>
+                                        <rect key="frame" x="180" y="21" width="220" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="lMs-bB-5Mt"/>
                                             <constraint firstAttribute="width" constant="220" id="tjd-kp-HMf"/>
@@ -174,20 +171,8 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入姓名" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="01W-iM-KSH" customClass="SPTextField" customModule="twshopping" customModuleProvider="target">
-                                        <rect key="frame" x="180" y="50" width="220" height="44"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="220" id="qAV-Lp-C5k"/>
-                                            <constraint firstAttribute="height" constant="44" id="x63-2s-LTn"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="icon_name"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入信箱" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="HaQ-0d-xdt" customClass="SPTextField" customModule="twshopping" customModuleProvider="target">
-                                        <rect key="frame" x="180" y="144" width="220" height="44"/>
+                                        <rect key="frame" x="180" y="50" width="220" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="bue-8Q-CTR"/>
                                             <constraint firstAttribute="width" constant="220" id="jDW-Se-h0Z"/>
@@ -199,7 +184,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入密碼" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Lej-Ri-RNj" customClass="SPTextField" customModule="twshopping" customModuleProvider="target">
-                                        <rect key="frame" x="180" y="251" width="220" height="44"/>
+                                        <rect key="frame" x="180" y="157" width="220" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="220" id="MRt-xh-5p1"/>
                                             <constraint firstAttribute="height" constant="44" id="apa-l2-Xb2"/>
@@ -211,7 +196,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密碼確認" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="b3a-hZ-8t0" customClass="SPTextField" customModule="twshopping" customModuleProvider="target">
-                                        <rect key="frame" x="180" y="303" width="220" height="44"/>
+                                        <rect key="frame" x="180" y="209" width="220" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="220" id="80V-FP-EjG"/>
                                             <constraint firstAttribute="height" constant="44" id="TQP-G0-X1u"/>
@@ -223,7 +208,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="密碼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NvA-7c-K62" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
-                                        <rect key="frame" x="180" y="222" width="220" height="21"/>
+                                        <rect key="frame" x="180" y="128" width="220" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="220" id="LNP-yB-9YG"/>
                                             <constraint firstAttribute="height" constant="21" id="Y34-Fb-ygX"/>
@@ -237,19 +222,15 @@
                                 <constraints>
                                     <constraint firstItem="IVJ-lm-jJ7" firstAttribute="leading" secondItem="HaQ-0d-xdt" secondAttribute="leading" id="1YA-Dy-AIn"/>
                                     <constraint firstItem="HaQ-0d-xdt" firstAttribute="top" secondItem="IVJ-lm-jJ7" secondAttribute="bottom" constant="8" id="4Vb-58-EDK"/>
-                                    <constraint firstItem="MPa-mK-vql" firstAttribute="leading" secondItem="01W-iM-KSH" secondAttribute="leading" id="7kD-bF-bsW"/>
-                                    <constraint firstItem="01W-iM-KSH" firstAttribute="top" secondItem="kHJ-2K-8Z2" secondAttribute="top" constant="50" id="Hre-gM-HHB"/>
+                                    <constraint firstItem="HaQ-0d-xdt" firstAttribute="top" secondItem="kHJ-2K-8Z2" secondAttribute="top" constant="50" id="5bP-16-XRv"/>
+                                    <constraint firstItem="HaQ-0d-xdt" firstAttribute="centerX" secondItem="kHJ-2K-8Z2" secondAttribute="centerX" id="Dnw-hR-SDT"/>
                                     <constraint firstAttribute="height" constant="500" id="Kxe-iH-ymL"/>
-                                    <constraint firstItem="HaQ-0d-xdt" firstAttribute="top" secondItem="01W-iM-KSH" secondAttribute="bottom" constant="50" id="NsW-Np-G9W"/>
                                     <constraint firstItem="Lej-Ri-RNj" firstAttribute="leading" secondItem="HaQ-0d-xdt" secondAttribute="leading" id="gbc-9L-0w9"/>
-                                    <constraint firstItem="01W-iM-KSH" firstAttribute="top" secondItem="MPa-mK-vql" secondAttribute="bottom" constant="8" id="jz7-1d-7Lt"/>
-                                    <constraint firstItem="01W-iM-KSH" firstAttribute="centerX" secondItem="kHJ-2K-8Z2" secondAttribute="centerX" id="kDO-y9-g8Y"/>
-                                    <constraint firstItem="HaQ-0d-xdt" firstAttribute="leading" secondItem="01W-iM-KSH" secondAttribute="leading" id="kmZ-BV-wYA"/>
                                     <constraint firstItem="Lej-Ri-RNj" firstAttribute="top" secondItem="HaQ-0d-xdt" secondAttribute="bottom" constant="63" id="kz4-nn-kCD"/>
                                     <constraint firstItem="NvA-7c-K62" firstAttribute="leading" secondItem="Lej-Ri-RNj" secondAttribute="leading" id="qzs-dv-zAD"/>
                                     <constraint firstItem="b3a-hZ-8t0" firstAttribute="top" secondItem="Lej-Ri-RNj" secondAttribute="bottom" constant="8" id="s3p-1p-JUP"/>
                                     <constraint firstItem="b3a-hZ-8t0" firstAttribute="leading" secondItem="Lej-Ri-RNj" secondAttribute="leading" id="skt-Vq-Jy6"/>
-                                    <constraint firstAttribute="bottom" secondItem="b3a-hZ-8t0" secondAttribute="bottom" constant="50" id="uIj-dF-9rQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="b3a-hZ-8t0" secondAttribute="bottom" constant="30" id="uIj-dF-9rQ"/>
                                     <constraint firstItem="Lej-Ri-RNj" firstAttribute="top" secondItem="NvA-7c-K62" secondAttribute="bottom" constant="8" id="ut5-Rf-jrE"/>
                                 </constraints>
                                 <variation key="default">
@@ -266,6 +247,11 @@
                             <constraint firstAttribute="trailing" secondItem="kHJ-2K-8Z2" secondAttribute="trailing" constant="10" id="Scm-SS-rW4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="HaQ-0d-xdt" id="z1B-7x-FbK"/>
+                        <outlet property="pwdTextField" destination="Lej-Ri-RNj" id="qXO-o0-59i"/>
+                        <outlet property="pwdTextField2" destination="b3a-hZ-8t0" id="rXT-GJ-aZ3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UGH-rL-0Pa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -370,7 +356,6 @@
     </scenes>
     <resources>
         <image name="icon_email" width="26" height="20"/>
-        <image name="icon_name" width="20" height="28"/>
         <image name="icon_pwd" width="21" height="28"/>
         <image name="login_top_logo" width="205" height="135"/>
     </resources>

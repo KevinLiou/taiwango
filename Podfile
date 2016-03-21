@@ -6,6 +6,7 @@ use_frameworks!
 target 'twshopping' do
 pod 'RESideMenu', '~> 4.0.7'
 pod 'PINRemoteImage', '~> 2.1'
+pod 'IQKeyboardManagerSwift'
 end
 
 target 'twshoppingTests' do

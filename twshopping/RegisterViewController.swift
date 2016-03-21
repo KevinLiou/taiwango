@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import AVOSCloud
 
 @IBDesignable
 class RegisterViewController: SPSingleColorViewController {
 
+    @IBOutlet var emailTextField: SPTextField!
+    @IBOutlet var pwdTextField: SPTextField!
+    @IBOutlet var pwdTextField2: SPTextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "快速註冊"
@@ -21,6 +25,27 @@ class RegisterViewController: SPSingleColorViewController {
     
     // MARK: - Action
     func submit(){
+        
+        SPTools.showLoadingOnViewController(self)
+        
+        let user = SPUser()
+        user.username = self.emailTextField.text
+        user.password = self.pwdTextField.text
+        user.email = self.emailTextField.text
+        
+        user.signUpInBackgroundWithBlock { (succeeded, error) -> Void in
+            
+            if succeeded {
+                
+                let alertView = UIAlertView(title: "恭喜", message: "註冊成功，請使用註冊的帳號進行登入。", delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "確定")
+                alertView.show()
+                self.navigationController?.popViewControllerAnimated(true)
+            }else{
+                print(error)
+            }
+            
+            SPTools.hideLoadingOnViewController(self)
+        }
         
     }
 

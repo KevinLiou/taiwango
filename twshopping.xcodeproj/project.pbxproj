@@ -16,6 +16,7 @@
 		0A17ACED1C9A905800B7C268 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A17ACEC1C9A905800B7C268 /* ProductListViewController.swift */; };
 		0A17ACEF1C9A93F800B7C268 /* SPImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A17ACEE1C9A93F800B7C268 /* SPImageView.swift */; };
 		0A17ACF11C9A985200B7C268 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A17ACF01C9A985200B7C268 /* ProductCell.swift */; };
+		0A2F555C1C9FC0C80028FCB2 /* OrderUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2F555B1C9FC0C80028FCB2 /* OrderUserCell.swift */; };
 		0A38EC3B1C9913CC0001117A /* SPBlackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A38EC3A1C9913CC0001117A /* SPBlackView.swift */; };
 		0A38EC561C9941E50001117A /* SPDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A38EC551C9941E50001117A /* SPDataManager.swift */; };
 		0A7DEB131C98F59B00D82329 /* Tools.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A7DEB151C98F59B00D82329 /* Tools.storyboard */; };
@@ -104,6 +105,7 @@
 		0A17ACEC1C9A905800B7C268 /* ProductListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
 		0A17ACEE1C9A93F800B7C268 /* SPImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPImageView.swift; sourceTree = "<group>"; };
 		0A17ACF01C9A985200B7C268 /* ProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		0A2F555B1C9FC0C80028FCB2 /* OrderUserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderUserCell.swift; sourceTree = "<group>"; };
 		0A38EC3A1C9913CC0001117A /* SPBlackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPBlackView.swift; sourceTree = "<group>"; };
 		0A38EC551C9941E50001117A /* SPDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPDataManager.swift; sourceTree = "<group>"; };
 		0A7DEB141C98F59B00D82329 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Tools.storyboard; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 				202367631C9E781A00D6F452 /* ProductInfoViewController.swift */,
 				20F731461C9EF7630047C494 /* ProductInfoCell.swift */,
 				20F731481C9F0E8D0047C494 /* OrderSnCell.swift */,
+				0A2F555B1C9FC0C80028FCB2 /* OrderUserCell.swift */,
 			);
 			name = Product;
 			sourceTree = "<group>";
@@ -650,6 +653,7 @@
 				203BEF1A1C9840440090F463 /* SPButton.swift in Sources */,
 				2028955F1C9D6943006CCFAE /* ChangePwdViewController.swift in Sources */,
 				2028955D1C9D6931006CCFAE /* ProfileEditViewController.swift in Sources */,
+				0A2F555C1C9FC0C80028FCB2 /* OrderUserCell.swift in Sources */,
 				202367641C9E781A00D6F452 /* ProductInfoViewController.swift in Sources */,
 				0AE44B8C1C9BB99A009FBE89 /* Push.swift in Sources */,
 				0AD3DB501C99693F0055213B /* Cate.swift in Sources */,

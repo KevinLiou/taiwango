@@ -36,7 +36,7 @@ class ProductInfoViewController: SPSingleImageViewController, UITableViewDelegat
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -56,10 +56,17 @@ class ProductInfoViewController: SPSingleImageViewController, UITableViewDelegat
             cell.dateLabel.text = "交易時間: 2013-03-14 14:22:50"
             
             return cell
-        }else{
+        }else if indexPath.row == 2{
             let cell = tableView.dequeueReusableCellWithIdentifier("ProductInfoCell", forIndexPath: indexPath) as! ProductInfoCell
             cell.titleLabel.text = "標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題標題"
             cell.descLabel.text = "說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明\n說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明\n說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明\n說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明\n說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明\n說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明\n說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明\n說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明\n說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明\n說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明\n說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明\n說明說明說明說明，說明說明說明說明說明。說明說明說明說明說明說明"
+            return cell
+        }else{
+            let cell = tableView.dequeueReusableCellWithIdentifier("OrderUserCell", forIndexPath: indexPath) as! OrderUserCell
+            cell.nameLabel.text = "姓名: testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest"
+            cell.addressLabel.text = "地址: testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest"
+            cell.mobileLabel.text = "電話: testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest"
+            cell.emailLabel.text = "聯絡信箱: testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest"
             return cell
         }
 

@@ -12,8 +12,15 @@ class ForgotPwdViewController: SPSingleColorViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+         self.title = "忘記密碼"
+        
+        let submitItem = UIBarButtonItem(title: "送出", style: .Plain, target: self, action: "submit")
+        self.navigationItem.rightBarButtonItem = submitItem
+    }
+    
+    // MARK: - Action
+    func submit(){
+        
     }
 
     override func didReceiveMemoryWarning() {

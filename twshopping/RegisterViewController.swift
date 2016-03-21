@@ -13,7 +13,14 @@ class RegisterViewController: SPSingleColorViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "快速註冊"
         
+        let submitItem = UIBarButtonItem(title: "送出", style: .Plain, target: self, action: "submit")
+        self.navigationItem.rightBarButtonItem = submitItem
+    }
+    
+    // MARK: - Action
+    func submit(){
         
     }
 

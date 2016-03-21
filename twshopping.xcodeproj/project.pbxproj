@@ -286,13 +286,13 @@
 		0A8F68721C980F6E00F1EFF3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				203BEF231C9865AE0090F463 /* LoginPages */,
 				0AE44B911C9BD188009FBE89 /* Profile */,
 				2017C2911C9AFB750047B51D /* Push */,
 				2017C2901C9AFB580047B51D /* Menu */,
 				0A17ACEB1C9A903400B7C268 /* Product */,
 				0A17ACDE1C9A637D00B7C268 /* Info */,
 				0A8F68631C97C87D00F1EFF3 /* MyClasses */,
-				203BEF231C9865AE0090F463 /* LoginPages */,
 				0A8F68731C980F8F00F1EFF3 /* LaunchViewController.swift */,
 			);
 			name = ViewControllers;

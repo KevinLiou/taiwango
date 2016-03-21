@@ -7,10 +7,33 @@
 //
 
 import UIKit
+import RESideMenu
 
-class LeftMenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class LeftMenuViewController: SPSingleColorViewController, RESideMenuDelegate, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var versionLabel: UILabel!
+    @IBOutlet weak var titleLabel: SPWhiteTextLabel!
+    @IBOutlet weak var sourceLabel: SPWhiteTextLabel!
+    @IBOutlet weak var randomImageView: UIImageView!
+    let imgDatas:[[String:String]] = {
+        let bundle = NSBundle.mainBundle()
+        if let path = bundle.pathForResource("img", ofType: "json") {
+            if let jsonData = NSData(contentsOfFile: path) {
+                do{
+                    if let data = try NSJSONSerialization.JSONObjectWithData(jsonData, options: .MutableLeaves) as? [[String:String]] {
+                        return data ////load img datas
+                    }
+                    
+                } catch {
+                    //error
+                }
+            }
+        }
+        
+        return []
+    }()
+    
+    
     @IBOutlet weak var tableView: UITableView!
     let sections:[String] = ["所有商品" ,"系統公告" ,"個人/訂單資訊" ,"應用程式聲明、政策" ,"開發團隊資訊"]
     var cates:[Cate]? = {
@@ -39,7 +62,12 @@ class LeftMenuViewController: UIViewController, UITableViewDelegate, UITableView
         if let v = vString {
             versionLabel.text = "版本: \(v)"
         }
+        
+        
+        
+        
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -198,6 +226,21 @@ class LeftMenuViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.reloadData()
     }
     
+    
+    // MARK: - RESideMenuDelegate
+    func sideMenu(sideMenu: RESideMenu!, willShowMenuViewController menuViewController: UIViewController!) {
+        
+        if !imgDatas.isEmpty {
+            
+            let randomIndex = Int(arc4random_uniform(UInt32(imgDatas.count)))
+            
+            let img_dic = imgDatas[randomIndex]
+            self.randomImageView.image = UIImage(named: img_dic["img"]!)
+            self.sourceLabel.text = img_dic["source"]
+            self.titleLabel.text = img_dic["title"]
+        }
+        
+    }
     
     /*
     // Override to support conditional editing of the table view.

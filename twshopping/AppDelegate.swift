@@ -93,12 +93,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //取得需要的view controller
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let navProductListViewController = mainStoryboard.instantiateViewControllerWithIdentifier("NavProductListViewController") as! SPNavigationController
-        let leftMenuViewController = mainStoryboard.instantiateViewControllerWithIdentifier("LeftMenuViewController")
+        let leftMenuViewController = mainStoryboard.instantiateViewControllerWithIdentifier("LeftMenuViewController") as! LeftMenuViewController
         let productListViewController = navProductListViewController.viewControllers.first as! ProductListViewController
         
         //側邊選單init
         let sideMenuViewController = RESideMenu(contentViewController: navProductListViewController, leftMenuViewController: leftMenuViewController, rightMenuViewController: nil)
-        sideMenuViewController.backgroundImage = UIImage(named: "menu_bg")
+        sideMenuViewController.delegate = leftMenuViewController
+//        sideMenuViewController.backgroundImage = UIImage(named: "menu_bg")
         
         //set第一個畫面的值
         productListViewController.dataSource = products

@@ -324,6 +324,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yzg-W4-6iZ" userLabel="Random Image View">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PZB-a9-ahA" userLabel="TopView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -343,7 +346,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="55"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TN7-if-Juf" customClass="SPWhiteCornerView" customModule="twshopping" customModuleProvider="target">
+                                                <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TN7-if-Juf" customClass="SPBlackView" customModule="twshopping" customModuleProvider="target">
                                                     <rect key="frame" x="15" y="7" width="400" height="48"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="OiG-vR-YdL">
@@ -394,7 +397,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="40"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ly-Qz-XJs">
+                                                <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ly-Qz-XJs" customClass="SPBlackView" customModule="twshopping" customModuleProvider="target">
                                                     <rect key="frame" x="45" y="7" width="370" height="33"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="iex-Zj-RGo">
@@ -444,12 +447,27 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a5w-jM-5Lm" userLabel="BottomView">
                                 <rect key="frame" x="0.0" y="530" width="600" height="70"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="版本: Loading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYp-sw-4pw" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="32" width="150" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="版本: Loading" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYp-sw-4pw" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="37" width="150" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="Yrk-Mc-ZXM"/>
-                                            <constraint firstAttribute="height" constant="30" id="oYM-vX-NoR"/>
+                                            <constraint firstAttribute="height" constant="25" id="oYM-vX-NoR"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXx-wp-E12" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                        <rect key="frame" x="166" y="37" width="426" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="QbW-5z-ea9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="SIq-aA-7U7" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                        <rect key="frame" x="158" y="8" width="434" height="29"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -458,8 +476,15 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="DYp-sw-4pw" firstAttribute="leading" secondItem="a5w-jM-5Lm" secondAttribute="leadingMargin" id="8Cc-tR-YNh"/>
+                                    <constraint firstItem="SIq-aA-7U7" firstAttribute="top" secondItem="a5w-jM-5Lm" secondAttribute="top" constant="8" id="9aj-6i-3gy"/>
+                                    <constraint firstItem="DXx-wp-E12" firstAttribute="leading" secondItem="DYp-sw-4pw" secondAttribute="trailing" constant="8" id="GTm-DY-4G5"/>
+                                    <constraint firstItem="SIq-aA-7U7" firstAttribute="leading" secondItem="DYp-sw-4pw" secondAttribute="trailing" id="Mmm-Eu-XYV"/>
                                     <constraint firstAttribute="height" constant="70" id="WLl-Yt-9QG"/>
                                     <constraint firstItem="DYp-sw-4pw" firstAttribute="bottom" secondItem="a5w-jM-5Lm" secondAttribute="bottomMargin" id="WNg-jR-403"/>
+                                    <constraint firstAttribute="bottom" secondItem="DXx-wp-E12" secondAttribute="bottom" constant="8" id="Wev-nB-FBI"/>
+                                    <constraint firstAttribute="trailing" secondItem="SIq-aA-7U7" secondAttribute="trailing" constant="8" id="cn9-tu-KeE"/>
+                                    <constraint firstItem="DXx-wp-E12" firstAttribute="top" secondItem="SIq-aA-7U7" secondAttribute="bottom" id="gp7-Cj-TYw"/>
+                                    <constraint firstAttribute="trailing" secondItem="DXx-wp-E12" secondAttribute="trailing" constant="8" id="i8n-vZ-JkZ"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -467,18 +492,25 @@
                         <constraints>
                             <constraint firstItem="a5w-jM-5Lm" firstAttribute="top" secondItem="boC-5g-JX8" secondAttribute="bottom" id="2eH-nc-ysa"/>
                             <constraint firstItem="PZB-a9-ahA" firstAttribute="leading" secondItem="yk3-Gw-n5G" secondAttribute="leading" id="3nT-I2-TgV"/>
+                            <constraint firstItem="wbv-51-OIY" firstAttribute="top" secondItem="yzg-W4-6iZ" secondAttribute="bottom" id="Ftj-4c-D0t"/>
+                            <constraint firstAttribute="trailing" secondItem="yzg-W4-6iZ" secondAttribute="trailing" id="H7A-67-dCf"/>
                             <constraint firstAttribute="trailing" secondItem="boC-5g-JX8" secondAttribute="trailing" id="PUp-n0-QFo"/>
                             <constraint firstItem="a5w-jM-5Lm" firstAttribute="bottom" secondItem="wbv-51-OIY" secondAttribute="top" id="YvB-am-iR7"/>
                             <constraint firstItem="boC-5g-JX8" firstAttribute="leading" secondItem="yk3-Gw-n5G" secondAttribute="leading" id="YyI-x3-eTv"/>
                             <constraint firstItem="a5w-jM-5Lm" firstAttribute="leading" secondItem="PZB-a9-ahA" secondAttribute="leading" id="adf-Li-bwb"/>
                             <constraint firstItem="a5w-jM-5Lm" firstAttribute="trailing" secondItem="PZB-a9-ahA" secondAttribute="trailing" id="f5Y-0m-ESb"/>
                             <constraint firstItem="boC-5g-JX8" firstAttribute="top" secondItem="PZB-a9-ahA" secondAttribute="bottom" id="fL0-yS-Co3"/>
+                            <constraint firstItem="yzg-W4-6iZ" firstAttribute="top" secondItem="hZn-fN-K2j" secondAttribute="bottom" constant="-20" id="sNf-E4-QDv"/>
+                            <constraint firstItem="yzg-W4-6iZ" firstAttribute="leading" secondItem="yk3-Gw-n5G" secondAttribute="leading" id="sxG-wI-jof"/>
                             <constraint firstItem="PZB-a9-ahA" firstAttribute="top" secondItem="yk3-Gw-n5G" secondAttribute="top" id="t6T-I6-Oqk"/>
                             <constraint firstAttribute="trailing" secondItem="PZB-a9-ahA" secondAttribute="trailing" id="xHI-zd-E8Z"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="randomImageView" destination="yzg-W4-6iZ" id="yrQ-CH-ZLB"/>
+                        <outlet property="sourceLabel" destination="DXx-wp-E12" id="vX1-cB-bvC"/>
                         <outlet property="tableView" destination="boC-5g-JX8" id="APG-13-qzG"/>
+                        <outlet property="titleLabel" destination="SIq-aA-7U7" id="Wr1-x2-ya5"/>
                         <outlet property="versionLabel" destination="DYp-sw-4pw" id="Fgf-iU-ESp"/>
                     </connections>
                 </viewController>

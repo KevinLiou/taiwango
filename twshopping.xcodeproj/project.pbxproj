@@ -57,6 +57,7 @@
 		203BEF1C1C98489C0090F463 /* SPWhiteCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203BEF1B1C98489C0090F463 /* SPWhiteCornerView.swift */; };
 		203BEF1E1C9848DF0090F463 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203BEF1D1C9848DF0090F463 /* RegisterViewController.swift */; };
 		203BEF221C9864CF0090F463 /* ForgotPwdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203BEF211C9864CF0090F463 /* ForgotPwdViewController.swift */; };
+		2062FB2C1CA0608A00658985 /* img.json in Resources */ = {isa = PBXBuildFile; fileRef = 2062FB2B1CA0608A00658985 /* img.json */; };
 		20A566571C8F28E700B09B7E /* SPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A566561C8F28E700B09B7E /* SPService.swift */; };
 		20AE329E1C9AD98A00078EE6 /* LeftMenuDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AE329D1C9AD98A00078EE6 /* LeftMenuDetailCell.swift */; };
 		20B988281C9718D100D46ACB /* json.json in Resources */ = {isa = PBXBuildFile; fileRef = 20B988271C9718D100D46ACB /* json.json */; };
@@ -148,6 +149,7 @@
 		203BEF1B1C98489C0090F463 /* SPWhiteCornerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPWhiteCornerView.swift; sourceTree = "<group>"; };
 		203BEF1D1C9848DF0090F463 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		203BEF211C9864CF0090F463 /* ForgotPwdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPwdViewController.swift; sourceTree = "<group>"; };
+		2062FB2B1CA0608A00658985 /* img.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = img.json; sourceTree = "<group>"; };
 		20A566561C8F28E700B09B7E /* SPService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPService.swift; sourceTree = "<group>"; };
 		20AE329D1C9AD98A00078EE6 /* LeftMenuDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuDetailCell.swift; sourceTree = "<group>"; };
 		20B988271C9718D100D46ACB /* json.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = json.json; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 			children = (
 				0AD3DB3E1C99690E0055213B /* Entity */,
 				20B988271C9718D100D46ACB /* json.json */,
+				2062FB2B1CA0608A00658985 /* img.json */,
 				20C260351C8DC63E00938F54 /* twshopping.xcdatamodeld */,
 				0A38EC551C9941E50001117A /* SPDataManager.swift */,
 			);
@@ -577,6 +580,7 @@
 				0A7DEB131C98F59B00D82329 /* Tools.storyboard in Resources */,
 				20B988281C9718D100D46ACB /* json.json in Resources */,
 				0A7DEB161C98F5AA00D82329 /* LoginPages.storyboard in Resources */,
+				2062FB2C1CA0608A00658985 /* img.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

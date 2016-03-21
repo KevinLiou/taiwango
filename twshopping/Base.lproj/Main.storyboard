@@ -1318,88 +1318,107 @@
                                             <outlet property="delegate" destination="6rR-8j-KUO" id="CRD-oh-PzG"/>
                                         </connections>
                                     </tableView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eKP-bc-CaA" userLabel="Bottom View">
+                                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Xi-DL-FxG" userLabel="Bottom Effect View">
                                         <rect key="frame" x="0.0" y="560" width="600" height="60"/>
-                                        <subviews>
-                                            <button opaque="NO" clipsSubviews="YES" tag="1000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dd-Ci-k1O" customClass="SPButton" customModule="twshopping" customModuleProvider="target">
-                                                <rect key="frame" x="127" y="8" width="110" height="44"/>
-                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="110" id="Rix-0J-t8v"/>
-                                                    <constraint firstAttribute="height" constant="44" id="kO1-nr-Q6g"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <state key="normal" title="店家資訊"/>
-                                                <connections>
-                                                    <action selector="goToStoreInfo:" destination="6rR-8j-KUO" eventType="touchUpInside" id="pw6-Ad-FZ1"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" clipsSubviews="YES" tag="1001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAT-Um-Uop" customClass="SPButton" customModule="twshopping" customModuleProvider="target">
-                                                <rect key="frame" x="363" y="8" width="110" height="44"/>
-                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="44" id="YOW-5t-HM8"/>
-                                                    <constraint firstAttribute="width" constant="110" id="eQX-b9-gc6"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <state key="normal" title="購買商品"/>
-                                                <connections>
-                                                    <action selector="buyThis:" destination="6rR-8j-KUO" eventType="touchUpInside" id="wTT-bH-xnQ"/>
-                                                </connections>
-                                            </button>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iim-JC-iSD">
-                                                <rect key="frame" x="473" y="0.0" width="127" height="60"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lo0-FJ-sKW">
-                                                <rect key="frame" x="237" y="0.0" width="126" height="60"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W44-ud-ZA6">
-                                                <rect key="frame" x="0.0" y="0.0" width="127" height="60"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            </view>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="XuF-a2-hpq">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eKP-bc-CaA" userLabel="Bottom View">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
+                                                    <subviews>
+                                                        <button opaque="NO" clipsSubviews="YES" tag="1000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dd-Ci-k1O" customClass="SPButton" customModule="twshopping" customModuleProvider="target">
+                                                            <rect key="frame" x="127" y="8" width="110" height="44"/>
+                                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="110" id="Rix-0J-t8v"/>
+                                                                <constraint firstAttribute="height" constant="44" id="kO1-nr-Q6g"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <state key="normal" title="店家資訊"/>
+                                                            <connections>
+                                                                <action selector="goToStoreInfo:" destination="6rR-8j-KUO" eventType="touchUpInside" id="pw6-Ad-FZ1"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" clipsSubviews="YES" tag="1001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAT-Um-Uop" customClass="SPButton" customModule="twshopping" customModuleProvider="target">
+                                                            <rect key="frame" x="363" y="8" width="110" height="44"/>
+                                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="44" id="YOW-5t-HM8"/>
+                                                                <constraint firstAttribute="width" constant="110" id="eQX-b9-gc6"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <state key="normal" title="購買商品"/>
+                                                            <connections>
+                                                                <action selector="buyThis:" destination="6rR-8j-KUO" eventType="touchUpInside" id="wTT-bH-xnQ"/>
+                                                            </connections>
+                                                        </button>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iim-JC-iSD">
+                                                            <rect key="frame" x="473" y="0.0" width="127" height="60"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lo0-FJ-sKW">
+                                                            <rect key="frame" x="237" y="0.0" width="126" height="60"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W44-ud-ZA6">
+                                                            <rect key="frame" x="0.0" y="0.0" width="127" height="60"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="W44-ud-ZA6" secondAttribute="bottom" id="07E-Z8-rbH"/>
+                                                        <constraint firstItem="lo0-FJ-sKW" firstAttribute="width" secondItem="W44-ud-ZA6" secondAttribute="width" id="0PB-rj-z6r"/>
+                                                        <constraint firstItem="iim-JC-iSD" firstAttribute="height" secondItem="eKP-bc-CaA" secondAttribute="height" id="1rm-cH-HZf"/>
+                                                        <constraint firstItem="lo0-FJ-sKW" firstAttribute="height" secondItem="eKP-bc-CaA" secondAttribute="height" id="QDy-O9-TG5"/>
+                                                        <constraint firstItem="4dd-Ci-k1O" firstAttribute="leading" secondItem="eKP-bc-CaA" secondAttribute="leading" constant="27" id="QSm-zR-bl3"/>
+                                                        <constraint firstItem="4dd-Ci-k1O" firstAttribute="leading" secondItem="W44-ud-ZA6" secondAttribute="trailing" id="WsC-QO-3PD"/>
+                                                        <constraint firstItem="lo0-FJ-sKW" firstAttribute="leading" secondItem="4dd-Ci-k1O" secondAttribute="trailing" id="Ys6-SM-88i"/>
+                                                        <constraint firstItem="W44-ud-ZA6" firstAttribute="top" secondItem="eKP-bc-CaA" secondAttribute="top" id="Yyh-U4-Y8W"/>
+                                                        <constraint firstAttribute="trailing" secondItem="iim-JC-iSD" secondAttribute="trailing" id="bZj-4N-4rg"/>
+                                                        <constraint firstItem="iim-JC-iSD" firstAttribute="width" secondItem="lo0-FJ-sKW" secondAttribute="width" id="fGt-Sn-aEE"/>
+                                                        <constraint firstItem="4dd-Ci-k1O" firstAttribute="centerY" secondItem="eKP-bc-CaA" secondAttribute="centerY" id="fiW-m4-DRO"/>
+                                                        <constraint firstItem="iim-JC-iSD" firstAttribute="leading" secondItem="uAT-Um-Uop" secondAttribute="trailing" id="gCU-C9-utc"/>
+                                                        <constraint firstAttribute="bottom" secondItem="lo0-FJ-sKW" secondAttribute="bottom" id="iWx-MQ-ovA"/>
+                                                        <constraint firstItem="iim-JC-iSD" firstAttribute="top" secondItem="eKP-bc-CaA" secondAttribute="top" id="n4V-Yb-DaL"/>
+                                                        <constraint firstItem="W44-ud-ZA6" firstAttribute="height" secondItem="eKP-bc-CaA" secondAttribute="height" id="nDR-Bf-0wr"/>
+                                                        <constraint firstItem="uAT-Um-Uop" firstAttribute="centerY" secondItem="eKP-bc-CaA" secondAttribute="centerY" id="q9P-ee-erC"/>
+                                                        <constraint firstItem="lo0-FJ-sKW" firstAttribute="top" secondItem="eKP-bc-CaA" secondAttribute="top" id="vr4-6A-N2J"/>
+                                                        <constraint firstItem="uAT-Um-Uop" firstAttribute="leading" secondItem="lo0-FJ-sKW" secondAttribute="trailing" id="x5X-Y6-MKH"/>
+                                                        <constraint firstAttribute="bottom" secondItem="iim-JC-iSD" secondAttribute="bottom" id="xrT-6Y-MpC"/>
+                                                        <constraint firstItem="W44-ud-ZA6" firstAttribute="leading" secondItem="eKP-bc-CaA" secondAttribute="leading" id="yDF-au-asC"/>
+                                                        <constraint firstAttribute="height" constant="60" id="zHf-Cl-FKb"/>
+                                                    </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="QSm-zR-bl3"/>
+                                                        </mask>
+                                                    </variation>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="eKP-bc-CaA" secondAttribute="trailing" id="GK6-Ee-3F1"/>
+                                                <constraint firstItem="eKP-bc-CaA" firstAttribute="leading" secondItem="XuF-a2-hpq" secondAttribute="leading" id="fH4-rV-fmu"/>
+                                                <constraint firstItem="eKP-bc-CaA" firstAttribute="top" secondItem="XuF-a2-hpq" secondAttribute="top" id="p9h-lz-qts"/>
+                                                <constraint firstAttribute="bottom" secondItem="eKP-bc-CaA" secondAttribute="bottom" id="vjm-pY-SGN"/>
+                                            </constraints>
+                                        </view>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="W44-ud-ZA6" secondAttribute="bottom" id="07E-Z8-rbH"/>
-                                            <constraint firstItem="lo0-FJ-sKW" firstAttribute="width" secondItem="W44-ud-ZA6" secondAttribute="width" id="0PB-rj-z6r"/>
-                                            <constraint firstItem="iim-JC-iSD" firstAttribute="height" secondItem="eKP-bc-CaA" secondAttribute="height" id="1rm-cH-HZf"/>
-                                            <constraint firstItem="lo0-FJ-sKW" firstAttribute="height" secondItem="eKP-bc-CaA" secondAttribute="height" id="QDy-O9-TG5"/>
-                                            <constraint firstItem="4dd-Ci-k1O" firstAttribute="leading" secondItem="eKP-bc-CaA" secondAttribute="leading" constant="27" id="QSm-zR-bl3"/>
-                                            <constraint firstItem="4dd-Ci-k1O" firstAttribute="leading" secondItem="W44-ud-ZA6" secondAttribute="trailing" id="WsC-QO-3PD"/>
-                                            <constraint firstItem="lo0-FJ-sKW" firstAttribute="leading" secondItem="4dd-Ci-k1O" secondAttribute="trailing" id="Ys6-SM-88i"/>
-                                            <constraint firstItem="W44-ud-ZA6" firstAttribute="top" secondItem="eKP-bc-CaA" secondAttribute="top" id="Yyh-U4-Y8W"/>
-                                            <constraint firstAttribute="trailing" secondItem="iim-JC-iSD" secondAttribute="trailing" id="bZj-4N-4rg"/>
-                                            <constraint firstItem="iim-JC-iSD" firstAttribute="width" secondItem="lo0-FJ-sKW" secondAttribute="width" id="fGt-Sn-aEE"/>
-                                            <constraint firstItem="4dd-Ci-k1O" firstAttribute="centerY" secondItem="eKP-bc-CaA" secondAttribute="centerY" id="fiW-m4-DRO"/>
-                                            <constraint firstItem="iim-JC-iSD" firstAttribute="leading" secondItem="uAT-Um-Uop" secondAttribute="trailing" id="gCU-C9-utc"/>
-                                            <constraint firstAttribute="bottom" secondItem="lo0-FJ-sKW" secondAttribute="bottom" id="iWx-MQ-ovA"/>
-                                            <constraint firstItem="iim-JC-iSD" firstAttribute="top" secondItem="eKP-bc-CaA" secondAttribute="top" id="n4V-Yb-DaL"/>
-                                            <constraint firstItem="W44-ud-ZA6" firstAttribute="height" secondItem="eKP-bc-CaA" secondAttribute="height" id="nDR-Bf-0wr"/>
-                                            <constraint firstItem="uAT-Um-Uop" firstAttribute="centerY" secondItem="eKP-bc-CaA" secondAttribute="centerY" id="q9P-ee-erC"/>
-                                            <constraint firstItem="lo0-FJ-sKW" firstAttribute="top" secondItem="eKP-bc-CaA" secondAttribute="top" id="vr4-6A-N2J"/>
-                                            <constraint firstItem="uAT-Um-Uop" firstAttribute="leading" secondItem="lo0-FJ-sKW" secondAttribute="trailing" id="x5X-Y6-MKH"/>
-                                            <constraint firstAttribute="bottom" secondItem="iim-JC-iSD" secondAttribute="bottom" id="xrT-6Y-MpC"/>
-                                            <constraint firstItem="W44-ud-ZA6" firstAttribute="leading" secondItem="eKP-bc-CaA" secondAttribute="leading" id="yDF-au-asC"/>
-                                            <constraint firstAttribute="height" constant="60" id="zHf-Cl-FKb"/>
+                                            <constraint firstAttribute="height" constant="60" id="Kob-rk-zhf"/>
                                         </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="QSm-zR-bl3"/>
-                                            </mask>
-                                        </variation>
-                                    </view>
+                                        <blurEffect style="light"/>
+                                    </visualEffectView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="9Xi-DL-FxG" secondAttribute="bottom" id="2ly-FH-qMm"/>
                                     <constraint firstItem="6re-J3-IV5" firstAttribute="leading" secondItem="XDc-rA-8Bs" secondAttribute="leading" id="CLL-0I-uv3"/>
-                                    <constraint firstAttribute="trailing" secondItem="eKP-bc-CaA" secondAttribute="trailing" id="ON1-YQ-owB"/>
-                                    <constraint firstAttribute="bottom" secondItem="eKP-bc-CaA" secondAttribute="bottom" id="R8q-Z6-7oc"/>
+                                    <constraint firstAttribute="trailing" secondItem="9Xi-DL-FxG" secondAttribute="trailing" id="O37-fe-AaB"/>
                                     <constraint firstAttribute="bottom" secondItem="6re-J3-IV5" secondAttribute="bottom" id="YVZ-a4-m6S"/>
+                                    <constraint firstItem="9Xi-DL-FxG" firstAttribute="leading" secondItem="XDc-rA-8Bs" secondAttribute="leading" id="bTq-rU-gyb"/>
                                     <constraint firstItem="6re-J3-IV5" firstAttribute="top" secondItem="XDc-rA-8Bs" secondAttribute="top" constant="20" id="e2h-H4-CAc"/>
                                     <constraint firstAttribute="trailing" secondItem="6re-J3-IV5" secondAttribute="trailing" id="hyR-nt-wzB"/>
-                                    <constraint firstItem="eKP-bc-CaA" firstAttribute="leading" secondItem="XDc-rA-8Bs" secondAttribute="leading" id="jnb-q9-vNe"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -1413,7 +1432,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="kMb-QO-3xU"/>
                     <connections>
-                        <outlet property="bottomView" destination="eKP-bc-CaA" id="uTC-dz-h3N"/>
+                        <outlet property="bottomView" destination="9Xi-DL-FxG" id="H7Y-8z-4ah"/>
                         <outlet property="buyThisButton" destination="uAT-Um-Uop" id="TBA-df-Zrm"/>
                         <outlet property="goTosStoreButton" destination="4dd-Ci-k1O" id="Y2v-Zj-taa"/>
                         <outlet property="tableView" destination="6re-J3-IV5" id="fb4-cZ-OVQ"/>

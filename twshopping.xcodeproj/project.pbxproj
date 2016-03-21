@@ -861,7 +861,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tw.com.tnot.twshopping;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3e5e9b81-2292-49f5-bcaf-21e658883fce";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -887,7 +887,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tw.com.tnot.twshopping;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3e5e9b81-2292-49f5-bcaf-21e658883fce";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

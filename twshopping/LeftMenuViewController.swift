@@ -8,8 +8,9 @@
 
 import UIKit
 
-class LeftMenuViewController: SPSingleColorViewController, UITableViewDelegate, UITableViewDataSource {
+class LeftMenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var versionLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     let sections:[String] = ["所有商品" ,"系統公告" ,"個人/訂單資訊" ,"應用程式聲明、政策" ,"開發團隊資訊"]
     var cates:[Cate]? = {
@@ -34,6 +35,10 @@ class LeftMenuViewController: SPSingleColorViewController, UITableViewDelegate, 
         tableView.estimatedRowHeight = 49.0
         tableView.rowHeight = UITableViewAutomaticDimension
 
+        let vString = NSBundle.mainBundle().infoDictionary!["CFBundleShortVersionString"] as? String
+        if let v = vString {
+            versionLabel.text = "版本: \(v)"
+        }
     }
 
     override func didReceiveMemoryWarning() {

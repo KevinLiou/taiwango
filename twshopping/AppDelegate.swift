@@ -98,7 +98,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //側邊選單init
         let sideMenuViewController = RESideMenu(contentViewController: navProductListViewController, leftMenuViewController: leftMenuViewController, rightMenuViewController: nil)
-//        sideMenuViewController.backgroundImage = UIImage(named: "Launch")
+        sideMenuViewController.backgroundImage = UIImage(named: "menu_bg")
         
         //set第一個畫面的值
         productListViewController.dataSource = products

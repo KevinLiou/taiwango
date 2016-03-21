@@ -74,8 +74,10 @@ class ProductListViewController: SPSingleImageViewController {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        let productInfoViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ProductInfoViewController")
-        self.navigationController?.pushViewController(productInfoViewController!, animated: true)
+        let productInfoViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ProductInfoViewController") as! ProductInfoViewController
+
+        productInfoViewController.infoType = .ProductInfo
+        self.navigationController?.pushViewController(productInfoViewController, animated: true)
         
     }
     

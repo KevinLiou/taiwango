@@ -40,6 +40,38 @@ class PushListViewController: SPSingleImageViewController {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
+        let push = self.dataSource![indexPath.row]
+        
+        guard let type = push.type else{
+            return
+        }
+        
+        switch Int(type) {
+        case 1:
+            //一般訊息
+            let infoViewController = self.storyboard?.instantiateViewControllerWithIdentifier("InfoViewController") as! InfoViewController
+            infoViewController.infoString = push.info
+            infoViewController.title = push.title
+            self.navigationController?.pushViewController(infoViewController, animated: true)
+            
+        case 2:
+            //商品推薦
+            let predicate = NSPredicate(format: "language.lan = '\(SPTools.getPreferredLanguages())' AND product_id = \(push.product_id!)")
+            let result = SPDataManager.sharedInstance.fetchProductWithPredicate(predicate: predicate)
+            let product = result?.first
+            
+            guard let _product = product else{
+                return
+            }
+            
+            let productInfoViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ProductInfoViewController") as! ProductInfoViewController
+            productInfoViewController.product = _product
+            productInfoViewController.infoType = .ProductInfo
+            self.navigationController?.pushViewController(productInfoViewController, animated: true)
+            
+        default:break
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {

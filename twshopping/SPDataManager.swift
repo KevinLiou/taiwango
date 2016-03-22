@@ -132,6 +132,8 @@ class SPDataManager {
         appDelegate.saveContext()
     }
     
+    
+    // MARK: - fetch
     func fetchProfile() -> Profile? {
         
         let request = NSFetchRequest(entityName: "Profile")
@@ -139,6 +141,21 @@ class SPDataManager {
         do{
             let result = try context.executeFetchRequest(request) as! [Profile]
             return result.first
+        }catch{
+            return nil
+        }
+    }
+    
+    func fetchProductWithPredicate(predicate predicate:NSPredicate?) -> [Product]? {
+        
+        let request = NSFetchRequest(entityName: "Product")
+        if predicate != nil {
+            request.predicate = predicate
+        }
+        
+        do{
+            let result = try context.executeFetchRequest(request) as! [Product]
+            return result
         }catch{
             return nil
         }
@@ -204,7 +221,18 @@ class SPDataManager {
         }
     }
     
+    // MARK: - update
+    func updateProfileWith(info info:[String:String?], target:Profile) {
+        
+        target.name = info["name"]!
+        target.mobile = info["mobile"]!
+        target.address = info["address"]!
+        target.email = info["email"]!
+        
+        appDelegate.saveContext()
+    }
     
+    // MARK: - delete
     func deleteProfile(){
         
         let profile = fetchProfile()

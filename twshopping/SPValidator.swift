@@ -58,7 +58,7 @@ class SPValidator {
     
     static func validatorWithName(name:String) -> Bool {
         
-        let result = (name.characters.count < 30)
+        let result = (name.characters.count < 31 || name.characters.count == 0/*非必填*/)
         
         if !result {
             let alertView = UIAlertView(title: "錯誤", message:"姓名最多30的字" , delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "確定")
@@ -70,7 +70,7 @@ class SPValidator {
     
     
     static func validatorWithAddress(address:String) -> Bool {
-        let result = (address.characters.count < 250)
+        let result = (address.characters.count < 251 || address.characters.count == 0/*非必填*/)
         
         if !result {
             let alertView = UIAlertView(title: "錯誤", message:"地址最多250的字" , delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "確定")
@@ -78,5 +78,18 @@ class SPValidator {
         }
         
         return result
+    }
+    
+    static func validatorWithMobile(mobile:String) -> Bool {
+        
+        let result = (mobile.characters.count < 12 || mobile.characters.count == 0/*非必填*/)
+        
+        if !result {
+            let alertView = UIAlertView(title: "錯誤", message:"手機號最多11的字" , delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "確定")
+            alertView.show()
+        }
+        
+        return result
+
     }
 }

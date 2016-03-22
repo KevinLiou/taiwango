@@ -45,8 +45,15 @@ class ProfileListViewController: SPSingleImageViewController {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCellWithIdentifier("ProfileCell", forIndexPath: indexPath) as! ProfileCell
             
-            cell.nameLabel.text = "Hello, Kevin~"
-            cell.emailLabel.text = "聯絡信箱: gr20060513@gmail.com"
+            if let name = profile?.name {
+                cell.nameLabel.text = "Hello, \(name)"
+            }else{
+                cell.nameLabel.text = "Hello, "
+            }
+            
+            if let email = profile?.email {
+                cell.emailLabel.text = "聯絡信箱: \(email)"
+            }
             
             return cell
         }else{
@@ -75,12 +82,15 @@ class ProfileListViewController: SPSingleImageViewController {
             
             let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
             let edtiProfile = UIAlertAction(title: "編輯個人資料", style: .Default, handler: { (_) -> Void in
-                let profileEditViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ProfileEditViewController")
-                self.navigationController?.pushViewController(profileEditViewController!, animated: true)
+                let profileEditViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ProfileEditViewController") as! ProfileEditViewController
+                profileEditViewController.profile = self.profile
+                self.navigationController?.pushViewController(profileEditViewController, animated: true)
             })
             let changePwd = UIAlertAction(title: "變更密碼", style: .Default, handler: { (_) -> Void in
-                let changePwdViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ChangePwdViewController")
-                self.navigationController?.pushViewController(changePwdViewController!, animated: true)
+                
+                let loginPages = UIStoryboard(name: "LoginPages", bundle: nil)
+                let changePwdViewController = loginPages.instantiateViewControllerWithIdentifier("ForgotPwdViewController")
+                self.navigationController?.pushViewController(changePwdViewController, animated: true)
             })
             let logOut = UIAlertAction(title: "登出", style: .Default, handler: { (_) -> Void in
                 

@@ -14,7 +14,7 @@ class ForgotPwdViewController: SPSingleColorViewController {
     @IBOutlet var emailTextFIeld: SPTextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-         self.title = "忘記密碼"
+         self.title = "重置密碼"
         
         let submitItem = UIBarButtonItem(title: "送出", style: .Plain, target: self, action: "submit")
         self.navigationItem.rightBarButtonItem = submitItem

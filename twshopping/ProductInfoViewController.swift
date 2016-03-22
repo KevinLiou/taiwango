@@ -156,9 +156,23 @@ class ProductInfoViewController: SPSingleImageViewController, UITableViewDelegat
             return
         }
         
-        let orderUserViewController = self.storyboard?.instantiateViewControllerWithIdentifier("OrderUserViewController") as! OrderUserViewController
-        orderUserViewController.product = product
-        self.navigationController?.pushViewController(orderUserViewController, animated: true)
+        
+        let profile = SPDataManager.sharedInstance.fetchProfile()
+        
+        if let user_profile = profile {
+            let orderUserViewController = self.storyboard?.instantiateViewControllerWithIdentifier("OrderUserViewController") as! OrderUserViewController
+            orderUserViewController.product = product
+            orderUserViewController.profile = user_profile
+            self.navigationController?.pushViewController(orderUserViewController, animated: true)
+            
+        }else{
+            let loginPages = UIStoryboard(name: "LoginPages", bundle: nil)
+            let loginViewController = loginPages.instantiateViewControllerWithIdentifier("LoginViewController")
+            
+            self.navigationController?.pushViewController(loginViewController, animated: true)
+            return
+        }
+        
     }
     
     

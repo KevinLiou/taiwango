@@ -33,8 +33,7 @@ class ProductListViewController: SPSingleImageViewController {
         let profile = SPDataManager.sharedInstance.fetchProfile()
         
         if let user_profile = profile {
-            let navProfileListViewController = self.storyboard?.instantiateViewControllerWithIdentifier("NavProfileListViewController") as! SPNavigationController
-            let profileListViewController = navProfileListViewController.viewControllers.first as! ProfileListViewController
+            let profileListViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ProfileListViewController") as! ProfileListViewController
             profileListViewController.profile = user_profile
             self.navigationController?.pushViewController(profileListViewController, animated: true)
             

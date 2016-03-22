@@ -458,17 +458,20 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXx-wp-E12">
-                                        <rect key="frame" x="166" y="37" width="426" height="25"/>
+                                        <rect key="frame" x="166" y="44" width="426" height="18"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="25" id="QbW-5z-ea9"/>
+                                            <constraint firstAttribute="height" constant="18" id="QbW-5z-ea9"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="SIq-aA-7U7">
-                                        <rect key="frame" x="158" y="8" width="434" height="29"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                        <rect key="frame" x="158" y="26" width="434" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="18" id="a1O-ft-xXa"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -486,6 +489,11 @@
                                     <constraint firstItem="DXx-wp-E12" firstAttribute="top" secondItem="SIq-aA-7U7" secondAttribute="bottom" id="gp7-Cj-TYw"/>
                                     <constraint firstAttribute="trailing" secondItem="DXx-wp-E12" secondAttribute="trailing" constant="8" id="i8n-vZ-JkZ"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="9aj-6i-3gy"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -940,7 +948,7 @@
                                                     <constraint firstAttribute="width" constant="220" id="QqJ-fO-cHX"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="image" value="icon_mobile"/>
                                                 </userDefinedRuntimeAttributes>
@@ -1718,12 +1726,12 @@
                                                     <constraint firstAttribute="height" constant="44" id="Is9-Qb-w7Q"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="image" value="icon_mobile"/>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="收貨人資訊" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KLX-mX-p5X" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="收貨人資訊(必填)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KLX-mX-p5X" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="8" width="544" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="220" id="Kcn-Ec-9VU"/>

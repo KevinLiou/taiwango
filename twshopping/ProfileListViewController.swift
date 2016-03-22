@@ -23,6 +23,19 @@ class ProfileListViewController: SPSingleImageViewController {
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 70.0
         
+        
+        
+        //refresh user info from server
+        AVUser.currentUser().refresh()
+        let user = AVUser.currentUser()
+        
+        let name = user["name"] as? String
+        let address = user["address"]  as? String
+        let mobile = user["mobile"] as? String
+        let email = user["email"] as? String
+        
+        let info = ["name":name, "address":address, "mobile":mobile, "email":email]
+        SPDataManager.sharedInstance.updateProfileWith(info: info, target: self.profile!)
     }
     
     // MARK: - Table view data source

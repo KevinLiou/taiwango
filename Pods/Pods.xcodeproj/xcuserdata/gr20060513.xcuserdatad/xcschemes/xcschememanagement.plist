@@ -44,6 +44,11 @@
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
+		<key>Validator.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -62,12 +67,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>871A7BBD0B3FFB250C8CD4C19E27A295</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>9AB92A2AE7314091D107EAC8561B8977</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>9EC0522962193EF3A86B6CF9BFAED8A7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>BFFEF77A1EC776CCE3BF81CC070CEBC8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CD5C04EE3A4916F166B5793FFDB7A510</key>
 		<dict>
 			<key>primary</key>
 			<true/>

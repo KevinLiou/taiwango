@@ -23,19 +23,30 @@ class ProfileListViewController: SPSingleImageViewController {
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 70.0
         
-        
+    }
+    
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         
         //refresh user info from server
-        AVUser.currentUser().refresh()
-        let user = AVUser.currentUser()
+        SPTools.showLoadingOnViewController(self)
         
-        let name = user["name"] as? String
-        let address = user["address"]  as? String
-        let mobile = user["mobile"] as? String
-        let email = user["email"] as? String
-        
-        let info = ["name":name, "address":address, "mobile":mobile, "email":email]
-        SPDataManager.sharedInstance.updateProfileWith(info: info, target: self.profile!)
+        AVUser.currentUser().refreshInBackgroundWithBlock { (user: AVObject!, error: NSError!) -> Void in
+            if user != nil {
+                
+                let name = user["name"] as? String
+                let address = user["address"]  as? String
+                let mobile = user["mobile"] as? String
+                let email = user["email"] as? String
+                
+                let info = ["name":name, "address":address, "mobile":mobile, "email":email]
+                SPDataManager.sharedInstance.updateProfileWith(info: info, target: self.profile!)
+                self.tableView.reloadData()
+            }
+            
+            SPTools.hideLoadingOnViewController(self)
+        }
     }
     
     // MARK: - Table view data source

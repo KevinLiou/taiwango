@@ -37,7 +37,7 @@ class RegisterViewController: SPSingleColorViewController {
             
             if succeeded {
                 
-                let alertView = UIAlertView(title: "恭喜", message: "註冊成功，請使用註冊的帳號進行登入。", delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "確定")
+                let alertView = UIAlertView(title: "註冊成功", message: "請使用註冊的帳號進行登入。", delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "確定")
                 alertView.show()
                 self.navigationController?.popViewControllerAnimated(true)
             }else{

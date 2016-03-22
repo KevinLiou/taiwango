@@ -190,6 +190,20 @@ class SPDataManager {
         }
     }
     
+    func fetchAppInfoWithPredicate(predicate predicate:NSPredicate?) -> Version? {
+        let request = NSFetchRequest(entityName: "Version")
+        if predicate != nil {
+            request.predicate = predicate
+        }
+        
+        do{
+            let result = try context.executeFetchRequest(request) as! [Version]
+            return result.first
+        }catch{
+            return nil
+        }
+    }
+    
     
     func deleteProfile(){
         

@@ -61,15 +61,15 @@ class OrderUserViewController: SPSingleColorViewController {
             return
         }
         
-        if !SPValidator.validatorWithMobile(self.mobileTextField.text!) && (self.mobileTextField.text?.characters.count > 0) {
+        if !(SPValidator.validatorWithMobile(self.mobileTextField.text!) && (self.mobileTextField.text?.characters.count > 0)) {
             return
         }
         
-        if !SPValidator.validatorWithAddress(self.addressTextField.text!) && (self.addressTextField.text?.characters.count > 0) {
+        if !(SPValidator.validatorWithAddress(self.addressTextField.text!) && (self.addressTextField.text?.characters.count > 0)) {
             return
         }
         
-        if !SPValidator.validatorWithName(self.nameTextField.text!) && (self.nameTextField.text?.characters.count > 0) {
+        if !(SPValidator.validatorWithName(self.nameTextField.text!) && (self.nameTextField.text?.characters.count > 0)) {
             return
         }
         

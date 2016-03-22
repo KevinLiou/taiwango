@@ -29,7 +29,6 @@ class ProductInfoViewController: SPSingleImageViewController, UITableViewDelegat
         //購買商品詳細資訊頁
         //商品詳細資訊頁
         //共用此VC
-        self.title = product?.name
         
         tableView.estimatedRowHeight = 90.0
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -40,6 +39,7 @@ class ProductInfoViewController: SPSingleImageViewController, UITableViewDelegat
         case .OrderInfo:
             self.buyThisButton.hidden = true
         case .ProductInfo:
+            self.title = product?.name
             self.buyThisButton.hidden = false
         }
     }

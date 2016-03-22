@@ -10,11 +10,13 @@ PODS:
     - FLAnimatedImage (>= 1.0)
     - PINRemoteImage/Core
   - RESideMenu (4.0.7)
+  - Validator (1.1.1)
 
 DEPENDENCIES:
   - IQKeyboardManagerSwift
   - PINRemoteImage (~> 2.1)
   - RESideMenu (~> 4.0.7)
+  - Validator
 
 SPEC CHECKSUMS:
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
@@ -22,5 +24,6 @@ SPEC CHECKSUMS:
   PINCache: 078426d356ab95ef875e9e62e5c35a2ea3333c28
   PINRemoteImage: e8367ac3f5c234712f1d8c274462ec834d649940
   RESideMenu: f24c508404b49c667344c54aba7e590883533958
+  Validator: e17f25fe03c32590be0a9d7d46a779c9ec5dd3b3
 
 COCOAPODS: 0.39.0

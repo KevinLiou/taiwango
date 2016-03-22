@@ -15,6 +15,9 @@ class RegisterViewController: SPSingleColorViewController {
     @IBOutlet var emailTextField: SPTextField!
     @IBOutlet var pwdTextField: SPTextField!
     @IBOutlet var pwdTextField2: SPTextField!
+    
+    @IBOutlet var policyButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "快速註冊"
@@ -47,6 +50,32 @@ class RegisterViewController: SPSingleColorViewController {
             SPTools.hideLoadingOnViewController(self)
         }
         
+    }
+    
+    
+    @IBAction func policyShow(sender: AnyObject) {
+        let predicate = NSPredicate(format: "lan = '\(SPTools.getPreferredLanguages())'")
+        let language = SPDataManager.sharedInstance.fetchLanguageWithPredicate(predicate: predicate)
+        let version = language?.first?.version
+        
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let infoViewController = mainStoryboard.instantiateViewControllerWithIdentifier("InfoViewController") as! InfoViewController
+        infoViewController.infoString = version?.policy
+        infoViewController.title = "應用程式聲明、政策"
+        
+        let agreeItem = UIBarButtonItem(title: "我同意", style: .Plain, target: self, action: "agree")
+        infoViewController.navigationItem.rightBarButtonItem = agreeItem
+        
+        self.navigationController?.pushViewController(infoViewController, animated: true)
+    }
+    
+    func agree(){
+        self.policyButton.selected = true
+        self.navigationController?.popToViewController(self, animated: true)
+    }
+    
+    @IBAction func policyButtonClick(sender: AnyObject?) {
+        self.policyButton.selected = !self.policyButton.selected
     }
 
     override func didReceiveMemoryWarning() {

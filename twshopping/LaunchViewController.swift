@@ -37,6 +37,10 @@ class LaunchViewController: UIViewController, UIAlertViewDelegate {
                             
                             if let data = try NSJSONSerialization.JSONObjectWithData(json.dataUsingEncoding(NSUTF8StringEncoding)!, options: .MutableLeaves) as? [String:[String:[AnyObject]]] {
                                 SPDataManager.sharedInstance.insertAllData(data: data)
+                            }else{
+                                let alertView = UIAlertView(title: "連線發生錯誤！", message: "請稍候重新嘗試", delegate: self, cancelButtonTitle: nil, otherButtonTitles: "確定")
+                                alertView.tag = 1000
+                                alertView.show()
                             }
                             
                             //update type 1, 2, 3
@@ -113,6 +117,8 @@ class LaunchViewController: UIViewController, UIAlertViewDelegate {
             
         }else if alertView.tag == 3 {
             UIApplication.sharedApplication().openURL(NSURL(string: app)!)
+            exit(0);
+        }else if alertView.tag == 1000 {
             exit(0);
         }
     }

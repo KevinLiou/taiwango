@@ -159,7 +159,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kHJ-2K-8Z2" customClass="SPWhiteCornerView" customModule="twshopping" customModuleProvider="target">
-                                <rect key="frame" x="10" y="30" width="580" height="283"/>
+                                <rect key="frame" x="10" y="30" width="580" height="332"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="信箱(登入帳號)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVJ-lm-jJ7" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
                                         <rect key="frame" x="180" y="21" width="220" height="21"/>
@@ -217,6 +217,40 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我同意本程式相關聲明及政策" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqP-2v-UnN">
+                                        <rect key="frame" x="218" y="285" width="182" height="17"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="9Lx-oD-dF2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="9Lx-oD-dF2"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="ppl-Oe-ZI7" appends="YES" id="lbm-I8-D76"/>
+                                        </connections>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccm-gp-mfB">
+                                        <rect key="frame" x="195" y="286" width="15" height="15"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="15" id="M5L-ll-KW5"/>
+                                            <constraint firstAttribute="height" constant="15" id="lpM-VN-j0k"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="member_icon_agree-no">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected" title=" " backgroundImage="member_icon_agree-ok">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="policyButtonClick:" destination="iec-Tg-bgo" eventType="touchUpInside" id="lrR-HK-meq"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -224,20 +258,18 @@
                                     <constraint firstItem="HaQ-0d-xdt" firstAttribute="top" secondItem="IVJ-lm-jJ7" secondAttribute="bottom" constant="8" id="4Vb-58-EDK"/>
                                     <constraint firstItem="HaQ-0d-xdt" firstAttribute="top" secondItem="kHJ-2K-8Z2" secondAttribute="top" constant="50" id="5bP-16-XRv"/>
                                     <constraint firstItem="HaQ-0d-xdt" firstAttribute="centerX" secondItem="kHJ-2K-8Z2" secondAttribute="centerX" id="Dnw-hR-SDT"/>
-                                    <constraint firstAttribute="height" constant="500" id="Kxe-iH-ymL"/>
+                                    <constraint firstItem="uqP-2v-UnN" firstAttribute="leading" secondItem="ccm-gp-mfB" secondAttribute="trailing" constant="8" id="EwB-vv-p0G"/>
+                                    <constraint firstItem="uqP-2v-UnN" firstAttribute="top" secondItem="b3a-hZ-8t0" secondAttribute="bottom" constant="32" id="HGM-sk-F0W"/>
+                                    <constraint firstItem="ccm-gp-mfB" firstAttribute="centerY" secondItem="uqP-2v-UnN" secondAttribute="centerY" id="NsW-xR-tXf"/>
+                                    <constraint firstItem="uqP-2v-UnN" firstAttribute="trailing" secondItem="b3a-hZ-8t0" secondAttribute="trailing" id="T0B-jE-za6"/>
+                                    <constraint firstAttribute="bottom" secondItem="uqP-2v-UnN" secondAttribute="bottom" constant="30" id="W0Q-sh-pqJ"/>
                                     <constraint firstItem="Lej-Ri-RNj" firstAttribute="leading" secondItem="HaQ-0d-xdt" secondAttribute="leading" id="gbc-9L-0w9"/>
                                     <constraint firstItem="Lej-Ri-RNj" firstAttribute="top" secondItem="HaQ-0d-xdt" secondAttribute="bottom" constant="63" id="kz4-nn-kCD"/>
                                     <constraint firstItem="NvA-7c-K62" firstAttribute="leading" secondItem="Lej-Ri-RNj" secondAttribute="leading" id="qzs-dv-zAD"/>
                                     <constraint firstItem="b3a-hZ-8t0" firstAttribute="top" secondItem="Lej-Ri-RNj" secondAttribute="bottom" constant="8" id="s3p-1p-JUP"/>
                                     <constraint firstItem="b3a-hZ-8t0" firstAttribute="leading" secondItem="Lej-Ri-RNj" secondAttribute="leading" id="skt-Vq-Jy6"/>
-                                    <constraint firstAttribute="bottom" secondItem="b3a-hZ-8t0" secondAttribute="bottom" constant="30" id="uIj-dF-9rQ"/>
                                     <constraint firstItem="Lej-Ri-RNj" firstAttribute="top" secondItem="NvA-7c-K62" secondAttribute="bottom" constant="8" id="ut5-Rf-jrE"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Kxe-iH-ymL"/>
-                                    </mask>
-                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.56862745098039214" green="0.6588235294117647" blue="0.81568627450980391" alpha="1" colorSpace="calibratedRGB"/>
@@ -249,11 +281,17 @@
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="HaQ-0d-xdt" id="z1B-7x-FbK"/>
+                        <outlet property="policyButton" destination="ccm-gp-mfB" id="1XA-2V-ebk"/>
                         <outlet property="pwdTextField" destination="Lej-Ri-RNj" id="qXO-o0-59i"/>
                         <outlet property="pwdTextField2" destination="b3a-hZ-8t0" id="rXT-GJ-aZ3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UGH-rL-0Pa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ppl-Oe-ZI7">
+                    <connections>
+                        <action selector="policyShow:" destination="iec-Tg-bgo" id="Kgi-8K-kRi"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2163" y="362"/>
         </scene>
@@ -358,5 +396,7 @@
         <image name="icon_email" width="26" height="20"/>
         <image name="icon_pwd" width="21" height="28"/>
         <image name="login_top_logo" width="205" height="135"/>
+        <image name="member_icon_agree-no" width="15" height="15"/>
+        <image name="member_icon_agree-ok" width="15" height="15"/>
     </resources>
 </document>

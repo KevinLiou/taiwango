@@ -17,17 +17,37 @@ class RegisterViewController: SPSingleColorViewController {
     @IBOutlet var pwdTextField2: SPTextField!
     
     @IBOutlet var policyButton: UIButton!
+    @IBOutlet var policyLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "快速註冊"
         
-        let submitItem = UIBarButtonItem(title: "送出", style: .Plain, target: self, action: "submit")
+//        let attributedString = NSMutableAttributedString(string: self.policyLabel.text!)
+//        attributedString.addAttribute(NSUnderlineStyleAttributeName, value: NSUnderlineStyle.StyleSingle.rawValue, range: NSMakeRange(4, 9))
+//        self.policyLabel.attributedText = attributedString
+        
+        let submitItem = UIBarButtonItem(title: "註冊", style: .Plain, target: self, action: "submit")
         self.navigationItem.rightBarButtonItem = submitItem
     }
     
     // MARK: - Action
     func submit(){
+        
+        
+        if !SPValidator.validatorWithEmail(self.emailTextField.text!) {
+            return
+        }
+        
+        if !SPValidator.validatorWithTwoPassword(self.pwdTextField.text!, password2: self.pwdTextField2.text!){
+            return
+        }
+        
+        if !self.policyButton.selected{
+            let alertView = UIAlertView(title: "注意", message: "請先同意本程式相關聲明及政策。", delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "確定")
+            alertView.show()
+            return
+        }
         
         SPTools.showLoadingOnViewController(self)
         

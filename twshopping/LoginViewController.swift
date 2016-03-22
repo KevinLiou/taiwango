@@ -18,7 +18,6 @@ class LoginViewController: SPSingleColorViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -34,11 +33,10 @@ class LoginViewController: SPSingleColorViewController {
     // MARK : Actions
     @IBAction func tapToLogin(sender: SPButton) {
         
-        if (self.emailTextField.text?.characters.count == 0) ||
-            (self.pwdTextField.text?.characters.count == 0) {
-                
+        if !SPValidator.validatorWithEmail(self.emailTextField.text!) {
             return
         }
+        
         
         SPTools.showLoadingOnViewController(self)
         SPUser.logInWithUsernameInBackground(self.emailTextField.text, password: self.pwdTextField.text) { (user: AVUser!,error: NSError!) -> Void in

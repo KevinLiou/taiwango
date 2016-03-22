@@ -282,6 +282,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="HaQ-0d-xdt" id="z1B-7x-FbK"/>
                         <outlet property="policyButton" destination="ccm-gp-mfB" id="1XA-2V-ebk"/>
+                        <outlet property="policyLabel" destination="uqP-2v-UnN" id="tie-7O-Nkt"/>
                         <outlet property="pwdTextField" destination="Lej-Ri-RNj" id="qXO-o0-59i"/>
                         <outlet property="pwdTextField2" destination="b3a-hZ-8t0" id="rXT-GJ-aZ3"/>
                     </connections>
@@ -310,7 +311,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mlp-Jk-rGa" customClass="SPWhiteCornerView" customModule="twshopping" customModuleProvider="target">
                                 <rect key="frame" x="10" y="30" width="580" height="250"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="信箱(登入帳號)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rc8-zr-Hm4" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="信箱(聯絡信箱)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rc8-zr-Hm4" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
                                         <rect key="frame" x="180" y="21" width="220" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="220" id="446-mx-6nk"/>
@@ -368,6 +369,9 @@
                             <constraint firstItem="mlp-Jk-rGa" firstAttribute="leading" secondItem="fWn-xG-gtl" secondAttribute="leading" constant="10" id="eiu-7S-uGI"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextFIeld" destination="1i0-cb-pXW" id="lFa-9d-ccs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i1x-uL-LZz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -14,8 +14,10 @@ class SPTextField: UITextField {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        
+//        self.highlightColor = UIColor(red: 145.0/255.0, green: 168.0/255.0, blue: 208.0/255.0, alpha: 1.0)
         self.attributedPlaceholder = NSAttributedString(string: self.placeholder!, attributes: [NSForegroundColorAttributeName: UIColor(white: 1.0, alpha: 0.9)])
-        self.backgroundColor = UIColor.clearColor()
+        self.backgroundColor = UIColor(colorLiteralRed: 1, green: 1, blue: 1, alpha: 0.0)
         self.textColor = UIColor.whiteColor()
         self.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
         

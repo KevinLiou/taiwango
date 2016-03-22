@@ -26,6 +26,8 @@ class LaunchViewController: UIViewController, UIAlertViewDelegate {
         
         let query = AVQuery(className: "API")
         query.getFirstObjectInBackgroundWithBlock { (object: AVObject!, error: NSError!) -> Void in
+            
+            print(object)
             let time: NSTimeInterval = 1.0
             let delay = dispatch_time(DISPATCH_TIME_NOW, Int64(time * Double(NSEC_PER_SEC)))
             dispatch_after(delay, dispatch_get_main_queue()) { () -> Void in
@@ -37,53 +39,63 @@ class LaunchViewController: UIViewController, UIAlertViewDelegate {
                             
                             if let data = try NSJSONSerialization.JSONObjectWithData(json.dataUsingEncoding(NSUTF8StringEncoding)!, options: .MutableLeaves) as? [String:[String:[AnyObject]]] {
                                 SPDataManager.sharedInstance.insertAllData(data: data)
-                            }else{
-                                let alertView = UIAlertView(title: "連線發生錯誤！", message: "請稍候重新嘗試", delegate: self, cancelButtonTitle: nil, otherButtonTitles: "確定")
-                                alertView.tag = 1000
-                                alertView.show()
-                            }
-                            
-                            //update type 1, 2, 3
-                            let predicate = NSPredicate(format: "language.lan = '\(SPTools.getPreferredLanguages())'")
-                            let version = SPDataManager.sharedInstance.fetchAppInfoWithPredicate(predicate: predicate)
-                            
-//                            "Type = 1, 顯示訊息
-//                            Type = 2, 顯示訊息,不強制更新
-//                            Type = 3, 顯示訊息,強制更新
-//                            Type = 4, 無"
-                            
-                            if let type = version?.type, let info = version?.info{
                                 
-                                switch Int(type){
-                                case 1:
-                                    let alertView = UIAlertView(title: "通知", message: info, delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "確定")
-                                    alertView.show()
-                                    self.entry()
-                                case 2:
-                                    let alertView = UIAlertView(title: "通知", message: info, delegate: self, cancelButtonTitle: "暫時不要", otherButtonTitles: "前往更新")
-                                    alertView.tag = 2
-                                    alertView.show()
-                                case 3:
-                                    let alertView = UIAlertView(title: "通知", message: info, delegate: self, cancelButtonTitle: nil, otherButtonTitles: "前往更新")
-                                    alertView.tag = 3
-                                    alertView.show()
-                                default:
+                                //update type 1, 2, 3
+                                let predicate = NSPredicate(format: "language.lan = '\(SPTools.getPreferredLanguages())'")
+                                let version = SPDataManager.sharedInstance.fetchAppInfoWithPredicate(predicate: predicate)
+                                
+                                //                            "Type = 1, 顯示訊息
+                                //                            Type = 2, 顯示訊息,不強制更新
+                                //                            Type = 3, 顯示訊息,強制更新
+                                //                            Type = 4, 無"
+                                
+                                if let type = version?.type, let info = version?.info{
+                                    
+                                    switch Int(type){
+                                    case 1:
+                                        let alertView = UIAlertView(title: "通知", message: info, delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "確定")
+                                        alertView.show()
+                                        self.entry()
+                                    case 2:
+                                        let alertView = UIAlertView(title: "通知", message: info, delegate: self, cancelButtonTitle: "暫時不要", otherButtonTitles: "前往更新")
+                                        alertView.tag = 2
+                                        alertView.show()
+                                        self.entry()
+                                    case 3:
+                                        let alertView = UIAlertView(title: "通知", message: info, delegate: self, cancelButtonTitle: nil, otherButtonTitles: "前往更新")
+                                        alertView.tag = 3
+                                        alertView.show()
+                                    default:
+                                        self.entry()
+                                    }
+                                }else{
                                     self.entry()
                                 }
                             }else{
-                                self.entry()
+                                self.showError()
                             }
+                            
                             
                         } catch {
                             //error
+                            self.showError()
                         }
-                    }//let json = jsonString
-                }//object != nil
-                
+                    }
+                }else{
+                    //object == nil
+                    self.showError()
+                }
                 
                 SPTools.hideLoadingOnViewController(self)
             }
         }
+    }
+    
+    func showError(){
+        //error
+        let alertView = UIAlertView(title: "連線發生錯誤！", message: "請稍候重新嘗試", delegate: self, cancelButtonTitle: nil, otherButtonTitles: "確定")
+        alertView.tag = 1000
+        alertView.show()
     }
     
     

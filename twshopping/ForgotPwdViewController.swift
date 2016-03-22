@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import AVOSCloud
 
 class ForgotPwdViewController: SPSingleColorViewController {
 
+    @IBOutlet var emailTextFIeld: SPTextField!
     override func viewDidLoad() {
         super.viewDidLoad()
          self.title = "忘記密碼"
@@ -21,6 +23,24 @@ class ForgotPwdViewController: SPSingleColorViewController {
     // MARK: - Action
     func submit(){
         
+        if !SPValidator.validatorWithEmail(self.emailTextFIeld.text!) {
+            return
+        }
+        
+        SPTools.showLoadingOnViewController(self)
+        AVUser.requestPasswordResetForEmailInBackground(self.emailTextFIeld.text) { (succeeded: Bool, error: NSError!) -> Void in
+            if succeeded {
+                let alertView = UIAlertView(title: "請求成功", message: "密碼重置信件已經寄送到您的信箱。", delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "確定")
+                alertView.show()
+                self.navigationController?.popViewControllerAnimated(true)
+            }else{
+                let errInfo = error.userInfo["error"] as! String
+                
+                let alertView = UIAlertView(title: "請求失敗！", message:errInfo , delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "確定")
+                alertView.show()
+            }
+            SPTools.hideLoadingOnViewController(self)
+        }
     }
 
     override func didReceiveMemoryWarning() {

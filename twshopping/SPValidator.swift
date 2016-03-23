@@ -16,7 +16,13 @@ class SPValidator {
         let result = email.validate(rule: rule)
         
         if result.isValid == false || email.characters.count == 0 {
-            let alertView = UIAlertView(title: "錯誤", message:"Email格式錯誤" , delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "確定")
+            
+            let alertView = UIAlertView(title: NSLocalizedString("AlertTitleError",comment: ""),
+                message:NSLocalizedString("AlertMessageEmailError",comment: "") ,
+                delegate: nil,
+                cancelButtonTitle: nil,
+                otherButtonTitles: NSLocalizedString("ButtonTitleSure",comment: ""))
+            
             alertView.show()
         }
         
@@ -29,7 +35,11 @@ class SPValidator {
         let result = password.validate(rule: rangeLengthRule)
 
         if result.isValid == false || password.characters.count == 0{
-            let alertView = UIAlertView(title: "錯誤", message:"密碼請輸入6~12位英文或數字" , delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "確定")
+            let alertView = UIAlertView(title: NSLocalizedString("AlertTitleError",comment: ""),
+                message: NSLocalizedString("AlertMessagePwdError",comment: ""),
+                delegate: nil,
+                cancelButtonTitle: nil,
+                otherButtonTitles: NSLocalizedString("ButtonTitleSure",comment: ""))
             alertView.show()
         }
         
@@ -45,7 +55,11 @@ class SPValidator {
             if password == password2 {
                 return true
             }else{
-                let alertView = UIAlertView(title: "錯誤", message:"兩次密碼輸入不相符" , delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "確定")
+                let alertView = UIAlertView(title: NSLocalizedString("AlertTitleError",comment: ""),
+                    message: NSLocalizedString("AlertMessage2PwdNotMatch",comment: ""),
+                    delegate: nil,
+                    cancelButtonTitle: nil,
+                    otherButtonTitles: NSLocalizedString("ButtonTitleSure",comment: ""))
                 alertView.show()
                 return false
             }
@@ -61,7 +75,11 @@ class SPValidator {
         let result = (name.characters.count < 31 || name.characters.count == 0/*非必填*/)
         
         if !result {
-            let alertView = UIAlertView(title: "錯誤", message:"姓名最多30的字" , delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "確定")
+            let alertView = UIAlertView(title: NSLocalizedString("AlertTitleError",comment: ""),
+                message: NSLocalizedString("AlertMessageNameError",comment: ""),
+                delegate: nil,
+                cancelButtonTitle: nil,
+                otherButtonTitles: NSLocalizedString("ButtonTitleSure",comment: ""))
             alertView.show()
         }
         
@@ -73,7 +91,11 @@ class SPValidator {
         let result = (address.characters.count < 251 || address.characters.count == 0/*非必填*/)
         
         if !result {
-            let alertView = UIAlertView(title: "錯誤", message:"地址最多250的字" , delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "確定")
+            let alertView = UIAlertView(title: NSLocalizedString("AlertTitleError",comment: ""),
+                message: NSLocalizedString("AlertMessageAddressError",comment: ""),
+                delegate: nil,
+                cancelButtonTitle: nil,
+                otherButtonTitles: NSLocalizedString("ButtonTitleSure",comment: ""))
             alertView.show()
         }
         
@@ -85,7 +107,11 @@ class SPValidator {
         let result = (mobile.characters.count < 12 || mobile.characters.count == 0/*非必填*/)
         
         if !result {
-            let alertView = UIAlertView(title: "錯誤", message:"手機號最多11的字" , delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "確定")
+            let alertView = UIAlertView(title: NSLocalizedString("AlertTitleError",comment: ""),
+                message: NSLocalizedString("AlertMessageMobileError",comment: ""),
+                delegate: nil,
+                cancelButtonTitle: nil,
+                otherButtonTitles: NSLocalizedString("ButtonTitleSure",comment: ""))
             alertView.show()
         }
         

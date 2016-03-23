@@ -55,14 +55,22 @@ class LaunchViewController: UIViewController, UIAlertViewDelegate {
                                     
                                     switch Int(type){
                                     case 1:
-                                        let alertView = UIAlertView(title: "通知", message: info, delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "確定")
+                                        let alertView = UIAlertView(title: NSLocalizedString("AlertTitleNotify",comment: ""),
+                                            message: info,
+                                            delegate: nil,
+                                            cancelButtonTitle: nil,
+                                            otherButtonTitles: NSLocalizedString("ButtonTitleSure",comment: ""))
                                         alertView.show()
                                         self.entry()
                                     case 2:
                                         let vString = NSBundle.mainBundle().infoDictionary!["CFBundleShortVersionString"] as? String
                                         
                                         if vString != version?.version {
-                                            let alertView = UIAlertView(title: "通知", message: info, delegate: self, cancelButtonTitle: "暫時不要", otherButtonTitles: "前往更新")
+                                            let alertView = UIAlertView(title: NSLocalizedString("AlertTitleNotify",comment: ""),
+                                                message: info,
+                                                delegate: self,
+                                                cancelButtonTitle: NSLocalizedString("ButtonTitleNotNow",comment: ""),
+                                                otherButtonTitles: NSLocalizedString("ButtonTitleGoUpdate",comment: ""))
                                             alertView.tag = 2
                                             alertView.show()
                                         }
@@ -74,7 +82,11 @@ class LaunchViewController: UIViewController, UIAlertViewDelegate {
                                         let vString = NSBundle.mainBundle().infoDictionary!["CFBundleShortVersionString"] as? String
                                         
                                         if vString != version?.version {
-                                            let alertView = UIAlertView(title: "通知", message: info, delegate: self, cancelButtonTitle: nil, otherButtonTitles: "前往更新")
+                                            let alertView = UIAlertView(title: NSLocalizedString("AlertTitleNotify",comment: ""),
+                                                message: info,
+                                                delegate: self,
+                                                cancelButtonTitle: nil,
+                                                otherButtonTitles: NSLocalizedString("ButtonTitleGoUpdate",comment: ""))
                                             alertView.tag = 3
                                             alertView.show()
                                         }else{
@@ -108,7 +120,11 @@ class LaunchViewController: UIViewController, UIAlertViewDelegate {
     
     func showError(){
         //error
-        let alertView = UIAlertView(title: "連線發生錯誤！", message: "請稍候重新嘗試", delegate: self, cancelButtonTitle: nil, otherButtonTitles: "確定")
+        let alertView = UIAlertView(title: NSLocalizedString("AlertTitleErrorConn",comment: ""),
+            message: NSLocalizedString("AlertMessageTryAgainLater",comment: ""),
+            delegate: self,
+            cancelButtonTitle: nil,
+            otherButtonTitles: NSLocalizedString("ButtonTitleSure",comment: ""))
         alertView.tag = 1000
         alertView.show()
     }

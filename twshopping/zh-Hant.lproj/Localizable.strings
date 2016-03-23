@@ -1,0 +1,77 @@
+
+/*   NSLocalizedString("",comment: "")*/
+"AlertTitleError" = "錯誤";
+"AlertMessageEmailError" = "Email格式錯誤";
+"ButtonTitleSure" = "確定";
+"AlertMessagePwdError" = "密碼請輸入6~12位英文或數字";
+"AlertMessage2PwdNotMatch" = "兩次密碼輸入不相符";
+"AlertMessageNameError" = "姓名最多30的字";
+"AlertMessageAddressError" = "地址最多250的字";
+"AlertMessageMobileError" = "手機號最多11的字";
+
+"AlertTitleErrorConn" = "連線發生錯誤！";
+"AlertMessageTryAgainLater" = "請稍候重新嘗試";
+
+"AlertTitleNotify" = "通知";
+"ButtonTitleGoUpdate" = "前往更新";
+"ButtonTitleNotNow" = "暫時不要";
+
+"AlertTitleLoginError" = "登入失敗！";
+
+"ItemTitleRegister" = "註冊";
+
+"AlertTitleRegisterOK" = "註冊成功";
+"AlertMessageRegisterOK" = "請使用註冊的帳號進行登入。";
+
+"VCTitlePolicy" = "應用程式聲明及政策";
+"ItemTitleAgree" = "我同意";
+
+"VCTitleResetPwd" = "重置密碼";
+
+"AlertTitleOK" = "請求成功！";
+"AlertTitleFail" = "請求失敗！";
+"AlertMessageResetPwdOK" = "密碼重置信件已經寄送到您的信箱。";
+
+"StringYouBuy" = "您購買了";
+"StringContactEmail" = "聯絡信箱";
+"StringOrderAmount" = "交易金額";
+"StringOrderSn" = "訂單編號";
+
+
+"ButtonTitleEditProfile" = "編輯個人資料";
+"ButtonTitleChangePwd" = "變更密碼";
+"ButtonTitleLogOut" = "登出";
+"ButtonTitleCancel" = "取消";
+
+"VCTitleOrderHistory" = "購買記錄";
+
+"VCTitleProfileInfo" = "詳細個人資料";
+"ItemTitleSave" = "儲存";
+"AlertTitleSaveOK" = "儲存成功！";
+"AlertTitleSaveFail" = "儲存失敗！";
+
+"StringVersion" = "版本";
+
+
+"MenuTitleAllProducts" = "所有商品";
+"MenuTitleSysInfo" = "系統公告";
+"MenuTitlePersionalInfo" = "個人/訂單資訊";
+"MenuTitlePolicy" = "應用程式聲明及政策";
+"MenuTitleTeam" = "開發團隊資訊";
+
+"StringName" = "姓名";
+"StringAddress" = "地址";
+"StringMobile" = "電話";
+"StringTradeTime" = "交易時間";
+
+"VCTitleBuy" = "購買商品";
+"StringBuy" = "購買";
+"StringProductName" = "商品名稱";
+"StringAmount" = "金額";
+"AlertTitleBuyError" = "無法購買！";
+"AlertMessageNoRemain" = "此商品已經售完囉。";
+
+
+"VCTitleBuySucceeded" = "購買完成";
+
+"AlertMessagePolicyAgree" = "請先同意本程式相關聲明及政策。";

@@ -27,7 +27,7 @@ class RegisterViewController: SPSingleColorViewController {
 //        attributedString.addAttribute(NSUnderlineStyleAttributeName, value: NSUnderlineStyle.StyleSingle.rawValue, range: NSMakeRange(4, 9))
 //        self.policyLabel.attributedText = attributedString
         
-        let submitItem = UIBarButtonItem(title: "註冊", style: .Plain, target: self, action: "submit")
+        let submitItem = UIBarButtonItem(title: NSLocalizedString("ItemTitleRegister",comment: ""), style: .Plain, target: self, action: "submit")
         self.navigationItem.rightBarButtonItem = submitItem
     }
     
@@ -44,7 +44,7 @@ class RegisterViewController: SPSingleColorViewController {
         }
         
         if !self.policyButton.selected{
-            let alertView = UIAlertView(title: "注意", message: "請先同意本程式相關聲明及政策。", delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "確定")
+            let alertView = UIAlertView(title: "", message: NSLocalizedString("AlertMessagePolicyAgree",comment: ""), delegate: nil, cancelButtonTitle: nil, otherButtonTitles: NSLocalizedString("ButtonTitleSure",comment: ""))
             alertView.show()
             return
         }
@@ -60,7 +60,11 @@ class RegisterViewController: SPSingleColorViewController {
             
             if succeeded {
                 
-                let alertView = UIAlertView(title: "註冊成功", message: "請使用註冊的帳號進行登入。", delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "確定")
+                let alertView = UIAlertView(title: NSLocalizedString("AlertTitleRegisterOK",comment: ""),
+                    message: NSLocalizedString("AlertMessageRegisterOK",comment: ""),
+                    delegate: nil,
+                    cancelButtonTitle: nil,
+                    otherButtonTitles: NSLocalizedString("ButtonTitleSure",comment: ""))
                 alertView.show()
                 self.navigationController?.popViewControllerAnimated(true)
             }else{
@@ -81,9 +85,9 @@ class RegisterViewController: SPSingleColorViewController {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let infoViewController = mainStoryboard.instantiateViewControllerWithIdentifier("InfoViewController") as! InfoViewController
         infoViewController.infoString = version?.policy
-        infoViewController.title = "應用程式聲明、政策"
+        infoViewController.title = NSLocalizedString("VCTitlePolicy",comment: "")
         
-        let agreeItem = UIBarButtonItem(title: "我同意", style: .Plain, target: self, action: "agree")
+        let agreeItem = UIBarButtonItem(title: NSLocalizedString("ItemTitleAgree",comment: ""), style: .Plain, target: self, action: "agree")
         infoViewController.navigationItem.rightBarButtonItem = agreeItem
         
         self.navigationController?.pushViewController(infoViewController, animated: true)

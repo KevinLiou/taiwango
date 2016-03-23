@@ -35,7 +35,11 @@ class LeftMenuViewController: SPSingleColorViewController, RESideMenuDelegate, U
     
     
     @IBOutlet weak var tableView: UITableView!
-    let sections:[String] = ["所有商品" ,"系統公告" ,"個人/訂單資訊" ,"應用程式聲明、政策" ,"開發團隊資訊"]
+    let sections:[String] = [NSLocalizedString("MenuTitleAllProducts",comment: ""),
+                                NSLocalizedString("MenuTitleSysInfo",comment: ""),
+                                NSLocalizedString("MenuTitlePersionalInfo",comment: ""),
+                                NSLocalizedString("MenuTitlePolicy",comment: ""),
+                                NSLocalizedString("MenuTitleTeam",comment: "")]
     var cates:[Cate]? = {
 
         let predicate = NSPredicate(format: "language.lan = '\(SPTools.getPreferredLanguages())'")
@@ -60,7 +64,7 @@ class LeftMenuViewController: SPSingleColorViewController, RESideMenuDelegate, U
 
         let vString = NSBundle.mainBundle().infoDictionary!["CFBundleShortVersionString"] as? String
         if let v = vString {
-            versionLabel.text = "版本: \(v)"
+            versionLabel.text = "\(NSLocalizedString("StringVersion",comment: "")): \(v)"
         }
         
         

@@ -18,7 +18,7 @@ class ProfileListViewController: SPSingleImageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.title = "個人/訂單資訊"
+        self.title = NSLocalizedString("VCTitleProfileOrderInfo",comment: "")
         
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 70.0
@@ -79,7 +79,7 @@ class ProfileListViewController: SPSingleImageViewController {
             }
             
             if let email = profile?.email {
-                cell.emailLabel.text = "聯絡信箱: \(email)"
+                cell.emailLabel.text = "\(NSLocalizedString("StringContactEmail",comment: "")): \(email)"
             }
             
             return cell
@@ -95,13 +95,13 @@ class ProfileListViewController: SPSingleImageViewController {
                 
                 let date = order.createdAt
                 let formatter = NSDateFormatter()
-                formatter.dateFormat = "yyyy-MM-dd a hh:mm:ss 您購買了,"
+                formatter.dateFormat = "yyyy-MM-dd a hh:mm:ss \(NSLocalizedString("StringYouBuy",comment: "")),"
                 let date_string = formatter.stringFromDate(date)
                 
                 cell.dateLabel.text = date_string
                 cell.nameLabel.text = order["product"] as? String
-                cell.costLabel.text = "交易金額: \(order["amount"] as! Int) NT"
-                cell.snLabel.text = "訂單編號: \(order["order_id"] as! String)"
+                cell.costLabel.text = "\(NSLocalizedString("StringOrderAmount",comment: "")): \(order["amount"] as! Int) NT"
+                cell.snLabel.text = "\(NSLocalizedString("StringOrderSn",comment: "")): \(order["order_id"] as! String)"
                 
                 return cell
             }
@@ -116,25 +116,25 @@ class ProfileListViewController: SPSingleImageViewController {
         if indexPath.row == 0 {
             
             let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
-            let edtiProfile = UIAlertAction(title: "編輯個人資料", style: .Default, handler: { (_) -> Void in
+            let edtiProfile = UIAlertAction(title: NSLocalizedString("ButtonTitleEditProfile",comment: ""), style: .Default, handler: { (_) -> Void in
                 let profileEditViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ProfileEditViewController") as! ProfileEditViewController
                 profileEditViewController.profile = self.profile
                 self.navigationController?.pushViewController(profileEditViewController, animated: true)
             })
-            let changePwd = UIAlertAction(title: "變更密碼", style: .Default, handler: { (_) -> Void in
+            let changePwd = UIAlertAction(title: NSLocalizedString("ButtonTitleChangePwd",comment: ""), style: .Default, handler: { (_) -> Void in
                 
                 let loginPages = UIStoryboard(name: "LoginPages", bundle: nil)
                 let changePwdViewController = loginPages.instantiateViewControllerWithIdentifier("ForgotPwdViewController")
                 self.navigationController?.pushViewController(changePwdViewController, animated: true)
             })
-            let logOut = UIAlertAction(title: "登出", style: .Default, handler: { (_) -> Void in
+            let logOut = UIAlertAction(title: NSLocalizedString("ButtonTitleLogOut",comment: ""), style: .Default, handler: { (_) -> Void in
                 
                 SPDataManager.sharedInstance.deleteProfile()
                 AVUser.logOut()
                 self.navigationController?.popToRootViewControllerAnimated(true)
             })
             
-            let cancel = UIAlertAction(title: "取消", style: .Cancel, handler: nil)
+            let cancel = UIAlertAction(title: NSLocalizedString("ButtonTitleCancel",comment: ""), style: .Cancel, handler: nil)
             alertController.addAction(edtiProfile)
             alertController.addAction(changePwd)
             alertController.addAction(logOut)
@@ -160,7 +160,7 @@ class ProfileListViewController: SPSingleImageViewController {
             productInfoViewController.product = _product
             productInfoViewController.infoType = .OrderInfo
             productInfoViewController.order = order
-            productInfoViewController.title = "購買記錄"
+            productInfoViewController.title = NSLocalizedString("VCTitleOrderHistory",comment: "")
             self.navigationController?.pushViewController(productInfoViewController, animated: true)
         }
     }

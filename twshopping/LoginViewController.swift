@@ -56,7 +56,11 @@ class LoginViewController: SPSingleColorViewController {
                 
                 let errInfo = error.userInfo["error"] as! String
                 
-                let alertView = UIAlertView(title: "登入失敗！", message:errInfo , delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "確定")
+                let alertView = UIAlertView(title: NSLocalizedString("AlertTitleLoginError",comment: ""),
+                    message:errInfo ,
+                    delegate: nil,
+                    cancelButtonTitle: nil,
+                    otherButtonTitles: NSLocalizedString("ButtonTitleSure",comment: ""))
                 alertView.show()
             }
             SPTools.hideLoadingOnViewController(self)

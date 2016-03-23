@@ -64,11 +64,11 @@
 		203BEF1C1C98489C0090F463 /* SPWhiteCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203BEF1B1C98489C0090F463 /* SPWhiteCornerView.swift */; };
 		203BEF1E1C9848DF0090F463 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203BEF1D1C9848DF0090F463 /* RegisterViewController.swift */; };
 		203BEF221C9864CF0090F463 /* ForgotPwdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203BEF211C9864CF0090F463 /* ForgotPwdViewController.swift */; };
+		2086DADD1CA2F126009FACC3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2086DADF1CA2F126009FACC3 /* Localizable.strings */; };
 		20A566571C8F28E700B09B7E /* SPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A566561C8F28E700B09B7E /* SPService.swift */; };
 		20AE329E1C9AD98A00078EE6 /* LeftMenuDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AE329D1C9AD98A00078EE6 /* LeftMenuDetailCell.swift */; };
 		20B988281C9718D100D46ACB /* json.json in Resources */ = {isa = PBXBuildFile; fileRef = 20B988271C9718D100D46ACB /* json.json */; };
 		20C2602F1C8DC63E00938F54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C2602E1C8DC63E00938F54 /* AppDelegate.swift */; };
-		20C260311C8DC63E00938F54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C260301C8DC63E00938F54 /* ViewController.swift */; };
 		20C260341C8DC63E00938F54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20C260321C8DC63E00938F54 /* Main.storyboard */; };
 		20C260371C8DC63E00938F54 /* twshopping.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 20C260351C8DC63E00938F54 /* twshopping.xcdatamodeld */; };
 		20C260391C8DC63E00938F54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20C260381C8DC63E00938F54 /* Assets.xcassets */; };
@@ -176,12 +176,21 @@
 		203BEF1B1C98489C0090F463 /* SPWhiteCornerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPWhiteCornerView.swift; sourceTree = "<group>"; };
 		203BEF1D1C9848DF0090F463 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		203BEF211C9864CF0090F463 /* ForgotPwdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPwdViewController.swift; sourceTree = "<group>"; };
+		2086DADE1CA2F126009FACC3 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		2086DAE01CA2F128009FACC3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		209D2E6D1CA2E99C005D418B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		209D2E6E1CA2E99C005D418B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		209D2E6F1CA2E99D005D418B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Tools.strings"; sourceTree = "<group>"; };
+		209D2E701CA2E99D005D418B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LoginPages.strings"; sourceTree = "<group>"; };
+		209D2E711CA2E9BF005D418B /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		209D2E721CA2E9BF005D418B /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		209D2E731CA2E9BF005D418B /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Tools.strings"; sourceTree = "<group>"; };
+		209D2E741CA2E9BF005D418B /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LoginPages.strings"; sourceTree = "<group>"; };
 		20A566561C8F28E700B09B7E /* SPService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPService.swift; sourceTree = "<group>"; };
 		20AE329D1C9AD98A00078EE6 /* LeftMenuDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuDetailCell.swift; sourceTree = "<group>"; };
 		20B988271C9718D100D46ACB /* json.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = json.json; sourceTree = "<group>"; };
 		20C2602B1C8DC63E00938F54 /* twshopping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = twshopping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20C2602E1C8DC63E00938F54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		20C260301C8DC63E00938F54 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		20C260331C8DC63E00938F54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		20C260361C8DC63E00938F54 /* twshopping.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = twshopping.xcdatamodel; sourceTree = "<group>"; };
 		20C260381C8DC63E00938F54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -307,6 +316,7 @@
 		0A8F686A1C97E4E500F1EFF3 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				209D2E751CA2EBED005D418B /* Localization */,
 				20C260321C8DC63E00938F54 /* Main.storyboard */,
 				20C2603A1C8DC63E00938F54 /* LaunchScreen.storyboard */,
 				0A7DEB151C98F59B00D82329 /* Tools.storyboard */,
@@ -418,6 +428,14 @@
 			name = LoginPages;
 			sourceTree = "<group>";
 		};
+		209D2E751CA2EBED005D418B /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				2086DADF1CA2F126009FACC3 /* Localizable.strings */,
+			);
+			name = Localization;
+			sourceTree = "<group>";
+		};
 		20C260221C8DC63E00938F54 = {
 			isa = PBXGroup;
 			children = (
@@ -450,7 +468,6 @@
 				0A8F68721C980F6E00F1EFF3 /* ViewControllers */,
 				0A8F686A1C97E4E500F1EFF3 /* Storyboard */,
 				20C2602E1C8DC63E00938F54 /* AppDelegate.swift */,
-				20C260301C8DC63E00938F54 /* ViewController.swift */,
 				0A9CCB121CA116BF0071042D /* twshopping-Bridging-Header.h */,
 				20C260381C8DC63E00938F54 /* Assets.xcassets */,
 				20C2603D1C8DC63E00938F54 /* Info.plist */,
@@ -606,6 +623,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = 20C260221C8DC63E00938F54;
 			productRefGroup = 20C2602C1C8DC63E00938F54 /* Products */;
@@ -629,6 +648,7 @@
 				20C260341C8DC63E00938F54 /* Main.storyboard in Resources */,
 				2030A8BA1CA2D8710056311F /* MainView.xib in Resources */,
 				0A7DEB131C98F59B00D82329 /* Tools.storyboard in Resources */,
+				2086DADD1CA2F126009FACC3 /* Localizable.strings in Resources */,
 				20B988281C9718D100D46ACB /* json.json in Resources */,
 				2030A8B91CA2D8710056311F /* image.xcassets in Resources */,
 				0A7DEB161C98F5AA00D82329 /* LoginPages.storyboard in Resources */,
@@ -715,7 +735,6 @@
 				0AE44B8F1C9BBB75009FBE89 /* Language+CoreDataProperties.swift in Sources */,
 				203BEF161C9837150090F463 /* SPTextField.swift in Sources */,
 				0A17ACE21C9A7BFD00B7C268 /* SPTextView.swift in Sources */,
-				20C260311C8DC63E00938F54 /* ViewController.swift in Sources */,
 				0AD3DB511C99693F0055213B /* Profile+CoreDataProperties.swift in Sources */,
 				0A7DEB261C990AC000D82329 /* SPWhiteTextLabel.swift in Sources */,
 				0A17ACEA1C9A85E000B7C268 /* Version.swift in Sources */,
@@ -801,6 +820,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				0A7DEB141C98F59B00D82329 /* Base */,
+				209D2E6F1CA2E99D005D418B /* zh-Hans */,
+				209D2E731CA2E9BF005D418B /* zh-Hant */,
 			);
 			name = Tools.storyboard;
 			sourceTree = "<group>";
@@ -809,14 +830,27 @@
 			isa = PBXVariantGroup;
 			children = (
 				0A7DEB171C98F5AA00D82329 /* Base */,
+				209D2E701CA2E99D005D418B /* zh-Hans */,
+				209D2E741CA2E9BF005D418B /* zh-Hant */,
 			);
 			name = LoginPages.storyboard;
+			sourceTree = "<group>";
+		};
+		2086DADF1CA2F126009FACC3 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2086DADE1CA2F126009FACC3 /* zh-Hant */,
+				2086DAE01CA2F128009FACC3 /* zh-Hans */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		20C260321C8DC63E00938F54 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				20C260331C8DC63E00938F54 /* Base */,
+				209D2E6D1CA2E99C005D418B /* zh-Hans */,
+				209D2E711CA2E9BF005D418B /* zh-Hant */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -825,6 +859,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				20C2603B1C8DC63E00938F54 /* Base */,
+				209D2E6E1CA2E99C005D418B /* zh-Hans */,
+				209D2E721CA2E9BF005D418B /* zh-Hant */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

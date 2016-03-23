@@ -94,12 +94,12 @@ class ProductInfoViewController: SPSingleImageViewController, UITableViewDelegat
                     
                     let date = _order.createdAt
                     let formatter = NSDateFormatter()
-                    formatter.dateFormat = "交易時間: yyyy-MM-dd a hh:mm:ss"
+                    formatter.dateFormat = "\(NSLocalizedString("StringTradeTime",comment: "")): yyyy-MM-dd a hh:mm:ss"
                     let date_string = formatter.stringFromDate(date)
                     
                     
-                    cell.snLabel.text = "訂單編號: \(_order["order_id"] as! String)"
-                    cell.costLabel.text = "交易金額: \(_order["amount"] as! Int) NT"
+                    cell.snLabel.text = "\(NSLocalizedString("StringOrderSn",comment: "")): \(_order["order_id"] as! String)"
+                    cell.costLabel.text = "\(NSLocalizedString("StringOrderAmount",comment: "")): \(_order["amount"] as! Int) NT"
                     cell.dateLabel.text = date_string
                 }
                 return cell
@@ -112,10 +112,10 @@ class ProductInfoViewController: SPSingleImageViewController, UITableViewDelegat
                 let cell = tableView.dequeueReusableCellWithIdentifier("OrderUserCell", forIndexPath: indexPath) as! OrderUserCell
                 if let _order = order {
                     
-                    cell.nameLabel.text = "姓名: \(_order["name"] as! String)"
-                    cell.addressLabel.text = "地址: \(_order["address"] as! String)"
-                    cell.mobileLabel.text = "電話: \(_order["mobile"] as! String)"
-                    cell.emailLabel.text = "聯絡信箱: \(_order["email"] as! String)"
+                    cell.nameLabel.text = "\(NSLocalizedString("StringName",comment: "")): \(_order["name"] as! String)"
+                    cell.addressLabel.text = "\(NSLocalizedString("StringAddress",comment: "")): \(_order["address"] as! String)"
+                    cell.mobileLabel.text = "\(NSLocalizedString("StringMobile",comment: "")): \(_order["mobile"] as! String)"
+                    cell.emailLabel.text = "\(NSLocalizedString("StringContactEmail",comment: "")): \(_order["email"] as! String)"
                 }
                 
                 return cell

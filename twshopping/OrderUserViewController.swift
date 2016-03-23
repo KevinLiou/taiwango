@@ -27,12 +27,12 @@ class OrderUserViewController: SPSingleColorViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "購買商品"
+        self.title = NSLocalizedString("VCTitleBuy",comment: "")
         
         self.productTitleLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
         self.OrderUserTitleLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
         
-        let buyItem = UIBarButtonItem(title: "購買", style: .Plain, target: self, action: "buyIt")
+        let buyItem = UIBarButtonItem(title: NSLocalizedString("StringBuy",comment: ""), style: .Plain, target: self, action: "buyIt")
         self.navigationItem.rightBarButtonItem = buyItem
         
         
@@ -42,13 +42,17 @@ class OrderUserViewController: SPSingleColorViewController {
     
     func loadData(){
         if let product_name = product?.name, let product_amount = product?.amount, let product_remain = product?.remain{
-            self.productName.text = "商品名稱: \(product_name)"
-            self.productPrice.text = "金額: \(product_amount) NT"
+            self.productName.text = "\(NSLocalizedString("StringProductName",comment: "")): \(product_name)"
+            self.productPrice.text = "\(NSLocalizedString("StringAmount",comment: "")): \(product_amount) NT"
             
             if product_amount == 0 || product_remain == 0{
                 self.navigationController?.popViewControllerAnimated(true)
                 
-                let alertView = UIAlertView(title: "無法購買！", message:"此商品已經售完囉。" , delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "確定")
+                let alertView = UIAlertView(title: NSLocalizedString("AlertTitleBuyError",comment: ""),
+                    message:NSLocalizedString("AlertMessageNoRemain",comment: ""),
+                    delegate: nil,
+                    cancelButtonTitle: nil,
+                    otherButtonTitles: NSLocalizedString("ButtonTitleSure",comment: ""))
                 alertView.show()
             }
         }
@@ -148,7 +152,7 @@ class OrderUserViewController: SPSingleColorViewController {
                 productInfoViewController.product = self.product
                 productInfoViewController.infoType = .OrderInfo
                 productInfoViewController.order = order
-                productInfoViewController.title = "購買完成"
+                productInfoViewController.title = NSLocalizedString("VCTitleBuySucceeded",comment: "")
                 self.navigationController?.pushViewController(productInfoViewController, animated: true)
             }else{
                 

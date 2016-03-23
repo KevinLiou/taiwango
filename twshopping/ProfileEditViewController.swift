@@ -20,9 +20,9 @@ class ProfileEditViewController: SPSingleColorViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "詳細個人資料"
+        self.title = NSLocalizedString("VCTitleProfileInfo",comment: "")
         
-        let saveItem = UIBarButtonItem(title: "儲存", style: .Plain, target: self, action: "save")
+        let saveItem = UIBarButtonItem(title: NSLocalizedString("ItemTitleSave",comment: ""), style: .Plain, target: self, action: "save")
         self.navigationItem.rightBarButtonItem = saveItem
         
         /*
@@ -102,14 +102,22 @@ class ProfileEditViewController: SPSingleColorViewController {
                 
                 SPDataManager.sharedInstance.updateProfileWith(info: info, target: self.profile!)
                 
-                let alertView = UIAlertView(title: "儲存成功！", message:"" , delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "確定")
+                let alertView = UIAlertView(title: NSLocalizedString("AlertTitleSaveOK",comment: ""),
+                    message:"" ,
+                    delegate: nil,
+                    cancelButtonTitle: nil,
+                    otherButtonTitles: NSLocalizedString("ButtonTitleSure",comment: ""))
                 alertView.show()
                 
                 self.navigationController?.popViewControllerAnimated(true)
             }else{
                 let errInfo = error.userInfo["error"] as! String
                 
-                let alertView = UIAlertView(title: "儲存失敗！", message:errInfo , delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "確定")
+                let alertView = UIAlertView(title: NSLocalizedString("AlertTitleSaveFail",comment: ""),
+                    message:errInfo ,
+                    delegate: nil,
+                    cancelButtonTitle: nil,
+                    otherButtonTitles: NSLocalizedString("ButtonTitleSure",comment: ""))
                 alertView.show()
             }
             

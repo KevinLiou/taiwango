@@ -19,9 +19,9 @@ class ChangePwdViewController: SPSingleColorViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.title = "變更密碼"
+        self.title = NSLocalizedString("ButtonTitleChangePwd",comment: "")
         
-        let saveItem = UIBarButtonItem(title: "確定", style: .Plain, target: self, action: "save")
+        let saveItem = UIBarButtonItem(title: NSLocalizedString("ButtonTitleSure",comment: ""), style: .Plain, target: self, action: "save")
         self.navigationItem.rightBarButtonItem = saveItem
     }
 

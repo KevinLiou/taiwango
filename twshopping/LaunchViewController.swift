@@ -57,14 +57,27 @@ class LaunchViewController: UIViewController, UIAlertViewDelegate {
                                         alertView.show()
                                         self.entry()
                                     case 2:
-                                        let alertView = UIAlertView(title: "通知", message: info, delegate: self, cancelButtonTitle: "暫時不要", otherButtonTitles: "前往更新")
-                                        alertView.tag = 2
-                                        alertView.show()
+                                        let vString = NSBundle.mainBundle().infoDictionary!["CFBundleShortVersionString"] as? String
+                                        
+                                        if vString != version?.version {
+                                            let alertView = UIAlertView(title: "通知", message: info, delegate: self, cancelButtonTitle: "暫時不要", otherButtonTitles: "前往更新")
+                                            alertView.tag = 2
+                                            alertView.show()
+                                        }
+                                        
                                         self.entry()
+                                        
                                     case 3:
-                                        let alertView = UIAlertView(title: "通知", message: info, delegate: self, cancelButtonTitle: nil, otherButtonTitles: "前往更新")
-                                        alertView.tag = 3
-                                        alertView.show()
+                                        
+                                        let vString = NSBundle.mainBundle().infoDictionary!["CFBundleShortVersionString"] as? String
+                                        
+                                        if vString != version?.version {
+                                            let alertView = UIAlertView(title: "通知", message: info, delegate: self, cancelButtonTitle: nil, otherButtonTitles: "前往更新")
+                                            alertView.tag = 3
+                                            alertView.show()
+                                        }else{
+                                            self.entry()
+                                        }
                                     default:
                                         self.entry()
                                     }

@@ -26,7 +26,7 @@ class ProductInfoViewController: SPSingleImageViewController, UITableViewDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //購買商品詳細資訊頁
+        //訂單商品詳細資訊頁
         //商品詳細資訊頁
         //共用此VC
         

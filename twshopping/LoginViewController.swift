@@ -44,11 +44,11 @@ class LoginViewController: SPSingleColorViewController {
             if user != nil {
                 
                 let email = user.email
-                let mobilePhoneNumber = user.mobilePhoneNumber
+                let mobile = user["mobile"] as? String
                 let address = user["address"] as? String
                 let name = user["name"] as? String
                 
-                SPDataManager.sharedInstance.insertProfile(email, mobilePhoneNumber: mobilePhoneNumber, address: address, name: name)
+                SPDataManager.sharedInstance.insertProfile(email, mobilePhoneNumber: mobile, address: address, name: name)
                 
                 self.tapPassLogin()
                 

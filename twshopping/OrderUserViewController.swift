@@ -42,7 +42,7 @@ class OrderUserViewController: SPSingleColorViewController {
     func loadData(){
         if let product_name = product?.name, let product_amount = product?.amount, let product_remain = product?.remain{
             self.productName.text = "商品名稱: \(product_name)"
-            self.productPrice.text = "金額: \(product_amount)"
+            self.productPrice.text = "金額: \(product_amount) NT"
             
             if product_amount == 0 || product_remain == 0{
                 self.navigationController?.popViewControllerAnimated(true)

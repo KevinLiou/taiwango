@@ -89,11 +89,19 @@ class ProductInfoViewController: SPSingleImageViewController, UITableViewDelegat
                 return cell
             }else if indexPath.row == 1 {
                 let cell = tableView.dequeueReusableCellWithIdentifier("OrderSnCell", forIndexPath: indexPath) as! OrderSnCell
-                
-                cell.snLabel.text = "訂單編號: ABC-1234567890"
-                cell.costLabel.text = "交易金額: 7,200,345,678,900"
-                cell.dateLabel.text = "交易時間: 2013-03-14 14:22:50"
-                
+
+                if let _order = order {
+                    
+                    let date = _order.createdAt
+                    let formatter = NSDateFormatter()
+                    formatter.dateFormat = "交易時間: yyyy-MM-dd a hh:mm:ss"
+                    let date_string = formatter.stringFromDate(date)
+                    
+                    
+                    cell.snLabel.text = "訂單編號: \(_order["order_id"] as! String)"
+                    cell.costLabel.text = "交易金額: \(_order["amount"] as! Int) NT"
+                    cell.dateLabel.text = date_string
+                }
                 return cell
             }else if indexPath.row == 2{
                 let cell = tableView.dequeueReusableCellWithIdentifier("ProductInfoCell", forIndexPath: indexPath) as! ProductInfoCell
@@ -102,10 +110,14 @@ class ProductInfoViewController: SPSingleImageViewController, UITableViewDelegat
                 return cell
             }else{
                 let cell = tableView.dequeueReusableCellWithIdentifier("OrderUserCell", forIndexPath: indexPath) as! OrderUserCell
-                cell.nameLabel.text = "姓名: testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest"
-                cell.addressLabel.text = "地址: testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest"
-                cell.mobileLabel.text = "電話: testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest"
-                cell.emailLabel.text = "聯絡信箱: testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest"
+                if let _order = order {
+                    
+                    cell.nameLabel.text = "姓名: \(_order["name"] as! String)"
+                    cell.addressLabel.text = "地址: \(_order["address"] as! String)"
+                    cell.mobileLabel.text = "電話: \(_order["mobile"] as! String)"
+                    cell.emailLabel.text = "聯絡信箱: \(_order["email"] as! String)"
+                }
+                
                 return cell
             }
             

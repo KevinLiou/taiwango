@@ -20,8 +20,6 @@ class SPDataManager {
     
     func insertAllData(data data:[String:[String:[AnyObject]]]){
         
-        deleteLanguageWithPredicate(predicate: nil)
-        
         for (lan, value) in data {
             //languages
             let language = NSEntityDescription.insertNewObjectForEntityForName("Language", inManagedObjectContext: context) as! Language

@@ -38,6 +38,8 @@ class LaunchViewController: UIViewController, UIAlertViewDelegate {
                         do{
                             
                             if let data = try NSJSONSerialization.JSONObjectWithData(json.dataUsingEncoding(NSUTF8StringEncoding)!, options: .MutableLeaves) as? [String:[String:[AnyObject]]] {
+                                
+                                SPDataManager.sharedInstance.deleteLanguageWithPredicate(predicate: nil)
                                 SPDataManager.sharedInstance.insertAllData(data: data)
                                 
                                 //update type 1, 2, 3

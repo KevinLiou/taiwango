@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.registerUserNotificationSettings(pushNotificationSettings)
         application.registerForRemoteNotifications()
         
-        print(self.applicationDocumentsDirectory)
+//        print(self.applicationDocumentsDirectory)
         
         return true
     }

@@ -96,7 +96,7 @@ class OrderUserViewController: SPSingleColorViewController {
             let _name = self.nameTextField.text {
                 
                 
-                let memo = "\(order_id),\(_user_object_id).\(_product_id),\(_product_name),\(_amount),\(_email),\(_mobile),\(_address),\(_name)"
+                let memo = "twshopping,\(order_id),\(_user_object_id).\(_product_id),\(_product_name),\(_amount),\(_email),\(_mobile),\(_address),\(_name)"
                 
                 let query = AVObject(className: "Orders")
                 query.setObject(_user_object_id, forKey: "user_object_id")
@@ -104,6 +104,7 @@ class OrderUserViewController: SPSingleColorViewController {
                 query.setObject(_mobile, forKey: "mobile")
                 query.setObject(_address, forKey: "address")
                 query.setObject(_name, forKey: "name")
+                query.setObject("twshopping", forKey: "app")
                 
                 query.setObject(_product_id, forKey: "product_id")
                 query.setObject(_product_name, forKey: "product")

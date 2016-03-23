@@ -20,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+//        UnionpaysdkService.InitWithKey("e$3k3Y3Mfa", andScode: "EID002201", andIsRace: false)
+        
         //IQKeyboardManager
         IQKeyboardManager.sharedManager().enable = true
         

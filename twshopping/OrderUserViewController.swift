@@ -13,6 +13,7 @@ class OrderUserViewController: SPSingleColorViewController {
 
     var product:Product?
     var profile:Profile?
+    var cacheOrder:AVObject?
     
     @IBOutlet var productTitleLabel: SPWhiteTextLabel!
     @IBOutlet var productName: SPWhiteTextLabel!
@@ -97,29 +98,47 @@ class OrderUserViewController: SPSingleColorViewController {
                 
                 let memo = "twshopping,\(order_id),\(_user_object_id).\(_product_id),\(_product_name),\(_amount),\(_email),\(_mobile),\(_address),\(_name)"
                 
-                let query = AVObject(className: "Orders")
-                query.setObject(_user_object_id, forKey: "user_object_id")
-                query.setObject(_email, forKey: "email")
-                query.setObject(_mobile, forKey: "mobile")
-                query.setObject(_address, forKey: "address")
-                query.setObject(_name, forKey: "name")
-                query.setObject("twshopping", forKey: "app")
                 
-                query.setObject(_product_id, forKey: "product_id")
-                query.setObject(_product_name, forKey: "product")
-                query.setObject(_amount, forKey: "amount")
-                query.setObject(order_id, forKey: "order_id")
-                query.setObject(memo, forKey: "memo")
+//                let payvc = UnionpaysdkService.CreateWebView(self, withOrderId: order_id, andAmount: Double(_amount), andMemo: memo, andPayCallBackUrl: "https://payment.skillfully.com.tw/back.aspx")
+//                self.presentViewController(payvc, animated: true, completion: nil)
                 
-                SPTools.showLoadingOnViewController(self)
-                saveOrdersInfoWithObject(query)
+
+                let order = AVObject(className: "Orders")
+                order.setObject(_user_object_id, forKey: "user_object_id")
+                order.setObject(_email, forKey: "email")
+                order.setObject(_mobile, forKey: "mobile")
+                order.setObject(_address, forKey: "address")
+                order.setObject(_name, forKey: "name")
+                order.setObject("twshopping", forKey: "app")
+                
+                order.setObject(_product_id, forKey: "product_id")
+                order.setObject(_product_name, forKey: "product")
+                order.setObject(_amount, forKey: "amount")
+                order.setObject(order_id, forKey: "order_id")
+                order.setObject(memo, forKey: "memo")
+                
+                
+                cacheOrder = order
         }
         
     }
     
-    func saveOrdersInfoWithObject(query:AVObject){
+    //call back
+    func IPaymentIsSuccess(IsSuccess:Bool){
+        if IsSuccess {
+            print("IsSuccess")
+            SPTools.showLoadingOnViewController(self)
+            saveOrdersInfoWithObject(cacheOrder!)
+        }else{
+            print("NoSuccess")
+        }
         
-        query.saveInBackgroundWithBlock { (succeeded: Bool, error: NSError!) -> Void in
+    }
+    
+    
+    func saveOrdersInfoWithObject(order:AVObject){
+        
+        order.saveInBackgroundWithBlock { (succeeded: Bool, error: NSError!) -> Void in
             
             if succeeded {
                 
@@ -128,7 +147,7 @@ class OrderUserViewController: SPSingleColorViewController {
                 let productInfoViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ProductInfoViewController") as! ProductInfoViewController
                 productInfoViewController.product = self.product
                 productInfoViewController.infoType = .OrderInfo
-                productInfoViewController.order = query
+                productInfoViewController.order = order
                 productInfoViewController.title = "購買完成"
                 self.navigationController?.pushViewController(productInfoViewController, animated: true)
             }else{
@@ -137,7 +156,7 @@ class OrderUserViewController: SPSingleColorViewController {
                 let time: NSTimeInterval = 3.0
                 let delay = dispatch_time(DISPATCH_TIME_NOW, Int64(time * Double(NSEC_PER_SEC)))
                 dispatch_after(delay, dispatch_get_main_queue()) { () -> Void in
-                    self.saveOrdersInfoWithObject(query)
+                    self.saveOrdersInfoWithObject(order)
                 }
                 
             }

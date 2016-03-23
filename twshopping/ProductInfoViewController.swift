@@ -8,6 +8,7 @@
 
 import UIKit
 import PINRemoteImage
+import AVOSCloud
 
 enum ProductInfoType {
     case ProductInfo, OrderInfo
@@ -17,6 +18,7 @@ class ProductInfoViewController: SPSingleImageViewController, UITableViewDelegat
 
     var infoType:ProductInfoType = .ProductInfo //default
     var product:Product?
+    var order:AVObject?
     
     @IBOutlet weak var tableView: UITableView!
     //bottom views
@@ -41,6 +43,14 @@ class ProductInfoViewController: SPSingleImageViewController, UITableViewDelegat
         case .ProductInfo:
             self.title = product?.name
             self.buyThisButton.hidden = false
+        }
+    }
+    
+    override func pop() {
+        if infoType == .OrderInfo {
+            self.navigationController?.popToRootViewControllerAnimated(true)
+        }else{
+            super.pop()
         }
     }
     

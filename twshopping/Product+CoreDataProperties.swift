@@ -2,7 +2,7 @@
 //  Product+CoreDataProperties.swift
 //  twshopping
 //
-//  Created by KevinLiou on 2016/3/16.
+//  Created by KevinLiou on 2016/3/23.
 //  Copyright © 2016年 KevinLiou. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -21,8 +21,10 @@ extension Product {
     @NSManaged var product_id: NSNumber?
     @NSManaged var product_key: String?
     @NSManaged var store_id: NSNumber?
+    @NSManaged var amount: NSNumber?
+    @NSManaged var remain: NSNumber?
     @NSManaged var cate: Cate?
-    @NSManaged var store: Store?
     @NSManaged var language: Language?
+    @NSManaged var store: Store?
 
 }

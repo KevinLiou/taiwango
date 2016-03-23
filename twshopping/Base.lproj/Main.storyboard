@@ -710,7 +710,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="140"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mbh-4A-JgL" customClass="SPBlackView" customModule="twshopping" customModuleProvider="target">
+                                                <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mbh-4A-JgL" customClass="SPBlackView" customModule="twshopping" customModuleProvider="target">
                                                     <rect key="frame" x="15" y="7" width="570" height="133"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="3CP-Cr-WL8">
@@ -729,7 +729,7 @@
                                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4np-4N-tWC" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4np-4N-tWC" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
                                                             <rect key="frame" x="26" y="40" width="513" height="32"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="byd-LC-KA4"/>
@@ -743,7 +743,7 @@
                                                                 </mask>
                                                             </variation>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" tag="1003" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="訂單編號: --" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="TH7-12-jwf" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="1003" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="訂單編號: --" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TH7-12-jwf" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
                                                             <rect key="frame" x="8" y="99" width="531" height="26"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="137-yU-ZNh"/>
@@ -777,7 +777,7 @@
                                                     <color key="backgroundColor" white="0.0" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="bottom" secondItem="s3q-CC-1Yu" secondAttribute="bottom" constant="8" id="5do-XL-v2l"/>
-                                                        <constraint firstAttribute="bottom" secondItem="TH7-12-jwf" secondAttribute="bottom" priority="999" constant="8" id="82j-Va-GO5"/>
+                                                        <constraint firstAttribute="bottom" secondItem="TH7-12-jwf" secondAttribute="bottom" constant="8" id="82j-Va-GO5"/>
                                                         <constraint firstItem="3CP-Cr-WL8" firstAttribute="leading" secondItem="pwz-Bg-gvx" secondAttribute="trailing" constant="8" id="Fl6-mX-pya"/>
                                                         <constraint firstAttribute="bottom" secondItem="4np-4N-tWC" secondAttribute="bottom" constant="8" id="GfO-cD-VQE"/>
                                                         <constraint firstItem="TH7-12-jwf" firstAttribute="top" secondItem="pwz-Bg-gvx" secondAttribute="bottom" constant="2" id="IZq-5z-htD"/>
@@ -810,7 +810,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="Mbh-4A-JgL" secondAttribute="trailing" constant="15" id="0mP-zn-EqI"/>
                                                 <constraint firstItem="Mbh-4A-JgL" firstAttribute="top" secondItem="SlS-Ux-a3S" secondAttribute="top" constant="7" id="1wo-HV-GR2"/>
-                                                <constraint firstAttribute="bottom" secondItem="Mbh-4A-JgL" secondAttribute="bottom" id="8OT-24-Qmy"/>
+                                                <constraint firstAttribute="bottom" secondItem="Mbh-4A-JgL" secondAttribute="bottom" priority="750" id="8OT-24-Qmy"/>
                                                 <constraint firstItem="Mbh-4A-JgL" firstAttribute="leading" secondItem="SlS-Ux-a3S" secondAttribute="leading" constant="15" id="ip4-al-xTB"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -1179,7 +1179,7 @@
                                                             <rect key="frame" x="8" y="8" width="584" height="135"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" text="地址: Loading..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1H-Wv-upW" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
-                                                                    <rect key="frame" x="8" y="60" width="568" height="20"/>
+                                                                    <rect key="frame" x="8" y="60" width="568" height="23"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="21" id="CNq-Ah-TR8"/>
                                                                     </constraints>
@@ -1221,8 +1221,8 @@
                                                                         </mask>
                                                                     </variation>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="電話: Loading..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scw-gu-3Wq" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
-                                                                    <rect key="frame" x="8" y="80" width="568" height="20"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="電話: Loading..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scw-gu-3Wq" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                                                    <rect key="frame" x="8" y="83" width="568" height="20"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="21" id="exZ-lX-xQh"/>
                                                                     </constraints>
@@ -1235,8 +1235,8 @@
                                                                         </mask>
                                                                     </variation>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="248" text="聯絡信箱: Loading...." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.94999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="vkt-EM-9ol" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
-                                                                    <rect key="frame" x="8" y="100" width="568" height="23"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="聯絡信箱: Loading...." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.94999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="vkt-EM-9ol" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                                                    <rect key="frame" x="8" y="103" width="568" height="20"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="39" id="IKk-L1-VJX"/>
                                                                     </constraints>

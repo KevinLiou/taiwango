@@ -41,10 +41,28 @@ class ProfileEditViewController: SPSingleColorViewController {
     
     func loadData(){
         
-        self.nameTextField.text = profile?.name
-        self.emailTextField.text = profile?.email
-        self.mobileTextField.text = profile?.mobile
-        self.addressTextField.text = profile?.address
+        
+        SPTools.showLoadingOnViewController(self)
+        
+        AVUser.currentUser().refreshInBackgroundWithBlock { (user: AVObject!, error: NSError!) -> Void in
+            if user != nil {
+                
+                let name = user["name"] as? String
+                let address = user["address"]  as? String
+                let mobile = user["mobile"] as? String
+                let email = user["email"] as? String
+                
+                let info = ["name":name, "address":address, "mobile":mobile, "email":email]
+                SPDataManager.sharedInstance.updateProfileWith(info: info, target: self.profile!)
+                
+                self.nameTextField.text = self.profile?.name
+                self.emailTextField.text = self.profile?.email
+                self.mobileTextField.text = self.profile?.mobile
+                self.addressTextField.text = self.profile?.address
+            }
+            
+            SPTools.hideLoadingOnViewController(self)
+        }
     }
     
     func save(){

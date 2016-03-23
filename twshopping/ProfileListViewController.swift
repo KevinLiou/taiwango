@@ -13,7 +13,7 @@ class ProfileListViewController: SPSingleImageViewController {
 
     @IBOutlet var tableView: UITableView!
     var profile:Profile?
-    let orders:[[String:AnyObject]] = []
+    var orders:[AVObject] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,31 +23,34 @@ class ProfileListViewController: SPSingleImageViewController {
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 70.0
         
+        
+        loadData()
     }
     
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        //refresh user info from server
+    func loadData(){
         SPTools.showLoadingOnViewController(self)
         
-        AVUser.currentUser().refreshInBackgroundWithBlock { (user: AVObject!, error: NSError!) -> Void in
-            if user != nil {
-                
-                let name = user["name"] as? String
-                let address = user["address"]  as? String
-                let mobile = user["mobile"] as? String
-                let email = user["email"] as? String
-                
-                let info = ["name":name, "address":address, "mobile":mobile, "email":email]
-                SPDataManager.sharedInstance.updateProfileWith(info: info, target: self.profile!)
+        guard let user_object_id = AVUser.currentUser().objectId else{
+            return
+        }
+        
+        
+        
+        let query = AVQuery(className: "Orders")
+        query.whereKey("user_object_id", equalTo: user_object_id)
+        query.findObjectsInBackgroundWithBlock { (result: [AnyObject]!, error: NSError!) -> Void in
+            
+            if (error != nil){
+                print(error)
+                return
+            }else{
+                self.orders = result as! [AVObject]
                 self.tableView.reloadData()
             }
-            
             SPTools.hideLoadingOnViewController(self)
         }
     }
+    
     
     // MARK: - Table view data source
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -87,10 +90,18 @@ class ProfileListViewController: SPSingleImageViewController {
                 return cell
             }else{
                 let cell = tableView.dequeueReusableCellWithIdentifier("OrderCell", forIndexPath: indexPath) as! OrderCell
-                cell.dateLabel.text = "2016-03-18 18:05 您購買了,"
-                cell.nameLabel.text = "維力炸醬麵～～～"
-                cell.snLabel.text = "訂單編號: ABC-123456789"
-                cell.costLabel.text = "交易金額: 7,200 NT"
+                
+                let order = orders[indexPath.row-1]
+                
+                let date = order.createdAt
+                let formatter = NSDateFormatter()
+                formatter.dateFormat = "yyyy-MM-dd a hh:mm:ss 您購買了,"
+                let date_string = formatter.stringFromDate(date)
+                
+                cell.dateLabel.text = date_string
+                cell.nameLabel.text = order["product"] as? String
+                cell.costLabel.text = "交易金額: \(order["amount"] as! Int) NT"
+                cell.snLabel.text = "訂單編號: \(order["order_id"] as! String)"
                 
                 return cell
             }
@@ -130,6 +141,27 @@ class ProfileListViewController: SPSingleImageViewController {
             alertController.addAction(cancel)
             
             self.presentViewController(alertController, animated: true, completion: nil)
+        }else{
+            let order = orders[indexPath.row-1]
+            let product_id = order["product_id"] as? Int
+            
+            
+            
+            
+            let predicate = NSPredicate(format: "language.lan = '\(SPTools.getPreferredLanguages())' AND product_id = \(product_id!)")
+            let result = SPDataManager.sharedInstance.fetchProductWithPredicate(predicate: predicate)
+            let product = result?.first
+            
+            guard let _product = product else{
+                return
+            }
+            
+            let productInfoViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ProductInfoViewController") as! ProductInfoViewController
+            productInfoViewController.product = _product
+            productInfoViewController.infoType = .OrderInfo
+            productInfoViewController.order = order
+            productInfoViewController.title = "購買記錄"
+            self.navigationController?.pushViewController(productInfoViewController, animated: true)
         }
     }
     

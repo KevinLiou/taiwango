@@ -17,7 +17,7 @@ class SPViewController: UIViewController {
         if self.navigationController?.viewControllers.count > 1 {
             
             let image = UIImage(named: "icon_back")?.imageWithRenderingMode(.AlwaysOriginal)
-            let backButtonItem = UIBarButtonItem(image: image, style: .Plain, target: self.navigationController, action: Selector("popViewControllerAnimated:"))
+            let backButtonItem = UIBarButtonItem(image: image, style: .Plain, target: self, action: Selector("pop"))
             self.navigationItem.leftBarButtonItem = backButtonItem;
             
         }else{
@@ -27,6 +27,10 @@ class SPViewController: UIViewController {
             self.navigationItem.leftBarButtonItem = backButtonItem;
             
         }
+    }
+    
+    func pop(){
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
     

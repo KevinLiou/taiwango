@@ -96,6 +96,8 @@ class SPDataManager {
                     
                     let product = NSEntityDescription.insertNewObjectForEntityForName("Product", inManagedObjectContext: context) as! Product
                     product.product_id = dic_product["product_id"] as? Int
+                    product.amount = dic_product["amount"] as? Int
+                    product.remain = dic_product["remain"] as? Int
                     product.cate_id = dic_product["cate_id"] as? Int
                     product.name = dic_product["name"] as? String
                     product.image_urls = dic_product["image_urls"] as? String

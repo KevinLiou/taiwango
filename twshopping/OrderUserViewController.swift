@@ -101,12 +101,16 @@ class OrderUserViewController: SPSingleColorViewController {
                 
                 
                 let memo = "twshopping,\(order_id),\(_user_object_id).\(_product_id),\(_product_name),\(_amount),\(_email),\(_mobile),\(_address),\(_name)"
+            
+            do {
+                
+                let payvc = UnionpaysdkService.CreateWebView(self, withOrderId: order_id, andAmount: Double(_amount), andMemo: memo, andPayCallBackUrl: "https://payment.skillfully.com.tw/back.aspx")
+                
+                self.presentViewController(payvc, animated: true, completion: nil)
                 
                 
-//                let payvc = UnionpaysdkService.CreateWebView(self, withOrderId: order_id, andAmount: Double(_amount), andMemo: memo, andPayCallBackUrl: "https://payment.skillfully.com.tw/back.aspx")
-//                self.presentViewController(payvc, animated: true, completion: nil)
                 
-
+                
                 let order = AVObject(className: "Orders")
                 order.setObject(_user_object_id, forKey: "user_object_id")
                 order.setObject(_email, forKey: "email")
@@ -123,6 +127,8 @@ class OrderUserViewController: SPSingleColorViewController {
                 
                 
                 cacheOrder = order
+            }
+            
         }
         
     }

@@ -18,7 +18,7 @@ class ProfileListViewController: SPSingleImageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.title = NSLocalizedString("VCTitleProfileOrderInfo",comment: "")
+        self.title = NSLocalizedString("MenuTitlePersionalInfo",comment: "")
         
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 70.0

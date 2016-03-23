@@ -54,6 +54,10 @@
 		202367641C9E781A00D6F452 /* ProductInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202367631C9E781A00D6F452 /* ProductInfoViewController.swift */; };
 		2028955D1C9D6931006CCFAE /* ProfileEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2028955C1C9D6931006CCFAE /* ProfileEditViewController.swift */; };
 		2028955F1C9D6943006CCFAE /* ChangePwdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2028955E1C9D6943006CCFAE /* ChangePwdViewController.swift */; };
+		2030A8B31CA2D82F0056311F /* unionpaysdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2030A8B21CA2D82F0056311F /* unionpaysdk.framework */; };
+		2030A8B41CA2D82F0056311F /* unionpaysdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2030A8B21CA2D82F0056311F /* unionpaysdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2030A8B91CA2D8710056311F /* image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2030A8B71CA2D8710056311F /* image.xcassets */; };
+		2030A8BA1CA2D8710056311F /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2030A8B81CA2D8710056311F /* MainView.xib */; };
 		203BEF161C9837150090F463 /* SPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203BEF151C9837150090F463 /* SPTextField.swift */; };
 		203BEF181C983A150090F463 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203BEF171C983A150090F463 /* LoginViewController.swift */; };
 		203BEF1A1C9840440090F463 /* SPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203BEF191C9840440090F463 /* SPButton.swift */; };
@@ -99,6 +103,20 @@
 			remoteInfo = twshopping;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2030A8B51CA2D82F0056311F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2030A8B41CA2D82F0056311F /* unionpaysdk.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0A17ACDA1C9A608B00B7C268 /* SPSingleColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPSingleColorViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +167,9 @@
 		202367631C9E781A00D6F452 /* ProductInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductInfoViewController.swift; sourceTree = "<group>"; };
 		2028955C1C9D6931006CCFAE /* ProfileEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileEditViewController.swift; sourceTree = "<group>"; };
 		2028955E1C9D6943006CCFAE /* ChangePwdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePwdViewController.swift; sourceTree = "<group>"; };
+		2030A8B21CA2D82F0056311F /* unionpaysdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = unionpaysdk.framework; sourceTree = "<group>"; };
+		2030A8B71CA2D8710056311F /* image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = image.xcassets; sourceTree = "<group>"; };
+		2030A8B81CA2D8710056311F /* MainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
 		203BEF151C9837150090F463 /* SPTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTextField.swift; sourceTree = "<group>"; };
 		203BEF171C983A150090F463 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		203BEF191C9840440090F463 /* SPButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPButton.swift; sourceTree = "<group>"; };
@@ -192,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20C260731C8DCB2100938F54 /* libsqlite3.tbd in Frameworks */,
+				2030A8B31CA2D82F0056311F /* unionpaysdk.framework in Frameworks */,
 				20C260711C8DCA2B00938F54 /* CoreLocation.framework in Frameworks */,
 				20C2606F1C8DCA2500938F54 /* CoreTelephony.framework in Frameworks */,
 				20C2606D1C8DCA1E00938F54 /* MobileCoreServices.framework in Frameworks */,
@@ -377,6 +399,15 @@
 			name = Push;
 			sourceTree = "<group>";
 		};
+		2030A8B61CA2D84C0056311F /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				2030A8B71CA2D8710056311F /* image.xcassets */,
+				2030A8B81CA2D8710056311F /* MainView.xib */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
 		203BEF231C9865AE0090F463 /* LoginPages */ = {
 			isa = PBXGroup;
 			children = (
@@ -390,6 +421,7 @@
 		20C260221C8DC63E00938F54 = {
 			isa = PBXGroup;
 			children = (
+				2030A8B61CA2D84C0056311F /* Resource */,
 				20C2602D1C8DC63E00938F54 /* twshopping */,
 				20C260451C8DC63E00938F54 /* twshoppingTests */,
 				20C260501C8DC63F00938F54 /* twshoppingUITests */,
@@ -466,6 +498,7 @@
 		FE00F7A43F77BC319A03F5FF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2030A8B21CA2D82F0056311F /* unionpaysdk.framework */,
 				20C260721C8DCB2100938F54 /* libsqlite3.tbd */,
 				20C260701C8DCA2B00938F54 /* CoreLocation.framework */,
 				20C2606E1C8DCA2500938F54 /* CoreTelephony.framework */,
@@ -490,6 +523,7 @@
 				20C260291C8DC63E00938F54 /* Resources */,
 				EFB2AC5151FA4FA8B5906475 /* Embed Pods Frameworks */,
 				AA40BF188DCAEEFCD6496562 /* Copy Pods Resources */,
+				2030A8B51CA2D82F0056311F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -593,8 +627,10 @@
 				20C2603C1C8DC63E00938F54 /* LaunchScreen.storyboard in Resources */,
 				20C260391C8DC63E00938F54 /* Assets.xcassets in Resources */,
 				20C260341C8DC63E00938F54 /* Main.storyboard in Resources */,
+				2030A8BA1CA2D8710056311F /* MainView.xib in Resources */,
 				0A7DEB131C98F59B00D82329 /* Tools.storyboard in Resources */,
 				20B988281C9718D100D46ACB /* json.json in Resources */,
+				2030A8B91CA2D8710056311F /* image.xcassets in Resources */,
 				0A7DEB161C98F5AA00D82329 /* LoginPages.storyboard in Resources */,
 				0A9CCB111CA0E03E0071042D /* img.json in Resources */,
 			);
@@ -891,6 +927,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/twshopping",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = twshopping/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -920,6 +957,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/twshopping",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = twshopping/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

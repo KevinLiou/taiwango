@@ -82,9 +82,8 @@ class OrderUserViewController: SPSingleColorViewController {
         }
         
         self.view.endEditing(true)
-        
-        let uuid = NSUUID().UUIDString
-        let order_id = uuid
+
+        let order_id = SPTools.getRandomSnString()
         
         if let _product_name = self.product?.name,
             let _product_id = self.product?.product_id,

@@ -133,6 +133,7 @@
 		0A2F55601C9FEE500028FCB2 /* SPUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPUser.swift; sourceTree = "<group>"; };
 		0A38EC3A1C9913CC0001117A /* SPBlackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPBlackView.swift; sourceTree = "<group>"; };
 		0A38EC551C9941E50001117A /* SPDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPDataManager.swift; sourceTree = "<group>"; };
+		0A3C237D1CA3B7380083C6EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0A4CB6911CA28CC400423DEF /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0A4CB6921CA28CC400423DEF /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		0A7DEB141C98F59B00D82329 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Tools.storyboard; sourceTree = "<group>"; };
@@ -841,6 +842,7 @@
 			children = (
 				2086DADE1CA2F126009FACC3 /* zh-Hant */,
 				2086DAE01CA2F128009FACC3 /* zh-Hans */,
+				0A3C237D1CA3B7380083C6EC /* Base */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

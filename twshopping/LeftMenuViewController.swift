@@ -151,7 +151,17 @@ class LeftMenuViewController: SPSingleColorViewController, RESideMenuDelegate, U
                 
                 //products
                 let cate = cates![indexPath.row-1]
-                let products = cate.product?.allObjects as! [Product]
+                var products = cate.product?.allObjects as! [Product]
+                
+                products = products.sort({ (p1: Product, p2: Product) -> Bool in
+                    
+                    if let p1 = p1.product_id?.integerValue, let p2 = p2.product_id?.integerValue {
+                        return p1 > p2
+                    }else{
+                        return true
+                    }
+                    
+                })
                 
                 let navProductListViewController = self.storyboard?.instantiateViewControllerWithIdentifier("NavProductListViewController") as! SPNavigationController
                 

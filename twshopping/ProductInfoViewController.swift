@@ -48,7 +48,14 @@ class ProductInfoViewController: SPSingleImageViewController, UITableViewDelegat
     
     override func pop() {
         if infoType == .OrderInfo {
-            self.navigationController?.popToRootViewControllerAnimated(true)
+            
+            let prevVC = self.navigationController?.viewControllers[((self.navigationController?.viewControllers.indexOf(self))! - 1)]
+            if prevVC?.isKindOfClass(OrderUserViewController) == true {
+                self.navigationController?.popToRootViewControllerAnimated(true)
+            }else{
+                super.pop()
+            }
+            
         }else{
             super.pop()
         }
@@ -99,7 +106,7 @@ class ProductInfoViewController: SPSingleImageViewController, UITableViewDelegat
                     
                     
                     cell.snLabel.text = "\(NSLocalizedString("StringOrderSn",comment: "")): \(_order["order_id"] as! String)"
-                    cell.costLabel.text = "\(NSLocalizedString("StringOrderAmount",comment: "")): \(_order["amount"] as! Int) NT"
+                    cell.costLabel.text = "\(NSLocalizedString("StringOrderAmount",comment: "")): \(_order["amount"] as! Int) CNY"
                     cell.dateLabel.text = date_string
                 }
                 return cell

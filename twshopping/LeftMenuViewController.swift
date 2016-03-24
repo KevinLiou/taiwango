@@ -152,6 +152,7 @@ class LeftMenuViewController: SPSingleColorViewController, RESideMenuDelegate, U
                 //products
                 let cate = cates![indexPath.row-1]
                 let products = cate.product?.allObjects as! [Product]
+                
                 let navProductListViewController = self.storyboard?.instantiateViewControllerWithIdentifier("NavProductListViewController") as! SPNavigationController
                 
                 let productListViewController = navProductListViewController.viewControllers.first as! ProductListViewController
@@ -229,7 +230,6 @@ class LeftMenuViewController: SPSingleColorViewController, RESideMenuDelegate, U
         currentSelect = indexPath
         tableView.reloadData()
     }
-    
     
     // MARK: - RESideMenuDelegate
     func sideMenu(sideMenu: RESideMenu!, willShowMenuViewController menuViewController: UIViewController!) {

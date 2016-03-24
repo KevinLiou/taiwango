@@ -50,10 +50,10 @@ class LoadingViewController: UIViewController {
                         self.labels[idx].textColor = UIColor.whiteColor()
                         
                         }, completion: { (finished) -> Void in
-                            ++self.currentLabelIndex
+                            self.currentLabelIndex += 1
 
                             if self.currentLabelIndex >= self.labels.count {
-                                self.performSelector("animateRefreshStep1", withObject: nil, afterDelay: 1.0)
+                                self.performSelector(#selector(LoadingViewController.animateRefreshStep1), withObject: nil, afterDelay: 1.0)
                             }
                     })
             })

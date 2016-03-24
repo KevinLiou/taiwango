@@ -38,6 +38,7 @@ class ProfileListViewController: SPSingleImageViewController {
         
         let query = AVQuery(className: "Orders")
         query.whereKey("user_object_id", equalTo: user_object_id)
+        query.orderByDescending("createdAt")
         query.findObjectsInBackgroundWithBlock { (result: [AnyObject]!, error: NSError!) -> Void in
             
             if (error != nil){
@@ -100,7 +101,7 @@ class ProfileListViewController: SPSingleImageViewController {
                 
                 cell.dateLabel.text = date_string
                 cell.nameLabel.text = order["product"] as? String
-                cell.costLabel.text = "\(NSLocalizedString("StringOrderAmount",comment: "")): \(order["amount"] as! Int) NT"
+                cell.costLabel.text = "\(NSLocalizedString("StringOrderAmount",comment: "")): \(order["amount"] as! Int) CNY"
                 cell.snLabel.text = "\(NSLocalizedString("StringOrderSn",comment: "")): \(order["order_id"] as! String)"
                 
                 return cell

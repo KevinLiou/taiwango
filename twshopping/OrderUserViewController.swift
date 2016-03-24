@@ -43,7 +43,7 @@ class OrderUserViewController: SPSingleColorViewController {
     func loadData(){
         if let product_name = product?.name, let product_amount = product?.amount, let product_remain = product?.remain{
             self.productName.text = "\(NSLocalizedString("StringProductName",comment: "")): \(product_name)"
-            self.productPrice.text = "\(NSLocalizedString("StringAmount",comment: "")): \(product_amount) NT"
+            self.productPrice.text = "\(NSLocalizedString("StringAmount",comment: "")): \(product_amount) CNY"
             
             if product_amount == 0 || product_remain == 0{
                 self.navigationController?.popViewControllerAnimated(true)
@@ -142,7 +142,6 @@ class OrderUserViewController: SPSingleColorViewController {
         }else{
             print("NoSuccess")
         }
-        
     }
     
     
@@ -153,6 +152,13 @@ class OrderUserViewController: SPSingleColorViewController {
             if succeeded {
                 
                 SPTools.hideLoadingOnViewController(self)
+                
+                let alertView = UIAlertView(title: NSLocalizedString("VCTitleBuySucceeded",comment: ""),
+                    message: "",
+                    delegate: nil,
+                    cancelButtonTitle: nil,
+                    otherButtonTitles: NSLocalizedString("ButtonTitleSure",comment: ""))
+                alertView.show()
                 
                 let productInfoViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ProductInfoViewController") as! ProductInfoViewController
                 productInfoViewController.product = self.product

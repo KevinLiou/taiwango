@@ -21,7 +21,7 @@ class ProductCell: UITableViewCell {
         
         self.productImageView.clipsToBounds = true
          NSNotificationCenter.defaultCenter().removeObserver(self, name: UIContentSizeCategoryDidChangeNotification, object: nil)
-         NSNotificationCenter.defaultCenter().addObserver(self, selector: "fontSizeChanged:", name: UIContentSizeCategoryDidChangeNotification, object: nil)
+         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ProductCell.fontSizeChanged(_:)), name: UIContentSizeCategoryDidChangeNotification, object: nil)
     }
 
     deinit {

@@ -26,7 +26,7 @@ class SPTextView: UITextView {
         self.textContainerInset = UIEdgeInsetsZero
         
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "fontSizeChanged:", name: UIContentSizeCategoryDidChangeNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(SPTextView.fontSizeChanged(_:)), name: UIContentSizeCategoryDidChangeNotification, object: nil)
     }
     
     deinit {

@@ -17,7 +17,7 @@ class SPWhiteTextLabel: UILabel {
         self.textColor = UIColor.whiteColor()
         self.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "fontSizeChanged:", name: UIContentSizeCategoryDidChangeNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(SPWhiteTextLabel.fontSizeChanged(_:)), name: UIContentSizeCategoryDidChangeNotification, object: nil)
     }
     
     override init(frame: CGRect) {

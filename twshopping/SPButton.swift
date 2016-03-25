@@ -19,7 +19,7 @@ class SPButton: UIButton {
         self.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.3)
         self.clipsToBounds = true
 
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "fontSizeChanged:", name: UIContentSizeCategoryDidChangeNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(SPButton.fontSizeChanged(_:)), name: UIContentSizeCategoryDidChangeNotification, object: nil)
     }
 
     override init(frame: CGRect) {

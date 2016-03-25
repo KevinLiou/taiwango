@@ -16,7 +16,7 @@ class ForgotPwdViewController: SPSingleColorViewController {
         super.viewDidLoad()
          self.title = NSLocalizedString("VCTitleResetPwd",comment: "")
         
-        let submitItem = UIBarButtonItem(title: NSLocalizedString("ButtonTitleSure",comment: ""), style: .Plain, target: self, action: "submit")
+        let submitItem = UIBarButtonItem(title: NSLocalizedString("ButtonTitleSure",comment: ""), style: .Plain, target: self, action: #selector(ForgotPwdViewController.submit))
         self.navigationItem.rightBarButtonItem = submitItem
     }
     

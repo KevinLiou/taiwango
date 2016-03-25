@@ -27,7 +27,7 @@ class RegisterViewController: SPSingleColorViewController {
 //        attributedString.addAttribute(NSUnderlineStyleAttributeName, value: NSUnderlineStyle.StyleSingle.rawValue, range: NSMakeRange(4, 9))
 //        self.policyLabel.attributedText = attributedString
         
-        let submitItem = UIBarButtonItem(title: NSLocalizedString("ItemTitleRegister",comment: ""), style: .Plain, target: self, action: "submit")
+        let submitItem = UIBarButtonItem(title: NSLocalizedString("ItemTitleRegister",comment: ""), style: .Plain, target: self, action: #selector(RegisterViewController.submit))
         self.navigationItem.rightBarButtonItem = submitItem
     }
     
@@ -87,7 +87,7 @@ class RegisterViewController: SPSingleColorViewController {
         infoViewController.infoString = version?.policy
         infoViewController.title = NSLocalizedString("VCTitlePolicy",comment: "")
         
-        let agreeItem = UIBarButtonItem(title: NSLocalizedString("ItemTitleAgree",comment: ""), style: .Plain, target: self, action: "agree")
+        let agreeItem = UIBarButtonItem(title: NSLocalizedString("ItemTitleAgree",comment: ""), style: .Plain, target: self, action: #selector(RegisterViewController.agree))
         infoViewController.navigationItem.rightBarButtonItem = agreeItem
         
         self.navigationController?.pushViewController(infoViewController, animated: true)

@@ -21,7 +21,7 @@ class OrderSnCell: UITableViewCell {
         self.dateLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
         
         NSNotificationCenter.defaultCenter().removeObserver(self, name: UIContentSizeCategoryDidChangeNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "fontSizeChanged:", name: UIContentSizeCategoryDidChangeNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(OrderSnCell.fontSizeChanged(_:)), name: UIContentSizeCategoryDidChangeNotification, object: nil)
         
         
     }

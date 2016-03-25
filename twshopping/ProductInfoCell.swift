@@ -19,7 +19,7 @@ class ProductInfoCell: UITableViewCell {
         self.descLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
         
         NSNotificationCenter.defaultCenter().removeObserver(self, name: UIContentSizeCategoryDidChangeNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "fontSizeChanged:", name: UIContentSizeCategoryDidChangeNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ProductInfoCell.fontSizeChanged(_:)), name: UIContentSizeCategoryDidChangeNotification, object: nil)
         
         
     }

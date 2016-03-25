@@ -18,7 +18,7 @@ class PushCell: UITableViewCell {
         self.titleLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
         
         NSNotificationCenter.defaultCenter().removeObserver(self, name: UIContentSizeCategoryDidChangeNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "fontSizeChanged:", name: UIContentSizeCategoryDidChangeNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PushCell.fontSizeChanged(_:)), name: UIContentSizeCategoryDidChangeNotification, object: nil)
     }
 
     deinit {

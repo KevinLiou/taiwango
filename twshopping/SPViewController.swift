@@ -17,13 +17,13 @@ class SPViewController: UIViewController {
         if self.navigationController?.viewControllers.count > 1 {
             
             let image = UIImage(named: "icon_back")?.imageWithRenderingMode(.AlwaysOriginal)
-            let backButtonItem = UIBarButtonItem(image: image, style: .Plain, target: self, action: Selector("pop"))
+            let backButtonItem = UIBarButtonItem(image: image, style: .Plain, target: self, action: #selector(SPViewController.pop))
             self.navigationItem.leftBarButtonItem = backButtonItem;
             
         }else{
             
             let image = UIImage(named: "icon_menu")?.imageWithRenderingMode(.AlwaysOriginal)
-            let backButtonItem = UIBarButtonItem(image: image, style: .Plain, target: self, action: "showMenu")
+            let backButtonItem = UIBarButtonItem(image: image, style: .Plain, target: self, action: #selector(SPViewController.showMenu))
             self.navigationItem.leftBarButtonItem = backButtonItem;
             
         }

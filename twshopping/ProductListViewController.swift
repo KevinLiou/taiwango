@@ -24,7 +24,7 @@ class ProductListViewController: SPSingleImageViewController {
         
         
         let image = UIImage(named: "icon_profile")?.imageWithRenderingMode(.AlwaysOriginal)
-        let rifhtButtonItem = UIBarButtonItem(image: image, style: .Plain, target: self, action: "goToPersonalPage")
+        let rifhtButtonItem = UIBarButtonItem(image: image, style: .Plain, target: self, action: #selector(ProductListViewController.goToPersonalPage))
         self.navigationItem.rightBarButtonItem = rifhtButtonItem;
     }
 

@@ -20,7 +20,7 @@ class ProfileCell: UITableViewCell {
         self.emailLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
         
         NSNotificationCenter.defaultCenter().removeObserver(self, name: UIContentSizeCategoryDidChangeNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "fontSizeChanged:", name: UIContentSizeCategoryDidChangeNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ProfileCell.fontSizeChanged(_:)), name: UIContentSizeCategoryDidChangeNotification, object: nil)
     }
 
     deinit {

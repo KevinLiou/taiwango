@@ -21,7 +21,7 @@ class ChangePwdViewController: SPSingleColorViewController {
         // Do any additional setup after loading the view.
         self.title = NSLocalizedString("ButtonTitleChangePwd",comment: "")
         
-        let saveItem = UIBarButtonItem(title: NSLocalizedString("ButtonTitleSure",comment: ""), style: .Plain, target: self, action: "save")
+        let saveItem = UIBarButtonItem(title: NSLocalizedString("ButtonTitleSure",comment: ""), style: .Plain, target: self, action: #selector(ChangePwdViewController.save))
         self.navigationItem.rightBarButtonItem = saveItem
     }
 

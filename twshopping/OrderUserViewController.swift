@@ -32,7 +32,7 @@ class OrderUserViewController: SPSingleColorViewController {
         self.productTitleLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
         self.OrderUserTitleLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
         
-        let buyItem = UIBarButtonItem(title: NSLocalizedString("StringBuy",comment: ""), style: .Plain, target: self, action: "buyIt")
+        let buyItem = UIBarButtonItem(title: NSLocalizedString("StringBuy",comment: ""), style: .Plain, target: self, action: #selector(OrderUserViewController.buyIt))
         self.navigationItem.rightBarButtonItem = buyItem
         
         
@@ -104,9 +104,9 @@ class OrderUserViewController: SPSingleColorViewController {
             
             do {
                 
-                let payvc = UnionpaysdkService.CreateWebView(self, withOrderId: order_id, andAmount: Double(_amount), andMemo: memo, andPayCallBackUrl: "https://payment.skillfully.com.tw/back.aspx")
-                
-                self.presentViewController(payvc, animated: true, completion: nil)
+//                let payvc = UnionpaysdkService.CreateWebView(self, withOrderId: order_id, andAmount: Double(_amount), andMemo: memo, andPayCallBackUrl: "https://payment.skillfully.com.tw/back.aspx")
+//                
+//                self.presentViewController(payvc, animated: true, completion: nil)
                 
                 
                 

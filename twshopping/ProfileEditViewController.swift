@@ -22,7 +22,7 @@ class ProfileEditViewController: SPSingleColorViewController {
         super.viewDidLoad()
         self.title = NSLocalizedString("VCTitleProfileInfo",comment: "")
         
-        let saveItem = UIBarButtonItem(title: NSLocalizedString("ItemTitleSave",comment: ""), style: .Plain, target: self, action: "save")
+        let saveItem = UIBarButtonItem(title: NSLocalizedString("ItemTitleSave",comment: ""), style: .Plain, target: self, action: #selector(ProfileEditViewController.save))
         self.navigationItem.rightBarButtonItem = saveItem
         
         /*

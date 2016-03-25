@@ -23,7 +23,7 @@ class OrderCell: UITableViewCell {
         self.costLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
 
         NSNotificationCenter.defaultCenter().removeObserver(self, name: UIContentSizeCategoryDidChangeNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "fontSizeChanged:", name: UIContentSizeCategoryDidChangeNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(OrderCell.fontSizeChanged(_:)), name: UIContentSizeCategoryDidChangeNotification, object: nil)
     }
 
     deinit {

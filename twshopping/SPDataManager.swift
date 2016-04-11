@@ -25,8 +25,9 @@ class SPDataManager {
         //languages
         let language = NSEntityDescription.insertNewObjectForEntityForName("Language", inManagedObjectContext: context) as! Language
         language.lan = lan
-            
-            //push
+        
+        
+        //push
         let pushs = data["push"] as! [[String:AnyObject]]
         for dic_push in pushs {
             
@@ -38,7 +39,6 @@ class SPDataManager {
             push.product_id = dic_push["product_id"] as? Int
             push.language = language
         }
-            
         
         //app_info
         let app_info = data["app_info"] as! [[String:AnyObject]]
@@ -106,13 +106,12 @@ class SPDataManager {
                 
                 let product_store_id = dic_product["store_id"] as? Int
                 if (product_store_id != nil) {
-                    let store_predicate = NSPredicate(format: "store_id = \(product_store_id!)")
+                    let store_predicate = NSPredicate(format: "store_id = \(product_store_id!) AND language.lan = '\(lan)'")
                     let stores = fetchStoreWithPredicate(predicate: store_predicate)
                     product.store = stores?.first
                 }
             }
         }
-        
         self.appDelegate.saveContext()
     }
     
@@ -122,6 +121,31 @@ class SPDataManager {
         profile.mobile = mobilePhoneNumber
         profile.address = address
         profile.name = name
+        
+        appDelegate.saveContext()
+    }
+    
+    func insertPush(data:AnyObject, lan:String){
+        
+        let predicate = NSPredicate(format: "lan = '\(lan)'")
+        let lans = self.fetchLanguageWithPredicate(predicate: predicate)
+        
+        let pushs = data["push"] as! [[String:AnyObject]]
+        for dic_push in pushs {
+            
+            let push_id = dic_push["push_id"] as? Int
+            
+            let delPredicate = NSPredicate(format: "language = '\(lan)' AND push_id = '\(push_id)'")
+            self.deletePushWithPredicate(predicate: delPredicate)
+            
+            let push = NSEntityDescription.insertNewObjectForEntityForName("Push", inManagedObjectContext: context) as! Push
+            push.push_id = dic_push["push_id"] as? Int
+            push.type = dic_push["type"] as? Int
+            push.title = dic_push["title"] as? String
+            push.info = dic_push["info"] as? String
+            push.product_id = dic_push["product_id"] as? Int
+            push.language = lans?.first
+        }
         
         appDelegate.saveContext()
     }
@@ -215,6 +239,20 @@ class SPDataManager {
         }
     }
     
+    func fetchPushWithPredicate(predicate predicate:NSPredicate?) -> [Push]? {
+        let request = NSFetchRequest(entityName: "Push")
+        if predicate != nil {
+            request.predicate = predicate
+        }
+        
+        do{
+            let result = try context.executeFetchRequest(request) as! [Push]
+            return result
+        }catch{
+            return nil
+        }
+    }
+    
     // MARK: - update
     func updateProfileWith(info info:[String:String?], target:Profile) {
         
@@ -227,6 +265,14 @@ class SPDataManager {
     }
     
     // MARK: - delete
+    func deletePushWithPredicate(predicate predicate:NSPredicate?){
+        let pushs = self.fetchPushWithPredicate(predicate: predicate)
+        for push in pushs! {
+            context.deleteObject(push)
+        }
+        appDelegate.saveContext()
+    }
+    
     func deleteProfile(){
         
         let profile = fetchProfile()

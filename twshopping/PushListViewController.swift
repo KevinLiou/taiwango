@@ -21,6 +21,26 @@ class PushListViewController: SPSingleImageViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
     }
 
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        SPTools.showLoadingOnViewController(self)
+        
+        
+        let lan = SPTools.getPreferredLanguages()
+        SPService.sharedInstance.requestAllAPIMessageWith(["language":Int(lan)!, "app_name":"twshopping_ios"]) { (response) in
+            
+            if let JSON = response.result.value {
+                SPDataManager.sharedInstance.insertPush(JSON, lan: "1")
+                let predicate = NSPredicate(format: "language.lan = '\(SPTools.getPreferredLanguages())'")
+                self.dataSource = SPDataManager.sharedInstance.fetchPushWithPredicate(predicate: predicate)
+                self.tableView.reloadData()
+            }
+            
+            SPTools.hideLoadingOnViewController(self)
+        }
+    }
+    
     
     // MARK: - Table view data source
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -56,7 +56,11 @@ class PushListViewController: SPSingleImageViewController {
             
         case 2:
             //商品推薦
-            let predicate = NSPredicate(format: "language.lan = '\(SPTools.getPreferredLanguages())' AND product_id = \(push.product_id!)")
+            guard let product_id = push.product_id else{
+                return
+            }
+            
+            let predicate = NSPredicate(format: "language.lan = '\(SPTools.getPreferredLanguages())' AND product_id = \(product_id)")
             let result = SPDataManager.sharedInstance.fetchProductWithPredicate(predicate: predicate)
             let product = result?.first
             

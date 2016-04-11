@@ -37,7 +37,6 @@ class LoginViewController: SPSingleColorViewController {
             return
         }
         
-        
         SPTools.showLoadingOnViewController(self)
         SPUser.logInWithUsernameInBackground(self.emailTextField.text, password: self.pwdTextField.text) { (user: AVUser!,error: NSError!) -> Void in
             

@@ -22,4 +22,5 @@ enum SPServicePath:String {
 enum SPServiceHost:String {
     case Host = "http://52.26.127.167/twshopping/index.php"
 //    case Host = "http://twshopping.tno.tw"
+    case APPURL = "https://itunes.apple.com/us/app/tai-wan-gou/id1095562394?l=zh&ls=1&mt=8"
 }

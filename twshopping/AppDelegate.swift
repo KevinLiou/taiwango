@@ -37,19 +37,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.registerUserNotificationSettings(pushNotificationSettings)
         application.registerForRemoteNotifications()
         
-//        print(self.applicationDocumentsDirectory)
+        print(self.applicationDocumentsDirectory)
         
-        SPService.sharedInstance.requestAllAPIMessageWith(["language":1, "app_name":"twshopping_ios"]) { (response) in
-            print(response.request)  // original URL request
-            print(response.response) // URL response
-            print(response.data)     // server data
-            print(response.result)   // result of response serialization
-            
-            
-            if let JSON = response.result.value {
-                print("JSON: \(JSON)")
-            }
-        }
+//        SPService.sharedInstance.requestAllAPIMessageWith(["language":1, "app_name":"twshopping_ios"]) { (response) in
+//            print(response.request)  // original URL request
+//            print(response.response) // URL response
+//            print(response.data)     // server data
+//            print(response.result)   // result of response serialization
+//            
+//            
+//            if let JSON = response.result.value {
+//                print("JSON: \(JSON)")
+//            }
+//        }
         
         return true
     }

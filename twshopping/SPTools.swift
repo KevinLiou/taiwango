@@ -27,10 +27,10 @@ class SPTools {
         let language = NSLocale.preferredLanguages()[0]
         if language.hasPrefix("zh-Hans") {
             //簡體
-            return "ch"
+            return "2"
         }else{
             //繁體
-            return "tw"
+            return "1"
         }
     }
     

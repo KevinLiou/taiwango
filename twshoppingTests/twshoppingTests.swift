@@ -7,13 +7,39 @@
 //
 
 import XCTest
+import Alamofire
+
 @testable import twshopping
 
 class twshoppingTests: XCTestCase {
     
+    var didFinishedExpection:XCTestExpectation?
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
+    }
+    
+    func testAPI(){
+        
+        self.didFinishedExpection = self.expectationWithDescription("testAPI")
+        
+//        SPService.sharedInstance.requestAllAPIMessageWith(["language":1, "app_name":"twshopping_ios"]) { (response) in
+//            print(response.request)  // original URL request
+//            print(response.response) // URL response
+//            print(response.data)     // server data
+//            print(response.result)   // result of response serialization
+//            
+//            if let JSON = response.result.value {
+//                print("JSON: \(JSON)")
+//                
+//            }
+//            
+//            XCTAssertNotNil(response.result.value)
+//            self.didFinishedExpection?.fulfill()
+//        }
+        
+        self.waitForExpectationsWithTimeout(3.0, handler: nil)
     }
     
     override func tearDown() {

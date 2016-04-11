@@ -8,6 +8,7 @@ pod 'RESideMenu', '~> 4.0.7'
 pod 'PINRemoteImage', '~> 2.1'
 pod 'IQKeyboardManagerSwift'
 pod 'Validator'
+pod 'Alamofire', '~> 3.0'
 end
 
 target 'twshoppingTests' do

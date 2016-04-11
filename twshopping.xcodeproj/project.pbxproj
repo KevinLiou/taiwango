@@ -64,6 +64,7 @@
 		203BEF1C1C98489C0090F463 /* SPWhiteCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203BEF1B1C98489C0090F463 /* SPWhiteCornerView.swift */; };
 		203BEF1E1C9848DF0090F463 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203BEF1D1C9848DF0090F463 /* RegisterViewController.swift */; };
 		203BEF221C9864CF0090F463 /* ForgotPwdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203BEF211C9864CF0090F463 /* ForgotPwdViewController.swift */; };
+		2050BB921CBA55DB00968B30 /* SPServiceURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2050BB911CBA55DB00968B30 /* SPServiceURL.swift */; };
 		2086DADD1CA2F126009FACC3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2086DADF1CA2F126009FACC3 /* Localizable.strings */; };
 		20A566571C8F28E700B09B7E /* SPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A566561C8F28E700B09B7E /* SPService.swift */; };
 		20AE329E1C9AD98A00078EE6 /* LeftMenuDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AE329D1C9AD98A00078EE6 /* LeftMenuDetailCell.swift */; };
@@ -177,6 +178,7 @@
 		203BEF1B1C98489C0090F463 /* SPWhiteCornerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPWhiteCornerView.swift; sourceTree = "<group>"; };
 		203BEF1D1C9848DF0090F463 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		203BEF211C9864CF0090F463 /* ForgotPwdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPwdViewController.swift; sourceTree = "<group>"; };
+		2050BB911CBA55DB00968B30 /* SPServiceURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPServiceURL.swift; sourceTree = "<group>"; };
 		2086DADE1CA2F126009FACC3 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		2086DAE01CA2F128009FACC3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		209D2E6D1CA2E99C005D418B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 			children = (
 				20A566561C8F28E700B09B7E /* SPService.swift */,
 				0A2F55601C9FEE500028FCB2 /* SPUser.swift */,
+				2050BB911CBA55DB00968B30 /* SPServiceURL.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -758,6 +761,7 @@
 				0A8F686D1C97E97D00F1EFF3 /* SPTools.swift in Sources */,
 				0A17ACDD1C9A60A400B7C268 /* SPSingleImageViewController.swift in Sources */,
 				2017C2931C9AFBB10047B51D /* PushListViewController.swift in Sources */,
+				2050BB921CBA55DB00968B30 /* SPServiceURL.swift in Sources */,
 				0A17ACE91C9A85E000B7C268 /* Version+CoreDataProperties.swift in Sources */,
 				0AD3DB521C99693F0055213B /* Profile.swift in Sources */,
 				0AD3DB561C99693F0055213B /* Store.swift in Sources */,
@@ -979,7 +983,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tw.com.tnot.twshopping;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3e5e9b81-2292-49f5-bcaf-21e658883fce";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "twshopping/twshopping-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};

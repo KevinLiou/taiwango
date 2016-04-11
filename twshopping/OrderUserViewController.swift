@@ -8,6 +8,7 @@
 
 import UIKit
 import AVOSCloud
+import Alamofire
 
 class OrderUserViewController: SPSingleColorViewController {
 
@@ -105,7 +106,7 @@ class OrderUserViewController: SPSingleColorViewController {
             do {
                 
 //                let payvc = UnionpaysdkService.CreateWebView(self, withOrderId: order_id, andAmount: Double(_amount), andMemo: memo, andPayCallBackUrl: "https://payment.skillfully.com.tw/back.aspx")
-//                
+////http://twshopping.tno.tw/api/callbackurl
 //                self.presentViewController(payvc, animated: true, completion: nil)
                 
                 
@@ -137,8 +138,56 @@ class OrderUserViewController: SPSingleColorViewController {
     func IPaymentIsSuccess(IsSuccess:Bool){
         if IsSuccess {
             print("IsSuccess")
-            SPTools.showLoadingOnViewController(self)
-            saveOrdersInfoWithObject(cacheOrder!)
+//            SPTools.showLoadingOnViewController(self)
+//            saveOrdersInfoWithObject(cacheOrder!)
+            
+            let timestamp = UInt64(NSDate().timeIntervalSince1970)
+            let md5string = SPTools.md5(string: "\(timestamp)kikirace")
+            
+            let parameters:[String:AnyObject]
+            = [
+                "Username": "G121902266",
+                "Password": "happybirthday",
+                "ExternalOrderNo": "2016032800000001",
+                "ProductSN": 3,
+                "StyleA": "",
+                
+                "StyleB": "",
+                "Quantity": 3,
+                "Price": 50,
+                "Amount": 150,
+                "OrderName": "Kevin",
+                
+                "OrderAddress": "260 宜蘭市xxx 123",
+                "OrderEmail": "gr20060555@gmail.com",
+                "OrderPhone": "0988888888",
+                "ConsigneeName": "Kevin2",
+                "ConsigneeAddres": "260 宜蘭市xxx 12322222",
+                
+                "ConsigneeEmail": "gr200605551111@gmail.com",
+                "ConsigneePhone": "0987777777",
+                "DeliverTime": "請在白天送達",
+                "Result": 1,
+                "PaymentResult": 1,
+                
+//                "Param": "currcode,resptime,rmbrate",
+                "Time": "\(timestamp)",
+                "Key": md5string
+            ]
+            
+            Alamofire.request(.GET, "http://kikistore.csmuse.com/kikistore/api/kikirace_createOrder.php", parameters: parameters)
+                .responseJSON { response in
+                    print(response.request)  // original URL request
+                    print(response.response) // URL response
+                    print(response.data)     // server data
+                    print(response.result)   // result of response serialization
+                    
+                    if let JSON = response.result.value {
+                        print("JSON: \(JSON)")
+                    }
+            }
+            
+            
         }else{
             print("NoSuccess")
         }

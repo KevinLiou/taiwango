@@ -12,6 +12,8 @@ import AVOSCloud
 import RESideMenu
 import IQKeyboardManagerSwift
 
+import Alamofire
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -36,6 +38,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.registerForRemoteNotifications()
         
 //        print(self.applicationDocumentsDirectory)
+        
+        SPService.sharedInstance.requestAllAPIMessageWith(["language":1, "app_name":"twshopping_ios"]) { (response) in
+            print(response.request)  // original URL request
+            print(response.response) // URL response
+            print(response.data)     // server data
+            print(response.result)   // result of response serialization
+            
+            
+            if let JSON = response.result.value {
+                print("JSON: \(JSON)")
+            }
+        }
         
         return true
     }

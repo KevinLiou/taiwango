@@ -126,7 +126,7 @@ class ProductInfoViewController: SPSingleImageViewController, UITableViewDelegat
                         cell.titleLabel.text = _ProductTitle
                     }
                     if let _SellPrice = _api_product["SellPrice"] {
-                        cell.amountLabel.text = "\(NSLocalizedString("PriceOfOneProduct",comment: "")): \(_SellPrice)TWD"
+                        cell.amountLabel.text = "\(NSLocalizedString("PriceOfOneProduct",comment: "")): \(_SellPrice)"
                     }
                 }
                 return cell
@@ -179,9 +179,9 @@ class ProductInfoViewController: SPSingleImageViewController, UITableViewDelegat
         
         let profile = SPDataManager.sharedInstance.fetchProfile()
         
-        if let user_profile = profile {
+        if let user_profile = profile, let _has_api_product = api_product {
             let orderUserViewController = self.storyboard?.instantiateViewControllerWithIdentifier("OrderUserViewController") as! OrderUserViewController
-            orderUserViewController.product = product
+            orderUserViewController.product = _has_api_product
             orderUserViewController.profile = user_profile
             self.navigationController?.pushViewController(orderUserViewController, animated: true)
             

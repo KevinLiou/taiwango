@@ -1833,12 +1833,6 @@
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="購買數量: 1" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2w-6y-Mfy" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
-                                                <rect key="frame" x="30" y="103" width="420" height="17"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="×" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N77-Um-ikr" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="105" width="14" height="14"/>
                                                 <constraints>
@@ -1875,6 +1869,12 @@
                                             </stepper>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="商品單價: Loading..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Voy-aQ-YNR" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
                                                 <rect key="frame" x="30" y="78" width="500" height="17"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="購買數量: 1" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2w-6y-Mfy" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                                <rect key="frame" x="30" y="103" width="420" height="17"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -2146,10 +2146,10 @@
                         <outlet property="emailTextField" destination="feR-Yb-PSR" id="UHq-vS-Mbt"/>
                         <outlet property="mobileTextField" destination="Xo9-Uh-IVF" id="IYr-ol-iqY"/>
                         <outlet property="nameTextField" destination="34L-Mk-M3w" id="LsX-SR-k1Y"/>
-                        <outlet property="productAmount" destination="d2w-6y-Mfy" id="76q-ge-hf4"/>
                         <outlet property="productName" destination="ane-A8-ey5" id="lxi-PX-qfK"/>
                         <outlet property="productPrice" destination="l5b-8L-izr" id="EiF-Zz-Exu"/>
                         <outlet property="productPriceOfOne" destination="Voy-aQ-YNR" id="Ta2-Xf-804"/>
+                        <outlet property="productQuantity" destination="d2w-6y-Mfy" id="Rrv-hy-hbk"/>
                         <outlet property="productTitleLabel" destination="e8U-FB-4Fr" id="H9F-PR-C8K"/>
                         <outlet property="receiverAddressTextField" destination="y9u-uj-caz" id="wsB-v7-f1h"/>
                         <outlet property="receiverEmailTextField" destination="tq9-BH-YlV" id="uOP-lM-Yrr"/>

@@ -12,14 +12,14 @@ import Alamofire
 
 class OrderUserViewController: SPSingleColorViewController {
 
-    var product:Product?
+    var product:[String:AnyObject] = [:]
     var profile:Profile?
     var cacheOrder:AVObject?
     
     @IBOutlet var productTitleLabel: SPWhiteTextLabel!
     @IBOutlet var productName: SPWhiteTextLabel!
     @IBOutlet var productPriceOfOne: SPWhiteTextLabel!
-    @IBOutlet var productAmount: SPWhiteTextLabel!
+    @IBOutlet var productQuantity: SPWhiteTextLabel!
     @IBOutlet var productPrice: SPWhiteTextLabel!
     @IBOutlet var stepper: UIStepper!
     
@@ -46,6 +46,7 @@ class OrderUserViewController: SPSingleColorViewController {
         
         self.productTitleLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
         self.OrderUserTitleLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
+        self.receiverUserTitleLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
         
         let buyItem = UIBarButtonItem(title: NSLocalizedString("StringBuy",comment: ""), style: .Plain, target: self, action: #selector(OrderUserViewController.buyIt))
         self.navigationItem.rightBarButtonItem = buyItem
@@ -72,10 +73,38 @@ class OrderUserViewController: SPSingleColorViewController {
 //            }
 //        }
         
-        self.nameTextField.text = profile?.name
-        self.emailTextField.text = profile?.email
-        self.mobileTextField.text = profile?.mobile
-        self.addressTextField.text = profile?.address
+        
+        if let _ProductQuantity = product["ProductQuantity"], let _SellPrice = product["SellPrice"],let _ = product["ProductSN"]{
+            
+            let Quantity = (_ProductQuantity as! NSString).doubleValue
+            
+            if let _ProductTitle = product["ProductTitle"]{
+                self.productName.text = "\(NSLocalizedString("StringProductName",comment: "")): \(_ProductTitle)"
+            }
+            
+            self.productPriceOfOne.text = "\(NSLocalizedString("PriceOfOneProduct",comment: "")): \(_SellPrice)"
+            self.stepper.maximumValue = Double(Quantity)
+            self.stepper.minimumValue = 1
+            self.productPrice.text = "\(NSLocalizedString("PriceOfAll",comment: "")): \(_SellPrice)"
+            
+            self.nameTextField.text = profile?.name
+            self.emailTextField.text = profile?.email
+            self.mobileTextField.text = profile?.mobile
+            self.addressTextField.text = profile?.address
+        }else{
+            
+            self.navigationController?.popViewControllerAnimated(true)
+            let alertView = UIAlertView(title: NSLocalizedString("AlertTitleBuyError",comment: ""),
+                                        message:NSLocalizedString("AlertMessageNoRemain",comment: ""),
+                                        delegate: nil,
+                                        cancelButtonTitle: nil,
+                                        otherButtonTitles: NSLocalizedString("ButtonTitleSure",comment: ""))
+            alertView.show()
+            
+        }
+        
+        
+        
     }
     
     func buyIt(){
@@ -105,6 +134,7 @@ class OrderUserViewController: SPSingleColorViewController {
 
         let order_id = SPTools.getRandomSnString()
         
+        /*
         if let _product_name = self.product?.name,
             let _product_id = self.product?.product_id,
             let _amount = self.product?.amount,
@@ -145,6 +175,7 @@ class OrderUserViewController: SPSingleColorViewController {
             }
             
         }
+         */
         
     }
     
@@ -223,11 +254,11 @@ class OrderUserViewController: SPSingleColorViewController {
                     otherButtonTitles: NSLocalizedString("ButtonTitleSure",comment: ""))
                 alertView.show()
                 
-                let productInfoViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ProductInfoViewController") as! ProductInfoViewController
-                productInfoViewController.product = self.product
-                productInfoViewController.order = order
-                productInfoViewController.title = NSLocalizedString("VCTitleBuySucceeded",comment: "")
-                self.navigationController?.pushViewController(productInfoViewController, animated: true)
+//                let productInfoViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ProductInfoViewController") as! ProductInfoViewController
+//                productInfoViewController.product = self.product
+//                productInfoViewController.order = order
+//                productInfoViewController.title = NSLocalizedString("VCTitleBuySucceeded",comment: "")
+//                self.navigationController?.pushViewController(productInfoViewController, animated: true)
             }else{
                 
                 //延遲三秒後再重新傳送
@@ -251,15 +282,39 @@ class OrderUserViewController: SPSingleColorViewController {
     func fontSizeChanged(notification:NSNotification) {
         self.productTitleLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
         self.OrderUserTitleLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
+        self.receiverUserTitleLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
     }
     
     // MARK : actions
     @IBAction func sameButtonClick(sender: UIButton) {
+        sender.selected = !sender.selected
         
+        if sender.selected {
+            
+            self.receiverNameTextField.text = self.nameTextField.text
+            self.receiverEmailTextField.text = self.emailTextField.text
+            self.receiverAddressTextField.text = self.addressTextField.text
+            self.receiverMobileTextField.text = self.mobileTextField.text
+            
+        }else{
+            
+            self.receiverNameTextField.text = ""
+            self.receiverEmailTextField.text = ""
+            self.receiverAddressTextField.text = ""
+            self.receiverMobileTextField.text = ""
+        }
     }
     
     @IBAction func stepper(sender: UIStepper) {
         
+        guard let _SellPrice = product["SellPrice"] else{
+            return
+        }
+        
+        let price = (_SellPrice as! NSString).doubleValue
+        
+        self.productQuantity.text = "\(NSLocalizedString("BuyQuantity",comment: "")): \(Int(sender.value))"
+        self.productPrice.text = "\(NSLocalizedString("PriceOfAll",comment: "")): \(sender.value * price)"
     }
 
     override func didReceiveMemoryWarning() {

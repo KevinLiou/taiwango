@@ -13,6 +13,8 @@ import Alamofire
 class OrderUserViewController: SPSingleColorViewController {
 
     var product:[String:AnyObject] = [:]
+    var quantity = 1
+    var total_price:Double = 0
     var profile:Profile?
     var cacheOrder:AVObject?
     
@@ -82,10 +84,12 @@ class OrderUserViewController: SPSingleColorViewController {
                 self.productName.text = "\(NSLocalizedString("StringProductName",comment: "")): \(_ProductTitle)"
             }
             
-            self.productPriceOfOne.text = "\(NSLocalizedString("PriceOfOneProduct",comment: "")): \(_SellPrice)"
+            total_price = (_SellPrice as! NSString).doubleValue
+            
+            self.productPriceOfOne.text = "\(NSLocalizedString("PriceOfOneProduct",comment: "")): \(total_price)"
             self.stepper.maximumValue = Double(Quantity)
             self.stepper.minimumValue = 1
-            self.productPrice.text = "\(NSLocalizedString("PriceOfAll",comment: "")): \(_SellPrice)"
+            self.productPrice.text = "\(NSLocalizedString("PriceOfAll",comment: "")): \(total_price)"
             
             self.nameTextField.text = profile?.name
             self.emailTextField.text = profile?.email
@@ -114,25 +118,81 @@ class OrderUserViewController: SPSingleColorViewController {
             return
         }
         
-        if !SPValidator.validatorWithEmail(self.emailTextField.text!) {
-            return
-        }
-        
+        //order user
         if !(SPValidator.validatorWithMobile(self.mobileTextField.text!) && (self.mobileTextField.text?.characters.count > 0)) {
+            let alertView = UIAlertView(title: NSLocalizedString("AlertTitleError",comment: ""),
+                                        message: NSLocalizedString("AlertMessageMobileError",comment: ""),
+                                        delegate: nil,
+                                        cancelButtonTitle: nil,
+                                        otherButtonTitles: NSLocalizedString("ButtonTitleSure",comment: ""))
+            alertView.show()
             return
         }
         
         if !(SPValidator.validatorWithAddress(self.addressTextField.text!) && (self.addressTextField.text?.characters.count > 0)) {
+            let alertView = UIAlertView(title: NSLocalizedString("AlertTitleError",comment: ""),
+                                        message: NSLocalizedString("AlertMessageAddressError",comment: ""),
+                                        delegate: nil,
+                                        cancelButtonTitle: nil,
+                                        otherButtonTitles: NSLocalizedString("ButtonTitleSure",comment: ""))
+            alertView.show()
             return
         }
         
         if !(SPValidator.validatorWithName(self.nameTextField.text!) && (self.nameTextField.text?.characters.count > 0)) {
+            let alertView = UIAlertView(title: NSLocalizedString("AlertTitleError",comment: ""),
+                                        message: NSLocalizedString("AlertMessageNameError",comment: ""),
+                                        delegate: nil,
+                                        cancelButtonTitle: nil,
+                                        otherButtonTitles: NSLocalizedString("ButtonTitleSure",comment: ""))
+            alertView.show()
             return
         }
         
+        
+        //receiver user
+        if !(SPValidator.validatorWithMobile(self.receiverMobileTextField.text!) && (self.receiverMobileTextField.text?.characters.count > 0)) {
+            let alertView = UIAlertView(title: NSLocalizedString("AlertTitleError",comment: ""),
+                                        message: NSLocalizedString("AlertMessageMobileError",comment: ""),
+                                        delegate: nil,
+                                        cancelButtonTitle: nil,
+                                        otherButtonTitles: NSLocalizedString("ButtonTitleSure",comment: ""))
+            alertView.show()
+            return
+        }
+        
+        if !(SPValidator.validatorWithAddress(self.receiverAddressTextField.text!) && (self.receiverAddressTextField.text?.characters.count > 0)) {
+            let alertView = UIAlertView(title: NSLocalizedString("AlertTitleError",comment: ""),
+                                        message: NSLocalizedString("AlertMessageAddressError",comment: ""),
+                                        delegate: nil,
+                                        cancelButtonTitle: nil,
+                                        otherButtonTitles: NSLocalizedString("ButtonTitleSure",comment: ""))
+            alertView.show()
+            return
+        }
+        
+        if !(SPValidator.validatorWithName(self.receiverNameTextField.text!) && (self.receiverNameTextField.text?.characters.count > 0)) {
+            let alertView = UIAlertView(title: NSLocalizedString("AlertTitleError",comment: ""),
+                                        message: NSLocalizedString("AlertMessageNameError",comment: ""),
+                                        delegate: nil,
+                                        cancelButtonTitle: nil,
+                                        otherButtonTitles: NSLocalizedString("ButtonTitleSure",comment: ""))
+            alertView.show()
+            return
+        }
+        
+        if !(SPValidator.validatorWithRceiverTime(self.receiverTimeTextField.text!)) {
+            return
+        }
+        
+        
         self.view.endEditing(true)
-
         let order_id = SPTools.getRandomSnString()
+        
+        let payvc = UnionpaysdkService.CreateWebView(self, withOrderId: order_id, andAmount: total_price, andMemo: "twshopping_ios", andPayCallBackUrl: "http://52.26.127.167/twshopping/index.php/api/callbackurl")
+        self.presentViewController(payvc, animated: true, completion: nil)
+        
+//
         
         /*
         if let _product_name = self.product?.name,
@@ -312,9 +372,10 @@ class OrderUserViewController: SPSingleColorViewController {
         }
         
         let price = (_SellPrice as! NSString).doubleValue
+        total_price = sender.value * price
         
         self.productQuantity.text = "\(NSLocalizedString("BuyQuantity",comment: "")): \(Int(sender.value))"
-        self.productPrice.text = "\(NSLocalizedString("PriceOfAll",comment: "")): \(sender.value * price)"
+        self.productPrice.text = "\(NSLocalizedString("PriceOfAll",comment: "")): \(total_price)"
     }
 
     override func didReceiveMemoryWarning() {

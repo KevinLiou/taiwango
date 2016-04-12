@@ -79,3 +79,4 @@
 "PriceOfOneProduct"="商品單價";
 "BuyQuantity"="購買數量";
 "PriceOfAll"="總金額";
+"AlertMessageReceiverTimeNameError" = "請填寫配送時間。最多輸入100個字元。";

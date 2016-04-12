@@ -86,6 +86,22 @@ class SPValidator {
         return result
     }
     
+    static func validatorWithRceiverTime(rceiverTime:String) -> Bool {
+        
+        let result = (rceiverTime.characters.count < 100 && rceiverTime.characters.count != 0)
+        
+        if !result {
+            let alertView = UIAlertView(title: NSLocalizedString("AlertTitleError",comment: ""),
+                                        message: NSLocalizedString("AlertMessageReceiverTimeNameError",comment: ""),
+                                        delegate: nil,
+                                        cancelButtonTitle: nil,
+                                        otherButtonTitles: NSLocalizedString("ButtonTitleSure",comment: ""))
+            alertView.show()
+        }
+        
+        return result
+    }
+    
     
     static func validatorWithAddress(address:String) -> Bool {
         let result = (address.characters.count < 251 || address.characters.count == 0/*非必填*/)

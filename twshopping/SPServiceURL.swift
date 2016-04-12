@@ -15,8 +15,9 @@ enum SPServicePath:String {
     case CATE = "/api/cate"
     case PRODUCT = "/api/product"
     case STORE = "/api/store"
-    case ORDER_OK = "/api/order_ok"
+//    case ORDER_OK = "/api/order_ok"
     case ORDERS = "/api/orders"
+    case TRADE_INFO = "/api/trade_info"
 }
 
 enum SPServiceHost:String {

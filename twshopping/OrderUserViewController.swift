@@ -243,9 +243,24 @@ class OrderUserViewController: SPSingleColorViewController {
     func IPaymentIsSuccess(IsSuccess:Bool){
         if IsSuccess {
             print("IsSuccess")
+            
+            SPTools.showLoadingOnViewController(self)
+            
+            
+            let lan = SPTools.getPreferredLanguages()
+            SPService.sharedInstance.requestTradeInfoWith([:], completionHandler: { (response) in
+                if let JSON = response.result.value {
+                    
+                }
+                
+                SPTools.hideLoadingOnViewController(self)
+            })
+            
+            
 //            SPTools.showLoadingOnViewController(self)
 //            saveOrdersInfoWithObject(cacheOrder!)
             
+            /*
             let timestamp = UInt64(NSDate().timeIntervalSince1970)
             let md5string = SPTools.md5(string: "\(timestamp)kikirace")
             
@@ -291,7 +306,7 @@ class OrderUserViewController: SPSingleColorViewController {
                         print("JSON: \(JSON)")
                     }
             }
-            
+            */
             
         }else{
             print("NoSuccess")

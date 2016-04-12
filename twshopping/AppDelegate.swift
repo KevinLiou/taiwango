@@ -133,6 +133,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //更換app畫面
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window?.backgroundColor = UIColor.whiteColor()
         self.window?.rootViewController = sideMenuViewController
         self.window?.makeKeyAndVisible()
         
@@ -142,6 +143,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let loginPages = UIStoryboard(name: "LoginPages", bundle: nil)
         let loginViewController = loginPages.instantiateViewControllerWithIdentifier("NavLoginViewController")
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window?.backgroundColor = UIColor.whiteColor()
         self.window?.rootViewController = loginViewController
         self.window?.makeKeyAndVisible()
     }

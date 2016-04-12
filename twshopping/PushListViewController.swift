@@ -32,7 +32,7 @@ class PushListViewController: SPSingleImageViewController {
         SPService.sharedInstance.requestAllAPIMessageWith(["language":Int(lan)!, "app_name":"twshopping_ios"]) { (response) in
             
             if let JSON = response.result.value {
-                SPDataManager.sharedInstance.insertPush(JSON, lan: "1")
+                SPDataManager.sharedInstance.insertPush(JSON, lan: lan)
                 let predicate = NSPredicate(format: "language.lan = '\(SPTools.getPreferredLanguages())'")
                 self.dataSource = SPDataManager.sharedInstance.fetchPushWithPredicate(predicate: predicate)
                 self.tableView.reloadData()

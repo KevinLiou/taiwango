@@ -64,11 +64,13 @@ class LaunchViewController: UIViewController, UIAlertViewDelegate {
                                                                 delegate: self,
                                                                 cancelButtonTitle: NSLocalizedString("ButtonTitleNotNow",comment: ""),
                                                                 otherButtonTitles: NSLocalizedString("ButtonTitleGoUpdate",comment: ""))
+                                    alertView.delegate = self
                                     alertView.tag = 2
                                     alertView.show()
+                                }else{
+                                    self.entry()
                                 }
                                 
-                                self.entry()
                                 
                             case 3:
                                 
@@ -80,6 +82,7 @@ class LaunchViewController: UIViewController, UIAlertViewDelegate {
                                                                 delegate: self,
                                                                 cancelButtonTitle: nil,
                                                                 otherButtonTitles: NSLocalizedString("ButtonTitleGoUpdate",comment: ""))
+                                    alertView.delegate = self
                                     alertView.tag = 3
                                     alertView.show()
                                 }else{

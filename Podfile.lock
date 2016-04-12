@@ -10,6 +10,7 @@ PODS:
   - PINRemoteImage/FLAnimatedImage (2.1):
     - FLAnimatedImage (>= 1.0)
     - PINRemoteImage/Core
+  - pop (1.0.9)
   - RESideMenu (4.0.7)
   - Validator (1.1.1)
 
@@ -17,6 +18,7 @@ DEPENDENCIES:
   - Alamofire (~> 3.0)
   - IQKeyboardManagerSwift
   - PINRemoteImage (~> 2.1)
+  - pop (~> 1.0)
   - RESideMenu (~> 4.0.7)
   - Validator
 
@@ -26,6 +28,7 @@ SPEC CHECKSUMS:
   IQKeyboardManagerSwift: ede2a27b4e1ce053d03073b9c7fa439322f5e405
   PINCache: 078426d356ab95ef875e9e62e5c35a2ea3333c28
   PINRemoteImage: e8367ac3f5c234712f1d8c274462ec834d649940
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   RESideMenu: f24c508404b49c667344c54aba7e590883533958
   Validator: e17f25fe03c32590be0a9d7d46a779c9ec5dd3b3
 

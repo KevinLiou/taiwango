@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jdb-Be-9yH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jdb-Be-9yH">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -1385,22 +1385,21 @@
                                                     <outlet property="snLabel" destination="wPP-NL-an4" id="jb0-Dr-6iN"/>
                                                 </connections>
                                             </tableViewCell>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProductInfoCell" rowHeight="90" id="2aM-AH-4Iu" customClass="ProductInfoCell" customModule="twshopping" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="261" width="600" height="90"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProductInfoCell" rowHeight="120" id="2aM-AH-4Iu" customClass="ProductInfoCell" customModule="twshopping" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="261" width="600" height="120"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2aM-AH-4Iu" id="6bC-da-bzO">
-                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="120"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v6B-vb-RQi" customClass="SPBlackView" customModule="twshopping" customModuleProvider="target">
-                                                            <rect key="frame" x="8" y="8" width="584" height="88"/>
+                                                            <rect key="frame" x="8" y="8" width="584" height="112"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5of-Up-RRl" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                                                <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5of-Up-RRl" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
                                                                     <rect key="frame" x="8" y="40" width="568" height="36"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="39" id="lEX-k0-PV6"/>
                                                                     </constraints>
-                                                                    <string key="text">Loading................................................................................................................................................</string>
                                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -1410,7 +1409,7 @@
                                                                         </mask>
                                                                     </variation>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Loading..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6An-NM-kse" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                                                <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6An-NM-kse" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
                                                                     <rect key="frame" x="8" y="12" width="568" height="20"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="21" id="j4B-l3-Ccc"/>
@@ -1424,14 +1423,32 @@
                                                                         </mask>
                                                                     </variation>
                                                                 </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nCj-AA-GPO" userLabel="Amount Loading..." customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                                                    <rect key="frame" x="8" y="84" width="568" height="20"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="21" id="n8n-Ss-pua"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <variation key="default">
+                                                                        <mask key="constraints">
+                                                                            <exclude reference="n8n-Ss-pua"/>
+                                                                        </mask>
+                                                                    </variation>
+                                                                </label>
                                                             </subviews>
                                                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstItem="6An-NM-kse" firstAttribute="leading" secondItem="v6B-vb-RQi" secondAttribute="leading" constant="8" id="5ux-VH-30E"/>
+                                                                <constraint firstItem="nCj-AA-GPO" firstAttribute="top" secondItem="5of-Up-RRl" secondAttribute="bottom" constant="8" id="9Gn-SA-pa5"/>
+                                                                <constraint firstAttribute="bottom" secondItem="nCj-AA-GPO" secondAttribute="bottom" constant="8" id="At3-sx-7ZE"/>
+                                                                <constraint firstItem="nCj-AA-GPO" firstAttribute="leading" secondItem="v6B-vb-RQi" secondAttribute="leading" constant="8" id="Fr5-b5-M1O"/>
                                                                 <constraint firstItem="6An-NM-kse" firstAttribute="top" secondItem="v6B-vb-RQi" secondAttribute="top" constant="12" id="HeM-RU-epK"/>
                                                                 <constraint firstAttribute="trailing" secondItem="5of-Up-RRl" secondAttribute="trailing" constant="8" id="UEV-I0-qR1"/>
                                                                 <constraint firstAttribute="bottom" secondItem="5of-Up-RRl" secondAttribute="bottom" constant="12" id="UzR-ff-Pna"/>
                                                                 <constraint firstAttribute="trailing" secondItem="6An-NM-kse" secondAttribute="trailing" constant="8" id="YFN-Wi-P3P"/>
+                                                                <constraint firstAttribute="trailing" secondItem="nCj-AA-GPO" secondAttribute="trailing" constant="8" id="cLO-jK-vCC"/>
                                                                 <constraint firstItem="5of-Up-RRl" firstAttribute="leading" secondItem="v6B-vb-RQi" secondAttribute="leading" constant="8" id="fr4-QX-A4p"/>
                                                                 <constraint firstItem="5of-Up-RRl" firstAttribute="top" secondItem="6An-NM-kse" secondAttribute="bottom" constant="8" id="wQR-QD-6Ct"/>
                                                                 <constraint firstAttribute="height" constant="81" id="wmE-5j-Jdp"/>
@@ -1439,6 +1456,7 @@
                                                             <variation key="default">
                                                                 <mask key="constraints">
                                                                     <exclude reference="wmE-5j-Jdp"/>
+                                                                    <exclude reference="UzR-ff-Pna"/>
                                                                 </mask>
                                                             </variation>
                                                         </view>
@@ -1453,12 +1471,13 @@
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <connections>
+                                                    <outlet property="amountLabel" destination="nCj-AA-GPO" id="yxW-Pd-q3V"/>
                                                     <outlet property="descLabel" destination="5of-Up-RRl" id="3eX-sq-U6o"/>
                                                     <outlet property="titleLabel" destination="6An-NM-kse" id="VAw-Ac-0Na"/>
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProductImageCell" rowHeight="97" id="fhn-j0-Ihs">
-                                                <rect key="frame" x="0.0" y="351" width="600" height="97"/>
+                                                <rect key="frame" x="0.0" y="381" width="600" height="97"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fhn-j0-Ihs" id="YLI-Uw-LRq">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="97"/>

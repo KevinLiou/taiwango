@@ -211,7 +211,6 @@ class OrderUserViewController: SPSingleColorViewController {
                 
                 let productInfoViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ProductInfoViewController") as! ProductInfoViewController
                 productInfoViewController.product = self.product
-                productInfoViewController.infoType = .OrderInfo
                 productInfoViewController.order = order
                 productInfoViewController.title = NSLocalizedString("VCTitleBuySucceeded",comment: "")
                 self.navigationController?.pushViewController(productInfoViewController, animated: true)

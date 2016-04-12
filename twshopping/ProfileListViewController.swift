@@ -8,6 +8,7 @@
 
 import UIKit
 import AVOSCloud
+import pop
 
 class ProfileListViewController: SPSingleImageViewController {
 
@@ -159,13 +160,20 @@ class ProfileListViewController: SPSingleImageViewController {
             
             let productInfoViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ProductInfoViewController") as! ProductInfoViewController
             productInfoViewController.product = _product
-            productInfoViewController.infoType = .OrderInfo
             productInfoViewController.order = order
             productInfoViewController.title = NSLocalizedString("VCTitleOrderHistory",comment: "")
             self.navigationController?.pushViewController(productInfoViewController, animated: true)
         }
     }
     
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let anim = POPBasicAnimation(propertyNamed: kPOPViewAlpha)
+        anim.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        anim.fromValue = 0.3
+        anim.toValue = 1.0
+        cell.pop_addAnimation(anim, forKey: "fade")
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

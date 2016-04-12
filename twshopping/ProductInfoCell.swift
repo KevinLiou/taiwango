@@ -12,11 +12,13 @@ class ProductInfoCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: SPWhiteTextLabel!
     @IBOutlet weak var descLabel: SPWhiteTextLabel!
+    @IBOutlet var amountLabel: SPWhiteTextLabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         self.titleLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
         self.descLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
+        self.amountLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
         
         NSNotificationCenter.defaultCenter().removeObserver(self, name: UIContentSizeCategoryDidChangeNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ProductInfoCell.fontSizeChanged(_:)), name: UIContentSizeCategoryDidChangeNotification, object: nil)
@@ -32,6 +34,7 @@ class ProductInfoCell: UITableViewCell {
     func fontSizeChanged(notification:NSNotification) {
         self.titleLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
         self.descLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
+        self.amountLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
     }
 
 

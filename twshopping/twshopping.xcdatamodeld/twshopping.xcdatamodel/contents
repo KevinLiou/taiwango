@@ -21,7 +21,7 @@
         <attribute name="image_urls" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="product_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="product_key" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="product_sn" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="remain" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="store_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <relationship name="cate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Cate" inverseName="product" inverseEntity="Cate" syncable="YES"/>
@@ -65,7 +65,7 @@
     <elements>
         <element name="Cate" positionX="603" positionY="30" width="128" height="103"/>
         <element name="Language" positionX="313" positionY="251" width="128" height="135"/>
-        <element name="Product" positionX="592" positionY="266" width="128" height="223"/>
+        <element name="Product" positionX="592" positionY="266" width="128" height="225"/>
         <element name="Profile" positionX="288" positionY="54" width="128" height="105"/>
         <element name="Push" positionX="108" positionY="198" width="128" height="133"/>
         <element name="Store" positionX="358" positionY="446" width="128" height="193"/>

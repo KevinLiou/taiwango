@@ -91,6 +91,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-twshopping/PINRemoteImage.framework"
   install_framework "Pods-twshopping/RESideMenu.framework"
   install_framework "Pods-twshopping/Validator.framework"
+  install_framework "Pods-twshopping/pop.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-twshopping/Alamofire.framework"
@@ -100,4 +101,5 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-twshopping/PINRemoteImage.framework"
   install_framework "Pods-twshopping/RESideMenu.framework"
   install_framework "Pods-twshopping/Validator.framework"
+  install_framework "Pods-twshopping/pop.framework"
 fi

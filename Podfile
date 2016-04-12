@@ -9,6 +9,7 @@ pod 'PINRemoteImage', '~> 2.1'
 pod 'IQKeyboardManagerSwift'
 pod 'Validator'
 pod 'Alamofire', '~> 3.0'
+pod 'pop', '~> 1.0'
 end
 
 target 'twshoppingTests' do

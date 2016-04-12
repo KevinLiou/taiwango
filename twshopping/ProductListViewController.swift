@@ -8,6 +8,7 @@
 
 import UIKit
 import PINRemoteImage
+import pop
 
 class ProductListViewController: SPSingleImageViewController {
 
@@ -77,9 +78,17 @@ class ProductListViewController: SPSingleImageViewController {
         
         let productInfoViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ProductInfoViewController") as! ProductInfoViewController
         productInfoViewController.product = dataSource![indexPath.row]
-        productInfoViewController.infoType = .ProductInfo
         self.navigationController?.pushViewController(productInfoViewController, animated: true)
         
+    }
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let anim = POPBasicAnimation(propertyNamed: kPOPViewAlpha)
+        anim.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        anim.fromValue = 0.3
+        anim.toValue = 1.0
+        cell.pop_addAnimation(anim, forKey: "fade")
     }
     
     override func didReceiveMemoryWarning() {

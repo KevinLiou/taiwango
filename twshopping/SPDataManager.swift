@@ -99,7 +99,7 @@ class SPDataManager {
                 product.name = dic_product["name"] as? String
                 product.image_urls = dic_product["image_urls"] as? String
                 product.store_id = dic_product["store_id"] as? Int
-                product.product_key = dic_product["product_key"] as? String
+                product.product_sn = dic_product["product_sn"] as? Int
                 product.desc = dic_product["intro"] as? String
                 product.language = language
                 product.cate = cate
@@ -130,13 +130,11 @@ class SPDataManager {
         let predicate = NSPredicate(format: "lan = '\(lan)'")
         let lans = self.fetchLanguageWithPredicate(predicate: predicate)
         
+        let delPredicate = NSPredicate(format: "language.lan = '\(lan)'")
+        self.deletePushWithPredicate(predicate: delPredicate)
+        
         let pushs = data["push"] as! [[String:AnyObject]]
         for dic_push in pushs {
-            
-            let push_id = dic_push["push_id"] as? Int
-            
-            let delPredicate = NSPredicate(format: "language = '\(lan)' AND push_id = '\(push_id)'")
-            self.deletePushWithPredicate(predicate: delPredicate)
             
             let push = NSEntityDescription.insertNewObjectForEntityForName("Push", inManagedObjectContext: context) as! Push
             push.push_id = dic_push["push_id"] as? Int

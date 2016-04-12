@@ -21,8 +21,6 @@
 		0A2F55611C9FEE500028FCB2 /* SPUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2F55601C9FEE500028FCB2 /* SPUser.swift */; };
 		0A38EC3B1C9913CC0001117A /* SPBlackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A38EC3A1C9913CC0001117A /* SPBlackView.swift */; };
 		0A38EC561C9941E50001117A /* SPDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A38EC551C9941E50001117A /* SPDataManager.swift */; };
-		0A4CB6931CA28CC400423DEF /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4CB6911CA28CC400423DEF /* Product+CoreDataProperties.swift */; };
-		0A4CB6941CA28CC400423DEF /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4CB6921CA28CC400423DEF /* Product.swift */; };
 		0A7DEB131C98F59B00D82329 /* Tools.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A7DEB151C98F59B00D82329 /* Tools.storyboard */; };
 		0A7DEB161C98F5AA00D82329 /* LoginPages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A7DEB181C98F5AA00D82329 /* LoginPages.storyboard */; };
 		0A7DEB241C99074D00D82329 /* LeftMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7DEB231C99074D00D82329 /* LeftMenuCell.swift */; };
@@ -49,6 +47,9 @@
 		0AE44B931C9BD1A0009FBE89 /* ProfileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE44B921C9BD1A0009FBE89 /* ProfileListViewController.swift */; };
 		0AE44B951C9C0812009FBE89 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE44B941C9C0812009FBE89 /* ProfileCell.swift */; };
 		0AE44B971C9C0827009FBE89 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE44B961C9C0827009FBE89 /* OrderCell.swift */; };
+		0AF3E3161CBC97DE0081AD30 /* OrderInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF3E3151CBC97DE0081AD30 /* OrderInfoViewController.swift */; };
+		0AF3E3191CBCA0A50081AD30 /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF3E3171CBCA0A50081AD30 /* Product+CoreDataProperties.swift */; };
+		0AF3E31A1CBCA0A50081AD30 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF3E3181CBCA0A50081AD30 /* Product.swift */; };
 		2017C2931C9AFBB10047B51D /* PushListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2017C2921C9AFBB10047B51D /* PushListViewController.swift */; };
 		2017C2951C9AFF430047B51D /* PushCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2017C2941C9AFF430047B51D /* PushCell.swift */; };
 		202367641C9E781A00D6F452 /* ProductInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202367631C9E781A00D6F452 /* ProductInfoViewController.swift */; };
@@ -135,8 +136,6 @@
 		0A38EC3A1C9913CC0001117A /* SPBlackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPBlackView.swift; sourceTree = "<group>"; };
 		0A38EC551C9941E50001117A /* SPDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPDataManager.swift; sourceTree = "<group>"; };
 		0A3C237D1CA3B7380083C6EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
-		0A4CB6911CA28CC400423DEF /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		0A4CB6921CA28CC400423DEF /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		0A7DEB141C98F59B00D82329 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Tools.storyboard; sourceTree = "<group>"; };
 		0A7DEB171C98F5AA00D82329 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LoginPages.storyboard; sourceTree = "<group>"; };
 		0A7DEB231C99074D00D82329 /* LeftMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuCell.swift; sourceTree = "<group>"; };
@@ -164,6 +163,9 @@
 		0AE44B921C9BD1A0009FBE89 /* ProfileListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileListViewController.swift; sourceTree = "<group>"; };
 		0AE44B941C9C0812009FBE89 /* ProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		0AE44B961C9C0827009FBE89 /* OrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
+		0AF3E3151CBC97DE0081AD30 /* OrderInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderInfoViewController.swift; sourceTree = "<group>"; };
+		0AF3E3171CBCA0A50081AD30 /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0AF3E3181CBCA0A50081AD30 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		2017C2921C9AFBB10047B51D /* PushListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushListViewController.swift; sourceTree = "<group>"; };
 		2017C2941C9AFF430047B51D /* PushCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushCell.swift; sourceTree = "<group>"; };
 		202367631C9E781A00D6F452 /* ProductInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductInfoViewController.swift; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 				20F731481C9F0E8D0047C494 /* OrderSnCell.swift */,
 				0A2F555B1C9FC0C80028FCB2 /* OrderUserCell.swift */,
 				0A2F555D1C9FD0550028FCB2 /* OrderUserViewController.swift */,
+				0AF3E3151CBC97DE0081AD30 /* OrderInfoViewController.swift */,
 			);
 			name = Product;
 			sourceTree = "<group>";
@@ -376,8 +379,8 @@
 				0AE44B8A1C9BB99A009FBE89 /* Push.swift */,
 				0AE44B8D1C9BBB75009FBE89 /* Language+CoreDataProperties.swift */,
 				0AE44B8E1C9BBB75009FBE89 /* Language.swift */,
-				0A4CB6911CA28CC400423DEF /* Product+CoreDataProperties.swift */,
-				0A4CB6921CA28CC400423DEF /* Product.swift */,
+				0AF3E3171CBCA0A50081AD30 /* Product+CoreDataProperties.swift */,
+				0AF3E3181CBCA0A50081AD30 /* Product.swift */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -743,6 +746,8 @@
 				0A7DEB261C990AC000D82329 /* SPWhiteTextLabel.swift in Sources */,
 				0A17ACEA1C9A85E000B7C268 /* Version.swift in Sources */,
 				0A9CCB181CA11C840071042D /* UITextBox.swift in Sources */,
+				0AF3E3191CBCA0A50081AD30 /* Product+CoreDataProperties.swift in Sources */,
+				0AF3E31A1CBCA0A50081AD30 /* Product.swift in Sources */,
 				0A17ACDB1C9A608B00B7C268 /* SPSingleColorViewController.swift in Sources */,
 				203BEF1A1C9840440090F463 /* SPButton.swift in Sources */,
 				2028955F1C9D6943006CCFAE /* ChangePwdViewController.swift in Sources */,
@@ -766,9 +771,8 @@
 				0AD3DB521C99693F0055213B /* Profile.swift in Sources */,
 				0AD3DB561C99693F0055213B /* Store.swift in Sources */,
 				0AE44B8B1C9BB99A009FBE89 /* Push+CoreDataProperties.swift in Sources */,
+				0AF3E3161CBC97DE0081AD30 /* OrderInfoViewController.swift in Sources */,
 				0A17ACE01C9A639700B7C268 /* InfoViewController.swift in Sources */,
-				0A4CB6941CA28CC400423DEF /* Product.swift in Sources */,
-				0A4CB6931CA28CC400423DEF /* Product+CoreDataProperties.swift in Sources */,
 				0AE44B971C9C0827009FBE89 /* OrderCell.swift in Sources */,
 				0A2F555E1C9FD0550028FCB2 /* OrderUserViewController.swift in Sources */,
 				20F731491C9F0E8D0047C494 /* OrderSnCell.swift in Sources */,

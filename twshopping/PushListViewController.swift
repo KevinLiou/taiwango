@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import pop
 
 class PushListViewController: SPSingleImageViewController {
 
@@ -90,12 +91,20 @@ class PushListViewController: SPSingleImageViewController {
             
             let productInfoViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ProductInfoViewController") as! ProductInfoViewController
             productInfoViewController.product = _product
-            productInfoViewController.infoType = .ProductInfo
             self.navigationController?.pushViewController(productInfoViewController, animated: true)
             
         default:break
         }
         
+    }
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let anim = POPBasicAnimation(propertyNamed: kPOPViewAlpha)
+        anim.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        anim.fromValue = 0.3
+        anim.toValue = 1.0
+        cell.pop_addAnimation(anim, forKey: "fade")
     }
     
     override func didReceiveMemoryWarning() {

@@ -1,102 +1,156 @@
-/* Class = "UITextField"; placeholder = "请输入姓名"; Object ID = "34L-Mk-M3w"; */
-"34L-Mk-M3w.placeholder" = "请输入姓名";
-/* Class = "UILabel"; text = "联络信箱"; ObjectID = "3Dr-G3-8Ah"; */
-"3Dr-G3-8Ah.text" = "联络信箱";
-/* Class = "UIButton"; normalTitle = "店家资讯"; ObjectID = "4dd-Ci-k1O"; */
-"4dd-Ci-k1O.normalTitle" = "店家资讯";
+
+/* Class = "UITextField"; placeholder = "請輸入姓名"; ObjectID = "34L-Mk-M3w"; */
+"34L-Mk-M3w.placeholder" = "請輸入姓名";
+
+/* Class = "UILabel"; text = "聯絡信箱"; ObjectID = "3Dr-G3-8Ah"; */
+"3Dr-G3-8Ah.text" = "聯絡信箱";
+
+/* Class = "UIButton"; normalTitle = "店家資訊"; ObjectID = "4dd-Ci-k1O"; */
+"4dd-Ci-k1O.normalTitle" = "店家資訊";
+
 /* Class = "UILabel"; text = "Loading..."; ObjectID = "4np-4N-tWC"; */
 "4np-4N-tWC.text" = "Loading...";
-/* Class = "UILabel"; text = "Loading...................................... .................................................. .................................................. ......"; ObjectID = "5of-Up-RRl"; */
-"5of-Up-RRl.text" = "Loading...................................... .................................................. .................................................. ......";
-/* Class = "UILabel"; text = "Title Loading..."; ObjectID = "6An-NM-kse"; */
-"6An-NM-kse.text" = "Title Loading...";
-/* Class = "UILabel"; text = "Loading...................................... .................................................. .................................................. ......"; ObjectID = "7vj-QL-tnB"; */
-"7vj-QL-tnB.text" = "Loading...................................... .................................................. .................................................. ......";
-/* Class = "UILabel"; text = "联络信箱, --"; ObjectID = "AWi-zV-A7o"; */
-"AWi-zV-A7o.text" = "联络信箱, --";
+
+/* Class = "UILabel"; text = " "; ObjectID = "5of-Up-RRl"; */
+"5of-Up-RRl.text" = " ";
+
+/* Class = "UILabel"; text = "..."; ObjectID = "6An-NM-kse"; */
+"6An-NM-kse.text" = "...";
+
+/* Class = "UILabel"; text = "Loading................................................................................................................................................"; ObjectID = "7vj-QL-tnB"; */
+"7vj-QL-tnB.text" = "Loading................................................................................................................................................";
+
+/* Class = "UILabel"; text = "聯絡信箱, --"; ObjectID = "AWi-zV-A7o"; */
+"AWi-zV-A7o.text" = "聯絡信箱, --";
+
 /* Class = "UILabel"; text = "姓名"; ObjectID = "AwL-GM-DjQ"; */
 "AwL-GM-DjQ.text" = "姓名";
+
 /* Class = "UILabel"; text = "Loading...."; ObjectID = "DXd-fe-8zL"; */
 "DXd-fe-8zL.text" = "Loading....";
+
 /* Class = "UILabel"; text = "版本: Loading"; ObjectID = "DYp-sw-4pw"; */
 "DYp-sw-4pw.text" = "版本: Loading";
-/* Class = "UITextField"; placeholder = "请输入区号+地址"; ObjectID = "EaJ-Of-txa"; */
-"EaJ-Of-txa.placeholder" = "请输入区号+地址";
-/* Class = "UILabel"; text = "新密码"; ObjectID = "HrC-aM-NuF"; */
-"HrC-aM-NuF.text" = "新密码";
-/* Class = "UILabel"; text = "收货人资讯"; ObjectID = "IkI-Jt-jYC"; */
-"IkI-Jt-jYC.text" = "收货人资讯";
-/* Class = "UITextField"; placeholder = "新密码确认"; ObjectID = "K7T-XQ-t49"; */
-"K7T-XQ-t49.placeholder" = "新密码确认";
-/* Class = "UILabel"; text = "收货人资讯(必填)"; ObjectID = "KLX-mX-p5X"; */
-"KLX-mX-p5X.text" = "收货人资讯(必填)";
+
+/* Class = "UITextField"; placeholder = "請輸入區號+地址"; ObjectID = "EaJ-Of-txa"; */
+"EaJ-Of-txa.placeholder" = "請輸入區號+地址";
+
+/* Class = "UILabel"; text = "新密碼"; ObjectID = "HrC-aM-NuF"; */
+"HrC-aM-NuF.text" = "新密碼";
+
+/* Class = "UILabel"; text = "收貨人資訊"; ObjectID = "IkI-Jt-jYC"; */
+"IkI-Jt-jYC.text" = "收貨人資訊";
+
+/* Class = "UITextField"; placeholder = "新密碼確認"; ObjectID = "K7T-XQ-t49"; */
+"K7T-XQ-t49.placeholder" = "新密碼確認";
+
+/* Class = "UILabel"; text = "收貨人資訊(必填)"; ObjectID = "KLX-mX-p5X"; */
+"KLX-mX-p5X.text" = "收貨人資訊(必填)";
+
 /* Class = "UILabel"; text = "地址: Loading..."; ObjectID = "M1H-Wv-upW"; */
 "M1H-Wv-upW.text" = "地址: Loading...";
+
 /* Class = "UILabel"; text = "Loading..."; ObjectID = "N3o-rE-sRh"; */
 "N3o-rE-sRh.text" = "Loading...";
-/* Class = "UILabel"; text = "Title Loading..."; ObjectID = "NEg-e​​e-rq2"; */
-"NEg-e​​e-rq2.text" = "Title Loading...";
-/* Class = "UILabel"; text = "旧密码"; ObjectID = "NpW-RH-LdN"; */
-"NpW-RH-LdN.text" = "旧密码";
-/* Class = "UILabel"; text = "订单编号: --"; ObjectID = "TH7-12-jwf"; */
-"TH7-12-jwf.text" = "订单编号: --";
+
+/* Class = "UILabel"; text = "Title Loading..."; ObjectID = "NEg-ee-rq2"; */
+"NEg-ee-rq2.text" = "Title Loading...";
+
+/* Class = "UILabel"; text = "舊密碼"; ObjectID = "NpW-RH-LdN"; */
+"NpW-RH-LdN.text" = "舊密碼";
+
+/* Class = "UILabel"; text = "訂單編號: --"; ObjectID = "TH7-12-jwf"; */
+"TH7-12-jwf.text" = "訂單編號: --";
+
 /* Class = "UILabel"; text = "Loading..."; ObjectID = "Tfw-CK-dFC"; */
 "Tfw-CK-dFC.text" = "Loading...";
+
 /* Class = "UILabel"; text = "Hello, --"; ObjectID = "Tkx-iv-jxv"; */
 "Tkx-iv-jxv.text" = "Hello, --";
-/* Class = "UITextField"; placeholder = "请输入手机号"; ObjectID = "Xo9-Uh-IVF"; */
-"Xo9-Uh-IVF.placeholder" = "请输入手机号";
-/* Class = "UILabel"; text = "电话号码"; ObjectID = "a8e-5b-Kqi"; */
-"a8e-5b-Kqi.text" = "电话号码";
-/* Class = "UILabel"; text = "商品名称: Loading..."; ObjectID = "ane-A8-ey5"; */
-"ane-A8-ey5.text" = "商品名称: Loading...";
-/* Class = "UITextField"; placeholder = "请输入旧密码"; ObjectID = "bVc-hT-Gjc"; */
-"bVc-hT-Gjc.placeholder" = "请输入旧密码";
-/* Class = "UILabel"; text = "您未购买任何商品。"; ObjectID = "dlM-Hi-jud"; */
-"dlM-Hi-jud.text" = "您未购买任何商品。";
-/* Class = "UILabel"; text = "购买商品"; ObjectID = "e8U-FB-4Fr"; */
-"e8U-FB-4Fr.text" = "购买商品";
-/* Class = "UILabel"; text = "联络电话"; ObjectID = "eZJ-Pk-jUR"; */
-"eZJ-Pk-jUR.text" = "联络电话";
-/* Class = "UITextField"; placeholder = "请输入信箱"; ObjectID = "fMv-05-PVT"; */
-"fMv-05-PVT.placeholder" = "请输入信箱";
-/* Class = "UITextField"; placeholder = "请输入信箱"; ObjectID = "feR-Yb-PSR"; */
-"feR-Yb-PSR.placeholder" = "请输入信箱";
-/* Class = "UILabel"; text = "联络信箱"; ObjectID = "fj5-JL-r8Z"; */
-"fj5-JL-r8Z.text" = "联络信箱";
+
+/* Class = "UITextField"; placeholder = "請輸入手機號"; ObjectID = "Xo9-Uh-IVF"; */
+"Xo9-Uh-IVF.placeholder" = "請輸入手機號";
+
+/* Class = "UILabel"; text = "電話號碼"; ObjectID = "a8e-5b-Kqi"; */
+"a8e-5b-Kqi.text" = "電話號碼";
+
+/* Class = "UILabel"; text = "商品名稱: Loading..."; ObjectID = "ane-A8-ey5"; */
+"ane-A8-ey5.text" = "商品名稱: Loading...";
+
+/* Class = "UITextField"; placeholder = "請輸入舊密碼"; ObjectID = "bVc-hT-Gjc"; */
+"bVc-hT-Gjc.placeholder" = "請輸入舊密碼";
+
+/* Class = "UILabel"; text = "您未購買任何商品。"; ObjectID = "dlM-Hi-jud"; */
+"dlM-Hi-jud.text" = "您未購買任何商品。";
+
+/* Class = "UILabel"; text = "購買商品"; ObjectID = "e8U-FB-4Fr"; */
+"e8U-FB-4Fr.text" = "購買商品";
+
+/* Class = "UILabel"; text = "聯絡電話"; ObjectID = "eZJ-Pk-jUR"; */
+"eZJ-Pk-jUR.text" = "聯絡電話";
+
+/* Class = "UITextField"; placeholder = "請輸入信箱"; ObjectID = "fMv-05-PVT"; */
+"fMv-05-PVT.placeholder" = "請輸入信箱";
+
+/* Class = "UITextField"; placeholder = "請輸入信箱"; ObjectID = "feR-Yb-PSR"; */
+"feR-Yb-PSR.placeholder" = "請輸入信箱";
+
+/* Class = "UILabel"; text = "聯絡信箱"; ObjectID = "fj5-JL-r8Z"; */
+"fj5-JL-r8Z.text" = "聯絡信箱";
+
 /* Class = "UILabel"; text = "姓名"; ObjectID = "gNe-Hw-GA5"; */
 "gNe-Hw-GA5.text" = "姓名";
+
 /* Class = "UITextView"; text = "Loading..."; ObjectID = "jas-Ik-4EV"; */
 "jas-Ik-4EV.text" = "Loading...";
-/* Class = "UILabel"; text = "交易金额: Loading..."; ObjectID = "l5b-8L-izr"; */
-"l5b-8L-izr.text" = "交易金额: Loading...";
-/* Class = "UILabel"; text = "配送地址(请输入区号+地址)"; ObjectID = "mAl-Aa-MSD"; */
-"mAl-Aa-MSD.text" = "配送地址(请输入区号+地址)";
-/* Class = "UILabel"; text = "地址(请输入区号+地址)"; ObjectID = "mpP-sF-w2l"; */
-"mpP-sF-w2l.text" = "地址(请输入区号+地址)";
-/* Class = "UITextField"; placeholder = "请输入新密码"; ObjectID = "nfN-db-dB4"; */
-"nfN-db-dB4.placeholder" = "请输入新密码";
+
+/* Class = "UILabel"; text = "交易金額: Loading..."; ObjectID = "l5b-8L-izr"; */
+"l5b-8L-izr.text" = "總金額: Loading...";
+
+/* Class = "UILabel"; text = "配送地址(請輸入區號+地址)"; ObjectID = "mAl-Aa-MSD"; */
+"mAl-Aa-MSD.text" = "配送地址(請輸入區號+地址)";
+
+/* Class = "UILabel"; text = "地址(請輸入區號+地址)"; ObjectID = "mpP-sF-w2l"; */
+"mpP-sF-w2l.text" = "地址(請輸入區號+地址)";
+
+/* Class = "UILabel"; text = " "; ObjectID = "nCj-AA-GPO"; */
+"nCj-AA-GPO.text" = " ";
+
+/* Class = "UITextField"; placeholder = "請輸入新密碼"; ObjectID = "nfN-db-dB4"; */
+"nfN-db-dB4.placeholder" = "請輸入新密碼";
+
 /* Class = "UILabel"; text = "Loading..."; ObjectID = "o1Z-fH-Rjn"; */
 "o1Z-fH-Rjn.text" = "Loading...";
-/* Class = "UITextField"; placeholder = "请输入姓名"; ObjectID = "oNq-N8-f4b"; */
-"oNq-N8-f4b.placeholder" = "请输入姓名";
-/* Class = "UILabel"; text = "交易金额: --"; ObjectID = "pwz-Bg-gvx"; */
-"pwz-Bg-gvx.text" = "交易金额: --";
-/* Class = "UILabel"; text = "0000-00-00 您购买了,"; ObjectID = "s3q-CC-1Yu"; */
-"s3q-CC-1Yu.text" = "0000-00-00 您购买了,";
-/* Class = "UILabel"; text = "电话: Loading..."; ObjectID = "scw-gu-3Wq"; */
-"scw-gu-3Wq.text" = "电话: Loading...";
+
+/* Class = "UITextField"; placeholder = "請輸入姓名"; ObjectID = "oNq-N8-f4b"; */
+"oNq-N8-f4b.placeholder" = "請輸入姓名";
+
+/* Class = "UILabel"; text = "交易金額: --"; ObjectID = "pwz-Bg-gvx"; */
+"pwz-Bg-gvx.text" = "交易金額: --";
+
+/* Class = "UILabel"; text = "0000-00-00 您購買了,"; ObjectID = "s3q-CC-1Yu"; */
+"s3q-CC-1Yu.text" = "0000-00-00 您購買了,";
+
+/* Class = "UILabel"; text = "電話: Loading..."; ObjectID = "scw-gu-3Wq"; */
+"scw-gu-3Wq.text" = "電話: Loading...";
+
 /* Class = "UILabel"; text = "姓名: Loading..."; ObjectID = "tep-Cn-a5Z"; */
 "tep-Cn-a5Z.text" = "姓名: Loading...";
-/* Class = "UIButton"; normalTitle = "购买商品"; ObjectID = "uAT-Um-Uop"; */
-"uAT-Um-Uop.normalTitle" = "购买商品";
-/* Class = "UILabel"; text = "联络信箱: Loading...."; ObjectID = "vkt-EM-9ol"; */
-"vkt-EM-9ol.text" = "联络信箱: Loading....";
-/* Class = "UITextField"; placeholder = "请输入区号+地址"; ObjectID = "w7U-tV-XRm"; */
-"w7U-tV-XRm.placeholder" = "请输入区号+地址";
+
+/* Class = "UIButton"; normalTitle = "購買商品"; ObjectID = "uAT-Um-Uop"; */
+"uAT-Um-Uop.normalTitle" = "購買商品";
+
+/* Class = "UILabel"; text = "聯絡信箱: Loading...."; ObjectID = "vkt-EM-9ol"; */
+"vkt-EM-9ol.text" = "聯絡信箱: Loading....";
+
+/* Class = "UITextField"; placeholder = "請輸入區號+地址"; ObjectID = "w7U-tV-XRm"; */
+"w7U-tV-XRm.placeholder" = "請輸入區號+地址";
+
 /* Class = "UILabel"; text = "Loading..."; ObjectID = "wPP-NL-an4"; */
 "wPP-NL-an4.text" = "Loading...";
+
 /* Class = "UILabel"; text = "Loading..."; ObjectID = "x4T-qX-dzQ"; */
 "x4T-qX-dzQ.text" = "Loading...";
-/* Class = "UITextField"; placeholder = "请输入手机号"; ObjectID = "yHL-s9-pd9"; */
-"yHL-s9-pd9.placeholder" = "请输入手机号";
+
+/* Class = "UITextField"; placeholder = "請輸入手機號"; ObjectID = "yHL-s9-pd9"; */
+"yHL-s9-pd9.placeholder" = "請輸入手機號";

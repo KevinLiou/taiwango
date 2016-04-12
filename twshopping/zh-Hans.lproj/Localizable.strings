@@ -53,3 +53,4 @@
 "AlertMessageNoRemain" = "此商品已经售完啰。";
 "VCTitleBuySucceeded" = "购买完成";
 "AlertMessagePolicyAgree" = "请先同意本程式相关声明及政策。";
+"PriceOfOneProduct"="商品单价";

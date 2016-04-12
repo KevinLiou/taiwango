@@ -11,11 +11,11 @@
 /* Class = "UILabel"; text = "Loading..."; ObjectID = "4np-4N-tWC"; */
 "4np-4N-tWC.text" = "Loading...";
 
-/* Class = "UILabel"; text = "Loading................................................................................................................................................"; ObjectID = "5of-Up-RRl"; */
-"5of-Up-RRl.text" = "Loading................................................................................................................................................";
+/* Class = "UILabel"; text = " "; ObjectID = "5of-Up-RRl"; */
+"5of-Up-RRl.text" = " ";
 
-/* Class = "UILabel"; text = "Title Loading..."; ObjectID = "6An-NM-kse"; */
-"6An-NM-kse.text" = "Title Loading...";
+/* Class = "UILabel"; text = "..."; ObjectID = "6An-NM-kse"; */
+"6An-NM-kse.text" = "...";
 
 /* Class = "UILabel"; text = "Loading................................................................................................................................................"; ObjectID = "7vj-QL-tnB"; */
 "7vj-QL-tnB.text" = "Loading................................................................................................................................................";
@@ -105,13 +105,16 @@
 "jas-Ik-4EV.text" = "Loading...";
 
 /* Class = "UILabel"; text = "交易金額: Loading..."; ObjectID = "l5b-8L-izr"; */
-"l5b-8L-izr.text" = "交易金額: Loading...";
+"l5b-8L-izr.text" = "總金額: Loading...";
 
 /* Class = "UILabel"; text = "配送地址(請輸入區號+地址)"; ObjectID = "mAl-Aa-MSD"; */
 "mAl-Aa-MSD.text" = "配送地址(請輸入區號+地址)";
 
 /* Class = "UILabel"; text = "地址(請輸入區號+地址)"; ObjectID = "mpP-sF-w2l"; */
 "mpP-sF-w2l.text" = "地址(請輸入區號+地址)";
+
+/* Class = "UILabel"; text = " "; ObjectID = "nCj-AA-GPO"; */
+"nCj-AA-GPO.text" = " ";
 
 /* Class = "UITextField"; placeholder = "請輸入新密碼"; ObjectID = "nfN-db-dB4"; */
 "nfN-db-dB4.placeholder" = "請輸入新密碼";

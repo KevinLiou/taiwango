@@ -47,7 +47,7 @@ class LoginViewController: SPSingleColorViewController {
                 let address = user["address"] as? String
                 let name = user["name"] as? String
                 
-                SPDataManager.sharedInstance.insertProfile(email, mobilePhoneNumber: mobile, address: address, name: name)
+                SPDataManager.sharedInstance.insertProfile(email, mobilePhoneNumber: mobile, address: address, name: name, username: self.emailTextField.text)
                 
                 self.tapPassLogin()
                 

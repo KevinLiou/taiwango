@@ -33,6 +33,7 @@
         <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="mobile" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Push" representedClassName=".Push" syncable="YES">
         <attribute name="info" optional="YES" attributeType="String" syncable="YES"/>
@@ -66,7 +67,7 @@
         <element name="Cate" positionX="603" positionY="30" width="128" height="103"/>
         <element name="Language" positionX="313" positionY="251" width="128" height="135"/>
         <element name="Product" positionX="592" positionY="266" width="128" height="225"/>
-        <element name="Profile" positionX="288" positionY="54" width="128" height="105"/>
+        <element name="Profile" positionX="288" positionY="54" width="128" height="118"/>
         <element name="Push" positionX="108" positionY="198" width="128" height="133"/>
         <element name="Store" positionX="358" positionY="446" width="128" height="193"/>
         <element name="Version" positionX="124" positionY="443" width="128" height="133"/>

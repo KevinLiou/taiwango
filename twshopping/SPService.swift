@@ -55,6 +55,13 @@ class SPService {
         
     }
     
+    
+    func requestCreateOrderWith(parameters: [String:AnyObject], completionHandler: Response<AnyObject, NSError> -> Void) {
+        
+        Alamofire.request(.GET, "http://kikistore.csmuse.com/kikistore/api/kikirace_createOrder.php", parameters: parameters).responseJSON(completionHandler: completionHandler);
+        
+    }
+    
 //    func requestOrderOKWith(parameters: [String:AnyObject], completionHandler: Response<AnyObject, NSError> -> Void) {
 //        
 //        Alamofire.request(.GET, "\(SPServiceHost.Host.rawValue)\(SPServicePath.ORDER_OK.rawValue)", parameters: parameters).responseJSON(completionHandler: completionHandler);

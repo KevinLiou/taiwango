@@ -115,12 +115,13 @@ class SPDataManager {
         self.appDelegate.saveContext()
     }
     
-    func insertProfile(email:String, mobilePhoneNumber:String?, address:String?, name:String?){
+    func insertProfile(email:String, mobilePhoneNumber:String?, address:String?, name:String?, username: String?){
         let profile = NSEntityDescription.insertNewObjectForEntityForName("Profile", inManagedObjectContext: context) as! Profile
         profile.email = email
         profile.mobile = mobilePhoneNumber
         profile.address = address
         profile.name = name
+        profile.username = username
         
         appDelegate.saveContext()
     }

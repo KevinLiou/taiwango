@@ -17,6 +17,7 @@ class OrderUserViewController: SPSingleColorViewController {
     var total_price:Double = 0
     var profile:Profile?
     var cacheOrder:AVObject?
+    var order_id = ""
     
     @IBOutlet var productTitleLabel: SPWhiteTextLabel!
     @IBOutlet var productName: SPWhiteTextLabel!
@@ -59,22 +60,6 @@ class OrderUserViewController: SPSingleColorViewController {
     
     
     func loadData(){
-//        if let product_name = product?.name, let product_amount = product?.amount, let product_remain = product?.remain{
-//            self.productName.text = "\(NSLocalizedString("StringProductName",comment: "")): \(product_name)"
-//            self.productPrice.text = "\(NSLocalizedString("StringAmount",comment: "")): \(product_amount) CNY"
-//            
-//            if product_amount == 0 || product_remain == 0{
-//                self.navigationController?.popViewControllerAnimated(true)
-//                
-//                let alertView = UIAlertView(title: NSLocalizedString("AlertTitleBuyError",comment: ""),
-//                    message:NSLocalizedString("AlertMessageNoRemain",comment: ""),
-//                    delegate: nil,
-//                    cancelButtonTitle: nil,
-//                    otherButtonTitles: NSLocalizedString("ButtonTitleSure",comment: ""))
-//                alertView.show()
-//            }
-//        }
-        
         
         if let _ProductQuantity = product["ProductQuantity"], let _SellPrice = product["SellPrice"],let _ = product["ProductSN"]{
             
@@ -119,9 +104,9 @@ class OrderUserViewController: SPSingleColorViewController {
         }
         
         //order user
-        if !(SPValidator.validatorWithMobile(self.mobileTextField.text!) && (self.mobileTextField.text?.characters.count > 0)) {
+        if !(SPValidator.validatorWithName(self.nameTextField.text!) && (self.nameTextField.text?.characters.count > 0)) {
             let alertView = UIAlertView(title: NSLocalizedString("AlertTitleError",comment: ""),
-                                        message: NSLocalizedString("AlertMessageMobileError",comment: ""),
+                                        message: NSLocalizedString("AlertMessageNameError",comment: ""),
                                         delegate: nil,
                                         cancelButtonTitle: nil,
                                         otherButtonTitles: NSLocalizedString("ButtonTitleSure",comment: ""))
@@ -139,9 +124,9 @@ class OrderUserViewController: SPSingleColorViewController {
             return
         }
         
-        if !(SPValidator.validatorWithName(self.nameTextField.text!) && (self.nameTextField.text?.characters.count > 0)) {
+        if !(SPValidator.validatorWithMobile(self.mobileTextField.text!) && (self.mobileTextField.text?.characters.count > 0)) {
             let alertView = UIAlertView(title: NSLocalizedString("AlertTitleError",comment: ""),
-                                        message: NSLocalizedString("AlertMessageNameError",comment: ""),
+                                        message: NSLocalizedString("AlertMessageMobileError",comment: ""),
                                         delegate: nil,
                                         cancelButtonTitle: nil,
                                         otherButtonTitles: NSLocalizedString("ButtonTitleSure",comment: ""))
@@ -150,10 +135,11 @@ class OrderUserViewController: SPSingleColorViewController {
         }
         
         
+        
         //receiver user
-        if !(SPValidator.validatorWithMobile(self.receiverMobileTextField.text!) && (self.receiverMobileTextField.text?.characters.count > 0)) {
+        if !(SPValidator.validatorWithName(self.receiverNameTextField.text!) && (self.receiverNameTextField.text?.characters.count > 0)) {
             let alertView = UIAlertView(title: NSLocalizedString("AlertTitleError",comment: ""),
-                                        message: NSLocalizedString("AlertMessageMobileError",comment: ""),
+                                        message: NSLocalizedString("AlertMessageNameError",comment: ""),
                                         delegate: nil,
                                         cancelButtonTitle: nil,
                                         otherButtonTitles: NSLocalizedString("ButtonTitleSure",comment: ""))
@@ -171,9 +157,9 @@ class OrderUserViewController: SPSingleColorViewController {
             return
         }
         
-        if !(SPValidator.validatorWithName(self.receiverNameTextField.text!) && (self.receiverNameTextField.text?.characters.count > 0)) {
+        if !(SPValidator.validatorWithMobile(self.receiverMobileTextField.text!) && (self.receiverMobileTextField.text?.characters.count > 0)) {
             let alertView = UIAlertView(title: NSLocalizedString("AlertTitleError",comment: ""),
-                                        message: NSLocalizedString("AlertMessageNameError",comment: ""),
+                                        message: NSLocalizedString("AlertMessageMobileError",comment: ""),
                                         delegate: nil,
                                         cancelButtonTitle: nil,
                                         otherButtonTitles: NSLocalizedString("ButtonTitleSure",comment: ""))
@@ -185,11 +171,13 @@ class OrderUserViewController: SPSingleColorViewController {
             return
         }
         
-        
+        guard let _username = profile?.username else{
+            return
+        }
         self.view.endEditing(true)
-        let order_id = SPTools.getRandomSnString()
+        order_id = SPTools.getRandomSnString()
         
-        let payvc = UnionpaysdkService.CreateWebView(self, withOrderId: order_id, andAmount: total_price, andMemo: "twshopping_ios", andPayCallBackUrl: "http://52.26.127.167/twshopping/index.php/api/callbackurl")
+        let payvc = UnionpaysdkService.CreateWebView(self, withOrderId: order_id, andAmount: total_price, andMemo: "\(_username),twshopping_ios", andPayCallBackUrl: "http://52.26.127.167/twshopping/index.php/api/callbackurl")
         self.presentViewController(payvc, animated: true, completion: nil)
         
 //
@@ -243,18 +231,9 @@ class OrderUserViewController: SPSingleColorViewController {
     func IPaymentIsSuccess(IsSuccess:Bool){
         if IsSuccess {
             print("IsSuccess")
+            self.reqTradeInfo()
             
-            SPTools.showLoadingOnViewController(self)
             
-            
-            let lan = SPTools.getPreferredLanguages()
-            SPService.sharedInstance.requestTradeInfoWith([:], completionHandler: { (response) in
-                if let JSON = response.result.value {
-                    
-                }
-                
-                SPTools.hideLoadingOnViewController(self)
-            })
             
             
 //            SPTools.showLoadingOnViewController(self)
@@ -311,6 +290,150 @@ class OrderUserViewController: SPSingleColorViewController {
         }else{
             print("NoSuccess")
         }
+    }
+    
+    func reqTradeInfo() {
+        guard let _username = profile?.username else{
+            return
+        }
+        
+        SPTools.showLoadingOnViewController(self)
+        let timestamp = "\(Int(NSDate().timeIntervalSince1970))"
+        let md5string = SPTools.md5(string: "\(timestamp)twshopping")
+        let parameters = ["order_id":order_id, "username": _username, "time": timestamp, "key": md5string, "app_name": "twshopping_ios"]
+        SPService.sharedInstance.requestTradeInfoWith(parameters, completionHandler: { (response) in
+            if let JSON = response.result.value {
+                
+                if let result = JSON["result"], let data = JSON["data"] as? [[String:AnyObject]]{
+                    if 1 != result as! Int {
+                        //延遲三秒後再重新傳送
+                        let time: NSTimeInterval = 3.0
+                        let delay = dispatch_time(DISPATCH_TIME_NOW, Int64(time * Double(NSEC_PER_SEC)))
+                        dispatch_after(delay, dispatch_get_main_queue()) { () -> Void in
+                            self.reqTradeInfo()
+                        }
+                        
+                    }else{
+                        print(JSON)
+                        //成功後繼續
+                        
+                        if let _data = data.first {
+                            
+                            self.reqCreateOrder(_data)
+                        }
+                        
+                    }
+                }
+            }else{
+                let time: NSTimeInterval = 3.0
+                let delay = dispatch_time(DISPATCH_TIME_NOW, Int64(time * Double(NSEC_PER_SEC)))
+                dispatch_after(delay, dispatch_get_main_queue()) { () -> Void in
+                    self.reqTradeInfo()
+                }
+            }
+            
+        })
+    }
+    
+    
+    func reqCreateOrder(_data:[String:AnyObject]) {
+        let currcode = _data["currcode"] as! String
+        let resptime = _data["resptime"] as! String
+        let rmbrate = (_data["rmbrate"] as! NSNumber).doubleValue
+        let orderno = _data["orderno"] as! NSNumber
+        
+        
+        var orderEmail = ""
+        if let OrderEmail = self.emailTextField.text{
+            orderEmail = OrderEmail
+        }
+        
+        var receiverEmail = ""
+        if let ConsigneeEmail = self.receiverEmailTextField.text {
+            receiverEmail = ConsigneeEmail
+        }
+        
+        
+        let timestamp = UInt64(NSDate().timeIntervalSince1970)
+        let md5string = SPTools.md5(string: "\(timestamp)kikirace")
+        
+        let parameters:[String:AnyObject]
+            = [
+                "Username": "G121902266",
+                "Password": "happybirthday",
+                "ExternalOrderNo": orderno,
+                "ProductSN": self.product["ProductSN"]!,
+                "StyleA": "",
+                
+                "StyleB": "",
+                "Quantity": self.quantity,
+                "Price": self.product["SellPrice"]!,
+                "Amount": self.total_price,
+                "OrderName": self.nameTextField.text!,
+                
+                "OrderAddress": self.addressTextField.text!,
+                "OrderEmail": orderEmail,
+                "OrderPhone": self.mobileTextField.text!,
+                "ConsigneeName": self.receiverNameTextField.text!,
+                "ConsigneeAddres": self.receiverAddressTextField.text!,
+                
+                "ConsigneeEmail": receiverEmail,
+                "ConsigneePhone": self.receiverMobileTextField.text!,
+                "DeliverTime": self.receiverTimeTextField.text!,
+                "Result": 1,
+                "PaymentResult": 1,
+                
+                "Param": "\(currcode),\(resptime),\(rmbrate)",
+                "Time": "\(timestamp)",
+                "Key": md5string
+        ]
+        
+        
+        SPService.sharedInstance.requestCreateOrderWith(parameters, completionHandler: { (response) in
+            if let JSON = response.result.value {
+                
+                if let ErrorCode = JSON["ErrorCode"]{
+                    
+                    if let error_code = ErrorCode as? Int {
+                        if error_code == 0 {
+                            SPTools.hideLoadingOnViewController(self)
+                            
+                            //購買成功
+                            let alertView = UIAlertView(title: NSLocalizedString("VCTitleBuySucceeded",comment: ""),
+                                message: NSLocalizedString("BuyOkInfoMessage",comment: ""),
+                                delegate: nil,
+                                cancelButtonTitle: nil,
+                                otherButtonTitles: NSLocalizedString("ButtonTitleSure",comment: ""))
+                            alertView.show()
+                            
+                            return
+                        }
+                    }
+                    
+                    let time: NSTimeInterval = 3.0
+                    let delay = dispatch_time(DISPATCH_TIME_NOW, Int64(time * Double(NSEC_PER_SEC)))
+                    dispatch_after(delay, dispatch_get_main_queue()) { () -> Void in
+                        self.reqCreateOrder(_data)
+                    }
+                    
+                }else{
+                    let time: NSTimeInterval = 3.0
+                    let delay = dispatch_time(DISPATCH_TIME_NOW, Int64(time * Double(NSEC_PER_SEC)))
+                    dispatch_after(delay, dispatch_get_main_queue()) { () -> Void in
+                        self.reqCreateOrder(_data)
+                    }
+                }
+                
+                
+            }else{
+                let time: NSTimeInterval = 3.0
+                let delay = dispatch_time(DISPATCH_TIME_NOW, Int64(time * Double(NSEC_PER_SEC)))
+                dispatch_after(delay, dispatch_get_main_queue()) { () -> Void in
+                    self.reqCreateOrder(_data)
+                }
+            }
+
+        })
     }
     
     

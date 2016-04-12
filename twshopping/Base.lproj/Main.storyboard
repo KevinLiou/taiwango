@@ -1750,7 +1750,7 @@
                                                     <userDefinedRuntimeAttribute type="image" keyPath="image" value="icon_mobile"/>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="收貨人資訊(必填)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KLX-mX-p5X" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="寄件人資訊" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KLX-mX-p5X" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="8" width="544" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="220" id="Kcn-Ec-9VU"/>
@@ -1869,6 +1869,9 @@
                                                         <exclude reference="9A8-3f-ewM"/>
                                                     </mask>
                                                 </variation>
+                                                <connections>
+                                                    <action selector="stepper:" destination="Ssx-uK-plI" eventType="valueChanged" id="pbM-Kg-VU0"/>
+                                                </connections>
                                             </stepper>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="商品單價: Loading..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Voy-aQ-YNR" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
                                                 <rect key="frame" x="30" y="78" width="500" height="17"/>
@@ -1904,23 +1907,221 @@
                                             <constraint firstItem="Voy-aQ-YNR" firstAttribute="top" secondItem="ane-A8-ey5" secondAttribute="bottom" constant="24" id="zUi-xI-cpi"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rAR-bj-UOD" userLabel="Receiver User View" customClass="SPWhiteCornerView" customModule="twshopping" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="670" width="560" height="515"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="姓名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SwN-vW-xc4" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                                <rect key="frame" x="170" y="50" width="220" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="a40-Rw-ij8"/>
+                                                    <constraint firstAttribute="width" constant="220" id="yoQ-QG-bOA"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="聯絡信箱(非必填)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSY-tL-NNJ" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                                <rect key="frame" x="170" y="144" width="220" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="2dr-gw-D50"/>
+                                                    <constraint firstAttribute="width" constant="220" id="J88-IF-mOA"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入姓名" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="lBb-IE-efF" customClass="SPTextField" customModule="twshopping" customModuleProvider="target">
+                                                <rect key="frame" x="170" y="79" width="220" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="DCW-sD-0bz"/>
+                                                    <constraint firstAttribute="width" constant="220" id="UkT-Je-5K2"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="icon_name"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入信箱" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="tq9-BH-YlV" customClass="SPTextField" customModule="twshopping" customModuleProvider="target">
+                                                <rect key="frame" x="170" y="173" width="220" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="220" id="CxU-yS-H61"/>
+                                                    <constraint firstAttribute="height" constant="44" id="ukO-tF-xRm"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="icon_email"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入區號+地址" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="y9u-uj-caz" customClass="SPTextField" customModule="twshopping" customModuleProvider="target">
+                                                <rect key="frame" x="170" y="267" width="220" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="220" id="fOQ-Qy-bHt"/>
+                                                    <constraint firstAttribute="height" constant="44" id="ti9-Dt-621"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="icon_address"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="配送地址(請輸入區號+地址)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQa-jI-bFC" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                                <rect key="frame" x="170" y="238" width="220" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="bpv-pF-3Uw"/>
+                                                    <constraint firstAttribute="width" constant="220" id="cxp-pi-ZFQ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="聯絡電話" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9BW-U1-Cy2" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                                <rect key="frame" x="170" y="332" width="220" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="1hu-Pq-0Sg"/>
+                                                    <constraint firstAttribute="width" constant="220" id="Dzy-rg-R97"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入手機號" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rA1-YL-aJy" customClass="SPTextField" customModule="twshopping" customModuleProvider="target">
+                                                <rect key="frame" x="170" y="361" width="220" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="220" id="fIr-A5-YTe"/>
+                                                    <constraint firstAttribute="height" constant="44" id="lNv-1F-rcD"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="icon_mobile"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="收貨人資訊(必填)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYY-Ji-jvG" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                                <rect key="frame" x="8" y="8" width="466" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="220" id="AmN-Ao-7JX"/>
+                                                    <constraint firstAttribute="height" constant="21" id="vmI-q2-KwM"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="AmN-Ao-7JX"/>
+                                                    </mask>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="配送時間" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ut-fb-sbT" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                                <rect key="frame" x="170" y="426" width="220" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="Q7H-Li-1tQ"/>
+                                                    <constraint firstAttribute="width" constant="220" id="f5b-FS-yY1"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="例如:4月1日下午" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="KMx-Cy-jXN" customClass="SPTextField" customModule="twshopping" customModuleProvider="target">
+                                                <rect key="frame" x="170" y="455" width="220" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="220" id="1Oy-QT-zpd"/>
+                                                    <constraint firstAttribute="height" constant="44" id="Pxj-HV-zPE"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="icon_clock"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Owz-RW-DV6">
+                                                <rect key="frame" x="482" y="8" width="70" height="22"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="Fjb-aE-YsY"/>
+                                                    <constraint firstAttribute="height" constant="22" id="W6Z-3f-Her"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                <state key="normal" title="  同上" image="icon_no_agree">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="selected" image="icon_agree"/>
+                                                <connections>
+                                                    <action selector="sameButtonClick:" destination="Ssx-uK-plI" eventType="touchUpInside" id="qss-jF-mzN"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="tq9-BH-YlV" firstAttribute="top" secondItem="lBb-IE-efF" secondAttribute="bottom" constant="50" id="5kD-WH-sLS"/>
+                                            <constraint firstItem="cSY-tL-NNJ" firstAttribute="leading" secondItem="tq9-BH-YlV" secondAttribute="leading" id="6FJ-K0-SEz"/>
+                                            <constraint firstItem="rYY-Ji-jvG" firstAttribute="top" secondItem="rAR-bj-UOD" secondAttribute="top" constant="8" id="7nA-gM-eFf"/>
+                                            <constraint firstItem="Owz-RW-DV6" firstAttribute="top" secondItem="rYY-Ji-jvG" secondAttribute="top" id="9ti-Op-HdA"/>
+                                            <constraint firstItem="SwN-vW-xc4" firstAttribute="leading" secondItem="lBb-IE-efF" secondAttribute="leading" id="AH6-t5-tkf"/>
+                                            <constraint firstItem="y9u-uj-caz" firstAttribute="top" secondItem="tq9-BH-YlV" secondAttribute="bottom" constant="50" id="AbA-iK-LNE"/>
+                                            <constraint firstAttribute="height" constant="500" id="B2X-f0-ebo"/>
+                                            <constraint firstItem="tq9-BH-YlV" firstAttribute="leading" secondItem="lBb-IE-efF" secondAttribute="leading" id="Bhd-Lv-hBy"/>
+                                            <constraint firstItem="KMx-Cy-jXN" firstAttribute="top" secondItem="7ut-fb-sbT" secondAttribute="bottom" constant="8" id="CtH-Vn-KF5"/>
+                                            <constraint firstItem="lBb-IE-efF" firstAttribute="centerX" secondItem="rAR-bj-UOD" secondAttribute="centerX" id="EKK-pH-oo3"/>
+                                            <constraint firstAttribute="trailing" secondItem="Owz-RW-DV6" secondAttribute="trailing" constant="8" id="G4F-Nr-vl7"/>
+                                            <constraint firstItem="KMx-Cy-jXN" firstAttribute="leading" secondItem="rA1-YL-aJy" secondAttribute="leading" id="JpA-lg-V7H"/>
+                                            <constraint firstItem="lBb-IE-efF" firstAttribute="top" secondItem="SwN-vW-xc4" secondAttribute="bottom" constant="8" id="LtE-ec-9gA"/>
+                                            <constraint firstItem="y9u-uj-caz" firstAttribute="top" secondItem="FQa-jI-bFC" secondAttribute="bottom" constant="8" id="P0f-hq-Ozh"/>
+                                            <constraint firstItem="rA1-YL-aJy" firstAttribute="leading" secondItem="y9u-uj-caz" secondAttribute="leading" id="PBN-m3-YK7"/>
+                                            <constraint firstItem="tq9-BH-YlV" firstAttribute="top" secondItem="cSY-tL-NNJ" secondAttribute="bottom" constant="8" id="Rpt-JH-flZ"/>
+                                            <constraint firstItem="rYY-Ji-jvG" firstAttribute="leading" secondItem="rAR-bj-UOD" secondAttribute="leading" constant="8" id="TQO-qv-ERv"/>
+                                            <constraint firstItem="lBb-IE-efF" firstAttribute="top" secondItem="rYY-Ji-jvG" secondAttribute="bottom" constant="50" id="W1e-cY-yRF"/>
+                                            <constraint firstItem="7ut-fb-sbT" firstAttribute="leading" secondItem="KMx-Cy-jXN" secondAttribute="leading" id="XPQ-FF-q8p"/>
+                                            <constraint firstItem="FQa-jI-bFC" firstAttribute="leading" secondItem="y9u-uj-caz" secondAttribute="leading" id="b4b-0C-bS9"/>
+                                            <constraint firstAttribute="trailing" secondItem="rYY-Ji-jvG" secondAttribute="trailing" constant="8" id="bfw-6D-Kd8"/>
+                                            <constraint firstItem="KMx-Cy-jXN" firstAttribute="top" secondItem="rA1-YL-aJy" secondAttribute="bottom" constant="50" id="c1F-tH-gP3"/>
+                                            <constraint firstItem="rA1-YL-aJy" firstAttribute="top" secondItem="y9u-uj-caz" secondAttribute="bottom" constant="50" id="crt-jk-0ij"/>
+                                            <constraint firstItem="rA1-YL-aJy" firstAttribute="top" secondItem="9BW-U1-Cy2" secondAttribute="bottom" constant="8" id="dyl-PM-69c"/>
+                                            <constraint firstItem="y9u-uj-caz" firstAttribute="leading" secondItem="tq9-BH-YlV" secondAttribute="leading" id="ffk-Hj-RSG"/>
+                                            <constraint firstItem="rYY-Ji-jvG" firstAttribute="centerX" secondItem="rAR-bj-UOD" secondAttribute="centerX" id="jZY-xT-TMd"/>
+                                            <constraint firstAttribute="bottom" secondItem="KMx-Cy-jXN" secondAttribute="bottom" constant="16" id="mHV-Rf-7sn"/>
+                                            <constraint firstItem="9BW-U1-Cy2" firstAttribute="leading" secondItem="rA1-YL-aJy" secondAttribute="leading" id="nyy-q3-NBy"/>
+                                            <constraint firstItem="rA1-YL-aJy" firstAttribute="top" secondItem="y9u-uj-caz" secondAttribute="bottom" constant="8" id="pYq-AL-wda"/>
+                                            <constraint firstItem="Owz-RW-DV6" firstAttribute="leading" secondItem="rYY-Ji-jvG" secondAttribute="trailing" constant="8" id="ww8-mV-vCQ"/>
+                                            <constraint firstItem="lBb-IE-efF" firstAttribute="top" secondItem="rAR-bj-UOD" secondAttribute="top" constant="70" id="zBC-20-BCM"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="B2X-f0-ebo"/>
+                                                <exclude reference="bfw-6D-Kd8"/>
+                                                <exclude reference="jZY-xT-TMd"/>
+                                                <exclude reference="zBC-20-BCM"/>
+                                                <exclude reference="pYq-AL-wda"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="rAR-bj-UOD" firstAttribute="top" secondItem="rwE-jv-h7j" secondAttribute="bottom" constant="13" id="11U-FS-V1O"/>
                                     <constraint firstAttribute="trailing" secondItem="4rm-h2-p2a" secondAttribute="trailing" constant="20" id="6BV-ld-z5L"/>
+                                    <constraint firstItem="rAR-bj-UOD" firstAttribute="leading" secondItem="XBB-xn-NGZ" secondAttribute="leading" constant="20" id="HKs-Ll-wMq"/>
                                     <constraint firstAttribute="bottom" secondItem="rwE-jv-h7j" secondAttribute="bottom" constant="20" id="HR5-gl-kfM"/>
                                     <constraint firstItem="4rm-h2-p2a" firstAttribute="leading" secondItem="XBB-xn-NGZ" secondAttribute="leading" constant="20" id="Kh3-C1-COS"/>
+                                    <constraint firstAttribute="bottom" secondItem="rAR-bj-UOD" secondAttribute="bottom" constant="16" id="PwE-pG-xRO"/>
                                     <constraint firstAttribute="trailing" secondItem="rwE-jv-h7j" secondAttribute="trailing" constant="20" id="Qdg-px-c3d"/>
                                     <constraint firstItem="rwE-jv-h7j" firstAttribute="leading" secondItem="XBB-xn-NGZ" secondAttribute="leading" constant="20" id="RuI-IX-jMM"/>
                                     <constraint firstItem="rwE-jv-h7j" firstAttribute="top" secondItem="4rm-h2-p2a" secondAttribute="bottom" constant="20" id="YPO-fp-sI5"/>
+                                    <constraint firstItem="rAR-bj-UOD" firstAttribute="top" secondItem="rwE-jv-h7j" secondAttribute="bottom" constant="16" id="aHN-G8-Ean"/>
                                     <constraint firstItem="4rm-h2-p2a" firstAttribute="top" secondItem="XBB-xn-NGZ" secondAttribute="top" constant="20" id="f1b-5P-jxN"/>
                                     <constraint firstItem="rwE-jv-h7j" firstAttribute="centerX" secondItem="XBB-xn-NGZ" secondAttribute="centerX" id="fp6-77-h7T"/>
                                     <constraint firstItem="rwE-jv-h7j" firstAttribute="top" secondItem="XBB-xn-NGZ" secondAttribute="top" constant="20" id="jFu-LX-rWD"/>
+                                    <constraint firstItem="rAR-bj-UOD" firstAttribute="centerX" secondItem="XBB-xn-NGZ" secondAttribute="centerX" id="jv3-hc-cvD"/>
+                                    <constraint firstItem="rAR-bj-UOD" firstAttribute="top" secondItem="rwE-jv-h7j" secondAttribute="bottom" constant="16" id="lTp-29-B0d"/>
+                                    <constraint firstAttribute="trailing" secondItem="rAR-bj-UOD" secondAttribute="trailing" constant="20" id="uDd-Hu-Zs5"/>
                                     <constraint firstAttribute="bottom" secondItem="rwE-jv-h7j" secondAttribute="bottom" constant="20" id="vqZ-3m-n9c"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="HR5-gl-kfM"/>
                                         <exclude reference="jFu-LX-rWD"/>
                                         <exclude reference="vqZ-3m-n9c"/>
+                                        <exclude reference="aHN-G8-Ean"/>
+                                        <exclude reference="lTp-29-B0d"/>
                                     </mask>
                                 </variation>
                             </scrollView>
@@ -1930,8 +2131,14 @@
                             <constraint firstItem="XBB-xn-NGZ" firstAttribute="top" secondItem="H1O-R8-MPG" secondAttribute="top" id="Akw-ih-kaa"/>
                             <constraint firstItem="Zi3-6c-oO6" firstAttribute="top" secondItem="XBB-xn-NGZ" secondAttribute="bottom" id="EAZ-L3-Kco"/>
                             <constraint firstAttribute="trailing" secondItem="XBB-xn-NGZ" secondAttribute="trailing" id="XES-hu-dI9"/>
+                            <constraint firstItem="Zi3-6c-oO6" firstAttribute="top" secondItem="XBB-xn-NGZ" secondAttribute="bottom" id="cM1-sQ-SWB"/>
                             <constraint firstItem="XBB-xn-NGZ" firstAttribute="leading" secondItem="H1O-R8-MPG" secondAttribute="leading" id="dn3-T9-yVs"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="EAZ-L3-Kco"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="OrderUserTitleLabel" destination="KLX-mX-p5X" id="33n-ya-qdF"/>
@@ -1939,9 +2146,19 @@
                         <outlet property="emailTextField" destination="feR-Yb-PSR" id="UHq-vS-Mbt"/>
                         <outlet property="mobileTextField" destination="Xo9-Uh-IVF" id="IYr-ol-iqY"/>
                         <outlet property="nameTextField" destination="34L-Mk-M3w" id="LsX-SR-k1Y"/>
+                        <outlet property="productAmount" destination="d2w-6y-Mfy" id="76q-ge-hf4"/>
                         <outlet property="productName" destination="ane-A8-ey5" id="lxi-PX-qfK"/>
                         <outlet property="productPrice" destination="l5b-8L-izr" id="EiF-Zz-Exu"/>
+                        <outlet property="productPriceOfOne" destination="Voy-aQ-YNR" id="Ta2-Xf-804"/>
                         <outlet property="productTitleLabel" destination="e8U-FB-4Fr" id="H9F-PR-C8K"/>
+                        <outlet property="receiverAddressTextField" destination="y9u-uj-caz" id="wsB-v7-f1h"/>
+                        <outlet property="receiverEmailTextField" destination="tq9-BH-YlV" id="uOP-lM-Yrr"/>
+                        <outlet property="receiverMobileTextField" destination="rA1-YL-aJy" id="kVj-Q9-GgU"/>
+                        <outlet property="receiverNameTextField" destination="lBb-IE-efF" id="ugM-CD-yTl"/>
+                        <outlet property="receiverTimeTextField" destination="KMx-Cy-jXN" id="dLT-tT-7MK"/>
+                        <outlet property="receiverUserTitleLabel" destination="rYY-Ji-jvG" id="bV9-lV-vTF"/>
+                        <outlet property="sameButton" destination="Owz-RW-DV6" id="xdw-fN-XXF"/>
+                        <outlet property="stepper" destination="fgZ-i7-eec" id="o5u-MR-eLq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M75-hS-fbl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1952,10 +2169,13 @@
     <resources>
         <image name="Launch" width="320" height="568"/>
         <image name="icon_address" width="20" height="30"/>
+        <image name="icon_agree" width="18" height="18"/>
         <image name="icon_arrow" width="8" height="13"/>
+        <image name="icon_clock" width="30" height="30"/>
         <image name="icon_email" width="26" height="20"/>
         <image name="icon_mobile" width="18" height="30"/>
         <image name="icon_name" width="20" height="28"/>
+        <image name="icon_no_agree" width="18" height="18"/>
         <image name="icon_pwd" width="21" height="28"/>
         <image name="image_hoder" width="88" height="88"/>
     </resources>

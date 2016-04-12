@@ -18,13 +18,27 @@ class OrderUserViewController: SPSingleColorViewController {
     
     @IBOutlet var productTitleLabel: SPWhiteTextLabel!
     @IBOutlet var productName: SPWhiteTextLabel!
+    @IBOutlet var productPriceOfOne: SPWhiteTextLabel!
+    @IBOutlet var productAmount: SPWhiteTextLabel!
     @IBOutlet var productPrice: SPWhiteTextLabel!
+    @IBOutlet var stepper: UIStepper!
+    
     
     @IBOutlet var OrderUserTitleLabel: SPWhiteTextLabel!
     @IBOutlet var nameTextField: SPTextField!
     @IBOutlet var emailTextField: SPTextField!
     @IBOutlet var addressTextField: SPTextField!
     @IBOutlet var mobileTextField: SPTextField!
+    
+    @IBOutlet var receiverUserTitleLabel: SPWhiteTextLabel!
+    @IBOutlet var receiverNameTextField: SPTextField!
+    @IBOutlet var receiverEmailTextField: SPTextField!
+    @IBOutlet var receiverAddressTextField: SPTextField!
+    @IBOutlet var receiverMobileTextField: SPTextField!
+    @IBOutlet var receiverTimeTextField: SPTextField!
+    
+    @IBOutlet var sameButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,21 +56,21 @@ class OrderUserViewController: SPSingleColorViewController {
     
     
     func loadData(){
-        if let product_name = product?.name, let product_amount = product?.amount, let product_remain = product?.remain{
-            self.productName.text = "\(NSLocalizedString("StringProductName",comment: "")): \(product_name)"
-            self.productPrice.text = "\(NSLocalizedString("StringAmount",comment: "")): \(product_amount) CNY"
-            
-            if product_amount == 0 || product_remain == 0{
-                self.navigationController?.popViewControllerAnimated(true)
-                
-                let alertView = UIAlertView(title: NSLocalizedString("AlertTitleBuyError",comment: ""),
-                    message:NSLocalizedString("AlertMessageNoRemain",comment: ""),
-                    delegate: nil,
-                    cancelButtonTitle: nil,
-                    otherButtonTitles: NSLocalizedString("ButtonTitleSure",comment: ""))
-                alertView.show()
-            }
-        }
+//        if let product_name = product?.name, let product_amount = product?.amount, let product_remain = product?.remain{
+//            self.productName.text = "\(NSLocalizedString("StringProductName",comment: "")): \(product_name)"
+//            self.productPrice.text = "\(NSLocalizedString("StringAmount",comment: "")): \(product_amount) CNY"
+//            
+//            if product_amount == 0 || product_remain == 0{
+//                self.navigationController?.popViewControllerAnimated(true)
+//                
+//                let alertView = UIAlertView(title: NSLocalizedString("AlertTitleBuyError",comment: ""),
+//                    message:NSLocalizedString("AlertMessageNoRemain",comment: ""),
+//                    delegate: nil,
+//                    cancelButtonTitle: nil,
+//                    otherButtonTitles: NSLocalizedString("ButtonTitleSure",comment: ""))
+//                alertView.show()
+//            }
+//        }
         
         self.nameTextField.text = profile?.name
         self.emailTextField.text = profile?.email
@@ -237,6 +251,15 @@ class OrderUserViewController: SPSingleColorViewController {
     func fontSizeChanged(notification:NSNotification) {
         self.productTitleLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
         self.OrderUserTitleLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
+    }
+    
+    // MARK : actions
+    @IBAction func sameButtonClick(sender: UIButton) {
+        
+    }
+    
+    @IBAction func stepper(sender: UIStepper) {
+        
     }
 
     override func didReceiveMemoryWarning() {

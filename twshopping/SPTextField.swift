@@ -10,7 +10,6 @@ import UIKit
 
 @IBDesignable
 class SPTextField: UITextField {
-
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

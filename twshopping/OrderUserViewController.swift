@@ -171,14 +171,14 @@ class OrderUserViewController: SPSingleColorViewController {
             return
         }
         
-        guard let _username = profile?.username else{
+        guard let _ = profile?.username else{
             return
         }
         self.view.endEditing(true)
         order_id = SPTools.getRandomSnString()
         
-        let payvc = UnionpaysdkService.CreateWebView(self, withOrderId: order_id, andAmount: total_price, andMemo: "\(_username),twshopping_ios", andPayCallBackUrl: "http://52.26.127.167/twshopping/index.php/api/callbackurl")
-        self.presentViewController(payvc, animated: true, completion: nil)
+//        let payvc = UnionpaysdkService.CreateWebView(self, withOrderId: order_id, andAmount: total_price, andMemo: "\(_username),twshopping_ios", andPayCallBackUrl: "http://52.26.127.167/twshopping/index.php/api/callbackurl")
+//        self.presentViewController(payvc, animated: true, completion: nil)
         
 //
         

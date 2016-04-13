@@ -2342,7 +2342,7 @@
                                                                 <action selector="goToStoreInfo:" destination="VzX-aY-P6v" eventType="touchUpInside" id="kIG-xQ-1Gk"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" clipsSubviews="YES" tag="1001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DZO-gF-3Er" customClass="SPButton" customModule="twshopping" customModuleProvider="target">
+                                                        <button hidden="YES" opaque="NO" clipsSubviews="YES" tag="1001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DZO-gF-3Er" customClass="SPButton" customModule="twshopping" customModuleProvider="target">
                                                             <rect key="frame" x="363" y="8" width="110" height="44"/>
                                                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                                                             <constraints>
@@ -2351,9 +2351,6 @@
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <state key="normal" title="購買商品"/>
-                                                            <connections>
-                                                                <action selector="buyThis:" destination="VzX-aY-P6v" eventType="touchUpInside" id="jMk-8N-ez3"/>
-                                                            </connections>
                                                         </button>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X1v-gs-TuH">
                                                             <rect key="frame" x="473" y="0.0" width="127" height="60"/>
@@ -2435,7 +2432,6 @@
                     <navigationItem key="navigationItem" id="778-1L-VZp"/>
                     <connections>
                         <outlet property="bottomView" destination="F4I-xy-weB" id="Nri-yz-lep"/>
-                        <outlet property="buyThisButton" destination="DZO-gF-3Er" id="Gqb-rW-fsy"/>
                         <outlet property="goTosStoreButton" destination="ybL-wI-hGt" id="bBt-GA-1Oe"/>
                         <outlet property="tableView" destination="fmB-a5-TYH" id="ofU-7D-Loi"/>
                     </connections>

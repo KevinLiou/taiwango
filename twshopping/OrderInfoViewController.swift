@@ -14,7 +14,7 @@ import pop
 class OrderInfoViewController: SPSingleImageViewController, UITableViewDelegate {
     
     var product:Product?
-    var order:AVObject?
+    var order:[String:AnyObject]?
     
     @IBOutlet weak var tableView: UITableView!
     //bottom views
@@ -59,13 +59,13 @@ class OrderInfoViewController: SPSingleImageViewController, UITableViewDelegate 
         
         
             if indexPath.row == 0 {
-                let cell = tableView.dequeueReusableCellWithIdentifier("ProductImageCell", forIndexPath: indexPath)
+                let cell = tableView.dequeueReusableCellWithIdentifier("ProductImageCell2", forIndexPath: indexPath)
                 let imageView = cell.contentView.viewWithTag(1000) as! UIImageView
                 
-                if let image_url = product!.image_urls {
-                    imageView.pin_updateWithProgress = true
-                    imageView.pin_setImageFromURL(NSURL(string: image_url))
-                }
+//                if let image_url = product!.image_urls {
+//                    imageView.pin_updateWithProgress = true
+//                    imageView.pin_setImageFromURL(NSURL(string: image_url))
+//                }
                 
                 return cell
             }else if indexPath.row == 1 {
@@ -73,15 +73,15 @@ class OrderInfoViewController: SPSingleImageViewController, UITableViewDelegate 
                 
                 if let _order = order {
                     
-                    let date = _order.createdAt
-                    let formatter = NSDateFormatter()
-                    formatter.dateFormat = "\(NSLocalizedString("StringTradeTime",comment: "")): yyyy-MM-dd a hh:mm:ss"
-                    let date_string = formatter.stringFromDate(date)
+//                    let date = _order.createdAt
+//                    let formatter = NSDateFormatter()
+//                    formatter.dateFormat = "\(NSLocalizedString("StringTradeTime",comment: "")): yyyy-MM-dd a hh:mm:ss"
+//                    let date_string = formatter.stringFromDate(date)
                     
                     
                     cell.snLabel.text = "\(NSLocalizedString("StringOrderSn",comment: "")): \(_order["order_id"] as! String)"
                     cell.costLabel.text = "\(NSLocalizedString("StringOrderAmount",comment: "")): \(_order["amount"] as! Int) CNY"
-                    cell.dateLabel.text = date_string
+//                    cell.dateLabel.text = date_string
                 }
                 return cell
             }else if indexPath.row == 2{

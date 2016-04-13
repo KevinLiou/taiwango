@@ -14,7 +14,7 @@ class ProfileListViewController: SPSingleImageViewController {
 
     @IBOutlet var tableView: UITableView!
     var profile:Profile?
-    var orders:[AVObject] = []
+    var orders:[[String:AnyObject]]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,44 +23,70 @@ class ProfileListViewController: SPSingleImageViewController {
         
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 70.0
-        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         
         loadData()
     }
     
     func loadData(){
-        SPTools.showLoadingOnViewController(self)
         
-        guard let user_object_id = AVUser.currentUser().objectId else{
+        guard let _ = AVUser.currentUser().objectId, let username = profile?.username else{
+            let alertView = UIAlertView(title: NSLocalizedString("AlertTitleError",comment: ""),
+                                        message: NSLocalizedString("UnknownErrorMessage",comment: ""),
+                                        delegate: nil,
+                                        cancelButtonTitle: nil,
+                                        otherButtonTitles: NSLocalizedString("ButtonTitleSure",comment: ""))
+            alertView.show()
+            self.navigationController?.popViewControllerAnimated(true)
             return
         }
         
+        SPTools.showLoadingOnViewController(self)
         
+        let timestamp = "\(Int(NSDate().timeIntervalSince1970))"
+        let md5string = SPTools.md5(string: "\(timestamp)twshopping")
+        let parameters = ["username": username,
+                          "app_name": "twshopping",
+                          "key": md5string,
+                          "time": timestamp]
         
-        let query = AVQuery(className: "Orders")
-        query.whereKey("user_object_id", equalTo: user_object_id)
-        query.orderByDescending("createdAt")
-        query.findObjectsInBackgroundWithBlock { (result: [AnyObject]!, error: NSError!) -> Void in
+        SPService.sharedInstance.requestOrdersWith(parameters) { (response) in
             
-            if (error != nil){
-                print(error)
-                return
-            }else{
-                self.orders = result as! [AVObject]
-                self.tableView.reloadData()
+            if let JSON = response.result.value{
+                
+                if let data = JSON["data"]{
+                    
+                    self.orders = data  as? [[String:AnyObject]]
+//                    print(JSON)
+                    self.tableView.reloadData()
+                }
+                
+                
             }
+            
             SPTools.hideLoadingOnViewController(self)
         }
+        
+        
+        
+        
     }
     
     
     // MARK: - Table view data source
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if orders.isEmpty{
+        guard let _orders = orders else{
+            return 0
+        }
+        
+        if _orders.isEmpty{
             return 2
         }else{
-            return orders.count + 1
+            return _orders.count + 1
         }
         
     }
@@ -87,23 +113,36 @@ class ProfileListViewController: SPSingleImageViewController {
             return cell
         }else{
             
-            if orders.isEmpty {
+            guard let _orders = orders else{
+                let cell = tableView.dequeueReusableCellWithIdentifier("NoOrderCell", forIndexPath: indexPath)
+                return cell
+            }
+            
+            if _orders.isEmpty {
                 let cell = tableView.dequeueReusableCellWithIdentifier("NoOrderCell", forIndexPath: indexPath)
                 return cell
             }else{
                 let cell = tableView.dequeueReusableCellWithIdentifier("OrderCell", forIndexPath: indexPath) as! OrderCell
                 
-                let order = orders[indexPath.row-1]
+                let order = _orders[indexPath.row-1]
                 
-                let date = order.createdAt
-                let formatter = NSDateFormatter()
-                formatter.dateFormat = "yyyy-MM-dd a hh:mm:ss \(NSLocalizedString("StringYouBuy",comment: "")),"
-                let date_string = formatter.stringFromDate(date)
+                cell.dateLabel.text = "\(NSLocalizedString("StringYouBuy",comment: ""))," //不顯示日期
+                if let item_name = order["item_name"]{
+                    cell.nameLabel.text = "\(item_name)"
+                }
                 
-                cell.dateLabel.text = date_string
-                cell.nameLabel.text = order["product"] as? String
-                cell.costLabel.text = "\(NSLocalizedString("StringOrderAmount",comment: "")): \(order["amount"] as! Int) CNY"
-                cell.snLabel.text = "\(NSLocalizedString("StringOrderSn",comment: "")): \(order["order_id"] as! String)"
+                if let amount = order["amount"]{
+                    cell.costLabel.text = "\(NSLocalizedString("StringOrderAmount",comment: "")): \(amount)"
+                }
+                
+                if let external_order_no = order["external_order_no"]{
+                    cell.snLabel.text = "\(NSLocalizedString("StringOrderSn",comment: "")): \(external_order_no)"
+                }
+                
+//                let date = order.createdAt
+//                let formatter = NSDateFormatter()
+//                formatter.dateFormat = "yyyy-MM-dd a hh:mm:ss \(NSLocalizedString("StringYouBuy",comment: "")),"
+//                let date_string = formatter.stringFromDate(date)
                 
                 return cell
             }
@@ -144,25 +183,39 @@ class ProfileListViewController: SPSingleImageViewController {
             
             self.presentViewController(alertController, animated: true, completion: nil)
         }else{
-            let order = orders[indexPath.row-1]
-            let product_id = order["product_id"] as? Int
             
-            
-            
-            
-            let predicate = NSPredicate(format: "language.lan = '\(SPTools.getPreferredLanguages())' AND product_id = \(product_id!)")
-            let result = SPDataManager.sharedInstance.fetchProductWithPredicate(predicate: predicate)
-            let product = result?.first
-            
-            guard let _product = product else{
+            guard let _orders = orders else{
                 return
             }
             
-            let productInfoViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ProductInfoViewController") as! ProductInfoViewController
-            productInfoViewController.product = _product
-            productInfoViewController.order = order
-            productInfoViewController.title = NSLocalizedString("VCTitleOrderHistory",comment: "")
-            self.navigationController?.pushViewController(productInfoViewController, animated: true)
+            let order = _orders[indexPath.row-1]
+            
+            let orderInfoViewController = self.storyboard?.instantiateViewControllerWithIdentifier("OrderInfoViewController") as! OrderInfoViewController
+            orderInfoViewController.order = order
+            orderInfoViewController.title = NSLocalizedString("VCTitleOrderHistory",comment: "")
+            self.navigationController?.pushViewController(orderInfoViewController, animated: true)
+            
+            
+//            let order = _orders[indexPath.row-1]
+//            let product_id = order["product_id"] as? Int
+            
+//            guard let _product_id = product_id else{
+//                return
+//            }
+//            
+//            let predicate = NSPredicate(format: "language.lan = '\(SPTools.getPreferredLanguages())' AND product_id = \(_product_id)")
+//            let result = SPDataManager.sharedInstance.fetchProductWithPredicate(predicate: predicate)
+//            let product = result?.first
+            
+//            guard let _ = product else{
+//                return
+//            }
+            
+//            let productInfoViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ProductInfoViewController") as! ProductInfoViewController
+//            productInfoViewController.product = _product
+//            productInfoViewController.order = order
+//            productInfoViewController.title = NSLocalizedString("VCTitleOrderHistory",comment: "")
+//            self.navigationController?.pushViewController(productInfoViewController, animated: true)
         }
     }
     

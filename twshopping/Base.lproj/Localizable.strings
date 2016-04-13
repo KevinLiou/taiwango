@@ -81,3 +81,4 @@
 "PriceOfAll"="總金額";
 "AlertMessageReceiverTimeNameError" = "請填寫配送時間。最多輸入100個字元。";
 "BuyOkInfoMessage" = "您可以到「個人/訂單資訊」中查看您的訂單狀態。";
+"UnknownErrorMessage"="發生未知錯誤，請稍候嘗試。";

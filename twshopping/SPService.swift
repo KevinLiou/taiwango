@@ -70,7 +70,7 @@ class SPService {
     
     func requestOrdersWith(parameters: [String:AnyObject], completionHandler: Response<AnyObject, NSError> -> Void) {
         
-        Alamofire.request(.GET, "\(SPServiceHost.Host.rawValue)\(SPServicePath.ORDERS.rawValue)", parameters: parameters).responseJSON(completionHandler: completionHandler);
+        Alamofire.request(.POST, "\(SPServiceHost.Host.rawValue)\(SPServicePath.ORDERS.rawValue)", parameters: parameters).responseJSON(completionHandler: completionHandler);
         
     }
     

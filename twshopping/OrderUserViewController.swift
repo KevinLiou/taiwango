@@ -231,61 +231,9 @@ class OrderUserViewController: SPSingleColorViewController {
     func IPaymentIsSuccess(IsSuccess:Bool){
         if IsSuccess {
             print("IsSuccess")
+            
+            SPTools.showLoadingOnViewController(self)
             self.reqTradeInfo()
-            
-            
-            
-            
-//            SPTools.showLoadingOnViewController(self)
-//            saveOrdersInfoWithObject(cacheOrder!)
-            
-            /*
-            let timestamp = UInt64(NSDate().timeIntervalSince1970)
-            let md5string = SPTools.md5(string: "\(timestamp)kikirace")
-            
-            let parameters:[String:AnyObject]
-            = [
-                "Username": "G121902266",
-                "Password": "happybirthday",
-                "ExternalOrderNo": "2016032800000001",
-                "ProductSN": 3,
-                "StyleA": "",
-                
-                "StyleB": "",
-                "Quantity": 3,
-                "Price": 50,
-                "Amount": 150,
-                "OrderName": "Kevin",
-                
-                "OrderAddress": "260 宜蘭市xxx 123",
-                "OrderEmail": "gr20060555@gmail.com",
-                "OrderPhone": "0988888888",
-                "ConsigneeName": "Kevin2",
-                "ConsigneeAddres": "260 宜蘭市xxx 12322222",
-                
-                "ConsigneeEmail": "gr200605551111@gmail.com",
-                "ConsigneePhone": "0987777777",
-                "DeliverTime": "請在白天送達",
-                "Result": 1,
-                "PaymentResult": 1,
-                
-//                "Param": "currcode,resptime,rmbrate",
-                "Time": "\(timestamp)",
-                "Key": md5string
-            ]
-            
-            Alamofire.request(.GET, "http://kikistore.csmuse.com/kikistore/api/kikirace_createOrder.php", parameters: parameters)
-                .responseJSON { response in
-                    print(response.request)  // original URL request
-                    print(response.response) // URL response
-                    print(response.data)     // server data
-                    print(response.result)   // result of response serialization
-                    
-                    if let JSON = response.result.value {
-                        print("JSON: \(JSON)")
-                    }
-            }
-            */
             
         }else{
             print("NoSuccess")
@@ -297,10 +245,54 @@ class OrderUserViewController: SPSingleColorViewController {
             return
         }
         
-        SPTools.showLoadingOnViewController(self)
         let timestamp = "\(Int(NSDate().timeIntervalSince1970))"
         let md5string = SPTools.md5(string: "\(timestamp)twshopping")
-        let parameters = ["order_id":order_id, "username": _username, "time": timestamp, "key": md5string, "app_name": "twshopping_ios"]
+        
+        
+        var orderEmail = ""
+        if let OrderEmail = self.emailTextField.text{
+            orderEmail = OrderEmail
+        }
+        
+        var receiverEmail = ""
+        if let ConsigneeEmail = self.receiverEmailTextField.text {
+            receiverEmail = ConsigneeEmail
+        }
+        
+        let parameters:[String:AnyObject]
+            = [
+                "order_id":order_id,
+                "username": _username,
+                "time": timestamp,
+                "key": md5string,
+                "app_name": "twshopping_ios",
+                
+                //以下為備份參數
+                "ProductSN": self.product["ProductSN"]!,
+                "StyleA": "",
+                "StyleB": "",
+                "Quantity": self.quantity,
+                "Price": self.product["SellPrice"]!,
+                
+                "Amount": self.total_price,
+                "OrderName": self.nameTextField.text!,
+                "OrderAddress": self.addressTextField.text!,
+                "OrderEmail": orderEmail,
+                "OrderPhone": self.mobileTextField.text!,
+                
+                "ConsigneeName": self.receiverNameTextField.text!,
+                "ConsigneeAddres": self.receiverAddressTextField.text!,
+                "ConsigneeEmail": receiverEmail,
+                "ConsigneePhone": self.receiverMobileTextField.text!,
+                "DeliverTime": self.receiverTimeTextField.text!]
+        
+        
+        
+//        let parameters = ["order_id":order_id,
+//                          "username": _username,
+//                          "time": timestamp,
+//                          "key": md5string,
+//                          "app_name": "twshopping_ios"]
         SPService.sharedInstance.requestTradeInfoWith(parameters, completionHandler: { (response) in
             if let JSON = response.result.value {
                 
@@ -314,11 +306,9 @@ class OrderUserViewController: SPSingleColorViewController {
                         }
                         
                     }else{
-                        print(JSON)
+//                        print(JSON)
                         //成功後繼續
-                        
                         if let _data = data.first {
-                            
                             self.reqCreateOrder(_data)
                         }
                         
@@ -405,7 +395,7 @@ class OrderUserViewController: SPSingleColorViewController {
                                 cancelButtonTitle: nil,
                                 otherButtonTitles: NSLocalizedString("ButtonTitleSure",comment: ""))
                             alertView.show()
-                            
+                            self.navigationController?.popViewControllerAnimated(true)
                             return
                         }
                     }
@@ -437,38 +427,38 @@ class OrderUserViewController: SPSingleColorViewController {
     }
     
     
-    func saveOrdersInfoWithObject(order:AVObject){
-        
-        order.saveInBackgroundWithBlock { (succeeded: Bool, error: NSError!) -> Void in
-            
-            if succeeded {
-                
-                SPTools.hideLoadingOnViewController(self)
-                
-                let alertView = UIAlertView(title: NSLocalizedString("VCTitleBuySucceeded",comment: ""),
-                    message: "",
-                    delegate: nil,
-                    cancelButtonTitle: nil,
-                    otherButtonTitles: NSLocalizedString("ButtonTitleSure",comment: ""))
-                alertView.show()
-                
-//                let productInfoViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ProductInfoViewController") as! ProductInfoViewController
-//                productInfoViewController.product = self.product
-//                productInfoViewController.order = order
-//                productInfoViewController.title = NSLocalizedString("VCTitleBuySucceeded",comment: "")
-//                self.navigationController?.pushViewController(productInfoViewController, animated: true)
-            }else{
-                
-                //延遲三秒後再重新傳送
-                let time: NSTimeInterval = 3.0
-                let delay = dispatch_time(DISPATCH_TIME_NOW, Int64(time * Double(NSEC_PER_SEC)))
-                dispatch_after(delay, dispatch_get_main_queue()) { () -> Void in
-                    self.saveOrdersInfoWithObject(order)
-                }
-                
-            }
-        }
-    }
+//    func saveOrdersInfoWithObject(order:AVObject){
+//        
+//        order.saveInBackgroundWithBlock { (succeeded: Bool, error: NSError!) -> Void in
+//            
+//            if succeeded {
+//                
+//                SPTools.hideLoadingOnViewController(self)
+//                
+//                let alertView = UIAlertView(title: NSLocalizedString("VCTitleBuySucceeded",comment: ""),
+//                    message: "",
+//                    delegate: nil,
+//                    cancelButtonTitle: nil,
+//                    otherButtonTitles: NSLocalizedString("ButtonTitleSure",comment: ""))
+//                alertView.show()
+//                
+////                let productInfoViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ProductInfoViewController") as! ProductInfoViewController
+////                productInfoViewController.product = self.product
+////                productInfoViewController.order = order
+////                productInfoViewController.title = NSLocalizedString("VCTitleBuySucceeded",comment: "")
+////                self.navigationController?.pushViewController(productInfoViewController, animated: true)
+//            }else{
+//                
+//                //延遲三秒後再重新傳送
+//                let time: NSTimeInterval = 3.0
+//                let delay = dispatch_time(DISPATCH_TIME_NOW, Int64(time * Double(NSEC_PER_SEC)))
+//                dispatch_after(delay, dispatch_get_main_queue()) { () -> Void in
+//                    self.saveOrdersInfoWithObject(order)
+//                }
+//                
+//            }
+//        }
+//    }
     
     
     

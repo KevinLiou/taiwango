@@ -23,7 +23,7 @@ class OrderSnCell: UITableViewCell {
         NSNotificationCenter.defaultCenter().removeObserver(self, name: UIContentSizeCategoryDidChangeNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(OrderSnCell.fontSizeChanged(_:)), name: UIContentSizeCategoryDidChangeNotification, object: nil)
         
-        
+        /*已經沒有使用*/
     }
     
     deinit {

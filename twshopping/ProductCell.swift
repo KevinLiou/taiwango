@@ -18,6 +18,7 @@ class ProductCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         self.titleLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
+        self.descLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
         
         self.productImageView.clipsToBounds = true
          NSNotificationCenter.defaultCenter().removeObserver(self, name: UIContentSizeCategoryDidChangeNotification, object: nil)
@@ -31,6 +32,7 @@ class ProductCell: UITableViewCell {
     // MARK : observer
     func fontSizeChanged(notification:NSNotification) {
         self.titleLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
+        self.descLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
     }
 
 

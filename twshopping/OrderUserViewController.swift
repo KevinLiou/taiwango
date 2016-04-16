@@ -171,14 +171,28 @@ class OrderUserViewController: SPSingleColorViewController {
             return
         }
         
-        guard let _ = profile?.username else{
+        guard let _username = profile?.username else{
             return
         }
         self.view.endEditing(true)
-        order_id = SPTools.getRandomSnString()
         
+//        order_id = "UDYSX-146051723576827"
+//        self.mobileTextField.text = "15856774080"
+//        self.receiverMobileTextField.text = "15856774080"
+//        self.reqTradeInfo()
+        
+        
+        
+        
+        
+//        order_id = SPTools.getRandomSnString()
 //        let payvc = UnionpaysdkService.CreateWebView(self, withOrderId: order_id, andAmount: total_price, andMemo: "\(_username),twshopping_ios", andPayCallBackUrl: "http://52.26.127.167/twshopping/index.php/api/callbackurl")
 //        self.presentViewController(payvc, animated: true, completion: nil)
+        
+        
+        
+        
+        
         
 //
         
@@ -293,8 +307,11 @@ class OrderUserViewController: SPSingleColorViewController {
 //                          "time": timestamp,
 //                          "key": md5string,
 //                          "app_name": "twshopping_ios"]
+        
+        
         SPService.sharedInstance.requestTradeInfoWith(parameters, completionHandler: { (response) in
             if let JSON = response.result.value {
+                
                 
                 if let result = JSON["result"], let data = JSON["data"] as? [[String:AnyObject]]{
                     if 1 != result as! Int {
@@ -378,10 +395,11 @@ class OrderUserViewController: SPSingleColorViewController {
                 "Key": md5string
         ]
         
-        
+        print(parameters)
         SPService.sharedInstance.requestCreateOrderWith(parameters, completionHandler: { (response) in
             if let JSON = response.result.value {
                 
+                print(JSON)
                 if let ErrorCode = JSON["ErrorCode"]{
                     
                     if let error_code = ErrorCode as? Int {

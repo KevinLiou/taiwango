@@ -63,6 +63,8 @@
 		203BEF1C1C98489C0090F463 /* SPWhiteCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203BEF1B1C98489C0090F463 /* SPWhiteCornerView.swift */; };
 		203BEF1E1C9848DF0090F463 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203BEF1D1C9848DF0090F463 /* RegisterViewController.swift */; };
 		203BEF221C9864CF0090F463 /* ForgotPwdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203BEF211C9864CF0090F463 /* ForgotPwdViewController.swift */; };
+		203C311D1CC2872D00C1E66E /* ReceiverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203C311C1CC2872D00C1E66E /* ReceiverCell.swift */; };
+		203C311F1CC296FD00C1E66E /* OrderInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203C311E1CC296FD00C1E66E /* OrderInfoCell.swift */; };
 		2050BB921CBA55DB00968B30 /* SPServiceURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2050BB911CBA55DB00968B30 /* SPServiceURL.swift */; };
 		2086DADD1CA2F126009FACC3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2086DADF1CA2F126009FACC3 /* Localizable.strings */; };
 		20A566571C8F28E700B09B7E /* SPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A566561C8F28E700B09B7E /* SPService.swift */; };
@@ -180,6 +182,8 @@
 		203BEF1B1C98489C0090F463 /* SPWhiteCornerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPWhiteCornerView.swift; sourceTree = "<group>"; };
 		203BEF1D1C9848DF0090F463 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		203BEF211C9864CF0090F463 /* ForgotPwdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPwdViewController.swift; sourceTree = "<group>"; };
+		203C311C1CC2872D00C1E66E /* ReceiverCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiverCell.swift; sourceTree = "<group>"; };
+		203C311E1CC296FD00C1E66E /* OrderInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderInfoCell.swift; sourceTree = "<group>"; };
 		2050BB911CBA55DB00968B30 /* SPServiceURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPServiceURL.swift; sourceTree = "<group>"; };
 		2086DADE1CA2F126009FACC3 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		2086DAE01CA2F128009FACC3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -275,6 +279,8 @@
 				0A2F555B1C9FC0C80028FCB2 /* OrderUserCell.swift */,
 				0A2F555D1C9FD0550028FCB2 /* OrderUserViewController.swift */,
 				0AF3E3151CBC97DE0081AD30 /* OrderInfoViewController.swift */,
+				203C311C1CC2872D00C1E66E /* ReceiverCell.swift */,
+				203C311E1CC296FD00C1E66E /* OrderInfoCell.swift */,
 			);
 			name = Product;
 			sourceTree = "<group>";
@@ -749,6 +755,7 @@
 				0AF3E31A1CBCA0A50081AD30 /* Product.swift in Sources */,
 				0A17ACDB1C9A608B00B7C268 /* SPSingleColorViewController.swift in Sources */,
 				203BEF1A1C9840440090F463 /* SPButton.swift in Sources */,
+				203C311D1CC2872D00C1E66E /* ReceiverCell.swift in Sources */,
 				2028955F1C9D6943006CCFAE /* ChangePwdViewController.swift in Sources */,
 				2028955D1C9D6931006CCFAE /* ProfileEditViewController.swift in Sources */,
 				0A2F555C1C9FC0C80028FCB2 /* OrderUserCell.swift in Sources */,
@@ -761,6 +768,7 @@
 				0A17ACEF1C9A93F800B7C268 /* SPImageView.swift in Sources */,
 				0A7DEB241C99074D00D82329 /* LeftMenuCell.swift in Sources */,
 				0A2F55611C9FEE500028FCB2 /* SPUser.swift in Sources */,
+				203C311F1CC296FD00C1E66E /* OrderInfoCell.swift in Sources */,
 				0AE44B901C9BBB75009FBE89 /* Language.swift in Sources */,
 				0A8F686D1C97E97D00F1EFF3 /* SPTools.swift in Sources */,
 				20D5DA6C1CBD49C100E2B470 /* Profile.swift in Sources */,

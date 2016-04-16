@@ -24,7 +24,7 @@ class OrderInfoViewController: SPSingleImageViewController, UITableViewDelegate 
     override func viewDidLoad() {
         super.viewDidLoad()
         //訂單商品詳細資訊頁
-        
+        /*暫時不使用暫時不使用暫時不使用暫時不使用暫時不使用暫時不使用暫時不使用暫時不使用暫時不使用暫時不使用暫時不使用暫時不使用*/
         tableView.estimatedRowHeight = 90.0
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.contentInset.bottom = 8.0

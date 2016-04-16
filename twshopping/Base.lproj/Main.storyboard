@@ -1968,8 +1968,348 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OrderInfoCell" rowHeight="198" id="Z8A-mR-Ph9" customClass="OrderInfoCell" customModule="twshopping" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="600" height="198"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z8A-mR-Ph9" id="NCY-Ej-rxp">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="198"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f7j-zV-eW0" customClass="SPBlackView" customModule="twshopping" customModuleProvider="target">
+                                                            <rect key="frame" x="8" y="8" width="584" height="190"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" text="樣式: -- / --" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zez-gh-wRl" userLabel="Style" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                                                    <rect key="frame" x="8" y="60" width="568" height="22"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="21" id="I5y-o3-giy"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <variation key="default">
+                                                                        <mask key="constraints">
+                                                                            <exclude reference="I5y-o3-giy"/>
+                                                                        </mask>
+                                                                    </variation>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="訂單狀態: Loading..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42Y-cV-55H" userLabel="DealWithResult" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                                                    <rect key="frame" x="8" y="40" width="568" height="20"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="21" id="O1e-IJ-bRw"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <variation key="default">
+                                                                        <mask key="constraints">
+                                                                            <exclude reference="O1e-IJ-bRw"/>
+                                                                        </mask>
+                                                                    </variation>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="訂單編號: Loading..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zmo-yP-NE3" userLabel="ExternalOrderNo" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                                                    <rect key="frame" x="8" y="12" width="568" height="20"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="20" id="1Dh-I9-dSK"/>
+                                                                        <constraint firstAttribute="height" constant="21" id="BSI-aM-sVm"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <variation key="default">
+                                                                        <mask key="constraints">
+                                                                            <exclude reference="BSI-aM-sVm"/>
+                                                                        </mask>
+                                                                    </variation>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="商品單價: Loading..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DwK-EF-Uzz" userLabel="Price" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                                                    <rect key="frame" x="8" y="82" width="568" height="20"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="21" id="4HE-Zm-oww"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <variation key="default">
+                                                                        <mask key="constraints">
+                                                                            <exclude reference="4HE-Zm-oww"/>
+                                                                        </mask>
+                                                                    </variation>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="訂購數量: Loading...." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.94999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="Job-7h-flc" userLabel="Quantity" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                                                    <rect key="frame" x="8" y="102" width="568" height="20"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="39" id="8Kc-cO-PE7"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <variation key="default">
+                                                                        <mask key="constraints">
+                                                                            <exclude reference="8Kc-cO-PE7"/>
+                                                                        </mask>
+                                                                    </variation>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="運費: Loading...." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.94999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="AsU-92-iIv" userLabel="SendDate" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                                                    <rect key="frame" x="8" y="122" width="568" height="20"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="39" id="rL6-of-zua"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <variation key="default">
+                                                                        <mask key="constraints">
+                                                                            <exclude reference="rL6-of-zua"/>
+                                                                        </mask>
+                                                                    </variation>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="總金額: Loading...." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.94999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="QBe-Qq-1mi" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                                                    <rect key="frame" x="8" y="142" width="568" height="20"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="39" id="OLA-hz-sPs"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <variation key="default">
+                                                                        <mask key="constraints">
+                                                                            <exclude reference="OLA-hz-sPs"/>
+                                                                        </mask>
+                                                                    </variation>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="送貨時間: Loading...." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.94999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="gLd-aD-fgG" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                                                    <rect key="frame" x="8" y="162" width="568" height="20"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="39" id="8A6-sx-Ood"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <variation key="default">
+                                                                        <mask key="constraints">
+                                                                            <exclude reference="8A6-sx-Ood"/>
+                                                                        </mask>
+                                                                    </variation>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="gLd-aD-fgG" secondAttribute="trailing" constant="8" id="0Y1-JF-uWQ"/>
+                                                                <constraint firstItem="AsU-92-iIv" firstAttribute="leading" secondItem="f7j-zV-eW0" secondAttribute="leading" constant="8" id="74d-4c-vg0"/>
+                                                                <constraint firstItem="Job-7h-flc" firstAttribute="top" secondItem="zez-gh-wRl" secondAttribute="bottom" constant="8" id="8mF-Y3-zqv"/>
+                                                                <constraint firstItem="DwK-EF-Uzz" firstAttribute="top" secondItem="zez-gh-wRl" secondAttribute="bottom" id="BYo-9N-xYY"/>
+                                                                <constraint firstAttribute="trailing" secondItem="DwK-EF-Uzz" secondAttribute="trailing" constant="8" id="FL2-Rx-1qm"/>
+                                                                <constraint firstItem="gLd-aD-fgG" firstAttribute="top" secondItem="QBe-Qq-1mi" secondAttribute="bottom" id="Gh5-j5-Dsh"/>
+                                                                <constraint firstItem="zez-gh-wRl" firstAttribute="top" secondItem="f7j-zV-eW0" secondAttribute="top" constant="8" id="J3O-0y-Sob"/>
+                                                                <constraint firstItem="DwK-EF-Uzz" firstAttribute="leading" secondItem="f7j-zV-eW0" secondAttribute="leading" constant="8" id="P8f-Hw-7R0"/>
+                                                                <constraint firstAttribute="trailing" secondItem="zez-gh-wRl" secondAttribute="trailing" constant="8" id="QnC-Ua-SOy"/>
+                                                                <constraint firstAttribute="trailing" secondItem="QBe-Qq-1mi" secondAttribute="trailing" constant="8" id="Srl-cz-KVS"/>
+                                                                <constraint firstItem="QBe-Qq-1mi" firstAttribute="top" secondItem="AsU-92-iIv" secondAttribute="bottom" id="Vkz-dJ-Ely"/>
+                                                                <constraint firstAttribute="bottom" secondItem="gLd-aD-fgG" secondAttribute="bottom" constant="8" id="XPv-0H-RZg"/>
+                                                                <constraint firstItem="42Y-cV-55H" firstAttribute="leading" secondItem="f7j-zV-eW0" secondAttribute="leading" constant="8" id="ajz-6M-b6A"/>
+                                                                <constraint firstItem="zez-gh-wRl" firstAttribute="leading" secondItem="f7j-zV-eW0" secondAttribute="leading" constant="8" id="al2-Pc-wSS"/>
+                                                                <constraint firstItem="42Y-cV-55H" firstAttribute="top" secondItem="Zmo-yP-NE3" secondAttribute="bottom" constant="8" id="aya-an-pma"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Job-7h-flc" secondAttribute="trailing" constant="8" id="bt7-C3-WHw"/>
+                                                                <constraint firstItem="AsU-92-iIv" firstAttribute="top" secondItem="Job-7h-flc" secondAttribute="bottom" id="fla-dy-ny7"/>
+                                                                <constraint firstAttribute="trailing" secondItem="AsU-92-iIv" secondAttribute="trailing" constant="8" id="hZx-Xy-dki"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Zmo-yP-NE3" secondAttribute="trailing" constant="8" id="hk6-cP-s9F"/>
+                                                                <constraint firstItem="Zmo-yP-NE3" firstAttribute="top" secondItem="f7j-zV-eW0" secondAttribute="top" constant="12" id="ihG-wg-pHA"/>
+                                                                <constraint firstAttribute="bottom" secondItem="Job-7h-flc" secondAttribute="bottom" constant="12" id="lht-NM-Q5i"/>
+                                                                <constraint firstAttribute="bottom" secondItem="AsU-92-iIv" secondAttribute="bottom" constant="13" id="nyM-bp-OCZ"/>
+                                                                <constraint firstItem="gLd-aD-fgG" firstAttribute="leading" secondItem="f7j-zV-eW0" secondAttribute="leading" constant="8" id="pKL-nh-avE"/>
+                                                                <constraint firstItem="QBe-Qq-1mi" firstAttribute="leading" secondItem="f7j-zV-eW0" secondAttribute="leading" constant="8" id="rlN-oN-K0C"/>
+                                                                <constraint firstItem="Job-7h-flc" firstAttribute="top" secondItem="DwK-EF-Uzz" secondAttribute="bottom" id="tg2-yz-CAR"/>
+                                                                <constraint firstAttribute="trailing" secondItem="42Y-cV-55H" secondAttribute="trailing" constant="8" id="ucf-R7-b12"/>
+                                                                <constraint firstItem="zez-gh-wRl" firstAttribute="top" secondItem="42Y-cV-55H" secondAttribute="bottom" id="wjh-rR-2JD"/>
+                                                                <constraint firstItem="Job-7h-flc" firstAttribute="leading" secondItem="f7j-zV-eW0" secondAttribute="leading" constant="8" id="xUY-cY-GKT"/>
+                                                                <constraint firstItem="Zmo-yP-NE3" firstAttribute="leading" secondItem="f7j-zV-eW0" secondAttribute="leading" constant="8" id="yhp-c8-nSc"/>
+                                                            </constraints>
+                                                            <variation key="default">
+                                                                <mask key="constraints">
+                                                                    <exclude reference="J3O-0y-Sob"/>
+                                                                    <exclude reference="8mF-Y3-zqv"/>
+                                                                    <exclude reference="lht-NM-Q5i"/>
+                                                                    <exclude reference="nyM-bp-OCZ"/>
+                                                                </mask>
+                                                            </variation>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="f7j-zV-eW0" secondAttribute="bottom" priority="750" id="7aa-22-Djt"/>
+                                                        <constraint firstItem="f7j-zV-eW0" firstAttribute="trailing" secondItem="NCY-Ej-rxp" secondAttribute="trailingMargin" id="AkD-mh-2uH"/>
+                                                        <constraint firstItem="f7j-zV-eW0" firstAttribute="top" secondItem="NCY-Ej-rxp" secondAttribute="topMargin" id="SqE-3L-Kw4"/>
+                                                        <constraint firstItem="f7j-zV-eW0" firstAttribute="leading" secondItem="NCY-Ej-rxp" secondAttribute="leadingMargin" id="yGS-87-s6A"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <connections>
+                                                    <outlet property="addressLabel" destination="zez-gh-wRl" id="stK-XJ-iKN"/>
+                                                    <outlet property="amount" destination="QBe-Qq-1mi" id="OVi-4f-YgV"/>
+                                                    <outlet property="deal_with_result" destination="42Y-cV-55H" id="ssD-O7-PG6"/>
+                                                    <outlet property="emailLabel" destination="Job-7h-flc" id="hUa-E9-fKg"/>
+                                                    <outlet property="external_order_no" destination="Zmo-yP-NE3" id="BRs-hr-Eaj"/>
+                                                    <outlet property="freight" destination="AsU-92-iIv" id="v9M-fI-5bq"/>
+                                                    <outlet property="mobileLabel" destination="DwK-EF-Uzz" id="wwc-kA-mks"/>
+                                                    <outlet property="nameLabel" destination="42Y-cV-55H" id="6hH-oM-oMK"/>
+                                                    <outlet property="price" destination="DwK-EF-Uzz" id="46R-uP-4mm"/>
+                                                    <outlet property="quantity" destination="Job-7h-flc" id="JZi-bA-pfN"/>
+                                                    <outlet property="receiverTimeLabel" destination="AsU-92-iIv" id="GSc-3K-676"/>
+                                                    <outlet property="send_date" destination="gLd-aD-fgG" id="1RO-vl-3lH"/>
+                                                    <outlet property="style" destination="zez-gh-wRl" id="fqa-zy-C41"/>
+                                                    <outlet property="titleLabel" destination="Zmo-yP-NE3" id="Aeg-WG-Ea5"/>
+                                                </connections>
+                                            </tableViewCell>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ReceiverCell" rowHeight="163" id="U5r-sO-ONP" customClass="ReceiverCell" customModule="twshopping" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="226" width="600" height="163"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U5r-sO-ONP" id="Imw-Wa-9Gn">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="163"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KI1-TO-zR9" customClass="SPBlackView" customModule="twshopping" customModuleProvider="target">
+                                                            <rect key="frame" x="8" y="8" width="584" height="155"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" text="地址: Loading..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tj5-KR-r49" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                                                    <rect key="frame" x="8" y="60" width="568" height="22"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="21" id="EUp-G6-j0c"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <variation key="default">
+                                                                        <mask key="constraints">
+                                                                            <exclude reference="EUp-G6-j0c"/>
+                                                                        </mask>
+                                                                    </variation>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="姓名: Loading..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHa-mm-kQG" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                                                    <rect key="frame" x="8" y="40" width="568" height="20"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="21" id="q30-zP-BHp"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <variation key="default">
+                                                                        <mask key="constraints">
+                                                                            <exclude reference="q30-zP-BHp"/>
+                                                                        </mask>
+                                                                    </variation>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="取貨人資訊" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I67-XT-s0e" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                                                    <rect key="frame" x="8" y="12" width="568" height="20"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="21" id="T0H-aF-pqr"/>
+                                                                        <constraint firstAttribute="height" constant="20" id="Z9W-ET-KAp"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <variation key="default">
+                                                                        <mask key="constraints">
+                                                                            <exclude reference="T0H-aF-pqr"/>
+                                                                        </mask>
+                                                                    </variation>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="電話: Loading..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hff-x6-CCj" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                                                    <rect key="frame" x="8" y="82" width="568" height="20"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="21" id="83c-P8-lLe"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <variation key="default">
+                                                                        <mask key="constraints">
+                                                                            <exclude reference="83c-P8-lLe"/>
+                                                                        </mask>
+                                                                    </variation>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="聯絡信箱: Loading...." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.94999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="2ks-YU-dmK" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                                                    <rect key="frame" x="8" y="102" width="568" height="20"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="39" id="uuI-B4-aqM"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <variation key="default">
+                                                                        <mask key="constraints">
+                                                                            <exclude reference="uuI-B4-aqM"/>
+                                                                        </mask>
+                                                                    </variation>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="配送時間: Loading...." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.94999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="aEd-CL-zDq" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                                                    <rect key="frame" x="8" y="122" width="568" height="20"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="39" id="smY-H4-ano"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <variation key="default">
+                                                                        <mask key="constraints">
+                                                                            <exclude reference="smY-H4-ano"/>
+                                                                        </mask>
+                                                                    </variation>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstItem="tj5-KR-r49" firstAttribute="top" secondItem="KI1-TO-zR9" secondAttribute="top" constant="8" id="0Qt-Wo-Ymw"/>
+                                                                <constraint firstItem="hff-x6-CCj" firstAttribute="top" secondItem="tj5-KR-r49" secondAttribute="bottom" id="88d-I8-Qaj"/>
+                                                                <constraint firstItem="tj5-KR-r49" firstAttribute="top" secondItem="PHa-mm-kQG" secondAttribute="bottom" id="8at-Jw-JRe"/>
+                                                                <constraint firstItem="2ks-YU-dmK" firstAttribute="leading" secondItem="KI1-TO-zR9" secondAttribute="leading" constant="8" id="AQQ-zC-fQT"/>
+                                                                <constraint firstAttribute="trailing" secondItem="hff-x6-CCj" secondAttribute="trailing" constant="8" id="BR8-Uy-fOR"/>
+                                                                <constraint firstItem="PHa-mm-kQG" firstAttribute="leading" secondItem="KI1-TO-zR9" secondAttribute="leading" constant="8" id="BhC-nb-SEc"/>
+                                                                <constraint firstItem="I67-XT-s0e" firstAttribute="leading" secondItem="KI1-TO-zR9" secondAttribute="leading" constant="8" id="CqT-Rd-fGv"/>
+                                                                <constraint firstAttribute="trailing" secondItem="PHa-mm-kQG" secondAttribute="trailing" constant="8" id="DkS-sk-hqu"/>
+                                                                <constraint firstAttribute="bottom" secondItem="2ks-YU-dmK" secondAttribute="bottom" constant="12" id="FT0-r2-yLE"/>
+                                                                <constraint firstAttribute="trailing" secondItem="tj5-KR-r49" secondAttribute="trailing" constant="8" id="GLI-bJ-Dzn"/>
+                                                                <constraint firstAttribute="bottom" secondItem="aEd-CL-zDq" secondAttribute="bottom" constant="13" id="Lcd-0z-QSV"/>
+                                                                <constraint firstAttribute="trailing" secondItem="2ks-YU-dmK" secondAttribute="trailing" constant="8" id="P9O-jg-M7j"/>
+                                                                <constraint firstItem="aEd-CL-zDq" firstAttribute="top" secondItem="2ks-YU-dmK" secondAttribute="bottom" id="Thw-5s-cNl"/>
+                                                                <constraint firstItem="2ks-YU-dmK" firstAttribute="top" secondItem="hff-x6-CCj" secondAttribute="bottom" id="U09-if-RuG"/>
+                                                                <constraint firstItem="aEd-CL-zDq" firstAttribute="leading" secondItem="KI1-TO-zR9" secondAttribute="leading" constant="8" id="Uhd-2S-ZU9"/>
+                                                                <constraint firstItem="2ks-YU-dmK" firstAttribute="top" secondItem="tj5-KR-r49" secondAttribute="bottom" constant="8" id="b0f-Z0-jxZ"/>
+                                                                <constraint firstItem="tj5-KR-r49" firstAttribute="leading" secondItem="KI1-TO-zR9" secondAttribute="leading" constant="8" id="dgU-Ol-XPG"/>
+                                                                <constraint firstAttribute="trailing" secondItem="aEd-CL-zDq" secondAttribute="trailing" constant="8" id="exQ-hF-BEf"/>
+                                                                <constraint firstItem="PHa-mm-kQG" firstAttribute="top" secondItem="I67-XT-s0e" secondAttribute="bottom" constant="8" id="fNe-VL-fz1"/>
+                                                                <constraint firstItem="I67-XT-s0e" firstAttribute="top" secondItem="KI1-TO-zR9" secondAttribute="top" constant="12" id="k5U-0s-CE3"/>
+                                                                <constraint firstAttribute="trailing" secondItem="I67-XT-s0e" secondAttribute="trailing" constant="8" id="pIC-W5-FgD"/>
+                                                                <constraint firstItem="hff-x6-CCj" firstAttribute="leading" secondItem="KI1-TO-zR9" secondAttribute="leading" constant="8" id="yfN-i3-16i"/>
+                                                            </constraints>
+                                                            <variation key="default">
+                                                                <mask key="constraints">
+                                                                    <exclude reference="0Qt-Wo-Ymw"/>
+                                                                    <exclude reference="b0f-Z0-jxZ"/>
+                                                                    <exclude reference="FT0-r2-yLE"/>
+                                                                </mask>
+                                                            </variation>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="KI1-TO-zR9" firstAttribute="top" secondItem="Imw-Wa-9Gn" secondAttribute="topMargin" id="WXg-jN-196"/>
+                                                        <constraint firstItem="KI1-TO-zR9" firstAttribute="trailing" secondItem="Imw-Wa-9Gn" secondAttribute="trailingMargin" id="q8B-dC-QIb"/>
+                                                        <constraint firstItem="KI1-TO-zR9" firstAttribute="leading" secondItem="Imw-Wa-9Gn" secondAttribute="leadingMargin" id="r7R-aZ-KWS"/>
+                                                        <constraint firstAttribute="bottom" secondItem="KI1-TO-zR9" secondAttribute="bottom" priority="750" id="rym-Jz-jlf"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <connections>
+                                                    <outlet property="addressLabel" destination="tj5-KR-r49" id="eY2-YZ-EL0"/>
+                                                    <outlet property="emailLabel" destination="2ks-YU-dmK" id="cwv-Zb-5W1"/>
+                                                    <outlet property="mobileLabel" destination="hff-x6-CCj" id="Lq1-fg-gh8"/>
+                                                    <outlet property="nameLabel" destination="PHa-mm-kQG" id="XfN-y2-h7h"/>
+                                                    <outlet property="receiverTimeLabel" destination="aEd-CL-zDq" id="1fF-kX-ASL"/>
+                                                    <outlet property="titleLabel" destination="I67-XT-s0e" id="oek-X3-pEz"/>
+                                                </connections>
+                                            </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="143" id="5Nr-Y6-Gag" customClass="OrderUserCell" customModule="twshopping" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="600" height="143"/>
+                                                <rect key="frame" x="0.0" y="389" width="600" height="143"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Nr-Y6-Gag" id="sP3-Hu-PGJ">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="143"/>
@@ -2006,7 +2346,7 @@
                                                                         </mask>
                                                                     </variation>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="收貨人資訊" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKo-kM-m10" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                                                <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="寄件人資訊" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKo-kM-m10" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
                                                                     <rect key="frame" x="8" y="12" width="568" height="20"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="21" id="c6p-Gl-elX"/>
@@ -2096,97 +2436,8 @@
                                                     <outlet property="titleLabel" destination="vKo-kM-m10" id="z9n-5U-GNY"/>
                                                 </connections>
                                             </tableViewCell>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OrderSnCell" rowHeight="90" id="Ze3-Dk-3Az" customClass="OrderSnCell" customModule="twshopping" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="171" width="600" height="90"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ze3-Dk-3Az" id="Ffa-Wl-fCT">
-                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O1T-qA-zDK" customClass="SPBlackView" customModule="twshopping" customModuleProvider="target">
-                                                            <rect key="frame" x="8" y="8" width="584" height="92"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading...." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.94999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="5sL-sH-fYZ" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
-                                                                    <rect key="frame" x="8" y="64" width="568" height="20"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="39" id="cOz-5r-RYD"/>
-                                                                    </constraints>
-                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                    <variation key="default">
-                                                                        <mask key="constraints">
-                                                                            <exclude reference="cOz-5r-RYD"/>
-                                                                        </mask>
-                                                                    </variation>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xU-7v-JdD" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
-                                                                    <rect key="frame" x="8" y="8" width="568" height="20"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="21" id="Ld3-Fr-HGH"/>
-                                                                    </constraints>
-                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                    <variation key="default">
-                                                                        <mask key="constraints">
-                                                                            <exclude reference="Ld3-Fr-HGH"/>
-                                                                        </mask>
-                                                                    </variation>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqo-Z5-ZS7" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
-                                                                    <rect key="frame" x="8" y="36" width="568" height="20"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="21" id="IFD-yU-loq"/>
-                                                                    </constraints>
-                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                    <variation key="default">
-                                                                        <mask key="constraints">
-                                                                            <exclude reference="IFD-yU-loq"/>
-                                                                        </mask>
-                                                                    </variation>
-                                                                </label>
-                                                            </subviews>
-                                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="trailing" secondItem="8xU-7v-JdD" secondAttribute="trailing" constant="8" id="3xV-dH-slG"/>
-                                                                <constraint firstAttribute="trailing" secondItem="dqo-Z5-ZS7" secondAttribute="trailing" constant="8" id="6an-tm-8sR"/>
-                                                                <constraint firstItem="8xU-7v-JdD" firstAttribute="top" secondItem="O1T-qA-zDK" secondAttribute="top" constant="8" id="EJp-UD-ulM"/>
-                                                                <constraint firstItem="5sL-sH-fYZ" firstAttribute="top" secondItem="8xU-7v-JdD" secondAttribute="bottom" constant="8" id="HXN-1B-EuQ"/>
-                                                                <constraint firstAttribute="trailing" secondItem="5sL-sH-fYZ" secondAttribute="trailing" constant="8" id="PLe-t2-cwG"/>
-                                                                <constraint firstItem="dqo-Z5-ZS7" firstAttribute="leading" secondItem="O1T-qA-zDK" secondAttribute="leading" constant="8" id="Txk-sa-G92"/>
-                                                                <constraint firstItem="5sL-sH-fYZ" firstAttribute="top" secondItem="dqo-Z5-ZS7" secondAttribute="bottom" constant="8" id="aLL-MM-HoE"/>
-                                                                <constraint firstAttribute="bottom" secondItem="5sL-sH-fYZ" secondAttribute="bottom" constant="8" id="b6i-Fu-nUL"/>
-                                                                <constraint firstItem="dqo-Z5-ZS7" firstAttribute="top" secondItem="8xU-7v-JdD" secondAttribute="bottom" constant="8" id="n6y-EI-JNU"/>
-                                                                <constraint firstItem="8xU-7v-JdD" firstAttribute="leading" secondItem="O1T-qA-zDK" secondAttribute="leading" constant="8" id="pXi-Ye-Yfz"/>
-                                                                <constraint firstItem="5sL-sH-fYZ" firstAttribute="leading" secondItem="O1T-qA-zDK" secondAttribute="leading" constant="8" id="riS-jj-11T"/>
-                                                            </constraints>
-                                                            <variation key="default">
-                                                                <mask key="constraints">
-                                                                    <exclude reference="HXN-1B-EuQ"/>
-                                                                </mask>
-                                                            </variation>
-                                                        </view>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstItem="O1T-qA-zDK" firstAttribute="top" secondItem="Ffa-Wl-fCT" secondAttribute="topMargin" id="I7Y-X1-g8z"/>
-                                                        <constraint firstItem="O1T-qA-zDK" firstAttribute="trailing" secondItem="Ffa-Wl-fCT" secondAttribute="trailingMargin" id="RxO-db-ga3"/>
-                                                        <constraint firstAttribute="bottom" secondItem="O1T-qA-zDK" secondAttribute="bottom" priority="750" id="agh-qg-3Zf"/>
-                                                        <constraint firstItem="O1T-qA-zDK" firstAttribute="leading" secondItem="Ffa-Wl-fCT" secondAttribute="leadingMargin" id="rJW-DI-LJK"/>
-                                                    </constraints>
-                                                </tableViewCellContentView>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <connections>
-                                                    <outlet property="costLabel" destination="dqo-Z5-ZS7" id="cHV-D7-5jc"/>
-                                                    <outlet property="dateLabel" destination="5sL-sH-fYZ" id="U3u-dp-izE"/>
-                                                    <outlet property="snLabel" destination="8xU-7v-JdD" id="8FC-pL-vkt"/>
-                                                </connections>
-                                            </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProductInfoCell2" rowHeight="120" id="7bn-va-rUk" customClass="ProductInfoCell" customModule="twshopping" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="261" width="600" height="120"/>
+                                                <rect key="frame" x="0.0" y="532" width="600" height="120"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7bn-va-rUk" id="7rH-NM-7uE">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="120"/>
@@ -2277,7 +2528,7 @@
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProductImageCell2" rowHeight="97" id="6Ig-a6-Ufa">
-                                                <rect key="frame" x="0.0" y="381" width="600" height="97"/>
+                                                <rect key="frame" x="0.0" y="652" width="600" height="97"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6Ig-a6-Ufa" id="Acw-Eo-i4O">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="97"/>

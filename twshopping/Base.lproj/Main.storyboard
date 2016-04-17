@@ -1968,15 +1968,15 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OrderInfoCell" rowHeight="198" id="Z8A-mR-Ph9" customClass="OrderInfoCell" customModule="twshopping" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="600" height="198"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OrderInfoCell" rowHeight="218" id="Z8A-mR-Ph9" customClass="OrderInfoCell" customModule="twshopping" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="600" height="218"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z8A-mR-Ph9" id="NCY-Ej-rxp">
-                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="198"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="218"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f7j-zV-eW0" customClass="SPBlackView" customModule="twshopping" customModuleProvider="target">
-                                                            <rect key="frame" x="8" y="8" width="584" height="190"/>
+                                                            <rect key="frame" x="8" y="8" width="584" height="210"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" text="樣式: -- / --" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zez-gh-wRl" userLabel="Style" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
                                                                     <rect key="frame" x="8" y="60" width="568" height="22"/>
@@ -2091,10 +2091,25 @@
                                                                         </mask>
                                                                     </variation>
                                                                 </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="付款狀態: Loading...." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.94999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="y3l-6e-UI2" customClass="SPWhiteTextLabel" customModule="twshopping" customModuleProvider="target">
+                                                                    <rect key="frame" x="8" y="182" width="568" height="20"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="39" id="ULC-E3-v6f"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <variation key="default">
+                                                                        <mask key="constraints">
+                                                                            <exclude reference="ULC-E3-v6f"/>
+                                                                        </mask>
+                                                                    </variation>
+                                                                </label>
                                                             </subviews>
                                                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="trailing" secondItem="gLd-aD-fgG" secondAttribute="trailing" constant="8" id="0Y1-JF-uWQ"/>
+                                                                <constraint firstItem="y3l-6e-UI2" firstAttribute="top" secondItem="gLd-aD-fgG" secondAttribute="bottom" id="4mJ-qa-5wH"/>
                                                                 <constraint firstItem="AsU-92-iIv" firstAttribute="leading" secondItem="f7j-zV-eW0" secondAttribute="leading" constant="8" id="74d-4c-vg0"/>
                                                                 <constraint firstItem="Job-7h-flc" firstAttribute="top" secondItem="zez-gh-wRl" secondAttribute="bottom" constant="8" id="8mF-Y3-zqv"/>
                                                                 <constraint firstItem="DwK-EF-Uzz" firstAttribute="top" secondItem="zez-gh-wRl" secondAttribute="bottom" id="BYo-9N-xYY"/>
@@ -2104,11 +2119,14 @@
                                                                 <constraint firstItem="DwK-EF-Uzz" firstAttribute="leading" secondItem="f7j-zV-eW0" secondAttribute="leading" constant="8" id="P8f-Hw-7R0"/>
                                                                 <constraint firstAttribute="trailing" secondItem="zez-gh-wRl" secondAttribute="trailing" constant="8" id="QnC-Ua-SOy"/>
                                                                 <constraint firstAttribute="trailing" secondItem="QBe-Qq-1mi" secondAttribute="trailing" constant="8" id="Srl-cz-KVS"/>
+                                                                <constraint firstAttribute="bottom" secondItem="y3l-6e-UI2" secondAttribute="bottom" constant="8" id="Tux-45-6N5"/>
                                                                 <constraint firstItem="QBe-Qq-1mi" firstAttribute="top" secondItem="AsU-92-iIv" secondAttribute="bottom" id="Vkz-dJ-Ely"/>
+                                                                <constraint firstItem="y3l-6e-UI2" firstAttribute="leading" secondItem="f7j-zV-eW0" secondAttribute="leading" constant="8" id="W1C-MP-KaS"/>
                                                                 <constraint firstAttribute="bottom" secondItem="gLd-aD-fgG" secondAttribute="bottom" constant="8" id="XPv-0H-RZg"/>
                                                                 <constraint firstItem="42Y-cV-55H" firstAttribute="leading" secondItem="f7j-zV-eW0" secondAttribute="leading" constant="8" id="ajz-6M-b6A"/>
                                                                 <constraint firstItem="zez-gh-wRl" firstAttribute="leading" secondItem="f7j-zV-eW0" secondAttribute="leading" constant="8" id="al2-Pc-wSS"/>
                                                                 <constraint firstItem="42Y-cV-55H" firstAttribute="top" secondItem="Zmo-yP-NE3" secondAttribute="bottom" constant="8" id="aya-an-pma"/>
+                                                                <constraint firstAttribute="trailing" secondItem="y3l-6e-UI2" secondAttribute="trailing" constant="8" id="bnR-18-ghm"/>
                                                                 <constraint firstAttribute="trailing" secondItem="Job-7h-flc" secondAttribute="trailing" constant="8" id="bt7-C3-WHw"/>
                                                                 <constraint firstItem="AsU-92-iIv" firstAttribute="top" secondItem="Job-7h-flc" secondAttribute="bottom" id="fla-dy-ny7"/>
                                                                 <constraint firstAttribute="trailing" secondItem="AsU-92-iIv" secondAttribute="trailing" constant="8" id="hZx-Xy-dki"/>
@@ -2130,6 +2148,7 @@
                                                                     <exclude reference="8mF-Y3-zqv"/>
                                                                     <exclude reference="lht-NM-Q5i"/>
                                                                     <exclude reference="nyM-bp-OCZ"/>
+                                                                    <exclude reference="XPv-0H-RZg"/>
                                                                 </mask>
                                                             </variation>
                                                         </view>
@@ -2148,6 +2167,7 @@
                                                     <outlet property="deal_with_result" destination="42Y-cV-55H" id="ssD-O7-PG6"/>
                                                     <outlet property="external_order_no" destination="Zmo-yP-NE3" id="BRs-hr-Eaj"/>
                                                     <outlet property="freight" destination="AsU-92-iIv" id="v9M-fI-5bq"/>
+                                                    <outlet property="payment_result" destination="y3l-6e-UI2" id="tdh-Nn-O75"/>
                                                     <outlet property="price" destination="DwK-EF-Uzz" id="46R-uP-4mm"/>
                                                     <outlet property="quantity" destination="Job-7h-flc" id="JZi-bA-pfN"/>
                                                     <outlet property="send_date" destination="gLd-aD-fgG" id="1RO-vl-3lH"/>
@@ -2155,7 +2175,7 @@
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ReceiverCell" rowHeight="163" id="U5r-sO-ONP" customClass="ReceiverCell" customModule="twshopping" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="226" width="600" height="163"/>
+                                                <rect key="frame" x="0.0" y="246" width="600" height="163"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U5r-sO-ONP" id="Imw-Wa-9Gn">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="163"/>
@@ -2303,7 +2323,7 @@
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OrderUserCell" rowHeight="143" id="5Nr-Y6-Gag" customClass="OrderUserCell" customModule="twshopping" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="389" width="600" height="143"/>
+                                                <rect key="frame" x="0.0" y="409" width="600" height="143"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Nr-Y6-Gag" id="sP3-Hu-PGJ">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="143"/>
@@ -2431,7 +2451,7 @@
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProductInfoCell2" rowHeight="120" id="7bn-va-rUk" customClass="ProductInfoCell" customModule="twshopping" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="532" width="600" height="120"/>
+                                                <rect key="frame" x="0.0" y="552" width="600" height="120"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7bn-va-rUk" id="7rH-NM-7uE">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="120"/>
@@ -2522,7 +2542,7 @@
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProductImageCell2" rowHeight="97" id="6Ig-a6-Ufa">
-                                                <rect key="frame" x="0.0" y="652" width="600" height="97"/>
+                                                <rect key="frame" x="0.0" y="672" width="600" height="97"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6Ig-a6-Ufa" id="Acw-Eo-i4O">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="97"/>

@@ -82,3 +82,13 @@
 "AlertMessageReceiverTimeNameError" = "請填寫配送時間。最多輸入100個字元。";
 "BuyOkInfoMessage" = "您可以到「個人/訂單資訊」中查看您的訂單狀態。";
 "UnknownErrorMessage"="發生未知錯誤，請稍候嘗試。";
+
+"external_order_no"="訂單編號";
+"deal_with_result"="訂單狀態";
+"style"="樣式";
+"price"="商品單價";
+"quantity"="訂購數量";
+"freight"="運費";
+"amount"="總金額";
+"send_date"="送貨時間";
+"payment_result"="付款狀態";

@@ -32,6 +32,7 @@ class OrderInfoCell: UITableViewCell {
         self.freight.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
         self.amount.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
         self.send_date.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
+        self.payment_result.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
         
         NSNotificationCenter.defaultCenter().removeObserver(self, name: UIContentSizeCategoryDidChangeNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(OrderInfoCell.fontSizeChanged(_:)), name: UIContentSizeCategoryDidChangeNotification, object: nil)
@@ -51,6 +52,7 @@ class OrderInfoCell: UITableViewCell {
         self.freight.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
         self.amount.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
         self.send_date.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
+        self.payment_result.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
     }
 
 

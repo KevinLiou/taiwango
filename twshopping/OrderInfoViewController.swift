@@ -17,6 +17,10 @@ class OrderInfoViewController: SPSingleImageViewController, UITableViewDelegate 
     var api_product:[String:AnyObject]? //from api
     var order:[String:AnyObject]?
     
+    //status
+    let payment_result_status = ["發生錯誤，請通知服務人員。","已付款","未付款","已退款"]
+    let deal_with_result_status = ["發生錯誤，請通知服務人員。","待處理","已確認","取消訂單","已配送","退單","已退貨"]
+    
     @IBOutlet weak var tableView: UITableView!
     
     //bottom views
@@ -99,16 +103,17 @@ class OrderInfoViewController: SPSingleImageViewController, UITableViewDelegate 
                     let freight = (_order["freight"] as? Double) ?? -1
                     let amount = (_order["amount"] as? Double) ?? -1
                     let send_date = (_order["send_date"] as? String) ?? ""
+                    let payment_result = (_order["payment_result"] as? Int) ?? 0
                     
-                    cell.external_order_no.text = "\(NSLocalizedString("",comment: "")): \(external_order_no)"
-                    cell.deal_with_result.text = "\(NSLocalizedString("",comment: "")): \(deal_with_result)"
-                    cell.style.text = "\(NSLocalizedString("",comment: "")): \(style_a) / \(style_b)"
-                    cell.price.text = "\(NSLocalizedString("",comment: "")): \(price)"
-                    cell.quantity.text = "\(NSLocalizedString("",comment: "")): \(quantity)"
-                    cell.freight.text = "\(NSLocalizedString("",comment: "")): \(freight)"
-                    cell.amount.text = "\(NSLocalizedString("",comment: "")): \(amount)"
-                    cell.send_date.text = "\(NSLocalizedString("",comment: "")): \(send_date)"
-                    
+                    cell.external_order_no.text = "\(NSLocalizedString("external_order_no",comment: "")): \(external_order_no)"
+                    cell.deal_with_result.text = "\(NSLocalizedString("deal_with_result",comment: "")): \(deal_with_result_status[deal_with_result])"
+                    cell.style.text = "\(NSLocalizedString("style",comment: "")): \(style_a) / \(style_b)"
+                    cell.price.text = "\(NSLocalizedString("price",comment: "")): \(price)"
+                    cell.quantity.text = "\(NSLocalizedString("quantity",comment: "")): \(quantity)"
+                    cell.freight.text = "\(NSLocalizedString("freight",comment: "")): \(freight)"
+                    cell.amount.text = "\(NSLocalizedString("amount",comment: "")): \(amount)"
+                    cell.send_date.text = "\(NSLocalizedString("send_date",comment: "")): \(send_date)"
+                    cell.payment_result.text = "\(NSLocalizedString("payment_result",comment: "")): \(payment_result_status[payment_result])"
                 }
                 
                 return cell

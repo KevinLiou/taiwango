@@ -19,10 +19,8 @@ class OrderInfoCell: UITableViewCell {
     @IBOutlet var freight:SPWhiteTextLabel!
     @IBOutlet var amount:SPWhiteTextLabel!
     @IBOutlet var send_date:SPWhiteTextLabel!
-    
-    
-    
-    
+    @IBOutlet var payment_result:SPWhiteTextLabel!
+
     
     override func awakeFromNib() {
         super.awakeFromNib()

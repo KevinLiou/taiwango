@@ -2144,20 +2144,14 @@
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <connections>
-                                                    <outlet property="addressLabel" destination="zez-gh-wRl" id="stK-XJ-iKN"/>
                                                     <outlet property="amount" destination="QBe-Qq-1mi" id="OVi-4f-YgV"/>
                                                     <outlet property="deal_with_result" destination="42Y-cV-55H" id="ssD-O7-PG6"/>
-                                                    <outlet property="emailLabel" destination="Job-7h-flc" id="hUa-E9-fKg"/>
                                                     <outlet property="external_order_no" destination="Zmo-yP-NE3" id="BRs-hr-Eaj"/>
                                                     <outlet property="freight" destination="AsU-92-iIv" id="v9M-fI-5bq"/>
-                                                    <outlet property="mobileLabel" destination="DwK-EF-Uzz" id="wwc-kA-mks"/>
-                                                    <outlet property="nameLabel" destination="42Y-cV-55H" id="6hH-oM-oMK"/>
                                                     <outlet property="price" destination="DwK-EF-Uzz" id="46R-uP-4mm"/>
                                                     <outlet property="quantity" destination="Job-7h-flc" id="JZi-bA-pfN"/>
-                                                    <outlet property="receiverTimeLabel" destination="AsU-92-iIv" id="GSc-3K-676"/>
                                                     <outlet property="send_date" destination="gLd-aD-fgG" id="1RO-vl-3lH"/>
                                                     <outlet property="style" destination="zez-gh-wRl" id="fqa-zy-C41"/>
-                                                    <outlet property="titleLabel" destination="Zmo-yP-NE3" id="Aeg-WG-Ea5"/>
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ReceiverCell" rowHeight="163" id="U5r-sO-ONP" customClass="ReceiverCell" customModule="twshopping" customModuleProvider="target">
@@ -2284,8 +2278,8 @@
                                                             <variation key="default">
                                                                 <mask key="constraints">
                                                                     <exclude reference="0Qt-Wo-Ymw"/>
-                                                                    <exclude reference="b0f-Z0-jxZ"/>
                                                                     <exclude reference="FT0-r2-yLE"/>
+                                                                    <exclude reference="b0f-Z0-jxZ"/>
                                                                 </mask>
                                                             </variation>
                                                         </view>
@@ -2308,7 +2302,7 @@
                                                     <outlet property="titleLabel" destination="I67-XT-s0e" id="oek-X3-pEz"/>
                                                 </connections>
                                             </tableViewCell>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="143" id="5Nr-Y6-Gag" customClass="OrderUserCell" customModule="twshopping" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OrderUserCell" rowHeight="143" id="5Nr-Y6-Gag" customClass="OrderUserCell" customModule="twshopping" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="389" width="600" height="143"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Nr-Y6-Gag" id="sP3-Hu-PGJ">

@@ -1026,7 +1026,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tw.com.tnot.twshopping;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ce848575-455d-41b0-805f-d32d65cf3b54";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "twshopping/twshopping-Bridging-Header.h";
 			};
 			name = Release;

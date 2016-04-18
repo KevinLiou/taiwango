@@ -5,9 +5,9 @@
 "ButtonTitleSure" = "確定";
 "AlertMessagePwdError" = "密碼請輸入6~12位英文或數字";
 "AlertMessage2PwdNotMatch" = "兩次密碼輸入不相符";
-"AlertMessageNameError" = "姓名最多30的字";
-"AlertMessageAddressError" = "地址最多250的字";
-"AlertMessageMobileError" = "手機號最多11的字";
+"AlertMessageNameError" = "姓名輸入錯誤(最多30的字)";
+"AlertMessageAddressError" = "地址輸入錯誤(最多250的字)";
+"AlertMessageMobileError" = "手機號輸入錯誤(最多11的字)";
 
 "AlertTitleErrorConn" = "連線發生錯誤！";
 "AlertMessageTryAgainLater" = "請稍候重新嘗試";

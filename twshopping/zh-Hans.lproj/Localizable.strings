@@ -4,9 +4,9 @@
 "ButtonTitleSure" = "确定";
 "AlertMessagePwdError" = "密码请输入6~12位英文或数字";
 "AlertMessage2PwdNotMatch" = "两次密码输入不相符";
-"AlertMessageNameError" = "姓名最多30的字";
-"AlertMessageAddressError" = "地址最多250的字";
-"AlertMessageMobileError" = "手机号最多11的字";
+"AlertMessageNameError" = "姓名输入错误(最多30的字)";
+"AlertMessageAddressError" = "地址输入错误(最多250的字)";
+"AlertMessageMobileError" = "手机号输入错误(最多11的字)";
 "AlertTitleErrorConn" = "连线发生错误!";
 "AlertMessageTryAgainLater" = "请稍候重新尝试";
 "AlertTitleNotify" = "通知";

@@ -194,28 +194,6 @@ class ProfileListViewController: SPSingleImageViewController {
             orderInfoViewController.order = order
             orderInfoViewController.title = NSLocalizedString("VCTitleOrderHistory",comment: "")
             self.navigationController?.pushViewController(orderInfoViewController, animated: true)
-            
-            
-//            let order = _orders[indexPath.row-1]
-//            let product_id = order["product_id"] as? Int
-            
-//            guard let _product_id = product_id else{
-//                return
-//            }
-//            
-//            let predicate = NSPredicate(format: "language.lan = '\(SPTools.getPreferredLanguages())' AND product_id = \(_product_id)")
-//            let result = SPDataManager.sharedInstance.fetchProductWithPredicate(predicate: predicate)
-//            let product = result?.first
-            
-//            guard let _ = product else{
-//                return
-//            }
-            
-//            let productInfoViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ProductInfoViewController") as! ProductInfoViewController
-//            productInfoViewController.product = _product
-//            productInfoViewController.order = order
-//            productInfoViewController.title = NSLocalizedString("VCTitleOrderHistory",comment: "")
-//            self.navigationController?.pushViewController(productInfoViewController, animated: true)
         }
     }
     

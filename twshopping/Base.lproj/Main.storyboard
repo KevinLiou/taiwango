@@ -1968,8 +1968,46 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProductImageCell2" rowHeight="97" id="6Ig-a6-Ufa">
+                                                <rect key="frame" x="0.0" y="28" width="600" height="97"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6Ig-a6-Ufa" id="Acw-Eo-i4O">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="97"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qyy-eW-myY" customClass="SPBlackView" customModule="twshopping" customModuleProvider="target">
+                                                            <rect key="frame" x="8" y="9" width="584" height="90"/>
+                                                            <subviews>
+                                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_hoder" translatesAutoresizingMaskIntoConstraints="NO" id="EWc-ZJ-CG2">
+                                                                    <rect key="frame" x="226" y="1" width="132" height="88"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="EWc-ZJ-CG2" secondAttribute="height" multiplier="350:232" id="29M-Cp-kyH"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstItem="EWc-ZJ-CG2" firstAttribute="width" secondItem="qyy-eW-myY" secondAttribute="width" constant="-2" id="5Nt-iw-B9k"/>
+                                                                <constraint firstItem="EWc-ZJ-CG2" firstAttribute="centerY" secondItem="qyy-eW-myY" secondAttribute="centerY" id="Ttb-0E-Wvb"/>
+                                                                <constraint firstItem="EWc-ZJ-CG2" firstAttribute="centerX" secondItem="qyy-eW-myY" secondAttribute="centerX" id="yDZ-cQ-y58"/>
+                                                                <constraint firstItem="EWc-ZJ-CG2" firstAttribute="height" secondItem="qyy-eW-myY" secondAttribute="height" constant="-2" id="znc-mr-RYR"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="qyy-eW-myY" firstAttribute="leading" secondItem="Acw-Eo-i4O" secondAttribute="leading" constant="8" id="DqJ-p6-9MT"/>
+                                                        <constraint firstAttribute="bottom" secondItem="qyy-eW-myY" secondAttribute="bottom" id="Jrj-Cu-8cI"/>
+                                                        <constraint firstItem="qyy-eW-myY" firstAttribute="top" secondItem="Acw-Eo-i4O" secondAttribute="top" constant="8" id="U6k-ta-Qo0"/>
+                                                        <constraint firstItem="qyy-eW-myY" firstAttribute="width" secondItem="Acw-Eo-i4O" secondAttribute="width" constant="-16" id="bAc-HJ-629"/>
+                                                        <constraint firstAttribute="trailing" secondItem="qyy-eW-myY" secondAttribute="trailing" constant="8" id="owK-qY-4Ox"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OrderInfoCell" rowHeight="218" id="Z8A-mR-Ph9" customClass="OrderInfoCell" customModule="twshopping" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="600" height="218"/>
+                                                <rect key="frame" x="0.0" y="125" width="600" height="218"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z8A-mR-Ph9" id="NCY-Ej-rxp">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="218"/>
@@ -2175,7 +2213,7 @@
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ReceiverCell" rowHeight="163" id="U5r-sO-ONP" customClass="ReceiverCell" customModule="twshopping" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="246" width="600" height="163"/>
+                                                <rect key="frame" x="0.0" y="343" width="600" height="163"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U5r-sO-ONP" id="Imw-Wa-9Gn">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="163"/>
@@ -2323,7 +2361,7 @@
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OrderUserCell" rowHeight="143" id="5Nr-Y6-Gag" customClass="OrderUserCell" customModule="twshopping" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="409" width="600" height="143"/>
+                                                <rect key="frame" x="0.0" y="506" width="600" height="143"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Nr-Y6-Gag" id="sP3-Hu-PGJ">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="143"/>
@@ -2451,7 +2489,7 @@
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProductInfoCell2" rowHeight="120" id="7bn-va-rUk" customClass="ProductInfoCell" customModule="twshopping" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="552" width="600" height="120"/>
+                                                <rect key="frame" x="0.0" y="649" width="600" height="120"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7bn-va-rUk" id="7rH-NM-7uE">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="120"/>
@@ -2540,44 +2578,6 @@
                                                     <outlet property="descLabel" destination="bdW-C5-YuE" id="5ox-bq-1wN"/>
                                                     <outlet property="titleLabel" destination="Hj3-Ah-RDL" id="0oj-ET-Am0"/>
                                                 </connections>
-                                            </tableViewCell>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProductImageCell2" rowHeight="97" id="6Ig-a6-Ufa">
-                                                <rect key="frame" x="0.0" y="672" width="600" height="97"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6Ig-a6-Ufa" id="Acw-Eo-i4O">
-                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="97"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qyy-eW-myY" customClass="SPBlackView" customModule="twshopping" customModuleProvider="target">
-                                                            <rect key="frame" x="8" y="9" width="584" height="90"/>
-                                                            <subviews>
-                                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_hoder" translatesAutoresizingMaskIntoConstraints="NO" id="EWc-ZJ-CG2">
-                                                                    <rect key="frame" x="226" y="1" width="132" height="88"/>
-                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" secondItem="EWc-ZJ-CG2" secondAttribute="height" multiplier="350:232" id="29M-Cp-kyH"/>
-                                                                    </constraints>
-                                                                </imageView>
-                                                            </subviews>
-                                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
-                                                            <constraints>
-                                                                <constraint firstItem="EWc-ZJ-CG2" firstAttribute="width" secondItem="qyy-eW-myY" secondAttribute="width" constant="-2" id="5Nt-iw-B9k"/>
-                                                                <constraint firstItem="EWc-ZJ-CG2" firstAttribute="centerY" secondItem="qyy-eW-myY" secondAttribute="centerY" id="Ttb-0E-Wvb"/>
-                                                                <constraint firstItem="EWc-ZJ-CG2" firstAttribute="centerX" secondItem="qyy-eW-myY" secondAttribute="centerX" id="yDZ-cQ-y58"/>
-                                                                <constraint firstItem="EWc-ZJ-CG2" firstAttribute="height" secondItem="qyy-eW-myY" secondAttribute="height" constant="-2" id="znc-mr-RYR"/>
-                                                            </constraints>
-                                                        </view>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstItem="qyy-eW-myY" firstAttribute="leading" secondItem="Acw-Eo-i4O" secondAttribute="leading" constant="8" id="DqJ-p6-9MT"/>
-                                                        <constraint firstAttribute="bottom" secondItem="qyy-eW-myY" secondAttribute="bottom" id="Jrj-Cu-8cI"/>
-                                                        <constraint firstItem="qyy-eW-myY" firstAttribute="top" secondItem="Acw-Eo-i4O" secondAttribute="top" constant="8" id="U6k-ta-Qo0"/>
-                                                        <constraint firstItem="qyy-eW-myY" firstAttribute="width" secondItem="Acw-Eo-i4O" secondAttribute="width" constant="-16" id="bAc-HJ-629"/>
-                                                        <constraint firstAttribute="trailing" secondItem="qyy-eW-myY" secondAttribute="trailing" constant="8" id="owK-qY-4Ox"/>
-                                                    </constraints>
-                                                </tableViewCellContentView>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </tableViewCell>
                                         </prototypes>
                                         <connections>

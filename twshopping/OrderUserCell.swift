@@ -19,6 +19,10 @@ class OrderUserCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         self.titleLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
+        self.nameLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+        self.addressLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+        self.mobileLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+        self.emailLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
         
         NSNotificationCenter.defaultCenter().removeObserver(self, name: UIContentSizeCategoryDidChangeNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(OrderUserCell.fontSizeChanged(_:)), name: UIContentSizeCategoryDidChangeNotification, object: nil)
@@ -31,5 +35,9 @@ class OrderUserCell: UITableViewCell {
     // MARK : observer
     func fontSizeChanged(notification:NSNotification) {
         self.titleLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
+        self.nameLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+        self.addressLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+        self.mobileLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+        self.emailLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
     }
 }

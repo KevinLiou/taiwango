@@ -76,4 +76,33 @@
 
 "AlertMessagePolicyAgree" = "請先同意本程式相關聲明及政策。";
 
+"PriceOfOneProduct"="商品單價";
+"BuyQuantity"="購買數量";
+"PriceOfAll"="總金額";
+"AlertMessageReceiverTimeNameError" = "請填寫配送時間。最多輸入100個字元。";
+"BuyOkInfoMessage" = "您可以到「個人/訂單資訊」中查看您的訂單狀態。";
+"UnknownErrorMessage"="發生未知錯誤，請稍候嘗試。";
 
+"external_order_no"="訂單編號";
+"deal_with_result"="訂單狀態";
+"style"="樣式";
+"price"="商品單價";
+"quantity"="訂購數量";
+"freight"="運費";
+"amount"="總金額";
+"send_date"="送貨時間";
+"payment_result"="付款狀態";
+"receiver_time"="配送時間";
+
+"payment_result_status0"="發生錯誤，請通知服務人員。";
+"payment_result_status1"="已付款";
+"payment_result_status2"="未付款";
+"payment_result_status3"="已退款";
+
+"deal_with_result_status0"="發生錯誤，請通知服務人員。";
+"deal_with_result_status1"="待處理";
+"deal_with_result_status2"="已確認";
+"deal_with_result_status3"="取消訂單";
+"deal_with_result_status4"="已配送";
+"deal_with_result_status5"="退單";
+"deal_with_result_status6"="已退貨";

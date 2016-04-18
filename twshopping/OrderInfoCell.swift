@@ -25,14 +25,14 @@ class OrderInfoCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.external_order_no.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
-        self.deal_with_result.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
-        self.style.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
-        self.price.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
-        self.quantity.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
-        self.freight.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
-        self.amount.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
-        self.send_date.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
-        self.payment_result.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
+        self.deal_with_result.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+        self.style.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+        self.price.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+        self.quantity.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+        self.freight.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+        self.amount.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+        self.send_date.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+        self.payment_result.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
         
         NSNotificationCenter.defaultCenter().removeObserver(self, name: UIContentSizeCategoryDidChangeNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(OrderInfoCell.fontSizeChanged(_:)), name: UIContentSizeCategoryDidChangeNotification, object: nil)
@@ -45,14 +45,14 @@ class OrderInfoCell: UITableViewCell {
     // MARK : observer
     func fontSizeChanged(notification:NSNotification) {
         self.external_order_no.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
-        self.deal_with_result.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
-        self.style.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
-        self.price.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
-        self.quantity.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
-        self.freight.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
-        self.amount.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
-        self.send_date.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
-        self.payment_result.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
+        self.deal_with_result.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+        self.style.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+        self.price.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+        self.quantity.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+        self.freight.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+        self.amount.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+        self.send_date.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+        self.payment_result.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
     }
 
 

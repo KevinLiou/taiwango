@@ -22,11 +22,11 @@ class ReceiverCell: UITableViewCell {
         // Initialization code
         
         self.titleLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
-        self.nameLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
-        self.addressLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
-        self.mobileLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
-        self.emailLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
-        self.receiverTimeLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
+        self.nameLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+        self.addressLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+        self.mobileLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+        self.emailLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+        self.receiverTimeLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
 
         
         NSNotificationCenter.defaultCenter().removeObserver(self, name: UIContentSizeCategoryDidChangeNotification, object: nil)
@@ -40,11 +40,11 @@ class ReceiverCell: UITableViewCell {
     // MARK : observer
     func fontSizeChanged(notification:NSNotification) {
         self.titleLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
-        self.nameLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
-        self.addressLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
-        self.mobileLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
-        self.emailLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
-        self.receiverTimeLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
+        self.nameLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+        self.addressLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+        self.mobileLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+        self.emailLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+        self.receiverTimeLabel.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
     }
 
 }

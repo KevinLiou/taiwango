@@ -13,13 +13,22 @@ import pop
 
 class OrderInfoViewController: SPSingleImageViewController, UITableViewDelegate {
     
-    var product:Product?
+//    var product:Product?
     var api_product:[String:AnyObject]? //from api
     var order:[String:AnyObject]?
     
     //status
-    let payment_result_status = ["發生錯誤，請通知服務人員。","已付款","未付款","已退款"]
-    let deal_with_result_status = ["發生錯誤，請通知服務人員。","待處理","已確認","取消訂單","已配送","退單","已退貨"]
+    let payment_result_status = ["\(NSLocalizedString("payment_result_status0",comment: ""))",
+                                 "\(NSLocalizedString("payment_result_status1",comment: ""))",
+                                 "\(NSLocalizedString("payment_result_status2",comment: ""))",
+                                 "\(NSLocalizedString("payment_result_status3",comment: ""))"]
+    let deal_with_result_status = ["\(NSLocalizedString("deal_with_result_status0",comment: ""))",
+                                   "\(NSLocalizedString("deal_with_result_status1",comment: ""))",
+                                   "\(NSLocalizedString("deal_with_result_status2",comment: ""))",
+                                   "\(NSLocalizedString("deal_with_result_status3",comment: ""))",
+                                   "\(NSLocalizedString("deal_with_result_status4",comment: ""))",
+                                   "\(NSLocalizedString("deal_with_result_status5",comment: ""))",
+                                   "\(NSLocalizedString("deal_with_result_status6",comment: ""))"]
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -43,6 +52,49 @@ class OrderInfoViewController: SPSingleImageViewController, UITableViewDelegate 
                 super.pop()
             }
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if let _ = api_product {
+            return
+        }
+        
+        if let _order = order {
+            let product_sn = (_order["product_sn"] as? Int) ?? -1
+            SPTools.showLoadingOnViewController(self)
+            
+            let lan = SPTools.getPreferredLanguages()
+            let timestamp = UInt64(NSDate().timeIntervalSince1970)
+            let md5string = SPTools.md5(string: "\(timestamp)kikirace")
+            let parameters = ["Language":"\(Int(lan)!)", "ProductSN":"\(product_sn)", "Time": "\(timestamp)", "Key": md5string]
+            
+            SPService.sharedInstance.requestProductDetailWith(parameters) { (response) in
+                
+                SPTools.hideLoadingOnViewController(self)
+                
+                if let JSON = response.result.value {
+                    print(JSON)
+                    self.tableView.reloadData()
+                    
+                    let ErrorCode = JSON["ErrorCode"] as? Int
+                    if let _ErrorCode = ErrorCode {
+                        if _ErrorCode == 0 {
+                            
+                            let Products = JSON["Product"] as? [[String:AnyObject]]
+                            self.api_product = Products?.first
+                            
+                            self.tableView.reloadData()
+                        }
+                    }
+                }
+            }
+        }
+        
+        
+        
+    }
+    
     
     // MARK: - Table view data source
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -83,9 +135,10 @@ class OrderInfoViewController: SPSingleImageViewController, UITableViewDelegate 
                     if let _ProductTitle = _api_product["ProductTitle"] as? String{
                         cell.titleLabel.text = _ProductTitle
                     }
-                    if let _SellPrice = _api_product["SellPrice"] {
-                        cell.amountLabel.text = "\(NSLocalizedString("PriceOfOneProduct",comment: "")): \(_SellPrice)"
-                    }
+                    cell.amountLabel.text = ""  //資訊不顯示商品價格
+//                    if let _SellPrice = _api_product["SellPrice"] {
+//                        cell.amountLabel.text = "\(NSLocalizedString("PriceOfOneProduct",comment: "")): \(_SellPrice)"
+//                    }
                 }
                 return cell
             }else if indexPath.row == 2 {
@@ -99,7 +152,7 @@ class OrderInfoViewController: SPSingleImageViewController, UITableViewDelegate 
                     let style_a = (_order["style_a"] as? String) ?? "--"
                     let style_b = (_order["style_b"] as? String) ?? "--"
                     let price = (_order["price"] as? Double) ?? -1
-                    let quantity = (_order["quantity"] as? Double) ?? -1
+                    let quantity = (_order["quantity"] as? Int) ?? -1
                     let freight = (_order["freight"] as? Double) ?? -1
                     let amount = (_order["amount"] as? Double) ?? -1
                     let send_date = (_order["send_date"] as? String) ?? ""
@@ -139,17 +192,17 @@ class OrderInfoViewController: SPSingleImageViewController, UITableViewDelegate 
                 if let _order = order {
                     
                     
-                    let _order_name = (_order["order_name"] as? String) ?? ""
-                    let _order_address = (_order["order_address"] as? String) ?? ""
-                    let _order_phone = (_order["order_phone"] as? String) ?? ""
-                    let _order_email = (_order["order_email"] as? String) ?? ""
+                    let _consignee_name = (_order["consignee_name"] as? String) ?? ""
+                    let _consignee_address = (_order["consignee_address"] as? String) ?? ""
+                    let _consignee_phone = (_order["consignee_phone"] as? String) ?? ""
+                    let _consignee_email = (_order["consignee_email"] as? String) ?? ""
                     let _deliver_time = (_order["deliver_time"] as? String) ?? ""
                     
-                    cell.nameLabel.text = "\(NSLocalizedString("StringName",comment: "")): \(_order_name)"
-                    cell.addressLabel.text = "\(NSLocalizedString("StringAddress",comment: "")): \(_order_address)"
-                    cell.mobileLabel.text = "\(NSLocalizedString("StringMobile",comment: "")): \(_order_phone)"
-                    cell.emailLabel.text = "\(NSLocalizedString("StringContactEmail",comment: "")): \(_order_email)"
-                    cell.receiverTimeLabel.text = "\(NSLocalizedString("StringContactEmail",comment: "")): \(_deliver_time)"
+                    cell.nameLabel.text = "\(NSLocalizedString("StringName",comment: "")): \(_consignee_name)"
+                    cell.addressLabel.text = "\(NSLocalizedString("StringAddress",comment: "")): \(_consignee_address)"
+                    cell.mobileLabel.text = "\(NSLocalizedString("StringMobile",comment: "")): \(_consignee_phone)"
+                    cell.emailLabel.text = "\(NSLocalizedString("StringContactEmail",comment: "")): \(_consignee_email)"
+                    cell.receiverTimeLabel.text = "\(NSLocalizedString("receiver_time",comment: "")): \(_deliver_time)"
                 }
                 return cell
             }
@@ -192,12 +245,21 @@ class OrderInfoViewController: SPSingleImageViewController, UITableViewDelegate 
     //MARK: - Actions
     
     @IBAction func goToStoreInfo(sender: UIButton) {
-        let store = product?.store
         
-        let infoViewController = self.storyboard?.instantiateViewControllerWithIdentifier("InfoViewController") as! InfoViewController
-        infoViewController.infoString = store?.info
-        infoViewController.title = store?.name
-        self.navigationController?.pushViewController(infoViewController, animated: true)
+        if let _order = order {
+            let product_sn = (_order["product_sn"] as? Int) ?? -1
+            
+            let predicate = NSPredicate(format: "language.lan = '\(SPTools.getPreferredLanguages())' AND product_sn = \(product_sn)")
+            let products = SPDataManager.sharedInstance.fetchProductWithPredicate(predicate: predicate)
+            let store = products?.first?.store
+            
+            let infoViewController = self.storyboard?.instantiateViewControllerWithIdentifier("InfoViewController") as! InfoViewController
+            infoViewController.infoString = store?.info
+            infoViewController.title = store?.name
+            self.navigationController?.pushViewController(infoViewController, animated: true)
+            
+        }
+        
     }
     
     func bottomViewShow(){

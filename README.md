@@ -31,4 +31,4 @@ Xcode 7.3.1
 第6/第7/第8 服務器功能接已關閉
 
 Demo Video
-[![Demo](http://img.youtube.com/vi/8ChRlkzgaAY/5.jpg)](http://www.youtube.com/watch?v=8ChRlkzgaAY)
+[![Demo](http://img.youtube.com/vi/8ChRlkzgaAY/0.jpg)](http://www.youtube.com/watch?v=8ChRlkzgaAY)

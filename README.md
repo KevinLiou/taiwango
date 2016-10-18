@@ -4,10 +4,10 @@
 2016年 第一屆昕創APP大賽(http://unionpay.csmuse.com/sign.php) 入圍作品之一
 本專案已不進行維護，服務器功能接已關閉。 所有資料僅供參考。
 
-前次編譯成功環境
+## 編譯環境
 Xcode 7.3.1
 
-使用技術與相關套件
+## 使用技術與相關套件
 
 1.程式語言: Swift 2.3
 
@@ -30,5 +30,5 @@ Xcode 7.3.1
 
 第6/第7/第8 服務器功能接已關閉
 
-Demo Video
-[![Demo](http://img.youtube.com/vi/8ChRlkzgaAY/0.jpg)](http://www.youtube.com/watch?v=8ChRlkzgaAY)
+## Demo Video
+[![Demo](http://img.youtube.com/vi/dAvLw_3lgJg/0.jpg)](http://www.youtube.com/watch?v=dAvLw_3lgJg)

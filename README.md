@@ -19,7 +19,9 @@ Xcode 7.3.1
 
 5.手機資料庫: CoreData
 
-6.遠端Baas服務: lean cloud (主要用於Apple Push Notification Service)
+6.遠端Baas服務: lean cloud (主要用於Apple Push Notification Service，作為推播通知伺服器。)
+因為本APP針對大陸地區使用者提供服務，所以採用大陸的服務商LeanCloud，此服務類似以前的Parse。
+(https://leancloud.cn/)
 
 7.遠端資料庫: 自己架設的 AWS-EC2 主機, 程式語言PHP
 

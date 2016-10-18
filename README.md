@@ -30,4 +30,4 @@ Xcode 7.3.1
 
 第6/第7/第8 服務器功能接已關閉
 
-
+[![Alt text for your video](http://img.youtube.com/vi/dAvLw_3lgJg/0.jpg)](http://www.youtube.com/watch?v=dAvLw_3lgJg)
